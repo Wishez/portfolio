@@ -1,0 +1,31 @@
+.about__sociality {
+  margin-top: 20px;
+}
+.row__icon {
+  border-radius: 50%;
+  width: 25px;
+  display: inline-block;
+  border: 3px double #fff;
+  background-color: #7b7875;
+  margin: 0 5px;
+  color: #fff;
+  @media (max-width: 768px) {
+    display: block;
+    position: relative;
+    bottom: 20px;
+  }
+}
+@each $icon, $color in 
+(twitter, #1da1f2),
+(facebook, #4867aa),
+(rss, #fa9d39),
+(envelope-o, #00f) {
+  .fa.fa-#{$icon}:hover {
+    color: $color;
+  }
+}
+
+.sociality__row {
+  font-size: (13em / 14);
+  color: #7b7875;
+}
