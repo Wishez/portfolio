@@ -1,0 +1,93 @@
+/*******
+
+ Connect
+
+*******/
+#connect {
+  background-color: $transviolet;
+  width: 100%;
+  padding: 0 0 70px;
+}
+.connect__title {
+  width: 100%;
+}
+/* Form connect */
+.connect__connectForm {
+  width: 100%;
+  margin: 15px auto;
+}
+.connectFrom__elemForm {
+  margin-top: 10px;
+  .elemForm__label {
+    opacity: 0;
+    transition: top .3s ease,opacity .3s ease;
+  }
+  &-filled .elemForm__label {
+    color: #aaa;
+    opacity: 1;
+  }
+}
+.elemForm__item {
+  background-color: transparent;
+  height: 40px;
+  width: 100%;
+  border: 0;
+  border-bottom: 1px solid #fff;
+  &:focus {
+    outline: 0;
+  }
+}
+::-webkit-input-placeholder {
+  color: #fff;
+  font-size: (20em / 16);
+}
+:focus::-webkit-input-placeholder {
+}
+#message {
+  height: 110px;
+}
+/* Socials profiles */
+.connect__socials {
+  width: 100%;
+  @media(max-width: 768px) {
+    flex-direction: column;
+  }
+}
+.socials__contact {
+  width: 33%;
+  margin-top: 50px;
+  list-style: none;
+  position: relative;
+  @each $contact, $offset in 
+  (first-child, 38),
+  (nth-child(2), 17),
+  (last-child, 10) {
+    &:#{$contact} {
+      right: #{$offset}px;    
+    }      
+  }
+  @media(max-width: 768px) {
+    width: 50%;
+    margin: 20px auto 0;
+    text-align: left;
+    @each $contact, $offset in 
+  (first-child, 0),
+  (nth-child(2), 0),
+  (last-child, 0) {
+    &:#{$contact} {
+      right: #{$offset}px;    
+    }      
+  }
+  }
+}
+.socials__contact:nth-child(2) .cover__icon {
+  margin-right: 13px;
+}
+.cover__icon {
+  margin-right: 10px;
+}
+/*******
+
+ END Connect
+
+*******/

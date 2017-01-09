@@ -1,0 +1,157 @@
+/*******
+
+ SKILLS section
+
+*******/
+#skills {
+  background-color: $sweetred;
+  width: 100%;
+  padding-bottom: 50px;
+  position: relative;
+  &::after {
+    @include flagTo($sweetred);
+  }
+}
+.skills {
+  justify-content: space-between;
+  @media (max-width: 449px) {
+    flex-direction: column;
+  }
+}
+.skills__title {
+  width: 100%;
+}
+.progress {
+  background-color: transparent;
+  border-radius: 0;
+}
+/* Technologies' list */
+.skills__techno {
+  width: 60%;
+  margin-right: 0;
+  @media (max-width: 449px) {
+    width: 85%;
+    margin: 0 auto;
+  }
+}
+.techno__title {
+  padding-left: 35px;
+  @media (max-width: 449px) {
+    padding-left: 0;
+    text-align: center;
+  }
+}
+.techno__techList {
+  padding-left: 0;
+}
+.techList__itemTechList {
+  list-style: none;
+  height: 25px;
+  margin: 20px auto 0;
+  padding: 5px 0 0 35px;
+  position: relative;
+}
+@each $tech, $height, $width, $x, $y in 
+(html, 25, 19, 0, 0),
+(css, 25, 19, -19, 0),
+(js, 25, 19, -38, 0),
+(jquery, 25, 24, -57, 0),
+(sql, 25, 20, -82, 0),
+(ruby, 25, 21, -103, 0) {
+  .techList__itemTechList-icon_#{$tech}:before {
+    content: "";
+    position: absolute;
+    height: #{$height}px;
+    width: #{$width}px;
+    top: 0;
+    left: 0;
+    background: url('https://lh3.googleusercontent.com/sZzonbc1W4q9_OqaqZM8G0bmgvc7qat5EiJNIbdcKfM-vh0lpKkFLGCjzDQXWzYScgjnJsmzQPlR7TiZuPhAV6A2Isp33_Lqqf9MO2sXl3DoqKDv5G4Giu9qiE7LEYX2ZXXGURGZJFD_YMX1yxH43--5yxpaXOWuWNGV2ufJnR0snPzG7gE6ABtuDVrLLl1UNlFNgiVYnKSHUodavUYmqQDlbDQayOYnELwK0qL8ZQ1AtLrIIhR2giKNCuVqfD1hjtznOyxDVdge0KBdx9qbyTypidZ8ci31SJh19rRHt5K5fU63SNGCoDY0a4lvQhfKVTojoUY9mTmUBaJBArcPYCD0nhmH2ylM6Ar2OrBNo_Jhhu4PKXU9QzrwBfnHl-6CxQLXTnFo7lb2zrhoiXoUQeoIfiM-zfh7zcyaInNlnI_3qqtdqhAlQF1deUQmx7tIDIz5I2Zp64GghHYaNpDrApf5pg5AamJoqnLaFt846Pf5l9ujjb14XTc43ewqyE6QQiD8S8I1EA3VlbGGcJU90u3oxhFmJeopgGOvjaCOofbv4U-6xzJDhYigpBCQzu_mNrfc4iwHl-qtrz87nkGGlavVA5Ip70CIzhQklVOSMwmtZ7E=w374-h25-no') no-repeat #{$x}px #{$y}px;
+  }
+}
+.itemTechList__text {
+  text-align: left;
+  padding-left: 10px;
+  background-color: $sweetbrown;
+  color: #e65e66;
+  font-weight: 600;
+}
+/* Concepts. In addition to technologies' list and tools' list. */
+.skills__concepts {
+  width: 40%;
+  text-align: right;
+  margin-bottom: 10px;
+  @media (max-width: 449px) {
+    width: 100%;
+    text-align: center;
+  }
+}
+.concepts__conceptsList {
+  padding: 0;
+}
+.conceptsList__item {
+  height: 25px;
+  @extend .techList__itemTechList;
+  padding-left: 0;
+}
+.item__refer {
+  font: {
+    size: (18em / 16);
+    weight: 600;
+    family: $stackEuro;
+  }
+  color: $sweetbrown;
+  &:hover {
+    @extend .item__refer;
+    color: #fff;
+  }
+  &:active {
+    @extend .item__refer;
+  }
+  &:focus {
+    @extend .item__refer;
+  }
+}
+/* Tools' list */
+.skills__tools {
+  @extend .skills__techno;
+  @media (max-width: 449px) {
+    width: 85%;
+    margin: 0 auto;
+  }
+}
+.tools__title {
+  @extend .techno__title;
+}
+.tools__toolsList {
+  @extend .techno__techList;
+}
+.toolsList__itemToolsList {
+  @extend .techList__itemTechList;
+}
+@each $tool, $height, $width, $x, $y, $left in 
+(gulp, 25, 11, -125, 0, 8),
+(git, 25, 26, -136, 0, 0),
+(sass, 25, 30, -162, 0, -5),
+(pug, 25, 37, -198, 0, -10),
+(bootstrap, 25, 25, -236, 0, 0),
+(photoshop, 25, 25, -262, 0, 0),
+(bable, 25, 64, -286, 0, -40),
+(mocha, 25, 22, -352, 0, 0) {
+  .toolsList__itemToolsList-icon_#{$tool}:before {
+    content: "";
+    position: absolute;
+    height: #{$height}px;
+    width: #{$width}px;
+    top: 0;
+    left: #{$left}px; 
+    background: url('https://lh3.googleusercontent.com/sZzonbc1W4q9_OqaqZM8G0bmgvc7qat5EiJNIbdcKfM-vh0lpKkFLGCjzDQXWzYScgjnJsmzQPlR7TiZuPhAV6A2Isp33_Lqqf9MO2sXl3DoqKDv5G4Giu9qiE7LEYX2ZXXGURGZJFD_YMX1yxH43--5yxpaXOWuWNGV2ufJnR0snPzG7gE6ABtuDVrLLl1UNlFNgiVYnKSHUodavUYmqQDlbDQayOYnELwK0qL8ZQ1AtLrIIhR2giKNCuVqfD1hjtznOyxDVdge0KBdx9qbyTypidZ8ci31SJh19rRHt5K5fU63SNGCoDY0a4lvQhfKVTojoUY9mTmUBaJBArcPYCD0nhmH2ylM6Ar2OrBNo_Jhhu4PKXU9QzrwBfnHl-6CxQLXTnFo7lb2zrhoiXoUQeoIfiM-zfh7zcyaInNlnI_3qqtdqhAlQF1deUQmx7tIDIz5I2Zp64GghHYaNpDrApf5pg5AamJoqnLaFt846Pf5l9ujjb14XTc43ewqyE6QQiD8S8I1EA3VlbGGcJU90u3oxhFmJeopgGOvjaCOofbv4U-6xzJDhYigpBCQzu_mNrfc4iwHl-qtrz87nkGGlavVA5Ip70CIzhQklVOSMwmtZ7E=w374-h25-no') no-repeat #{$x}px #{$y}px;
+  }
+}
+.itemToolsList__text {
+  @extend .itemTechList__text;
+}
+/*******
+
+ END SKILLS section
+
+*******/

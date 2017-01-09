@@ -1,0 +1,69 @@
+/*******
+
+ HOBBIES section
+
+*******/
+#hobbies {
+  background: $palegreen;
+  width: 100%;
+  padding: 20px 0 50px;
+  color: $darkgreen;
+  position: relative;
+  &::after {
+   @include flagTo($palegreen);  
+  }
+}
+.hobbies {
+  justify-content: space-between;
+  @media (max-width: 768px) {
+     @extand .portfolio__works;
+  }
+  & .hobbies__hobby {
+    width: 27%;
+    margin-top: 60px;
+    @media (max-width: 989px){
+      width: 40%;
+    }
+    &:last-child {
+      @media (max-width: 989px) {
+        width: 70%;
+        margin: 0 auto 20px;
+      } 
+    }
+    @media (max-width: 768px) {
+     width: 70%;
+     margin: 20px auto 0;
+    }
+  }
+}
+.hobbies__title {
+  width: 100%;
+  margin: 0 auto;
+}
+
+@each $hobby, $width, $x, $y in 
+(drawing, 140, 0, 0),
+(ukulele, 289, -140, 25),
+(languages, 192, -431, 25){
+  .hobby__img-#{$hobby} {
+    background: url("https://lh3.googleusercontent.com/NV3NhJjAs98Hky8mqXlBdTFsBYQzltwjcSdrUC3gSOwj-uRUswV0Phlwt8mdwqLz6yMNqt4pu1Cm39K8Q7r47M1Z8NLAShTS3mzKSWKclEht28l_zw8H8Z8dKhQGGnUMrHzY2s4gWYwm0Lm_wfuE5JENm0JqU-Ds9LSTryAIkivgAOpGqRLJHudaPmxF7Dqhl5z5B0tLa6uqZFz3L2hh1Gn_MU8M8e-eAA2f0-pkBPdjglfglOLRtRmYZF0rh4Jmkw5hB--XHbBczIm2jdrAswRJIbaUW8XOywwLN1cfyd6TaBuYY-_aN9MKs28HlCfmSi13bk3X7sV4JomFo2W-fVLH9QWGJW4KPzTPgDfRk9NVyfsIywVfxNc3tT2p-_QkqzF5VVLMZJXE_7PhE5zZA1qaqKdrraXjEI0isN9vwu-kzkEKi0Xq9Nw4b41eChf3Pv9KkCSkv_bmv8iKVmUqOHSDMIq91yGJCJtCy1wtHc46d-7mXGTxnQlR7DiXWJtbZzbxZoENqWJ3Ul_EUEkYM5R1blVyHRQ5Qpy-px0m00iub1IMZdAuZn0hwP8mcD-vtzkrsnVK02KUgBoP4D8eE9iYzt2B59p1DMcVZd1JigqNbdxtenA=w640-h200-no") no-repeat #{$x}px #{$y}px;
+    height: 200px;
+    width: #{$width}px;
+    margin: 0 auto;
+  }
+}
+.hobby__title {
+  font: {
+    family: $stackEuro;
+    size: (36em / 24);
+    weight: bold;
+  }
+}
+.hobby__paragraph {
+  font-weight: 500;
+}
+/*******
+
+ END HOBBIES section
+
+*******/
