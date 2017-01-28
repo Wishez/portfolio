@@ -1,0 +1,40 @@
+/* Socials profiles */
+.connect__socials {
+  width: 100%;
+  @media(max-width: 768px) {
+    flex-direction: column;
+  }
+}
+.socials__contact {
+  width: 33%;
+  margin-top: 50px;
+  list-style: none;
+  position: relative;
+  @each $contact, $offset in 
+  (first-child, 38),
+  (nth-child(2), 17),
+  (last-child, 10) {
+    &:#{$contact} {
+      right: #{$offset}px;    
+    }      
+  }
+  @media(max-width: 768px) {
+    width: 50%;
+    margin: 20px auto 0;
+    text-align: left;
+    @each $contact, $offset in 
+  (first-child, 0),
+  (nth-child(2), 0),
+  (last-child, 0) {
+    &:#{$contact} {
+      right: #{$offset}px;    
+    }      
+  }
+  }
+}
+.socials__contact:nth-child(2) .cover__icon {
+  margin-right: 13px;
+}
+.cover__icon {
+  margin-right: 10px;
+}

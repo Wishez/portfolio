@@ -1,0 +1,26 @@
+.concepts__conceptsList {
+  padding: 0;
+}
+.conceptsList__item {
+  height: 25px;
+  @extend .techList__itemTechList;
+  padding-left: 0;
+}
+.item__refer {
+  font: {
+    size: (18em / 16);
+    weight: 600;
+    family: $stackEuro;
+  }
+  color: $sweetbrown;
+  &:hover {
+    @extend .item__refer;
+    color: #fff;
+  }
+  &:active {
+    @extend .item__refer;
+  }
+  &:focus {
+    @extend .item__refer;
+  }
+}

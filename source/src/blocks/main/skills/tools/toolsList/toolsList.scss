@@ -1,0 +1,28 @@
+.tools__toolsList {
+  @extend .techno__techList;
+}
+.toolsList__itemToolsList {
+  @extend .techList__itemTechList;
+}
+@each $tool, $height, $width, $x, $y, $left in 
+(gulp, 25, 11, -125, 0, 8),
+(git, 25, 26, -136, 0, 0),
+(sass, 25, 30, -162, 0, -5),
+(pug, 25, 37, -198, 0, -10),
+(bootstrap, 25, 25, -236, 0, 0),
+(photoshop, 25, 25, -262, 0, 0),
+(bable, 25, 64, -286, 0, -40),
+(mocha, 25, 22, -352, 0, 0) {
+  .toolsList__itemToolsList-icon_#{$tool}:before {
+    content: "";
+    position: absolute;
+    height: #{$height}px;
+    width: #{$width}px;
+    top: 0;
+    left: #{$left}px; 
+    background: url('../img/sprite.png') no-repeat #{$x}px #{$y}px;
+  }
+}
+.itemToolsList__text {
+  @extend .itemTechList__text;
+}
