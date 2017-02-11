@@ -1,0 +1,93 @@
+/*******
+
+ Custom
+
+*******/
+/* Variables, fonts, mixins */
+$stackEuro: 'Eurofurence', monospace;
+$stackFoo: 'KG Second Chances', cursive;
+$ghostblack: hsla(0, 0, 18, .9);
+$black: #000;
+$ghostcyen: hsla(184, 100, 62, .9);
+$sweetred: hsla(357, 73, 50, .9);
+$sweetbrown: hsla(16, 95, 20, .9);
+$palegreen: hsla(89, 27%, 79%, .9);
+$darkgreen: hsl(89, 34%, 30%);
+$transviolet: hsla(325, 65%, 30%, 0.9);
+@mixin flagTo($color) {
+    z-index: 3;
+    content: '';
+    position: absolute;
+    left: 15%;
+    top: 100%;
+    border: 25px solid transparent;
+    border-top: 25px solid $color;
+}
+/* Commonly custom */
+body {
+  color: #fff;
+  background-image: linear-gradient(#000 2px, transparent 2px), linear-gradient(90deg, #000 2px, transparent 2px), linear-gradient(rgba(0, 0, 0, .3) 1px, transparent 1px), linear-gradient(90deg, rgba(0, 0, 0, .3) 1px, transparent 1px);
+  background-size: 100px 100px, 100px 100px, 20px 20px, 20px 20px;
+  background-position: -2px -2px, -2px -2px, -1px -1px, -1px -1px;
+  font: {
+    size: 16px;
+    family: $stackEuro;
+  }
+  line-height: 145%;
+  word-break: break-word;
+  font-size-adjust: 100%;
+  hyphens: auto;
+  -webkit-hyphens-before: 2;
+  -webkit-hyphens-after: 3;
+  hyphens-lines: 3;
+}
+h1{
+  font-family: $stackFoo;  
+}
+h2 {
+font: {
+    family: $stackFoo;
+    size: (36em / 16);
+    weight: 500;
+  }
+}
+h3 {
+  font: {
+    famlily: $stackEuro;
+    size: (24em / 16);
+    weight: 500;
+  }
+}
+a {
+  color: #fff;
+  &:hover {
+    text-decoration: none;
+  }
+  &:active {
+    @extend a:hover;
+  }
+  &:focus {
+    @extend a:hover;
+  }
+}
+.banner .container,
+.main,
+.portfolio,
+.portfolio__works,
+.skills, .hobbies, .connect, .connect__socials {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  align-items: flex-start;
+  margin: 0 auto;
+}
+.banner .container,main__intro,
+.portfolio,
+.skills, .hobbies, .connect {
+  max-width: 1024px;
+}
+/*******
+
+ END Custom
+
+*******/
