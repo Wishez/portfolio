@@ -49,7 +49,7 @@
   }
   @media (max-width: 767px) {
     @extend .intro__heading;
-    top: -8px;
+    top: 35px;
     right: 0;
   }
 }
@@ -78,6 +78,11 @@
   font-size: 29px;
   line-height: 40px;
   color: hsl(0, 0, 87);
+}
+.introduce__paragraph {
+  @media(max-width: 768px) {
+    margin-top: 40px;
+  }
 }
 .paragraph__icon-icon_heart {
   display: inline-block;

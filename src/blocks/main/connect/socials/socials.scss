@@ -38,3 +38,30 @@
 .cover__icon {
   margin-right: 10px;
 }
+.fa-free-code-camp  {
+  position: relative;
+  right: 19px;
+  & + .cover__text {
+    @extend .fa-free-code-camp;
+    right: 20px;
+    @media(max-width: 768px) {
+    right: 0;
+    }
+  }
+  @media(max-width: 768px) {
+    right: 0;
+  }
+}
+
+.contact__cover {
+  transition: color 0.5s;
+  &:hover {
+    color: darken(#fff, 20%);  
+  }
+  &:focus {
+    color: #fff;
+  }
+  &:active {
+    color: #fff;  
+  }
+}
