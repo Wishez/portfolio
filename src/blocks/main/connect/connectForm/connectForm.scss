@@ -3,33 +3,57 @@
   width: 100%;
   margin: 15px auto;
 }
-.connectFrom__elemForm {
-  margin-top: 10px;
-  .elemForm__label {
-    opacity: 0;
-    transition: top .3s ease,opacity .3s ease;
-  }
+.elemForm {
   &-filled .elemForm__label {
     color: #aaa;
+    top: 0;
     opacity: 1;
   }
+  &-focused .elemForm__label {
+    color: #fff;
+  }
+}
+.elemForm__label {
+  opacity: 0;
+  font-size: (20em / 16);
+  position: relative;
+  top: 2em;
+  z-index: 0;
+  transition: top .3s ease,opacity .3s ease;
+  margin: 5px 0;
+  &::after {
+    content: '*';
+    color: #f0f;
+  }
+}
+label[for='phone']::after {
+  content: '';
 }
 .elemForm__item {
   background-color: transparent;
   height: 40px;
   width: 100%;
+  z-index: 1;
+  font-size: (22em / 16);
   border: 0;
   border-bottom: 1px solid #fff;
+  color: #aaa;
   &:focus {
     outline: 0;
+    color: #fff;
   }
 }
 ::-webkit-input-placeholder {
-  color: #fff;
-  font-size: (20em / 16);
+  color: #aaa;
+  font-size: (22em / 16);
 }
-:focus::-webkit-input-placeholder {
+.elemForm__item[name="message"] {
+  min-height: 110px;
 }
-#message {
-  height: 110px;
+.sendBtn__btn {
+  padding: 5%;
+  margin-top: 15px;
+  margin: 0 auto;
+  font-size: (24em / 16);
+  
 }
