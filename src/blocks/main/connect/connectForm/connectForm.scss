@@ -44,16 +44,24 @@ label[for='phone']::after {
   }
 }
 ::-webkit-input-placeholder {
-  color: #aaa;
+  color: #fff;
   font-size: (22em / 16);
 }
 .elemForm__item[name="message"] {
   min-height: 110px;
 }
 .sendBtn__btn {
-  padding: 5%;
-  margin-top: 15px;
-  margin: 0 auto;
+  display: block;
+  padding: 1% 2%;
+  margin: 15px auto 0;
   font-size: (24em / 16);
-  
+  background-color: darken($transviolet, 10%);
+  position: relative;
+  transition: top 0.5s;
+  &:hover {
+    color: currentColor;
+  }
+  &:active {
+    top: -5px;
+  }
 }

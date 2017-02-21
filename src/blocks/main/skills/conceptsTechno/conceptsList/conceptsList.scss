@@ -13,6 +13,7 @@
     family: $stackEuro;
   }
   color: $sweetbrown;
+  transition: color 1s;
   &:hover {
     @extend .item__refer;
     color: #fff;

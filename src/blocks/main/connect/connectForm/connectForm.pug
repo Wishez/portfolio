@@ -1,12 +1,12 @@
 // Connect Form
-form#connectMe.connect__connectForm.connectForm(action="#", method="get")
+form#connectMe.connect__connectForm.connectForm(method="post")
   .connectFrom__elemForm.elemForm
     label.elemForm__label(for="name") Name
     input#name.elemForm__item(
       name="name",
       placeholder="Name",
-      maxlength="33",
-      minlength="5",
+      maxlength="24",
+      minlength="2",
       required
       )
   .connectFrom__elemForm.elemForm
@@ -33,5 +33,5 @@ form#connectMe.connect__connectForm.connectForm(action="#", method="get")
       required
     )
   .connectForm__sendBtn.sendBtn
-    #send.sendBtn__btn Send
+    button#send.sendBtn__btn.btn(type="submit") Send
     

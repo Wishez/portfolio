@@ -11,21 +11,19 @@ $(document)
 
 $('#phone').mask('0 (000) 000 00 00');
 
-$(document).on('Change', '#name', function() {
-  var words = [];
-  var $this = $(this);
-  var value = $this.val().toLowerCase();
-  var result = "";
+$(document).on('input propertychange', '#connectMe', function() {
+  var $name = $('#name');
   
-  words = value.split(' ');
+  var str = $name
+    .val()
+    .toLowerCase()
+    .split(' ')
+    .map(fixWord)
+    .join(' ');
+
+  function fixWord( word ) {
+     return word.replace(word.charAt(0), word.charAt(0).toUpperCase()); 
+  }
   
-  words.forEach( function( word, i) {
-    var firstLetter = word.charAt(0).toUpperCase();
-    result += firstLetter.concat(word.slice(1));
-    if (i != words.length) {
-      result += ' ';
-    }
-  });
-  
-  $this.val(result);
+  $name.val(str);
 });

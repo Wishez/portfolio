@@ -14,6 +14,7 @@ $sweetbrown: hsla(16, 95, 20, .9);
 $palegreen: hsla(89, 27%, 79%, .9);
 $darkgreen: hsl(89, 34%, 30%);
 $transviolet: hsla(325, 65%, 30%, 0.9);
+/* Mixins */
 @mixin flagTo($color) {
     z-index: 3;
     content: '';
