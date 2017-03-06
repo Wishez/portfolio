@@ -12,7 +12,8 @@
 (bootstrap, 25, 25, -236, 0, 0),
 (photoshop, 25, 25, -262, 0, 0),
 (bable, 25, 64, -286, 0, -40),
-(mocha, 25, 22, -352, 0, 0) {
+(mocha, 25, 22, -352, 0, 0),
+(django, 25, 35, -25 * 3 + 3, -25, -8){
   .toolsList__itemToolsList-icon_#{$tool}:before {
     content: "";
     position: absolute;

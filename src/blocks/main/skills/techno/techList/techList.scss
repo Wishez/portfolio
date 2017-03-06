@@ -14,7 +14,9 @@
 (js, 25, 19, -38, 0),
 (jquery, 25, 24, -57, 0),
 (sql, 25, 20, -82, 0),
-(ruby, 25, 21, -103, 0) {
+(python, 25, 25, 0, -25),
+(react, 25, 25, -25, -25),
+(angular, 25, 23, -25 * 2, -25) {
   .techList__itemTechList-icon_#{$tech}:before {
     content: "";
     position: absolute;
