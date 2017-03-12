@@ -26,3 +26,10 @@ $(window).scroll(function() {
 });// end scroll
 
 $('body').scrollspy({target: ".navbar-fixed-top", offset: 50}); // end scrollspy
+
+$('#navbarToggle').blur(function(e) {
+  var screenWidth = window.innerWidth; 
+  if (screenWidth < 768)
+    $("#collapsable").collapse('hide');
+  
+});
