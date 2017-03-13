@@ -1,5 +1,17 @@
-/* Welcome to Compass. Use this file to write IE specific override styles.
- * Import this file using the following HTML or equivalent:
- * <!--[if IE]>
- *   <link href="/stylesheets/ie.css" media="screen, projection" rel="stylesheet" type="text/css" />
- * <![endif]--> */
+@media all and (-ms-high-contrast:none), (-ms-high-contrast:active) {
+  br {
+    display: none;
+  }
+  
+  .elemWork__img {
+      box-shadow: 0 0 15px rgba(0, 0, 0, .6); 
+  }
+  .works__elemWork {
+    width: 550px;
+    box-shadow: none;
+    background-color: transparent;
+    @media (max-width: 768px) {
+      max-height: 210px;
+    }
+  }
+}
