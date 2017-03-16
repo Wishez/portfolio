@@ -12,12 +12,14 @@
     @include flagTo($sweetred);
   }
 }
+
 .skills {
   justify-content: space-between;
   @media (max-width: 449px) {
     flex-direction: column;
   }
 }
+
 .progress {
   background-color: transparent;
   border-radius: 0;
