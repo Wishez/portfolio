@@ -21,5 +21,6 @@
     "typed.js": "^1.1.4",
     "jquery-mask-plugin": "^1.14.10",
     "tooltipster": "^4.2.2"
-  }
+  },
+  "devDependencies": {}
 }

@@ -4,6 +4,21 @@
 
 *******/
 /* Variables, fonts, mixins */
+$susy: (
+  columns: 12,
+  gutters: 1/4,
+  global-box-sizing: border-box
+);
+
+@include border-box-sizing;
+
+// Breakpoints
+$lg: 1200px;
+$md: 992px 1199px;
+$sm: 769px 991px;
+$xs: 460px 768px;
+$xxs: max-width 459px;
+
 $stackEuro: 'Eurofurence', monospace;
 $stackFoo: 'KG Second Chances', cursive;
 $ghostblack: hsla(0, 0, 18, .9);
@@ -14,7 +29,7 @@ $sweetbrown: hsla(16, 95, 20, .9);
 $palegreen: hsla(89, 27%, 79%, .9);
 $darkgreen: hsl(89, 34%, 30%);
 $transviolet: hsla(325, 65%, 30%, 0.9);
-/* Mixins */
+// Mixins
 @mixin flagTo($color) {
     z-index: 3;
     content: '';

@@ -1,0 +1,37 @@
+.techno__techList {
+  padding-left: 0;
+//  width: 100%;s
+}
+.techList__itemTechList {
+  list-style: none;
+  height: 25px;
+  margin: 20px auto 0;
+  padding: 5px 0 0 35px;
+  position: relative;
+}
+@each $tech, $height, $width, $x, $y in 
+(html, 25, 19, 0, 0),
+(css, 25, 19, -19, 0),
+(js, 25, 19, -38, 0),
+(jquery, 25, 24, -57, 0),
+(sql, 25, 20, -82, 0),
+(python, 25, 25, 0, -25),
+(react, 25, 25, -25, -25),
+(angular, 25, 23, -25 * 2, -25) {
+  .techList__itemTechList-icon_#{$tech}:before {
+    content: "";
+    position: absolute;
+    height: #{$height}px;
+    width: #{$width}px;
+    top: 0;
+    left: 0;
+    background: url('../img/sprite.png') no-repeat #{$x}px #{$y}px;
+  }
+}
+.itemTechList__text {
+  text-align: left;
+  padding-left: 10px;
+  background-color: $sweetbrown;
+  color: #e65e66;
+  font-weight: 600;
+}

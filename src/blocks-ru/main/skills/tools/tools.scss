@@ -1,0 +1,10 @@
+/* Tools' list */
+.skills__tools {
+  @extend .skills__techno;
+  @media (max-width: 449px) {
+    width: 85%;
+    margin: 0 auto;
+  }
+}
+@import "title/title.scss";
+@import "toolsList/toolsList.scss";
