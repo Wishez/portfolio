@@ -19,20 +19,17 @@
      @extand .portfolio__works;
   }
   & .hobbies__hobby {
-    width: 27%;
+    width: span(5);
     margin-top: 60px;
-    @media (max-width: 989px){
-      width: 40%;
-    }
     &:last-child {
-      @media (max-width: 989px) {
-        width: 70%;
-        margin: 0 auto 20px;
-      } 
+      width: span(8);
+      margin: 0 auto;
+      @include breakpoint(max-width 768px) {
+        width: span(12);
+      }
     }
     @media (max-width: 768px) {
-     width: 70%;
-     margin: 20px auto 0;
+      width: span(12);
     }
   }
 }

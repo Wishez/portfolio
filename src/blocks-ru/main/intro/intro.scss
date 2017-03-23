@@ -13,14 +13,14 @@
   &::after {
     @include flagTo($ghostblack);
   }
-  @media (max-width: 767px) {
+  @include breakpoint($xs) {
     padding: 75px 0;
   }
 }
 .intro__heading {
   @include span(6);
-  @media (max-width: 767px) {
-    text-align: center;
+  @include breakpoint($xs) {
+   text-align: center;
   }
 }
 .intro__introduce {
@@ -28,6 +28,12 @@
   position: relative;
   top: -30px;
   text-align: right;
+}
+.intro__heading, .intro__introduce {
+  @include breakpoint(max-width 768px) {
+    @include span(12);
+    text-align: center;
+  }
 }
 
 .heading__greet {
@@ -38,6 +44,9 @@
   font-size: (80em / 16);
   margin: 0;
   display: inline-block;
+  @include breakpoint(max-width 768px) {
+   display: block;
+  }
 }
 .heading__and {
   color: hsl(0, 0, 61);
@@ -45,6 +54,10 @@
   font-size: (60em / 16); 
   position: relative;
   left: calc(100% - 309px);
+  line-height: 140%;
+  @include breakpoint(max-width 768px) {
+    left: 0;
+  }
 }
 .intro__myFace {
   margin: 50px auto 0;
@@ -99,10 +112,15 @@
 }
 /* Typed.js styles */
 .activity {
-  width: span(6);
+  width: span(10);
   margin: 0 auto;
-  font-size: (40em / 16);
+  font-size: (30em / 16);
   line-height: 140%;
+  text-align: center;
+  @include breakpoint($xxs) {
+    width: span(12);
+    font-size: (24em / 16);
+  }
 }
 .typed-cursor{
     opacity: 1;
