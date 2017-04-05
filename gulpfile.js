@@ -24,21 +24,24 @@ build: { //Тут мы укажем куда складывать готовые
     js: 'build/js/',
     css: 'build/css/',
     img: 'build/img/',
-    fonts: 'build/fonts/'
+    fonts: 'build/fonts/',
+    scriptsPy: 'build/cgi-bin/'
 },
 src: { //Пути откуда брать исходники
     html: 'src/*.pug', //Синтаксис src/*.html говорит gulp что мы хотим взять все файлы с расширением .html
     js: 'src/js/*.js',//В стилях и скриптах нам понадобятся только main файлы
     style: 'src/scss/*.scss',
     img: 'src/img/**/*.*', //Синтаксис img/**/*.* означает - взять все файлы всех расширений из папки и из вложенных каталогов
-    fonts: 'src/fonts/**/*.*'
+    fonts: 'src/fonts/**/*.*',
+    scriptsPy: 'src/cgi-bin/**/*.py' 
 },
 watch: { //Тут мы укажем, за изменением каких файлов мы хотим наблюдать
     html: 'src/**/*.pug',
     js: 'src/**/*.js',
     style: 'src/**/*.scss',
     image: 'src/img/**/*.*',
-    fonts: 'src/fonts/**/*.*'
+    fonts: 'src/fonts/**/*.*',
+    scriptsPy: 'src/cgi-bin/**/*.py'
 },
 clean: './build'
 };
@@ -111,12 +114,18 @@ gulp.task('fonts', function() {
         .pipe(gulp.dest(path.build.fonts))
 });
 
+gulp.task('cgi', function() {
+  gulp.src(path.src.scriptsPy)
+    .pipe(gulp.dest(path.build.scriptsPy))
+});
+
 gulp.task('build', [
     'html',
     'js',
     'style',
     'fonts',
-    'image'
+    'image',
+    'cgi'
 ]);
 
 gulp.task('watch', function() {
@@ -134,6 +143,9 @@ gulp.task('watch', function() {
     });
     watch([path.watch.fonts], function(event, cb){
         gulp.start('fonts');
+    });
+    watch([path.watch.scriptsPy], function(event, cb){
+        gulp.start('cgi');
     });
 });
 
