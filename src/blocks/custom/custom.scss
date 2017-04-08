@@ -21,6 +21,7 @@ $xxs: max-width 459px;
 
 $stackEuro: 'Eurofurence', monospace;
 $stackFoo: 'KG Second Chances', cursive;
+$stackRussoOne: 'RussoOne', cursive;
 $ghostblack: hsla(0, 0, 18, .9);
 $black: #000;
 $ghostcyen: hsla(184, 100, 62, .9);
@@ -57,22 +58,18 @@ body {
   -webkit-hyphens-after: 3;
   hyphens-lines: 3;
 }
-h1{
-  font-family: $stackFoo;  
+
+h1, h2, h3{
+  font-family: $stackRussoOne;  
+}
+h2, h3 {
+  font-weight: 500;
 }
 h2 {
-font: {
-    family: $stackFoo;
-    size: (36em / 16);
-    weight: 500;
-  }
+  font-size: (36em / 16);
 }
 h3 {
-  font: {
-    famlily: $stackEuro;
-    size: (24em / 16);
-    weight: 500;
-  }
+  font-size: (24em / 16);
 }
 a {
   color: #fff;

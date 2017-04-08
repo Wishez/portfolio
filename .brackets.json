@@ -1,0 +1,9 @@
+{
+    "jscodehints.detectedExclusions": [
+        "C:/Users/rory_/dev/portfolio/src/blocks-ru/main/connect/connect.js",
+        "C:/Users/rory_/dev/portfolio/src/blocks-ru/main/intro/intro.js",
+        "C:/Users/rory_/dev/portfolio/bower_components/jquery/src/core/init.js",
+        "C:/Users/rory_/dev/portfolio/bower_components/jquery/src/effects/animatedSelector.js",
+        "C:/Users/rory_/dev/portfolio/bower_components/jquery/src/effects/Tween.js"
+    ]
+}

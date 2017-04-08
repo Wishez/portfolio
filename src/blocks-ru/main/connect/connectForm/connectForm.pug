@@ -1,37 +1,16 @@
 // Connect Form
-form#connectMe.connect__connectForm.connectForm(action="/cgi-bin/send_mail.py")
-  .connectFrom__elemForm.elemForm
-    label.elemForm__label(for="name") Имя
-    input#name.elemForm__item(
-      name="name",
-      placeholder="Имя",
-      maxlength="24",
-      minlength="2",
-      required
-      )
-  .connectFrom__elemForm.elemForm
-    label.elemForm__label(for="email") Email
-    input#email.elemForm__item(
-      name="email",
-      placeholder="Email",
-      maxlenght="40",
-      minlength="10",
-      required
-    )
-  .connectFrom__elemForm.elemForm
-    label.elemForm__label(for="phone") Телефон
-    input#phone.elemForm__item(
-      name="phone",
-      placeholder="Телефон"
-    )
-  .connectFrom__elemForm.elemForm
-    label.elemForm__label(for="message") Сообщение
-    textarea#message.yourName.elemForm__item(
-      name="message",
-      placeholder="Сообщение",
-      maxlength="255",
-      required
-    )
-  .connectForm__sendBtn.sendBtn
-    button#send.sendBtn__btn.btn(type="submit") Отправить
+#formWrapper
+  form#connectMe.connect__connectForm.connectForm(
+    method='post'
+  )
+    | {% csrf_token %}
+    // Fields
+    | {% for field in form %}
+    .connectFrom__elemForm.elemForm
+      | {{ field.label_tag }}
+      | {{ field }}
+      | {{ field.errors }}
+    | {% endfor %}
+    .connectForm__sendBtn.sendBtn
+      button#send.sendBtn__btn.btn(type="submit") Отправить
     

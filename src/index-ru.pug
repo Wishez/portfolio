@@ -1,60 +1,12 @@
-doctype
-html.no-js(lang="ru")
-head
-  meta(charset="UTF-8")
-  meta(
-    name="viewport",
-    content="width=device-width, initial-scale=1.0"
-  )
-  meta(
-    http-equive="X-UA-Compatible",
-    content="IE=edge"
-  )
-  title Filipp Zhuravlev
-  link(
-    rel="stylesheet",
-    href="css/main-ru.css",
-    media="none",
-    onload="if (media !== 'all') media='all';"
-  )
-  <!--[if IE]>
-    <link href="/css/ie9.css" media="all" rel="stylesheet" type="text/css" />
-  <![endif]-->
+| {% extends 'base.html' %}
 
-  <!--[if lt IE 9]>
-    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js>
-    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js">
-  <![endif]-->
-  script(href="js/modernizr.min.js", async)
-body
-  // Header
-  include blocks-ru/header/header.pug
-  // Main Content
-  include blocks-ru/main/main.pug
-  
-  script(src="js/main.js", async)
-link(
-  href="/css/screen.css", 
-  media="none",
-  rel="stylesheet",
-  onload="if(media != 'screen') media='screen';"
-)
+| {% block title %}
+title Филипп Журавлёв
+| {% endblock %}
 
-link( 
-  href="/css/print.css",
-  media="none",
-  rel="stylesheet",
-  type="text/css",
-  onload="if(media != 'print') media='print';"
-)
-link(
-  rel="icon",
-  type="image/png",
-  href="/img/my_face.png"
-)
-link(
-    rel="stylesheet",
-    href="css/ie.css",
-    media="none",
-    onload="if(media != 'all') media='all';"
-)
+| {% block content %}
+// Header
+include blocks-ru/header/header.pug
+// Main Content
+include blocks-ru/main/main.pug
+| {% endblock %}

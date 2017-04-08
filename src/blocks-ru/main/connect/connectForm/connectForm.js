@@ -9,10 +9,10 @@ $(document)
     $(this).removeClass('elemForm-focused');
   });
 
-$('#phone').mask('0 (000) 000 00 00');
+$('#id_phone').mask('0 (000) 000 00 00');
 
 $(document).on('input propertychange', '#connectMe', function() {
-  var $name = $('#name');
+  var $name = $('#id_name');
   
   var str = $name
     .val()
