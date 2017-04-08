@@ -17,7 +17,7 @@
 (function( global ) {
 $(function () {
   //= ../blocks/header/header.js
-  //= ../blocks/main/main.js
+  //= ../blocks-ru/main/main.js
 });//end ready
   
 })( window );
