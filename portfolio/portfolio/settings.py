@@ -25,7 +25,7 @@ SECRET_KEY = 'vj#v!e5dc6+b2t0(o#%uq9d=*e*&efbnz52lw5&9bxhp+7v@#8'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['localhost']
 
 
 # Application definition
@@ -128,6 +128,6 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.10/howto/static-files/
 
 STATIC_URL = '/static/'
-STATIC_ROOT = 'C:/Users/rory_/django-projects/static'
+STATIC_ROOT = 'C:/Users/rory_/dev/portfolio/portfolio/static'
 MEDIA_URL = '/media/'
-MEDIA_ROOT = 'C:/Users/rory_/django-projects/media'
+MEDIA_ROOT = 'C:/Users/rory_/dev/portfolio/portfolio/media'
