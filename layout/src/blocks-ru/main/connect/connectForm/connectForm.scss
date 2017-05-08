@@ -19,9 +19,9 @@
       content: '*';
       color: #f0f;
     }
-  }
-  & label[for='phone']::after {
-    content: '';
+    &[for='phone']::after {
+      content: '';
+    }
   }
   &-filled label {
     color: #aaa;

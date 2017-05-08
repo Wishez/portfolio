@@ -73,8 +73,8 @@ TEMPLATES = [
 WSGI_APPLICATION = 'portfolio.wsgi.application'
 
 
-# Database
 # https://docs.djangoproject.com/en/1.10/ref/settings/#databases
+# Database
 
 DATABASES = {
     'default': {
@@ -84,11 +84,11 @@ DATABASES = {
 }
 
 # Custom MAIL
-DEFAULT_FROM_EMAIL = 'shiningfinger@list.ru'
-SERVER_EMAIL = 'shiningfinger@list.ru'
+DEFAULT_FROM_EMAIL = 'comandos.testing@list.ru'
+SERVER_EMAIL = 'comandos.testing@list.ru'
 EMAIL_HOST = 'smtp.mail.ru'
-EMAIL_HOST_USER = 'shiningfinger@list.ru'
-EMAIL_HOST_PASSWORD = 'ruking198237645'
+EMAIL_HOST_USER = 'comandos.testing@list.ru'
+EMAIL_HOST_PASSWORD = 'demonstrationmail'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 # Password validation
@@ -128,6 +128,6 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.10/howto/static-files/
 
 STATIC_URL = '/static/'
-STATIC_ROOT = 'C:/Users/rory_/dev/portfolio/portfolio/static'
+STATIC_ROOT = 'C:/Users/Shining/django-projects/portfolio/static'
 MEDIA_URL = '/media/'
-MEDIA_ROOT = 'C:/Users/rory_/dev/portfolio/portfolio/media'
+MEDIA_ROOT = 'C:/Users/Shining/django-projects/portfolio/media'

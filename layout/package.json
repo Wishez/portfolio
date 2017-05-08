@@ -4,6 +4,9 @@
   "description": "",
   "author": "Rory Mercury",
   "license": "ISC",
+  "scripts": {
+     "install": "bower install"
+  },
   "devDependencies": {
     "gulp": "^3.9.1"
   },
