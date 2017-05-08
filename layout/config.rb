@@ -1,6 +1,7 @@
 require 'compass/import-once/activate'
 require 'susy'
 require 'breakpoint'
+require 'font-awesome-sass'
 
 http_path = "/"
 css_dir = "build/css"

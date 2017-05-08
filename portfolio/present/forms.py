@@ -8,7 +8,7 @@ class ConnectForm(forms.ModelForm):
         model = Order
         fields = ('name','email', 'phone', 'message',)
         widgets = {
-            'name' : forms.TextInput(
+            'name': forms.TextInput(
                 attrs={
                     'placeholder': 'Имя',
                     'pattern': '\D+',
@@ -35,6 +35,3 @@ class ConnectForm(forms.ModelForm):
                     'class': 'elemForm__item'
             })
         }
-
-    def send_email(self):
-        pass

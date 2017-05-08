@@ -25,7 +25,7 @@ class Work(models.Model):
 
     url = models.URLField(max_length=250, verbose_name="Ссылка на работу")
     desc = models.CharField(max_length=350, verbose_name="Описание работы")
-    img = models.ImageField(upload_to="works/", verbose_name="Изображение работы")
+    img = models.FileField(upload_to="works/", verbose_name="Изображение работы")
     added_date = models.DateTimeField(default=timezone.now)
 
     def present(self):
