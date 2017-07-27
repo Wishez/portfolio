@@ -1,0 +1,42 @@
+/*******
+
+ HOBBIES section
+
+*******/
+#hobbies {
+  background: $palegreen;
+  width: 100%;
+  padding: 20px 0 50px;
+  color: $darkgreen;
+  position: relative;
+  &::after {
+   @include flagTo($palegreen);  
+  }
+}
+.hobbies {
+  justify-content: space-between;
+  @media (max-width: 768px) {
+     @extand .portfolio__works;
+  }
+  & .hobbies__hobby {
+    width: span(5);
+    margin-top: 60px;
+    &:last-child {
+      width: span(8);
+      margin: 0 auto;
+      @include breakpoint(max-width 768px) {
+        width: span(12);
+      }
+    }
+    @media (max-width: 768px) {
+      width: span(12);
+    }
+  }
+}
+@import "title/title.scss";
+@import "hobby/hobby.scss";
+/*******
+
+ END HOBBIES section
+
+*******/

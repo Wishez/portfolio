@@ -1,0 +1,20 @@
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  br {
+    display: none;
+  }
+
+  .elemWork__img {
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.6);
+  }
+
+  .works__elemWork {
+    width: 550px;
+    box-shadow: none;
+    background-color: transparent;
+  }
+}
+@media all and (-ms-high-contrast: none) and (max-width: 768px), (-ms-high-contrast: active) and (max-width: 768px) {
+  .works__elemWork {
+    max-height: 210px;
+  }
+}

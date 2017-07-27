@@ -21,5 +21,9 @@ from django.contrib import admin
 
 urlpatterns = [
     url(r'', include('present.urls')),
+    url(r'grappelli/', include('grappelli.urls')),
     url(r'^admin/', admin.site.urls),
-] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+] 
+
+urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

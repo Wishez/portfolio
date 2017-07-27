@@ -1,0 +1,16 @@
+// Connect Form
+#formWrapper
+  form#connectMe.connect__connectForm.connectForm(
+    method='post'
+  )
+    | {% csrf_token %}
+    // Fields
+    | {% for field in form %}
+    .connectFrom__elemForm.elemForm
+      | {{ field.label_tag }}
+      | {{ field }}
+      | {{ field.errors }}
+    | {% endfor %}
+    .connectForm__sendBtn.sendBtn
+      button#send.sendBtn__btn.btn(type="submit") Отправить
+    
