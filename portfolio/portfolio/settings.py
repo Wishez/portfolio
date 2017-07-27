@@ -31,6 +31,7 @@ ALLOWED_HOSTS = ['localhost']
 # Application definition
 
 INSTALLED_APPS = [
+    'grappelli',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -84,13 +85,20 @@ DATABASES = {
 }
 
 # Custom MAIL
-DEFAULT_FROM_EMAIL = 'comandos.testing@list.ru'
-SERVER_EMAIL = 'comandos.testing@list.ru'
-EMAIL_HOST = 'smtp.mail.ru'
-EMAIL_HOST_USER = 'comandos.testing@list.ru'
-EMAIL_HOST_PASSWORD = 'demonstrationmail'
-EMAIL_PORT = 587
-EMAIL_USE_TLS = True
+# DEFAULT_FROM_EMAIL = 'comandos.testing@list.ru'
+# SERVER_EMAIL = 'comandos.testing@list.ru'
+# EMAIL_HOST = 'smtp.mail.ru'
+# EMAIL_HOST_USER = 'comandos.testing@list.ru'
+# EMAIL_HOST_PASSWORD = 'demonstrationmail'
+# EMAIL_PORT = 587
+# EMAIL_USE_TLS = True
+# EMAIL_HOST = 'localhost'
+
+EMAIL_PORT = 25
+# If either of these settings is empty, Django won't attempt authentication.
+
+EMAIL_HOST_USER = ''
+EMAIL_HOST_PASSWORD = ''
 # Password validation
 # https://docs.djangoproject.com/en/1.10/ref/settings/#auth-password-validators
 
@@ -113,7 +121,7 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/1.10/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'ru-RU'
 
 TIME_ZONE = 'UTC'
 
@@ -128,6 +136,9 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.10/howto/static-files/
 
 STATIC_URL = '/static/'
-STATIC_ROOT = 'C:/Users/Shining/django-projects/portfolio/static'
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+STATIC_DIRS = [
+    os.path.join(BASE_DIR, 'theme', 'static')
+]
 MEDIA_URL = '/media/'
-MEDIA_ROOT = 'C:/Users/Shining/django-projects/portfolio/media'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')

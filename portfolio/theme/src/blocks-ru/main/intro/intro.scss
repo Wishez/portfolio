@@ -1,0 +1,166 @@
+/*********
+
+  GREET section
+
+*********/
+/* container */
+.main__intro {
+  background-color: $ghostblack;
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+  padding: 125px 0 40px;
+  &::after {
+    @include flagTo($ghostblack);
+  }
+  @include breakpoint($xs) {
+    padding: 75px 0;
+  }
+}
+.intro__heading {
+  @include span(6);
+  padding-left: 10%;
+  @include breakpoint($md) {
+    padding-left: 5%;
+  }
+}
+
+.intro__introduce {
+  @include span(6 of last);
+  position: relative;
+  top: -30px;
+  padding-left: 15%;
+  @include breakpoint($sm) {
+     text-align: right;
+  }
+}
+.intro__heading, .intro__introduce {
+  @include breakpoint($sm) {
+    padding-left: 0;
+  }
+  @include breakpoint(max-width 768px) {
+    padding-left: 0;
+    @include span(12);
+    text-align: center;
+  }
+}
+
+.heading__greet {
+  font-size: (30em / 16);
+  color: hsl(0, 0, 53);
+}
+.heading__name {
+  font-size: (80em / 16);
+  margin: 0;
+  display: inline-block;
+  @include breakpoint(max-width 768px) {
+   display: block;
+  }
+}
+.heading__and {
+  color: hsl(0, 0, 61);
+  font-family: monospace, monospace;
+  font-size: (60em / 16); 
+  position: relative;
+  left: calc(100% - 309px);
+  line-height: 140%;
+  @include breakpoint(max-width 768px) {
+    left: 0;
+  }
+}
+.intro__myFace {
+  margin: 50px auto 0;
+  max-width: 300px;
+}
+
+.myFace__face {
+  padding-top: 100%;
+  background: url("../img/my_face.png") no-repeat center;
+  background-size: cover; 
+  box-shadow: 0 0 5px rgba(0,0,0,.9);
+}
+.paragraph {
+  font-size: 16px;
+  line-height: 40px;
+  color: hsl(0, 0, 87);
+}
+.introduce__paragraph {
+  @media(max-width: 768px) {
+    margin-top: 40px;
+  }
+}
+.paragraph__icon-icon_heart {
+  display: inline-block;
+  background: url("../img/heart_as_love.png") no-repeat;
+  background-size: cover;
+  height: 45px;
+  width: 30px;
+  margin: 0 5px;
+}
+.paragraph__text-size_sm {
+  font-size: (22em / 16);
+}
+.paragraph__text-size_md {
+  font-size: (37em / 16);
+}
+.paragraph__text-size_l {
+  font-size: (47em / 16);
+  color: #fff;
+  line-height: 50px;
+}
+.paragraph__text-size_xl {
+  font-size: (66em / 16);
+  color: hsl(184, 90, 63);
+  line-height: 55px;
+}
+.paragraph__text-weight_b {
+  font-weight: 700;
+}
+.paragraph__icon {
+  color: #fd2933;
+}
+/* Typed.js styles */
+.activity {
+  width: span(10);
+  margin: 0 auto;
+  font-size: 2.5em; 
+  line-height: 140%;
+  text-align: center;
+  min-height: 130px;
+  @include breakpoint(max-width 768px) {
+    padding: 0 17vw;
+    width: span(12);
+    min-height: 175px;
+  }
+  @include breakpoint($xxs) { 
+    padding: 0;
+    min-height: 204px;
+  }
+  
+}
+.typed-cursor {
+    opacity: 1;
+    -webkit-animation: blink 0.7s infinite;
+    -moz-animation: blink 0.7s infinite;
+    animation: blink 0.7s infinite;
+}
+@keyframes blink {
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+@-webkit-keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+@-moz-keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+/*******
+
+ END GREET section
+
+*******/
