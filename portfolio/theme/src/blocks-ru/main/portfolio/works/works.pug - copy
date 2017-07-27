@@ -1,0 +1,58 @@
+.works__elemWork
+  a.anchor(href="https://cosmeticsyou.ru")
+    img.img-responsive.img-thambnail.elemWork__img.elemWork__img-work_territorio(
+      src="/media/portfolio/img/works/cosmeticsyou.png",
+      alt="Сайт одного безымянного консультанта в орифлейм."
+    )
+.works__elemWork
+  a.anchor(href="http://smart-tiles.tmweb.ru/")
+    img.img-responsive.img-thambnail.elemWork__img.elemWork__img-work_territorio(
+      src="/media/portfolio/img/works/smart-tiles.PNG",
+      alt="Just a smart-site."
+    )
+.works__elemWork
+  a.anchor(href="http://codepen.io/ShiningFinger/full/PWMJVo/")
+    img.img-responsive.img-thambnail.elemWork__img.elemWork__img-work_territorio(
+      src="/media/portfolio/img/works/twitch-streamers.PNG",
+      alt="You want to know who striming now? Twitch API will help you with pleasure."
+    )
+.works__elemWork
+  a.anchor(href="http://codepen.io/ShiningFinger/full/XpqVeR/")
+    img.img-responsive.img-thambnail.elemWork__img.elemWork__img-work_territorio(
+      src="/media/portfolio/img/works/wiki-viwer.PNG",
+      alt="Wiki Viewer."
+    )
+.works__elemWork
+  a.anchor(href="http://codepen.io/ShiningFinger/full/MJVZdO/")
+    img.img-responsive.img-thambnail.elemWork__img.elemWork__img-work_territorio(
+      src="/media/portfolio/img/works/weather_api.png",
+      alt="Wheater in your city.."
+    )
+.works__elemWork
+  a.anchor(href="http://codepen.io/ShiningFinger/full/qRmxMv/")
+    img.img-responsive.img-thambnail.elemWork__img.elemWork__img-work_rqm(
+      src="/media/portfolio/img/works/random-quotes-machine.PNG",
+      alt="Randome Quotes Machine."
+      )
+.works__elemWork
+  a.anchor(href="https://wishez.github.io/portfolio/peaceOfShit/territorio/build/")
+    img.img-responsive.img-thambnail.elemWork__img.elemWork__img-work_territorio(
+      src="/media/portfolio/img/works/territorio.png",
+      alt="Landing page - Territorio."
+    )
+.works__elemWork
+  a.anchor(href="https://wishez.github.io/portfolio/peaceOfShit/blanq/")
+    img.img-responsive.img-thambnail.elemWork__img.elemWork__img-work_blanq(
+      src="/media/portfolio/img/works/blanq.PNG",
+      alt="Landing page - BLANQ.")
+.works__elemWork
+  a.anchor(href="https://wishez.github.io/portfolio/peaceOfShit/brodsky/")
+    img.img-responsive.img-thambnail.elemWork__img.elemWork__img-work_brodsky(
+    src="/media/portfolio/img/works/brodsky.PNG",
+    alt="Here's beautiful page about Joseph Brodsky. Follow refer!")
+.works__elemWork
+  a.anchor(href="https://wishez.github.io/portfolio/peaceOfShit/web_studio/")
+    img.img-responsive.img-thambnail.elemWork__img.elemWork__img-work_webStudio(
+    src="/media/portfolio/img/works/web_studio.jpg",
+    alt="One page of the web-studio's portfolio."
+    )

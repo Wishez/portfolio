@@ -1,0 +1,21 @@
+@each $hobby, $width, $x, $y in 
+(drawing, 140, 0, 0),
+(ukulele, 289, -140, 25),
+(languages, 192, -431, 25){
+  .hobby__img-#{$hobby} {
+    background: url("../img/hobbies-sprite.png") no-repeat #{$x}px #{$y}px;
+    height: 200px;
+    width: #{$width}px;
+    margin: 0 auto;
+  }
+}
+.hobby__title {
+  font: {
+    family: $stackEuro;
+    size: (36em / 24);
+    weight: bold;
+  }
+}
+.hobby__paragraph {
+  font-weight: 500;
+}

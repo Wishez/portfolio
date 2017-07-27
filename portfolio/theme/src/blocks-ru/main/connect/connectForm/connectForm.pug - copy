@@ -1,0 +1,32 @@
+.connectFrom__elemForm.elemForm
+    label.elemForm__label(for="name") Имя
+    input#name.elemForm__item(
+      name="name",
+      placeholder="Имя",
+      maxlength="24",
+      minlength="2",
+      required
+      )
+  .connectFrom__elemForm.elemForm
+    label.elemForm__label(for="email") Email
+    input#email.elemForm__item(
+      name="email",
+      placeholder="Email",
+      maxlenght="40",
+      minlength="10",
+      required
+    )
+  .connectFrom__elemForm.elemForm
+    label.elemForm__label(for="phone") Телефон
+    input#phone.elemForm__item(
+      name="phone",
+      placeholder="Телефон"
+    )
+  .connectFrom__elemForm.elemForm
+    label.elemForm__label(for="message") Сообщение
+    textarea#message.yourName.elemForm__item(
+      name="message",
+      placeholder="Сообщение",
+      maxlength="255",
+      required
+    )

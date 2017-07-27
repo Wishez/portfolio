@@ -1,0 +1,41 @@
+/* navigation */
+.navigation {
+  top: 28px;
+  right: 18%;
+  @media (max-width: 768px) {
+    position: static;
+    width: 100%;
+    text-align: center;
+  }
+  .navList__item {
+    font-size: (22em / 16);
+    @media (max-width: 768px) {
+      display: inline-flex;
+    }
+    @media (max-width: 449px) {
+      display: block;
+    }
+    .item__text {
+      color: #fff;
+      transition: box-shadow .5s, color .5s;
+      &:hover {
+        color: #f0f;
+        box-shadow: 2px 3px 5px #000;
+      }
+      &:focus {
+        color: #fff;
+      }
+    }
+    &-list {
+      @media (min-width: 769px) {
+        display: block;
+      }
+    }
+  }
+}
+.navigation__btnUp {
+  z-index: 10;
+  position: fixed;
+  bottom: 20px;
+  right: 50px;
+}

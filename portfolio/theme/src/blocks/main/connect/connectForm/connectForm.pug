@@ -1,0 +1,37 @@
+// Connect Form
+form#connectMe.connect__connectForm.connectForm(method="post")
+  .connectFrom__elemForm.elemForm
+    label.elemForm__label(for="name") Name
+    input#name.elemForm__item(
+      name="name",
+      placeholder="Name",
+      maxlength="24",
+      minlength="2",
+      required
+      )
+  .connectFrom__elemForm.elemForm
+    label.elemForm__label(for="email") Email Addres
+    input#email.elemForm__item(
+      name="email",
+      placeholder="Email Addres",
+      maxlenght="40",
+      minlength="10",
+      required
+    )
+  .connectFrom__elemForm.elemForm
+    label.elemForm__label(for="phone") Phone number
+    input#phone.elemForm__item(
+      name="phone",
+      placeholder="Phone number"
+    )
+  .connectFrom__elemForm.elemForm
+    label.elemForm__label(for="message") Message
+    textarea#message.yourName.elemForm__item(
+      name="message",
+      placeholder="Message",
+      maxlength="255",
+      required
+    )
+  .connectForm__sendBtn.sendBtn
+    button#send.sendBtn__btn.btn(type="submit") Send
+    
