@@ -2,422 +2,368 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6192725a-0ebe-49e1-9688-f7b6827c314b" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.brackets.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.gitignore" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/README.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/base.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/cgi-bin/hello.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/cgi-bin/send-email.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/cgi-bin/send_mail.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/css/ie.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/css/ie9.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/css/main-ru.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/css/main.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/css/print.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/css/screen.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/fonts/Eurofurence/eurof_300.eot" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/fonts/Eurofurence/eurof_300.otf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/fonts/Eurofurence/eurof_300.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/fonts/Eurofurence/eurof_300.ttf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/fonts/Eurofurence/eurof_300.woff" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/fonts/Eurofurence/eurof_bold.eot" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/fonts/Eurofurence/eurof_bold.otf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/fonts/Eurofurence/eurof_bold.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/fonts/Eurofurence/eurof_bold.ttf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/fonts/Eurofurence/eurof_bold.woff" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/fonts/Eurofurence/eurof_normal.eot" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/fonts/Eurofurence/eurof_normal.otf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/fonts/Eurofurence/eurof_normal.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/fonts/Eurofurence/eurof_normal.ttf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/fonts/Eurofurence/eurof_normal.woff" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/fonts/FontAwesome.otf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/fonts/KGSecondChances/KGSecondChancesSketch.eot" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/fonts/KGSecondChances/KGSecondChancesSketch.otf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/fonts/KGSecondChances/KGSecondChancesSketch.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/fonts/KGSecondChances/KGSecondChancesSketch.ttf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/fonts/KGSecondChances/KGSecondChancesSketch.woff" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/fonts/RussoOne/RussoOne-Regular.eot" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/fonts/RussoOne/RussoOne-Regular.otf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/fonts/RussoOne/RussoOne-Regular.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/fonts/RussoOne/RussoOne-Regular.ttf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/fonts/RussoOne/RussoOne-Regular.woff" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/fonts/font-awesome.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/fonts/font-awesome/FontAwesome.otf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/fonts/font-awesome/fontawesome-webfont.eot" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/fonts/font-awesome/fontawesome-webfont.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/fonts/font-awesome/fontawesome-webfont.ttf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/fonts/font-awesome/fontawesome-webfont.woff" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/fonts/font-awesome/fontawesome-webfont.woff2" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/fonts/fontawesome-webfont.eot" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/fonts/fontawesome-webfont.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/fonts/fontawesome-webfont.ttf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/fonts/fontawesome-webfont.woff" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/fonts/fontawesome-webfont.woff2" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/fonts/fonts.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/img/Thumbs.db" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/img/flag.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/img/heart_as_love.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/img/hobbies-sprite.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/img/my_face.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/img/sprite.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/img/star.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/img/works/blanq.PNG" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/img/works/brodsky.PNG" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/img/works/cosmeticsyou.PNG" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/img/works/random-quotes-machine.PNG" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/img/works/smart-tiles.PNG" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/img/works/territorio.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/img/works/twitch-streamers.PNG" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/img/works/weather_api.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/img/works/web_studio.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/img/works/wiki-viwer.PNG" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/index-ru.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/js/jquery.html5support.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/js/main.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/js/modernizr.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/js/modernizr.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/success.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/config.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gulpfile.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/media/portfolio/css/ie.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/media/portfolio/css/ie9.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/media/portfolio/css/main-ru.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/media/portfolio/css/main.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/media/portfolio/css/print.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/media/portfolio/css/screen.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/media/portfolio/fonts/Eurofurence/eurof_300.eot" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/media/portfolio/fonts/Eurofurence/eurof_300.otf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/media/portfolio/fonts/Eurofurence/eurof_300.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/media/portfolio/fonts/Eurofurence/eurof_300.ttf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/media/portfolio/fonts/Eurofurence/eurof_300.woff" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/media/portfolio/fonts/Eurofurence/eurof_bold.eot" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/media/portfolio/fonts/Eurofurence/eurof_bold.otf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/media/portfolio/fonts/Eurofurence/eurof_bold.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/media/portfolio/fonts/Eurofurence/eurof_bold.ttf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/media/portfolio/fonts/Eurofurence/eurof_bold.woff" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/media/portfolio/fonts/Eurofurence/eurof_normal.eot" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/media/portfolio/fonts/Eurofurence/eurof_normal.otf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/media/portfolio/fonts/Eurofurence/eurof_normal.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/media/portfolio/fonts/Eurofurence/eurof_normal.ttf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/media/portfolio/fonts/Eurofurence/eurof_normal.woff" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/media/portfolio/fonts/FontAwesome.otf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/media/portfolio/fonts/KGSecondChances/KGSecondChancesSketch.eot" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/media/portfolio/fonts/KGSecondChances/KGSecondChancesSketch.otf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/media/portfolio/fonts/KGSecondChances/KGSecondChancesSketch.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/media/portfolio/fonts/KGSecondChances/KGSecondChancesSketch.ttf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/media/portfolio/fonts/KGSecondChances/KGSecondChancesSketch.woff" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/media/portfolio/fonts/RussoOne/RussoOne-Regular.eot" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/media/portfolio/fonts/RussoOne/RussoOne-Regular.otf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/media/portfolio/fonts/RussoOne/RussoOne-Regular.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/media/portfolio/fonts/RussoOne/RussoOne-Regular.ttf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/media/portfolio/fonts/RussoOne/RussoOne-Regular.woff" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/media/portfolio/fonts/font-awesome.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/media/portfolio/fonts/font-awesome/FontAwesome.otf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/media/portfolio/fonts/font-awesome/fontawesome-webfont.eot" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/media/portfolio/fonts/font-awesome/fontawesome-webfont.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/media/portfolio/fonts/font-awesome/fontawesome-webfont.ttf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/media/portfolio/fonts/font-awesome/fontawesome-webfont.woff" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/media/portfolio/fonts/font-awesome/fontawesome-webfont.woff2" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/media/portfolio/fonts/fontawesome-webfont.eot" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/media/portfolio/fonts/fontawesome-webfont.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/media/portfolio/fonts/fontawesome-webfont.ttf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/media/portfolio/fonts/fontawesome-webfont.woff" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/media/portfolio/fonts/fontawesome-webfont.woff2" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/media/portfolio/fonts/fonts.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/media/portfolio/img/Thumbs.db" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/media/portfolio/img/flag.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/media/portfolio/img/heart_as_love.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/media/portfolio/img/hobbies-sprite.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/media/portfolio/img/my_face.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/media/portfolio/img/sprite.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/media/portfolio/img/star.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/media/portfolio/img/works/blanq.PNG" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/media/portfolio/img/works/brodsky.PNG" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/media/portfolio/img/works/cosmeticsyou.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/media/portfolio/img/works/random-quotes-machine.PNG" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/media/portfolio/img/works/smart-tiles.PNG" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/media/portfolio/img/works/territorio.PNG" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/media/portfolio/img/works/twitch-streamers.PNG" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/media/portfolio/img/works/weather_api.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/media/portfolio/img/works/web_studio.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/media/portfolio/img/works/wiki-viwer.PNG" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/media/portfolio/js/jquery.html5support.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/media/portfolio/js/main.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/media/portfolio/js/modernizr.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/media/portfolio/js/modernizr.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/media/works/cosmeticsyou.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/media/works/web_studio.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/package.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/base.pug" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/blocks-ru/header/header.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/blocks-ru/header/header.pug" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/blocks-ru/header/header.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/blocks-ru/header/logo/logo.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/blocks-ru/header/logo/logo.pug" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/blocks-ru/header/logo/logo.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/blocks-ru/header/navigation/navigation.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/blocks-ru/header/navigation/navigation.pug" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/blocks-ru/header/navigation/navigation.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/blocks-ru/main/connect/connect.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/blocks-ru/main/connect/connect.pug" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/blocks-ru/main/connect/connect.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/blocks-ru/main/connect/connectForm/connectForm.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/blocks-ru/main/connect/connectForm/connectForm.pug" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/blocks-ru/main/connect/connectForm/connectForm.pug - copy" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/blocks-ru/main/connect/connectForm/connectForm.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/blocks-ru/main/connect/socials/socials.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/blocks-ru/main/connect/socials/socials.pug" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/blocks-ru/main/connect/socials/socials.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/blocks-ru/main/connect/title/title.pug" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/blocks-ru/main/connect/title/title.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/blocks-ru/main/hobbies/hobbies.pug" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/blocks-ru/main/hobbies/hobbies.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/blocks-ru/main/hobbies/hobby/hobby.pug" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/blocks-ru/main/hobbies/hobby/hobby.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/blocks-ru/main/hobbies/title/title.pug" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/blocks-ru/main/hobbies/title/title.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/blocks-ru/main/intro/intro.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/blocks-ru/main/intro/intro.pug" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/blocks-ru/main/intro/intro.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/blocks-ru/main/main.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/blocks-ru/main/main.pug" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/blocks-ru/main/main.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/blocks-ru/main/portfolio/portfolio.pug" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/blocks-ru/main/portfolio/portfolio.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/blocks-ru/main/portfolio/title/title.pug" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/blocks-ru/main/portfolio/title/title.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/blocks-ru/main/portfolio/works/works.pug" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/blocks-ru/main/portfolio/works/works.pug - copy" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/blocks-ru/main/portfolio/works/works.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/blocks-ru/main/skills/conceptsTechno/conceptsList/conceptsList.pug" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/blocks-ru/main/skills/conceptsTechno/conceptsList/conceptsList.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/blocks-ru/main/skills/conceptsTechno/conceptsTechno.pug" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/blocks-ru/main/skills/conceptsTechno/conceptsTechno.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/blocks-ru/main/skills/conceptsTechno/title/title.pug" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/blocks-ru/main/skills/conceptsTechno/title/title.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/blocks-ru/main/skills/conceptsTools/conceptsTools.pug" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/blocks-ru/main/skills/conceptsTools/conceptsTools.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/blocks-ru/main/skills/skills.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/blocks-ru/main/skills/skills.pug" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/blocks-ru/main/skills/skills.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/blocks-ru/main/skills/techno/techList/techList.pug" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/blocks-ru/main/skills/techno/techList/techList.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/blocks-ru/main/skills/techno/techno.pug" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/blocks-ru/main/skills/techno/techno.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/blocks-ru/main/skills/techno/title/title.pug" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/blocks-ru/main/skills/techno/title/title.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/blocks-ru/main/skills/title/title.pug" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/blocks-ru/main/skills/title/title.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/blocks-ru/main/skills/tools/title/title.pug" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/blocks-ru/main/skills/tools/title/title.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/blocks-ru/main/skills/tools/tools.pug" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/blocks-ru/main/skills/tools/tools.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/blocks-ru/main/skills/tools/toolsList/toolsList.pug" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/blocks-ru/main/skills/tools/toolsList/toolsList.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/blocks-ru/success/success.pug" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/blocks-ru/success/success.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/blocks/custom/custom.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/blocks/custom/custom.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/blocks/header/header.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/blocks/header/header.pug" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/blocks/header/header.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/blocks/header/logo/logo.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/blocks/header/logo/logo.pug" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/blocks/header/logo/logo.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/blocks/header/navigation/navigation.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/blocks/header/navigation/navigation.pug" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/blocks/header/navigation/navigation.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/blocks/main/connect/connect.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/blocks/main/connect/connect.pug" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/blocks/main/connect/connect.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/blocks/main/connect/connectForm/connectForm.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/blocks/main/connect/connectForm/connectForm.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/blocks/main/connect/connectForm/connectForm.pug" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/blocks/main/connect/connectForm/connectForm.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/blocks/main/connect/socials/socials.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/blocks/main/connect/socials/socials.pug" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/blocks/main/connect/socials/socials.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/blocks/main/connect/title/title.pug" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/blocks/main/connect/title/title.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/blocks/main/hobbies/hobbies.pug" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/blocks/main/hobbies/hobbies.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/blocks/main/hobbies/hobby/hobby.pug" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/blocks/main/hobbies/hobby/hobby.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/blocks/main/hobbies/title/title.pug" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/blocks/main/hobbies/title/title.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/blocks/main/intro/intro.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/blocks/main/intro/intro.pug" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/blocks/main/intro/intro.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/blocks/main/main.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/blocks/main/main.pug" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/blocks/main/main.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/blocks/main/portfolio/portfolio.pug" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/blocks/main/portfolio/portfolio.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/blocks/main/portfolio/title/title.pug" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/blocks/main/portfolio/title/title.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/blocks/main/portfolio/works/works.pug" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/blocks/main/portfolio/works/works.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/blocks/main/skills/conceptsTechno/conceptsList/conceptsList.pug" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/blocks/main/skills/conceptsTechno/conceptsList/conceptsList.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/blocks/main/skills/conceptsTechno/conceptsTechno.pug" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/blocks/main/skills/conceptsTechno/conceptsTechno.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/blocks/main/skills/conceptsTechno/title/title.pug" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/blocks/main/skills/conceptsTechno/title/title.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/blocks/main/skills/conceptsTools/conceptsTools.pug" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/blocks/main/skills/conceptsTools/conceptsTools.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/blocks/main/skills/skills.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/blocks/main/skills/skills.pug" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/blocks/main/skills/skills.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/blocks/main/skills/techno/techList/techList.pug" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/blocks/main/skills/techno/techList/techList.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/blocks/main/skills/techno/techno.pug" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/blocks/main/skills/techno/techno.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/blocks/main/skills/techno/title/title.pug" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/blocks/main/skills/techno/title/title.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/blocks/main/skills/title/title.pug" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/blocks/main/skills/title/title.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/blocks/main/skills/tools/title/title.pug" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/blocks/main/skills/tools/title/title.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/blocks/main/skills/tools/tools.pug" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/blocks/main/skills/tools/tools.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/blocks/main/skills/tools/toolsList/toolsList.pug" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/blocks/main/skills/tools/toolsList/toolsList.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/cgi-bin/hello.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/cgi-bin/send_mail.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/fonts/Eurofurence/eurof_300.eot" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/fonts/Eurofurence/eurof_300.otf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/fonts/Eurofurence/eurof_300.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/fonts/Eurofurence/eurof_300.ttf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/fonts/Eurofurence/eurof_300.woff" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/fonts/Eurofurence/eurof_bold.eot" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/fonts/Eurofurence/eurof_bold.otf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/fonts/Eurofurence/eurof_bold.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/fonts/Eurofurence/eurof_bold.ttf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/fonts/Eurofurence/eurof_bold.woff" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/fonts/Eurofurence/eurof_normal.eot" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/fonts/Eurofurence/eurof_normal.otf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/fonts/Eurofurence/eurof_normal.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/fonts/Eurofurence/eurof_normal.ttf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/fonts/Eurofurence/eurof_normal.woff" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/fonts/FontAwesome.otf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/fonts/KGSecondChances/KGSecondChancesSketch.eot" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/fonts/KGSecondChances/KGSecondChancesSketch.otf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/fonts/KGSecondChances/KGSecondChancesSketch.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/fonts/KGSecondChances/KGSecondChancesSketch.ttf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/fonts/KGSecondChances/KGSecondChancesSketch.woff" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/fonts/RussoOne/RussoOne-Regular.eot" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/fonts/RussoOne/RussoOne-Regular.otf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/fonts/RussoOne/RussoOne-Regular.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/fonts/RussoOne/RussoOne-Regular.ttf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/fonts/RussoOne/RussoOne-Regular.woff" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/fonts/font-awesome.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/fonts/font-awesome/FontAwesome.otf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/fonts/font-awesome/fontawesome-webfont.eot" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/fonts/font-awesome/fontawesome-webfont.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/fonts/font-awesome/fontawesome-webfont.ttf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/fonts/font-awesome/fontawesome-webfont.woff" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/fonts/font-awesome/fontawesome-webfont.woff2" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/fonts/fontawesome-webfont.eot" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/fonts/fontawesome-webfont.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/fonts/fontawesome-webfont.ttf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/fonts/fontawesome-webfont.woff" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/fonts/fontawesome-webfont.woff2" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/fonts/fonts.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/img/Thumbs.db" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/img/flag.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/img/heart_as_love.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/img/hobbies-sprite.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/img/my_face.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/img/sprite.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/img/star.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/img/works/blanq.PNG" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/img/works/brodsky.PNG" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/img/works/cosmeticsyou.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/img/works/random-quotes-machine.PNG" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/img/works/smart-tiles.PNG" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/img/works/territorio.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/img/works/twitch-streamers.PNG" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/img/works/weather_api.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/img/works/web_studio.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/img/works/wiki-viwer.PNG" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/index-ru.pug" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/index.pug" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/js/jquery.html5support.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/js/main.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/js/modernizr.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/js/modernizr.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/scss/ie.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/scss/ie9.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/scss/main-ru.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/scss/main.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/scss/print.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/scss/screen.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/success.pug" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/admin/css/base.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/admin/css/changelists.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/admin/css/dashboard.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/admin/css/fonts.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/admin/css/forms.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/admin/css/login.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/admin/css/rtl.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/admin/css/widgets.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/admin/fonts/LICENSE.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/admin/fonts/README.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/admin/fonts/Roboto-Bold-webfont.woff" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/admin/fonts/Roboto-Light-webfont.woff" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/admin/fonts/Roboto-Regular-webfont.woff" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/admin/img/LICENSE" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/admin/img/README.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/admin/img/calendar-icons.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/admin/img/gis/move_vertex_off.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/admin/img/gis/move_vertex_on.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/admin/img/icon-addlink.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/admin/img/icon-alert.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/admin/img/icon-calendar.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/admin/img/icon-changelink.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/admin/img/icon-clock.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/admin/img/icon-deletelink.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/admin/img/icon-no.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/admin/img/icon-unknown-alt.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/admin/img/icon-unknown.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/admin/img/icon-yes.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/admin/img/inline-delete.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/admin/img/search.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/admin/img/selector-icons.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/admin/img/sorting-icons.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/admin/img/tooltag-add.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/admin/img/tooltag-arrowright.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/admin/js/SelectBox.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/admin/js/SelectFilter2.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/admin/js/actions.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/admin/js/actions.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/admin/js/admin/DateTimeShortcuts.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/admin/js/admin/RelatedObjectLookups.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/admin/js/calendar.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/admin/js/cancel.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/admin/js/change_form.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/admin/js/collapse.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/admin/js/collapse.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/admin/js/core.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/admin/js/inlines.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/admin/js/inlines.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/admin/js/jquery.init.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/admin/js/popup_response.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/admin/js/prepopulate.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/admin/js/prepopulate.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/admin/js/prepopulate_init.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/admin/js/timeparse.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/admin/js/urlify.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/admin/js/vendor/jquery/LICENSE-JQUERY.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/admin/js/vendor/jquery/jquery.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/admin/js/vendor/jquery/jquery.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/admin/js/vendor/xregexp/LICENSE-XREGEXP.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/admin/js/vendor/xregexp/xregexp.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/admin/js/vendor/xregexp/xregexp.min.js" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/portfolio/portfolio/settings.py" afterPath="$PROJECT_DIR$/portfolio/portfolio/settings.py" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/layout/.brackets.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/layout/.gitignore" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/layout/README.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/layout/bower.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/layout/build/404.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/layout/build/base.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/layout/build/cgi-bin/hello.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/layout/build/cgi-bin/send-email.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/layout/build/cgi-bin/send_mail.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/layout/build/css/ie.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/layout/build/css/ie9.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/layout/build/css/main-ru.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/layout/build/css/main.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/layout/build/css/print.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/layout/build/css/screen.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/layout/build/fonts/Eurofurence/eurof_300.eot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/layout/build/fonts/Eurofurence/eurof_300.otf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/layout/build/fonts/Eurofurence/eurof_300.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/layout/build/fonts/Eurofurence/eurof_300.ttf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/layout/build/fonts/Eurofurence/eurof_300.woff" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/layout/build/fonts/Eurofurence/eurof_bold.eot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/layout/build/fonts/Eurofurence/eurof_bold.otf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/layout/build/fonts/Eurofurence/eurof_bold.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/layout/build/fonts/Eurofurence/eurof_bold.ttf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/layout/build/fonts/Eurofurence/eurof_bold.woff" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/layout/build/fonts/Eurofurence/eurof_normal.eot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/layout/build/fonts/Eurofurence/eurof_normal.otf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/layout/build/fonts/Eurofurence/eurof_normal.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/layout/build/fonts/Eurofurence/eurof_normal.ttf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/layout/build/fonts/Eurofurence/eurof_normal.woff" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/layout/build/fonts/FontAwesome.otf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/layout/build/fonts/KGSecondChances/KGSecondChancesSketch.eot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/layout/build/fonts/KGSecondChances/KGSecondChancesSketch.otf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/layout/build/fonts/KGSecondChances/KGSecondChancesSketch.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/layout/build/fonts/KGSecondChances/KGSecondChancesSketch.ttf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/layout/build/fonts/KGSecondChances/KGSecondChancesSketch.woff" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/layout/build/fonts/RussoOne/RussoOne-Regular.eot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/layout/build/fonts/RussoOne/RussoOne-Regular.otf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/layout/build/fonts/RussoOne/RussoOne-Regular.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/layout/build/fonts/RussoOne/RussoOne-Regular.ttf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/layout/build/fonts/RussoOne/RussoOne-Regular.woff" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/layout/build/fonts/font-awesome.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/layout/build/fonts/font-awesome/FontAwesome.otf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/layout/build/fonts/font-awesome/fontawesome-webfont.eot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/layout/build/fonts/font-awesome/fontawesome-webfont.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/layout/build/fonts/font-awesome/fontawesome-webfont.ttf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/layout/build/fonts/font-awesome/fontawesome-webfont.woff" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/layout/build/fonts/font-awesome/fontawesome-webfont.woff2" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/layout/build/fonts/fontawesome-webfont.eot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/layout/build/fonts/fontawesome-webfont.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/layout/build/fonts/fontawesome-webfont.ttf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/layout/build/fonts/fontawesome-webfont.woff" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/layout/build/fonts/fontawesome-webfont.woff2" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/layout/build/fonts/fonts.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/layout/build/img/Thumbs.db" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/layout/build/img/ajax-loader.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/layout/build/img/flag.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/layout/build/img/heart_as_love.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/layout/build/img/hobbies-sprite.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/layout/build/img/my_face.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/layout/build/img/sprite.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/layout/build/img/star.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/layout/build/img/works/blanq.PNG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/layout/build/img/works/brodsky.PNG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/layout/build/img/works/cmt.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/layout/build/img/works/cosmeticsyou.PNG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/layout/build/img/works/random-quotes-machine.PNG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/layout/build/img/works/smart-tiles.PNG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/layout/build/img/works/territorio.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/layout/build/img/works/twitch-streamers.PNG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/layout/build/img/works/weather_api.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/layout/build/img/works/web_studio.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/layout/build/img/works/wiki-viwer.PNG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/layout/build/index-ru.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/layout/build/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/layout/build/js/jquery.html5support.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/layout/build/js/main.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/layout/build/js/modernizr.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/layout/build/js/modernizr.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/layout/build/success.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/layout/config.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/layout/gulpfile.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/layout/package.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/layout/src/404.pug" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/layout/src/base.pug" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/layout/src/blocks-ru/header/header.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/layout/src/blocks-ru/header/header.pug" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/layout/src/blocks-ru/header/header.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/layout/src/blocks-ru/header/logo/logo.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/layout/src/blocks-ru/header/logo/logo.pug" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/layout/src/blocks-ru/header/logo/logo.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/layout/src/blocks-ru/header/navigation/navigation.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/layout/src/blocks-ru/header/navigation/navigation.pug" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/layout/src/blocks-ru/header/navigation/navigation.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/layout/src/blocks-ru/main/connect/connect.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/layout/src/blocks-ru/main/connect/connect.pug" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/layout/src/blocks-ru/main/connect/connect.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/layout/src/blocks-ru/main/connect/connectForm/connectForm.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/layout/src/blocks-ru/main/connect/connectForm/connectForm.pug" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/layout/src/blocks-ru/main/connect/connectForm/connectForm.pug - copy" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/layout/src/blocks-ru/main/connect/connectForm/connectForm.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/layout/src/blocks-ru/main/connect/socials/socials.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/layout/src/blocks-ru/main/connect/socials/socials.pug" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/layout/src/blocks-ru/main/connect/socials/socials.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/layout/src/blocks-ru/main/connect/title/title.pug" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/layout/src/blocks-ru/main/connect/title/title.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/layout/src/blocks-ru/main/hobbies/hobbies.pug" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/layout/src/blocks-ru/main/hobbies/hobbies.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/layout/src/blocks-ru/main/hobbies/hobby/hobby.pug" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/layout/src/blocks-ru/main/hobbies/hobby/hobby.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/layout/src/blocks-ru/main/hobbies/title/title.pug" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/layout/src/blocks-ru/main/hobbies/title/title.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/layout/src/blocks-ru/main/intro/intro.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/layout/src/blocks-ru/main/intro/intro.pug" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/layout/src/blocks-ru/main/intro/intro.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/layout/src/blocks-ru/main/main.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/layout/src/blocks-ru/main/main.pug" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/layout/src/blocks-ru/main/main.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/layout/src/blocks-ru/main/portfolio/portfolio.pug" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/layout/src/blocks-ru/main/portfolio/portfolio.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/layout/src/blocks-ru/main/portfolio/title/title.pug" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/layout/src/blocks-ru/main/portfolio/title/title.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/layout/src/blocks-ru/main/portfolio/works/works.pug" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/layout/src/blocks-ru/main/portfolio/works/works.pug - copy" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/layout/src/blocks-ru/main/portfolio/works/works.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/layout/src/blocks-ru/main/skills/conceptsTechno/conceptsList/conceptsList.pug" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/layout/src/blocks-ru/main/skills/conceptsTechno/conceptsList/conceptsList.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/layout/src/blocks-ru/main/skills/conceptsTechno/conceptsTechno.pug" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/layout/src/blocks-ru/main/skills/conceptsTechno/conceptsTechno.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/layout/src/blocks-ru/main/skills/conceptsTechno/title/title.pug" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/layout/src/blocks-ru/main/skills/conceptsTechno/title/title.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/layout/src/blocks-ru/main/skills/conceptsTools/conceptsTools.pug" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/layout/src/blocks-ru/main/skills/conceptsTools/conceptsTools.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/layout/src/blocks-ru/main/skills/skills.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/layout/src/blocks-ru/main/skills/skills.pug" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/layout/src/blocks-ru/main/skills/skills.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/layout/src/blocks-ru/main/skills/techno/techList/techList.pug" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/layout/src/blocks-ru/main/skills/techno/techList/techList.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/layout/src/blocks-ru/main/skills/techno/techno.pug" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/layout/src/blocks-ru/main/skills/techno/techno.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/layout/src/blocks-ru/main/skills/techno/title/title.pug" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/layout/src/blocks-ru/main/skills/techno/title/title.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/layout/src/blocks-ru/main/skills/title/title.pug" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/layout/src/blocks-ru/main/skills/title/title.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/layout/src/blocks-ru/main/skills/tools/title/title.pug" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/layout/src/blocks-ru/main/skills/tools/title/title.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/layout/src/blocks-ru/main/skills/tools/tools.pug" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/layout/src/blocks-ru/main/skills/tools/tools.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/layout/src/blocks-ru/main/skills/tools/toolsList/toolsList.pug" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/layout/src/blocks-ru/main/skills/tools/toolsList/toolsList.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/layout/src/blocks-ru/success/success.pug" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/layout/src/blocks-ru/success/success.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/layout/src/blocks/custom/custom-controller.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/layout/src/blocks/custom/custom.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/layout/src/blocks/custom/custom.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/layout/src/blocks/header/header.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/layout/src/blocks/header/header.pug" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/layout/src/blocks/header/header.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/layout/src/blocks/header/logo/logo.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/layout/src/blocks/header/logo/logo.pug" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/layout/src/blocks/header/logo/logo.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/layout/src/blocks/header/navigation/navigation.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/layout/src/blocks/header/navigation/navigation.pug" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/layout/src/blocks/header/navigation/navigation.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/layout/src/blocks/main/connect/connect.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/layout/src/blocks/main/connect/connect.pug" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/layout/src/blocks/main/connect/connect.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/layout/src/blocks/main/connect/connectForm/connectForm.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/layout/src/blocks/main/connect/connectForm/connectForm.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/layout/src/blocks/main/connect/connectForm/connectForm.pug" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/layout/src/blocks/main/connect/connectForm/connectForm.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/layout/src/blocks/main/connect/socials/socials.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/layout/src/blocks/main/connect/socials/socials.pug" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/layout/src/blocks/main/connect/socials/socials.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/layout/src/blocks/main/connect/title/title.pug" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/layout/src/blocks/main/connect/title/title.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/layout/src/blocks/main/hobbies/hobbies.pug" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/layout/src/blocks/main/hobbies/hobbies.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/layout/src/blocks/main/hobbies/hobby/hobby.pug" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/layout/src/blocks/main/hobbies/hobby/hobby.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/layout/src/blocks/main/hobbies/title/title.pug" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/layout/src/blocks/main/hobbies/title/title.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/layout/src/blocks/main/intro/intro.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/layout/src/blocks/main/intro/intro.pug" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/layout/src/blocks/main/intro/intro.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/layout/src/blocks/main/main.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/layout/src/blocks/main/main.pug" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/layout/src/blocks/main/main.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/layout/src/blocks/main/portfolio/portfolio.pug" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/layout/src/blocks/main/portfolio/portfolio.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/layout/src/blocks/main/portfolio/title/title.pug" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/layout/src/blocks/main/portfolio/title/title.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/layout/src/blocks/main/portfolio/works/works.pug" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/layout/src/blocks/main/portfolio/works/works.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/layout/src/blocks/main/skills/conceptsTechno/conceptsList/conceptsList.pug" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/layout/src/blocks/main/skills/conceptsTechno/conceptsList/conceptsList.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/layout/src/blocks/main/skills/conceptsTechno/conceptsTechno.pug" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/layout/src/blocks/main/skills/conceptsTechno/conceptsTechno.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/layout/src/blocks/main/skills/conceptsTechno/title/title.pug" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/layout/src/blocks/main/skills/conceptsTechno/title/title.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/layout/src/blocks/main/skills/conceptsTools/conceptsTools.pug" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/layout/src/blocks/main/skills/conceptsTools/conceptsTools.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/layout/src/blocks/main/skills/skills.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/layout/src/blocks/main/skills/skills.pug" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/layout/src/blocks/main/skills/skills.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/layout/src/blocks/main/skills/techno/techList/techList.pug" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/layout/src/blocks/main/skills/techno/techList/techList.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/layout/src/blocks/main/skills/techno/techno.pug" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/layout/src/blocks/main/skills/techno/techno.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/layout/src/blocks/main/skills/techno/title/title.pug" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/layout/src/blocks/main/skills/techno/title/title.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/layout/src/blocks/main/skills/title/title.pug" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/layout/src/blocks/main/skills/title/title.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/layout/src/blocks/main/skills/tools/title/title.pug" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/layout/src/blocks/main/skills/tools/title/title.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/layout/src/blocks/main/skills/tools/tools.pug" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/layout/src/blocks/main/skills/tools/tools.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/layout/src/blocks/main/skills/tools/toolsList/toolsList.pug" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/layout/src/blocks/main/skills/tools/toolsList/toolsList.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/layout/src/cgi-bin/hello.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/layout/src/cgi-bin/send_mail.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/layout/src/fonts/Eurofurence/eurof_300.eot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/layout/src/fonts/Eurofurence/eurof_300.otf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/layout/src/fonts/Eurofurence/eurof_300.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/layout/src/fonts/Eurofurence/eurof_300.ttf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/layout/src/fonts/Eurofurence/eurof_300.woff" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/layout/src/fonts/Eurofurence/eurof_bold.eot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/layout/src/fonts/Eurofurence/eurof_bold.otf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/layout/src/fonts/Eurofurence/eurof_bold.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/layout/src/fonts/Eurofurence/eurof_bold.ttf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/layout/src/fonts/Eurofurence/eurof_bold.woff" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/layout/src/fonts/Eurofurence/eurof_normal.eot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/layout/src/fonts/Eurofurence/eurof_normal.otf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/layout/src/fonts/Eurofurence/eurof_normal.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/layout/src/fonts/Eurofurence/eurof_normal.ttf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/layout/src/fonts/Eurofurence/eurof_normal.woff" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/layout/src/fonts/FontAwesome.otf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/layout/src/fonts/KGSecondChances/KGSecondChancesSketch.eot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/layout/src/fonts/KGSecondChances/KGSecondChancesSketch.otf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/layout/src/fonts/KGSecondChances/KGSecondChancesSketch.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/layout/src/fonts/KGSecondChances/KGSecondChancesSketch.ttf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/layout/src/fonts/KGSecondChances/KGSecondChancesSketch.woff" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/layout/src/fonts/RussoOne/RussoOne-Regular.eot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/layout/src/fonts/RussoOne/RussoOne-Regular.otf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/layout/src/fonts/RussoOne/RussoOne-Regular.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/layout/src/fonts/RussoOne/RussoOne-Regular.ttf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/layout/src/fonts/RussoOne/RussoOne-Regular.woff" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/layout/src/fonts/font-awesome.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/layout/src/fonts/font-awesome/FontAwesome.otf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/layout/src/fonts/font-awesome/fontawesome-webfont.eot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/layout/src/fonts/font-awesome/fontawesome-webfont.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/layout/src/fonts/font-awesome/fontawesome-webfont.ttf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/layout/src/fonts/font-awesome/fontawesome-webfont.woff" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/layout/src/fonts/font-awesome/fontawesome-webfont.woff2" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/layout/src/fonts/fontawesome-webfont.eot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/layout/src/fonts/fontawesome-webfont.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/layout/src/fonts/fontawesome-webfont.ttf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/layout/src/fonts/fontawesome-webfont.woff" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/layout/src/fonts/fontawesome-webfont.woff2" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/layout/src/fonts/fonts.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/layout/src/img/Thumbs.db" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/layout/src/img/ajax-loader.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/layout/src/img/flag.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/layout/src/img/heart_as_love.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/layout/src/img/hobbies-sprite.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/layout/src/img/my_face.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/layout/src/img/sprite.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/layout/src/img/star.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/layout/src/img/works/blanq.PNG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/layout/src/img/works/brodsky.PNG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/layout/src/img/works/cmt.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/layout/src/img/works/cosmeticsyou.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/layout/src/img/works/random-quotes-machine.PNG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/layout/src/img/works/smart-tiles.PNG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/layout/src/img/works/territorio.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/layout/src/img/works/twitch-streamers.PNG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/layout/src/img/works/weather_api.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/layout/src/img/works/web_studio.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/layout/src/img/works/wiki-viwer.PNG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/layout/src/index-ru.pug" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/layout/src/index.pug" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/layout/src/js/jquery.html5support.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/layout/src/js/main.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/layout/src/js/modernizr.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/layout/src/js/modernizr.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/layout/src/scss/ie.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/layout/src/scss/ie9.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/layout/src/scss/main-ru.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/layout/src/scss/main.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/layout/src/scss/print.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/layout/src/scss/screen.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/portfolio/theme/src/blocks/main/connect/connectForm/connectForm.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/portfolio/theme/src/cgi-bin/hello.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/portfolio/theme/src/cgi-bin/send_mail.py" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/portfolio/static/portfolio/img/ajax-loader.gif" afterPath="$PROJECT_DIR$/portfolio/static/portfolio/img/ajax-loader.gif" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/portfolio/static/portfolio/img/my_face.png" afterPath="$PROJECT_DIR$/portfolio/static/portfolio/img/my_face.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/portfolio/static/portfolio/img/sprite.png" afterPath="$PROJECT_DIR$/portfolio/static/portfolio/img/sprite.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/portfolio/static/portfolio/img/star.png" afterPath="$PROJECT_DIR$/portfolio/static/portfolio/img/star.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/portfolio/static/portfolio/img/works/blanq.PNG" afterPath="$PROJECT_DIR$/portfolio/static/portfolio/img/works/blanq.PNG" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/portfolio/static/portfolio/img/works/brodsky.PNG" afterPath="$PROJECT_DIR$/portfolio/static/portfolio/img/works/brodsky.PNG" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/portfolio/present/templates/base.html" afterPath="$PROJECT_DIR$/portfolio/present/templates/base.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/portfolio/present/templates/index-ru.html" afterPath="$PROJECT_DIR$/portfolio/present/templates/index-ru.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/portfolio/present/templates/index.html" afterPath="$PROJECT_DIR$/portfolio/present/templates/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/portfolio/present/views.py" afterPath="$PROJECT_DIR$/portfolio/present/views.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/portfolio/static/portfolio/css/ie.css" afterPath="$PROJECT_DIR$/portfolio/static/portfolio/css/ie.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/portfolio/static/portfolio/css/ie9.css" afterPath="$PROJECT_DIR$/portfolio/static/portfolio/css/ie9.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/portfolio/static/portfolio/css/main-ru.css" afterPath="$PROJECT_DIR$/portfolio/static/portfolio/css/main-ru.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/portfolio/static/portfolio/css/main.css" afterPath="$PROJECT_DIR$/portfolio/static/portfolio/css/main.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/portfolio/static/portfolio/css/print.css" afterPath="$PROJECT_DIR$/portfolio/static/portfolio/css/print.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/portfolio/static/portfolio/css/screen.css" afterPath="$PROJECT_DIR$/portfolio/static/portfolio/css/screen.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/portfolio/static/portfolio/js/jquery.html5support.min.js" afterPath="$PROJECT_DIR$/portfolio/static/portfolio/js/jquery.html5support.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/portfolio/static/portfolio/js/main.js" afterPath="$PROJECT_DIR$/portfolio/static/portfolio/js/main.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/portfolio/static/portfolio/js/modernizr.js" afterPath="$PROJECT_DIR$/portfolio/static/portfolio/js/modernizr.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/portfolio/static/portfolio/js/modernizr.min.js" afterPath="$PROJECT_DIR$/portfolio/static/portfolio/js/modernizr.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/portfolio/theme/bower.json" afterPath="$PROJECT_DIR$/portfolio/theme/bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/portfolio/theme/gulpfile.js" afterPath="$PROJECT_DIR$/portfolio/theme/gulpfile.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/portfolio/theme/package.json" afterPath="$PROJECT_DIR$/portfolio/theme/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/portfolio/theme/src/base.pug" afterPath="$PROJECT_DIR$/portfolio/theme/src/base.pug" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/portfolio/theme/src/blocks-ru/header/header.js" afterPath="$PROJECT_DIR$/portfolio/theme/src/blocks-ru/header/header.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/portfolio/theme/src/blocks-ru/main/skills/conceptsTechno/conceptsList/conceptsList.pug" afterPath="$PROJECT_DIR$/portfolio/theme/src/blocks-ru/main/skills/conceptsTechno/conceptsList/conceptsList.pug" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/portfolio/theme/src/blocks-ru/main/skills/conceptsTechno/conceptsTechno.scss" afterPath="$PROJECT_DIR$/portfolio/theme/src/blocks-ru/main/skills/conceptsTechno/conceptsTechno.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/portfolio/theme/src/blocks-ru/main/skills/conceptsTools/conceptsTools.pug" afterPath="$PROJECT_DIR$/portfolio/theme/src/blocks-ru/main/skills/conceptsTools/conceptsTools.pug" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/portfolio/theme/src/blocks-ru/main/skills/skills.js" afterPath="$PROJECT_DIR$/portfolio/theme/src/blocks-ru/main/skills/skills.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/portfolio/theme/src/blocks-ru/main/skills/skills.scss" afterPath="$PROJECT_DIR$/portfolio/theme/src/blocks-ru/main/skills/skills.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/portfolio/theme/src/blocks-ru/main/skills/techno/techList/techList.pug" afterPath="$PROJECT_DIR$/portfolio/theme/src/blocks-ru/main/skills/techno/techList/techList.pug" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/portfolio/theme/src/blocks-ru/main/skills/tools/toolsList/toolsList.pug" afterPath="$PROJECT_DIR$/portfolio/theme/src/blocks-ru/main/skills/tools/toolsList/toolsList.pug" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/portfolio/theme/src/blocks/custom/custom-controller.js" afterPath="$PROJECT_DIR$/portfolio/theme/src/blocks/custom/custom-controller.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/portfolio/theme/src/blocks/custom/custom.scss" afterPath="$PROJECT_DIR$/portfolio/theme/src/blocks/custom/custom.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/portfolio/theme/src/blocks/header/header.js" afterPath="$PROJECT_DIR$/portfolio/theme/src/blocks/header/header.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/portfolio/theme/src/blocks/header/navigation/navigation.pug" afterPath="$PROJECT_DIR$/portfolio/theme/src/blocks/header/navigation/navigation.pug" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/portfolio/theme/src/blocks/main/connect/connectForm/connectForm.js" afterPath="$PROJECT_DIR$/portfolio/theme/src/blocks/main/connect/connectForm/connectForm.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/portfolio/theme/src/blocks/main/connect/connectForm/connectForm.pug" afterPath="$PROJECT_DIR$/portfolio/theme/src/blocks/main/connect/connectForm/connectForm.pug" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/portfolio/theme/src/blocks/main/connect/connectForm/connectForm.scss" afterPath="$PROJECT_DIR$/portfolio/theme/src/blocks/main/connect/connectForm/connectForm.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/portfolio/theme/src/blocks/main/connect/socials/socials.scss" afterPath="$PROJECT_DIR$/portfolio/theme/src/blocks/main/connect/socials/socials.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/portfolio/theme/src/blocks/main/connect/title/title.pug" afterPath="$PROJECT_DIR$/portfolio/theme/src/blocks/main/connect/title/title.pug" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/portfolio/theme/src/blocks/main/hobbies/hobbies.scss" afterPath="$PROJECT_DIR$/portfolio/theme/src/blocks/main/hobbies/hobbies.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/portfolio/theme/src/blocks/main/hobbies/hobby/hobby.pug" afterPath="$PROJECT_DIR$/portfolio/theme/src/blocks/main/hobbies/hobby/hobby.pug" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/portfolio/theme/src/blocks/main/hobbies/hobby/hobby.scss" afterPath="$PROJECT_DIR$/portfolio/theme/src/blocks/main/hobbies/hobby/hobby.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/portfolio/theme/src/blocks/main/hobbies/title/title.pug" afterPath="$PROJECT_DIR$/portfolio/theme/src/blocks/main/hobbies/title/title.pug" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/portfolio/theme/src/blocks/main/intro/intro.js" afterPath="$PROJECT_DIR$/portfolio/theme/src/blocks/main/intro/intro.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/portfolio/theme/src/blocks/main/intro/intro.pug" afterPath="$PROJECT_DIR$/portfolio/theme/src/blocks/main/intro/intro.pug" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/portfolio/theme/src/blocks/main/intro/intro.scss" afterPath="$PROJECT_DIR$/portfolio/theme/src/blocks/main/intro/intro.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/portfolio/theme/src/blocks/main/portfolio/title/title.pug" afterPath="$PROJECT_DIR$/portfolio/theme/src/blocks/main/portfolio/title/title.pug" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/portfolio/theme/src/blocks/main/portfolio/title/title.scss" afterPath="$PROJECT_DIR$/portfolio/theme/src/blocks/main/portfolio/title/title.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/portfolio/theme/src/blocks/main/portfolio/works/works.pug" afterPath="$PROJECT_DIR$/portfolio/theme/src/blocks/main/portfolio/works/works.pug" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/portfolio/theme/src/blocks/main/skills/conceptsTechno/conceptsList/conceptsList.pug" afterPath="$PROJECT_DIR$/portfolio/theme/src/blocks/main/skills/conceptsTechno/conceptsList/conceptsList.pug" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/portfolio/theme/src/blocks/main/skills/conceptsTechno/conceptsTechno.scss" afterPath="$PROJECT_DIR$/portfolio/theme/src/blocks/main/skills/conceptsTechno/conceptsTechno.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/portfolio/theme/src/blocks/main/skills/conceptsTechno/title/title.pug" afterPath="$PROJECT_DIR$/portfolio/theme/src/blocks/main/skills/conceptsTechno/title/title.pug" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/portfolio/theme/src/blocks/main/skills/conceptsTools/conceptsTools.pug" afterPath="$PROJECT_DIR$/portfolio/theme/src/blocks/main/skills/conceptsTools/conceptsTools.pug" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/portfolio/theme/src/blocks/main/skills/skills.js" afterPath="$PROJECT_DIR$/portfolio/theme/src/blocks/main/skills/skills.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/portfolio/theme/src/blocks/main/skills/skills.scss" afterPath="$PROJECT_DIR$/portfolio/theme/src/blocks/main/skills/skills.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/portfolio/theme/src/blocks/main/skills/techno/techList/techList.pug" afterPath="$PROJECT_DIR$/portfolio/theme/src/blocks/main/skills/techno/techList/techList.pug" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/portfolio/theme/src/blocks/main/skills/techno/title/title.pug" afterPath="$PROJECT_DIR$/portfolio/theme/src/blocks/main/skills/techno/title/title.pug" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/portfolio/theme/src/blocks/main/skills/title/title.pug" afterPath="$PROJECT_DIR$/portfolio/theme/src/blocks/main/skills/title/title.pug" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/portfolio/theme/src/blocks/main/skills/tools/title/title.pug" afterPath="$PROJECT_DIR$/portfolio/theme/src/blocks/main/skills/tools/title/title.pug" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/portfolio/theme/src/blocks/main/skills/tools/toolsList/toolsList.pug" afterPath="$PROJECT_DIR$/portfolio/theme/src/blocks/main/skills/tools/toolsList/toolsList.pug" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/portfolio/theme/src/index-ru.pug" afterPath="$PROJECT_DIR$/portfolio/theme/src/index-ru.pug" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/portfolio/theme/src/index.pug" afterPath="$PROJECT_DIR$/portfolio/theme/src/index.pug" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/portfolio/theme/src/js/main.js" afterPath="$PROJECT_DIR$/portfolio/theme/src/js/main.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/portfolio/theme/src/scss/main-ru.scss" afterPath="$PROJECT_DIR$/portfolio/theme/src/scss/main-ru.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/portfolio/theme/src/scss/main.scss" afterPath="$PROJECT_DIR$/portfolio/theme/src/scss/main.scss" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -431,18 +377,34 @@
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="settings.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/portfolio/portfolio/settings.py">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/portfolio/present/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-511">
-              <caret line="21" column="25" lean-forward="false" selection-start-line="21" selection-start-column="25" selection-end-line="21" selection-end-column="25" />
+            <state relative-caret-position="83">
+              <caret line="14" column="14" lean-forward="false" selection-start-line="14" selection-start-column="14" selection-end-line="14" selection-end-column="14" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="base.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/portfolio/present/templates/base.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="17">
+              <caret line="1" column="72" lean-forward="false" selection-start-line="1" selection-start-column="68" selection-end-line="1" selection-end-column="72" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
     </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>main</find>
+      <find>main.j</find>
+    </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -451,6 +413,8 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/portfolio/portfolio/settings.py" />
+        <option value="$PROJECT_DIR$/portfolio/portfolio/urls.py" />
+        <option value="$PROJECT_DIR$/portfolio/present/views.py" />
       </list>
     </option>
   </component>
@@ -461,13 +425,13 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="NodeModulesDirectoryManager">
-    <handled-path value="$PROJECT_DIR$/layout/node_modules" />
+    <handled-path value="$PROJECT_DIR$/portfolio/theme/node_modules" />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="492" />
-    <option name="y" value="167" />
-    <option name="width" value="968" />
-    <option name="height" value="735" />
+    <option name="x" value="605" />
+    <option name="y" value="97" />
+    <option name="width" value="1170" />
+    <option name="height" value="781" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -484,6 +448,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -498,6 +463,46 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="portfolio" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="portfolio" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="portfolio" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="portfolio" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="present" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="portfolio" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="portfolio" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="portfolio" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="present" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="templates" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -531,12 +536,23 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
   </component>
   <component name="ShelveChangesManager" show_recycled="false">
     <option name="remove_strategy" value="false" />
@@ -552,27 +568,28 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="492" y="167" width="968" height="735" extended-state="0" />
+    <frame x="605" y="97" width="1170" height="781" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24956672" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -588,8 +605,64 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/portfolio/portfolio/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-511">
-          <caret line="21" column="25" lean-forward="false" selection-start-line="21" selection-start-column="25" selection-end-line="21" selection-end-column="25" />
+        <state relative-caret-position="561">
+          <caret line="33" column="5" lean-forward="false" selection-start-line="33" selection-start-column="5" selection-end-line="33" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/portfolio/portfolio/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="23" column="50" lean-forward="false" selection-start-line="23" selection-start-column="50" selection-end-line="23" selection-end-column="50" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/portfolio/portfolio/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/portfolio/portfolio/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="27" column="67" lean-forward="true" selection-start-line="23" selection-start-column="50" selection-end-line="27" selection-end-column="67" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/portfolio/portfolio/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="33" column="5" lean-forward="false" selection-start-line="33" selection-start-column="5" selection-end-line="33" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/portfolio/present/templates/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="2" column="1266" lean-forward="false" selection-start-line="2" selection-start-column="1266" selection-end-line="2" selection-end-column="1266" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/portfolio/present/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="83">
+          <caret line="14" column="14" lean-forward="false" selection-start-line="14" selection-start-column="14" selection-end-line="14" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/portfolio/present/templates/base.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="72" lean-forward="false" selection-start-line="1" selection-start-column="68" selection-end-line="1" selection-end-column="72" />
           <folding />
         </state>
       </provider>
