@@ -1,3 +1,1 @@
-$('.tooltip').tooltipster({
-  theme: 'tooltipster-punk'
-});
+$.notLikeOtherTipsters('.showTip');

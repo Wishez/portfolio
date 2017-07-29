@@ -11,8 +11,7 @@ var gulp = require('gulp'),
     sourcemaps = require('gulp-sourcemaps'),
     rigger = require('gulp-rigger'),
     cleanCSS = require('gulp-clean-css'),
-    imagemin = require('gulp-imagemin'),
-    pngquant = require('imagemin-pngquant'),
+    image = require('gulp-image'),
     rimraf = require('rimraf'),
     jshint = require('gulp-jshint'),
     browserSync = require("browser-sync"),
@@ -114,12 +113,7 @@ gulp.task('style', function () {
 
 gulp.task('image', function() {
     gulp.src(path.src.img) //Выбераем наши картинки
-        .pipe(imagemin ({ //Сожмём их
-            progressive: true,
-            svgoPlugins: [{removeViewBox: false}],
-            use: [pngquant()],
-            interlaced: true
-        }))
+        .pipe(image())
         .pipe(gulp.dest(path.build.img)) //И бросим в build
 });
 

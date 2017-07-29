@@ -9,7 +9,8 @@
 @import "font-awesome-sprockets";
 @import "font-awesome";
 @import "../../bower_components/bootstrap-sass/assets/stylesheets/bootstrap";
-//@import "../../bower_components/tooltipster/dist/css/tooltipster.bundle.min.css";
+@import "../../bower_components/slick-carousel/slick/slick.scss";
+@import "../../bower_components/slick-carousel/slick/slick-theme.scss";
 /**********
 
   CUSTOM
@@ -19,4 +20,5 @@
 @import "../blocks/custom/custom.scss";
 @import "../blocks/header/header.scss";
 @import "../blocks/main/main.scss";
+@import "../blocks/success/success.scss";
 

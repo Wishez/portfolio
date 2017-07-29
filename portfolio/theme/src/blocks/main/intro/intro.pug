@@ -1,24 +1,28 @@
 header.main__intro.intro
   .container
-    .intro__heading.heading.col-lg-4.col-lg-offset-1.col-md-5.col-sm-7.col-sm-offset-0.col-xs-12
-      span.heading__greet Hi, I'm
-      h1.heading__name Filipp
+    .intro__heading.heading
+      span.heading__greet Привет, меня зовут
+      br
+      h1.heading__name Филипп
       span.heading__and &
-    .intro__introduce.introduce.col-lg-3.col-md-4.col-sm-5.col-xs-12
+    .intro__introduce.introduce
       p.introduce__paragraph.paragraph. 
-        <span class="paragraph__text">I <span class='paragraph__icon paragraph__icon-icon_heart'></span> to develope</span> 
+        <span class="paragraph__text paragraph__text-size_md">Я <span class='paragraph__icon paragraph__icon-icon_heart'></span> разрабатывать</span> 
         <br>
-        <span class="paragraph__text paragraph__text-size_l paragraph__text-weight_n"> beautiful</span>
+        <span class="paragraph__text paragraph__text-size_md paragraph__text-weight_n">ваши великолепные</span>
         <br>
-        <span class="patagraph__text paragraph__text-size_xl paragraph__text-weight_b">worlds</span>
-        <br>
-        <div id="typed-strings">
-          <p>I make <i>landing pages</i></p>
-          <p>I create <i>user intrfaces</i></p>
-          <p>I'm a <i>front-end developer</i></p>
-        </div>
-        <span id="typed" class="paragraph__text paragraph__text-size_md paragraph__text-weight_s"></span> 
-    .clearfix.visible-xs.visible-sm
-    .intro__myFace.myFace.col-md-4.col-xs-12
+        <span class="patagraph__text paragraph__text-size_xl paragraph__text-weight_b">вселенные</span>
+        <br> 
+    .clearfix
+    .activity
+      div#typed-strings
+        p.
+          <i>Разрабатываю</i> дизайн пользовательских интерфейсов
+        p. 
+          <i>Делаю</i> адаптивную вёрстку
+        p.
+          <i>Создаю</i> сайты на Django
+      span#typed
+    .intro__myFace.myFace
       figure.myFace__face.img-circle
 //end intro

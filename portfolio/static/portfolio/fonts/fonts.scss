@@ -19,13 +19,13 @@
 	font-weight: 300;
 	font-style: normal;
 }
-@font-face {
-	font-family: 'KG Second Chances';
-	src: url('../fonts/KGSecondChances/KGSecondChancesSketch.eot');
-	src: local('KG Second Chances'), url('../fonts/KGSecondChances/KGSecondChancesSketch.woff') format('woff'), url('../fonts/KGSecondChances/KGSecondChancesSketch.ttf') format('truetype'), url('../fonts/KGSecondChances/KGSecondChancesSketch.svg') format('svg');
-	font-weight: normal;
-	font-style: normal;
-}
+// @font-face {
+// 	font-family: 'KG Second Chances';
+// 	src: url('../fonts/KGSecondChances/KGSecondChancesSketch.eot');
+// 	src: local('KG Second Chances'), url('../fonts/KGSecondChances/KGSecondChancesSketch.woff') format('woff'), url('../fonts/KGSecondChances/KGSecondChancesSketch.ttf') format('truetype'), url('../fonts/KGSecondChances/KGSecondChancesSketch.svg') format('svg');
+// 	font-weight: normal;
+// 	font-style: normal;
+// }
 
 @font-face{
   font-family:'FontAwesome';
@@ -42,3 +42,11 @@
 	font-style: normal;
 }
 
+
+@font-face {
+        font-family: "slick";
+        src: url("../fonts/slick.eot");
+        src: url("../fonts/slick.eot") format("embedded-opentype"), url("../fonts/slick.woff") format("woff"), url("../fonts/slick.ttf") format("truetype"), url("../fonts/slick.svg") format("svg");
+        font-weight: normal;
+        font-style: normal;
+    }

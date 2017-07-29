@@ -1,33 +1,36 @@
 /* Form connect */
+#formWrapper {
+  width: 100%;
+}
 .connect__connectForm {
   width: 100%;
   margin: 15px auto;
 }
 .elemForm {
-  &-filled .elemForm__label {
+  & label {
+    opacity: 0;
+    font-size: (20em / 16);
+    position: relative;
+    top: 2em;
+    z-index: 0;
+    transition: top .3s ease,opacity .3s ease;
+    margin: 5px 0;
+    &::after {
+      content: '*';
+      color: #f0f;
+    }
+    &[for='phone']::after {
+      content: '';
+    }
+  }
+  &-filled label {
     color: #aaa;
     top: 0;
     opacity: 1;
   }
-  &-focused .elemForm__label {
+  &-focused label {
     color: #fff;
   }
-}
-.elemForm__label {
-  opacity: 0;
-  font-size: (20em / 16);
-  position: relative;
-  top: 2em;
-  z-index: 0;
-  transition: top .3s ease,opacity .3s ease;
-  margin: 5px 0;
-  &::after {
-    content: '*';
-    color: #f0f;
-  }
-}
-label[for='phone']::after {
-  content: '';
 }
 .elemForm__item {
   background-color: transparent;
