@@ -1,9 +1,0 @@
-.portfolio__works.works
-  | {% for field in works %}
-  .works__elemWork
-    a.anchor(href="{{ field.url }}")
-      img.img-responsive.img-thambnail.elemWork__img.elemWork__img-work_territorio(
-        src="/media/{{ field.img }}",
-        alt="{{ field.desc }}"
-      )
-  | {% endfor %}
