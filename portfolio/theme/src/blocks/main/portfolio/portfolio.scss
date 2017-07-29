@@ -16,6 +16,38 @@
   justify-content: flex-start;
   padding-bottom: 50px;
   margin: 0 auto;
+  color: $darkGray;
+  $imp: !important;
+  & .slick-next, & .slick-prev  {
+    top: -35px $imp;
+    background-color: $darkGray;
+    width: 40px;
+    height: 40px;
+    border-radius: 2px;
+    &::before {
+      content: none $imp;
+    }
+    &::after {
+      position: relative;
+      top: 5px;
+      margin: 0 auto;
+      color: #f4f4f4;
+      font-size: 40px;
+    }
+  }
+  & .slick-prev {
+    &::after {
+      content: "\0003C";
+    }
+    left: auto $imp;
+    right: 60px $imp;
+  }
+  & .slick-next {
+    &::after {
+      content: "\0003E";
+    }
+    right: 0 $imp;
+  }
 }
 @import "title/title.scss";
 @import "works/works.scss";

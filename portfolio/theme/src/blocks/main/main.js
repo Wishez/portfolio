@@ -1,3 +1,4 @@
 //= intro/intro.js
-//= connect/connect.js
+//= portfolio/portfolio.js
 //= skills/skills.js
+//= connect/connect.js
