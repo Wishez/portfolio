@@ -12,7 +12,7 @@ def index(request):
     works = Work.objects.filter(added_date__lte=timezone.now()).order_by('added_date').reverse()
     return render(
         request,
-        'index-ru.html',
+        'index.html',
         {
             'form': form,
             'works': works

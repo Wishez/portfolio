@@ -24,21 +24,31 @@ $stackFoo: 'KG Second Chances', cursive;
 $stackRussoOne: 'RussoOne', cursive;
 $ghostblack: hsla(0, 0, 18, .9);
 $black: #000;
+$white: #e8e8e8;
 $ghostcyen: hsla(184, 100, 62, .9);
 $sweetred: hsla(357, 73, 50, .9);
 $sweetbrown: hsla(16, 95, 20, .9);
 $palegreen: hsla(89, 27%, 79%, .9);
 $darkgreen: hsl(89, 34%, 30%);
 $transviolet: hsla(325, 65%, 30%, 0.9);
+$darkGray: #3a3a3a;
 // Mixins
-@mixin flagTo($color) {
+.flag {
     z-index: 3;
     content: '';
     position: absolute;
     left: 15%;
     top: 100%;
     border: 25px solid transparent;
-    border-top: 25px solid $color;
+}
+@mixin flagTo($border-color: false, $border-width: false) {
+  @extend .flag;
+  @if ($border-width) {
+    border-width: #{$border-width}px;
+  }
+  @if ($border-color) {
+    border-top-color: $border-color;
+  }
 }
 /* Commonly custom */
 body {

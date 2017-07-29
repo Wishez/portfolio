@@ -8,6 +8,14 @@
     width: 100%;
     text-align: center;
   }
+  & .supertipInfo{
+  	left: auto;
+  	right: 70%;
+  	@include breakpoint($xxs) {
+		right: auto;
+		left: 90%;
+  	}
+  }
 }
 @import "title/title.scss";
 @import "conceptsList/conceptsList.scss";
