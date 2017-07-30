@@ -1,17 +1,9 @@
 //Consepts tools' list.
 .skills__conceptsTools.concepts
-  h3.concepts__title Немного больше
+  h3.concepts__title Больше
   .clearfix
   ul.concepts__conceptsList.conceptsList
-    li.conceptsList__item.item.showTip(data-supertip="Библиотека с готовым и настраиваемым пользовательским интерфейсом.")
-      a.item__refer.anchor(href="https://ru.wikipedia.org/wiki/JQuery_UI") jQuery UI
-    li.conceptsList__item.item.showTip(data-supertip="Ещё одна замечательная библиотека с элегантными элементами интерфейса и своими сладкими причудами.")
-      a.item__refer.anchor(href="https://semantic-ui.com/") Smantic Ui
-    li.conceptsList__item.item.showTip(data-supertip="Стильные иконки написанные на CSS.")
-      a.item__refer.anchor(href="http://fontawesome.io/icons/") Font-awesome
-    li.conceptsList__item.item.showTip(data-supertip="Инструмент для тестирования поддерживаемых свойств браузером.")
-      a.item__refer.anchor(href="https://modernizr.com/") Modernizr
-    li.conceptsList__item.item.showTip(data-supertip="Удобная систем разметки сетки.")
-      a.item__refer.anchor(href="http://susy.oddbird.net/") Susy
-    li.conceptsList__item.item.showTip(data-supertip="Одна из разновидностей операционных систем семейства UNIX, служащая сервером размещающий какие-либо связки технологий для их отображения во всемирной паутине.")
-      a.item__refer.anchor(href="http://susy.oddbird.net/") Ubuntu
+    | {% for tool in additionaltools %}
+    li.conceptsList__item.item.showTip(data-supertip="{{tool.tooltip}}")
+        a.item__refer.anchor(href="{{tool.link}}") {{tool.name}}
+    | {% endfor %}

@@ -2,31 +2,37 @@
 from django.db import models
 from django.utils import timezone
 from django.utils.encoding import python_2_unicode_compatible
+from django.utils.translation import ugettext_lazy as _
+from django.core.mail import send_mail
 # Create your models here.
 
 @python_2_unicode_compatible
 class Order(models.Model):
 
-    name = models.CharField(max_length=36, verbose_name='Имя')
-    email = models.EmailField(max_length=100, verbose_name='E-mail')
-    phone = models.CharField(max_length=24, verbose_name='Номер телефона', null=True, blank=True)
-    message = models.TextField(verbose_name='Сообщения')
+    name = models.CharField(_('Имя'), max_length=36)
+    email = models.EmailField(_('E-mail'), max_length=100)
+    phone = models.CharField(_('Номер телефона'), max_length=24, null=True, blank=True)
+    message = models.TextField(_('Сообщение'))
     ordered_date = models.DateTimeField(default=timezone.now)
 
-    def connect(self):
-        self.save()
+    def sendMail(self, orderMsg):
+        send_mail('Хочешь поработать?.', orderMsg, 'comandos.testing@list.ru', ['shiningfinger@list.ru'])
 
     def __str__(self):
         return self.name
+
+    class Meta:
+        verbose_name = _('Заказ')
+        verbose_name_plural = _('Заказы')
 
 
 @python_2_unicode_compatible
 class Work(models.Model):
 
-    url = models.URLField(max_length=250, verbose_name="Ссылка на работу")
-    desc = models.CharField(max_length=350, verbose_name="Описание работы")
-    img = models.FileField(upload_to="works/", verbose_name="Изображение работы")
-    added_date = models.DateTimeField(default=timezone.now)
+    url = models.URLField(_("Ссылка на работу"), max_length=250)
+    desc = models.CharField(_("Описание работы"), max_length=350)
+    img = models.FileField(_("Изображение работы"), upload_to="works/")
+    added_date = models.DateTimeField(_("Дата выполнения"), default=timezone.now)
 
     def present(self):
         self.added_date = timezone.now()
@@ -35,4 +41,58 @@ class Work(models.Model):
     def __str__(self):
         return self.desc
 
+    class Meta:
+        verbose_name = 'Работа'
+        verbose_name_plural = 'Работы'
 
+class Technology(models.Model):
+    icon = models.ImageField(_('Иконка'), upload_to='icons/')
+    name = models.CharField(_("Имя технологии"), max_length=350)
+    tooltip = models.TextField(_('Подсказка'), max_length=700)
+    link = models.URLField(_('Ссылка'), max_length=400)
+    progress = models.IntegerField(_('Прогресс от 1 до 100%'))
+
+    def __str__(self):
+        return self.name
+
+    class Meta:
+        verbose_name = 'Технология'
+        verbose_name_plural = 'Технологии'
+
+class Tool(models.Model):
+    icon = models.ImageField(_('Иконка'), upload_to='icons/')
+    name = models.CharField(_("Имя инструмента"), max_length=350)
+    tooltip = models.TextField(_('Подсказка'), max_length=700)
+    link = models.URLField(_('Ссылка'), max_length=400)
+    progress = models.IntegerField(_('Прогресс от 1 до 100%'))
+
+    def __str__(self):
+        return self.name
+
+    class Meta:
+        verbose_name = 'Инструмент'
+        verbose_name_plural = 'Инструменты'
+
+class Concept(models.Model):
+    name = models.CharField(_("Имя концепции"), max_length=350)
+    tooltip = models.TextField(_('Подсказка'), max_length=700)
+    link = models.URLField(_('Ссылка'), max_length=400)
+
+    def __str__(self):
+        return self.name
+
+    class Meta:
+        verbose_name = 'Концепция'
+        verbose_name_plural = 'Концепции'
+
+class MoreTool(models.Model):
+    name = models.CharField(_("Имя инструмента"), max_length=350)
+    tooltip = models.TextField(_('Подсказка'), max_length=700)
+    link = models.URLField(_('Ссылка'), max_length=400)
+
+    def __str__(self):
+        return self.name
+
+    class Meta:
+        verbose_name = 'Дополнительный инструмент'
+        verbose_name_plural = 'Дополнительный инструменты'
