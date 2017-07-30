@@ -1,97 +1,18 @@
 ul.techno__techList.techList
-  li.techList__itemTechList.techList__itemTechList-icon_html.itemTechList.showTip(
-    data-supertip="Язык — на котором пишется структура страницы, её фундамент."
+  | {% for technology in technologies %}
+  li.techList__itemTechList.itemTechList.showTip(
+    data-supertip="{{technology.tooltip}}"
   )
-    a.anchor(href="https://filipp-zhuravlev.ru/articles/1/")
+    figure.itemTechList__icon(
+      style="background-image: url('/media/{{technology.icon}}');width: {{technology.icon.width}}px;"
+    )
+    a.anchor(href="{{technology.link}}")
       .progress
         .itemTechList__text.progress-bar(
           role="progressbar",
-          aria-valuenow="90",
+          aria-valuenow="{{technology.progress}}",
           aria-valuemin="0",
           aria-valuemax="100",
-          style="width:90%"
-        ) HTML
-  li.techList__itemTechList.techList__itemTechList-icon_css.itemTechList.showTip(
-    data-supertip="Язык, который позиционирует, анимирует и стилизует элементы страницы."
-  )
-    a.anchor(href="https://filipp-zhuravlev.ru/articles/2/")
-      .progress 
-        .itemTechList__text.progress-bar(
-          role="progressbar",
-          aria-valuenow="90",
-          aria-valuemin="0",
-          aria-valuemax="100",
-          style="width: 90%"
-        ) CSS
-  li.techList__itemTechList.techList__itemTechList-icon_js.itemTechList.showTip(
-    data-supertip="Язык, который понимает браузер, описывающий в сценариях как ему действовать при определённом событие. На нём написано множество современных веб технологий относящиеся к пользовательскому интерфейсу."
-  )
-    a.anchor(href="https://ru.wikipedia.org/wiki/JavaScript")
-      .progress 
-        .itemTechList__text.progress-bar(
-          role="progressbar",
-          aria-valuenow="90",
-          aria-valuemin="0",
-          aria-valuemax="100",
-          style="width:90%"
-        ) Java Script
-  li.techList__itemTechList.techList__itemTechList-icon_jquery.itemTechList.showTip(
-    data-supertip="Библиотека JavaScript, которая упрощает взаимодействие с элементами структуры страницы (Документно-объектной моделью) и ускоряет разработку."
-  )
-    a.anchor(href="https://ru.wikipedia.org/wiki/JQuery")
-      .progress 
-        .itemTechList__text.progress-bar(
-          role="progressbar",
-          aria-valuenow="85",
-          aria-valuemin="0",
-          aria-valuemax="100",
-          style="width:85%"
-        ) jQuery
-  li.techList__itemTechList.techList__itemTechList-icon_sql.item.showTip(
-    data-supertip="Язык для общения с базой данных."
-  )
-    a.anchor(href="https://ru.wikipedia.org/wiki/SQL")
-      .progress 
-        .itemTechList__text.progress-bar(
-          role="progressbar",
-          aria-valuenow="55",
-          aria-valuemin="0",
-          aria-valuemax="100",
-          style="width:55%"
-        ) SQL
-  li.techList__itemTechList.techList__itemTechList-icon_python.item.showTip.showTip(
-    data-supertip="Позволяет разговаривать с сервером на парселтанге."
-  )
-    a.anchor(href="https://ru.wikipedia.org/wiki/Python")
-      .progress 
-        .itemTechList__text.progress-bar(
-          role="progressbar",
-          aria-valuenow="50",
-          aria-valuemin="0",
-          aria-valuemax="100",
-          style="width:50%"
-        ) Python
-  li.techList__itemTechList.techList__itemTechList-icon_react.item.showTip(
-    data-supertip="Библиотека, которая даёт возможность эффективно управлять динамикой содержимого на странице и быстро отображать страницу. Очень важная технология в front-end разработке."
-  )
-    a.anchor(href="https://facebook.github.io/react/")
-      .progress 
-        .itemTechList__text.progress-bar(
-          role="progressbar",
-          aria-valuenow="80",
-          aria-valuemin="0",
-          aria-valuemax="100",
-          style="width:80%"
-        ) ReactJS
-  li.techList__itemTechList.techList__itemTechList-icon_redux.item.showTip(
-    data-supertip="Это замечательная технология реализует более комплексное хранение состояние приложения, что делает приложение более гибким для его поддержки и расширения."
-  )
-    a.anchor(href="https://facebook.github.io/react/")
-      .progress 
-        .itemTechList__text.progress-bar(
-          role="progressbar",
-          aria-valuenow="70",
-          aria-valuemin="0",
-          aria-valuemax="100",
-          style="width:70%"
-        ) Redux
+          style="width:{{technology.progress}}%"
+        ) {{technology.name}}
+  | {% endfor %}
