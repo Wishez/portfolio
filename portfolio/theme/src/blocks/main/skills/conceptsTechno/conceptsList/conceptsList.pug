@@ -1,24 +1,5 @@
 ul.concepts__conceptsList.conceptsList
-  li.conceptsList__item.item.showTip(
-    data-supertip="Гибкое содержимое, которое подстраивается, адаптируетcя под экран пользователя."
-  )
-    a.item__refer.anchor(href="http://alistapart.com/article/responsive-web-design") Resposible Design
-  li.conceptsList__item.item.showTip(
-    data-supertip="Реализация одного и того же вида и поведения сайта в разных браузерах."
-  )
-    a.item__refer.anchor(href="https://en.wikipedia.org/wiki/Cross-browser") Cross-browser
-      
-  li.conceptsList__item.item.showTip(
-    data-supertip="Концепция наименования элементов страницы для улучшение их семантического значения." 
-  )
-    a.item__refer.anchor(href="https://filipp-zhuravlev.ru/articles/3/") BEM
-  li.conceptsList__item.item.showTip(
-    data-supertip="Описания структуры страницы для вспомогательных технологий, таких как экранный диктор."
-  )
-    a.item__refer.anchor(href="https://www.w3.org/WAI/intro/aria") WIA-ARIA
-  li.conceptsList__item.item.showTip(data-supertip="Асинхронный JavaScript и XML — концепция для частичного динамического обновления страницы.")
-    a.item__refer.anchor(href="https://en.wikipedia.org/wiki/Ajax_(programming)") AJAX
-  li.conceptsList__item.item.showTip(
-    data-supertip="Холст, на котором можно рисовать при помощи JavaScript-а."
-  )
-    a.item__refer.anchor(href="https://two.js.org/#examples") Canvas
+  | {% for concept in concepts %}
+  li.conceptsList__item.item.showTip(data-supertip="{{concept.tooltip}}")
+    a.item__refer.anchor(href="{{concept.link}}") {{concept.name}}
+  | {% endfor %}

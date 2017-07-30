@@ -4,10 +4,13 @@
 (languages, 192, -431, 25){
   .hobby__img-#{$hobby} {
     background: url("../img/hobbies-sprite.png") no-repeat #{$x}px #{$y}px;
-    height: 200px;
     width: #{$width}px;
-    margin: 0 auto;
   }
+}
+
+.hobby__img {
+    height: 200px;
+    margin: 0 auto;
 }
 .hobby__title {
   font: {

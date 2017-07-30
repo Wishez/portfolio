@@ -6,7 +6,7 @@
 /* Variables, fonts, mixins */
 $susy: (
   columns: 12,
-  gutters: 1/4,
+  gutters: 0,
   global-box-sizing: border-box
 );
 
@@ -16,7 +16,7 @@ $susy: (
 $lg: 1200px;
 $md: 992px 1199px;
 $sm: 769px 991px;
-$xs: 460px 768px;
+$xs: max-width 768px;
 $xxs: max-width 459px;
 
 $stackEuro: 'Eurofurence', monospace;
@@ -52,7 +52,7 @@ $darkGray: #3a3a3a;
 }
 /* Commonly custom */
 body {
-  color: #fff;
+  color: $white;
   background-image: linear-gradient(#000 2px, transparent 2px), linear-gradient(90deg, #000 2px, transparent 2px), linear-gradient(rgba(0, 0, 0, .3) 1px, transparent 1px), linear-gradient(90deg, rgba(0, 0, 0, .3) 1px, transparent 1px);
   background-size: 100px 100px, 100px 100px, 20px 20px, 20px 20px;
   background-position: -2px -2px, -2px -2px, -1px -1px, -1px -1px;
@@ -76,13 +76,13 @@ h2, h3 {
   font-weight: 500;
 }
 h2 {
-  font-size: (36em / 16);
+  font-size: (30em / 16);
 }
 h3 {
   font-size: (24em / 16);
 }
 a {
-  color: #fff;
+  color: $white;
   &:hover {
     text-decoration: none;
   }

@@ -1,10 +1,13 @@
 /* Form connect */
 #formWrapper {
-  width: 100%;
+  width: 50%;
+  margin-top: 50px;
+  @include breakpoint($xs) {
+    width: 100%;
+  }
 }
 .connect__connectForm {
   width: 100%;
-  margin: 15px auto;
 }
 .elemForm {
   & label {
