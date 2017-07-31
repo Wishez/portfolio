@@ -11,7 +11,6 @@
 		var $tips = $(className);
 		$tips.css('position', 'relative');
 		$(window).on('resize', function() {
-			console.log($.contains($(className), $('.supertipInfo')), _checkMobileWidth());
 			if (!$('.supertipInfo').length && _checkMobileWidth())
 				$tips.append('<i class="fa fa-info-circle supertipInfo" aria-hidden="true"></i>');
 			else if (!_checkMobileWidth())

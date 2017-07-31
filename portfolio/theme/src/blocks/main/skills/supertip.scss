@@ -1,8 +1,9 @@
 .supertip, .supertipInfo {
   position: absolute;
-  z-index: 999;
+  z-index: 3;
 }
 .supertip {
+  word-break: break-all;
   width: 100%;
   top: 0;
   left: 0;

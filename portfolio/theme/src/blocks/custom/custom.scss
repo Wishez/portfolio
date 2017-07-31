@@ -18,6 +18,7 @@ $md: 992px 1199px;
 $sm: 769px 991px;
 $xs: max-width 768px;
 $xxs: max-width 459px;
+$xxs-iphone: max-width 320px;
 
 $stackEuro: 'Eurofurence', monospace;
 $stackFoo: 'KG Second Chances', cursive;
@@ -34,7 +35,7 @@ $transviolet: hsla(325, 65%, 30%, 0.9);
 $darkGray: #3a3a3a;
 // Mixins
 .flag {
-    z-index: 3;
+    z-index: 1;
     content: '';
     position: absolute;
     left: 15%;
@@ -97,7 +98,7 @@ a {
 .banner .container,
 .main,
 .portfolio,
-.portfolio__works,
+// .portfolio__works,
 .skills, .hobbies, .connect, .connect__socials {
   display: flex;
   flex-flow: row wrap;
