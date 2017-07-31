@@ -6,14 +6,19 @@
 #portfolio {
   background-color: $ghostcyen;
   position: relative;
-  z-index: 1;
   width: 100%;
+  padding-bottom: 75px;
+  @include breakpoint($xs) {
+    padding-bottom: 40px;
+
+  }
   &::after {
     @include flagTo($ghostcyen);
   }
 }
 .portfolio {
   justify-content: flex-start;
+
   margin: 0 auto;
   color: $darkGray;
   $imp: !important;
