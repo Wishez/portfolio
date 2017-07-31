@@ -1,9 +1,71 @@
 .portfolio__works.works#works
-  | {% for field in works %}
-  .works__elemWork
-    a.anchor(href="{{ field.url }}")
-      img.img-responsive.img-thambnail.elemWork__img.elemWork__img-work_territorio(
-        src="/media/{{ field.img }}",
-        alt="{{ field.desc }}"
-      )
+  | {% for work in works %}
+  .elemWork
+    img.img-responsive.img-thambnail.elemWork__img(
+      src="/media/{{ work.img }}",
+      alt="{{ work.desc }}"
+      data-id="#work_{{work.id}}"
+    )
   | {% endfor %}
+| {% for work in works %}
+section.popupContainer(id="work_{{work.id}}")
+  .pupup
+    i.fa.fa-close.fa-2x.pupup__close(data-id='#work_{{work.id}}')
+    .popupSlider
+      | {% if work.slide_1 %}
+      img.img-responsive.img-thambnail.popupSlider__img(
+        src="/media/{{work.slide_1}}",
+        alt='Slide of a work.'
+      )
+      | {% endif %}
+      | {% if work.slide_2 %}
+      img.img-responsive.img-thambnail.popupSlider__img(
+        src="/media/{{work.slide_2}}",
+        alt='Slide of a work.'
+      )
+      | {% endif %}
+      | {% if work.slide_3 %}
+      img.img-responsive.img-thambnail.popupSlider__img(
+        src="/media/{{work.slide_3}}",
+        alt='Slide of a work.'
+      )
+      | {% endif %}
+      | {% if work.slide_4 %}
+      img.img-responsive.img-thambnail.popupSlider__img(
+        src="/media/{{work.slide_4}}",
+        alt='Slide of a work.'
+      )
+      | {% endif %}
+      | {% if work.slide_5 %}
+      img.img-responsive.img-thambnail.popupSlider__img(
+        src="/media/{{work.slide_5}}",
+        alt='Slide of a work.'
+      )
+      | {% endif %}
+      | {% if work.slide_6 %}
+      img.img-responsive.img-thambnail.popupSlider__img(
+        src="/media/{{work.slide_6}}",
+        alt='Slide of a work.'
+      )
+      | {% endif %}
+    aside.popupTech
+      h3.popupTech__title Применённые технологии
+      | {% if work.technologies %}
+      | {% for tecnology in work.technologies.all %}
+      span.label.label-default.popupTech__label {{technology.name}}
+      | {% endfor %}
+      | {% endif %}
+      | {% if work.tools %}
+      | {% for tecnology in work.tools.all %}
+      span.label.label-default.popupTech__label {{technology.name}}
+      | {% endfor %}
+      | {% endif %}
+      | {% if work.additionalTolls %}
+      | {% for tecnology in work.additionalTolls.all %}
+      span.label.label-default.popupTech__label {{technology.name}}
+      | {% endfor %}
+      | {% endif %}
+    article.popupDescription
+      a.anchor.popupDescription__link(href="{{ work.url }}") Перейти на сайт
+      p.popupDescription__text {{ work.full_desc }}
+| {% endfor %}
