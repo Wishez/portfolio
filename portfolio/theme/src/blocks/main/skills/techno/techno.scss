@@ -2,7 +2,7 @@
 .skills__techno {
   width: 60%;
   margin-right: 0;
-  @media (max-width: 449px) {
+  @include breakpoint($xxs) {
     width: 85%;
     margin: 0 auto;
   }

@@ -11,7 +11,7 @@
     width: span(12);
   }
   .navList__item {
-    @extend .font-size-22;
+    @extend %font-size-22;
     @include breakpoint($xs){
       display: inline-flex;
     }
@@ -19,14 +19,14 @@
       display: block;
     }
     .item__text {
-      @extend .white-color;
+      @extend %white-color;
       transition: box-shadow .5s, color .5s;
       &:hover {
         color: #f0f;
         box-shadow: 2px 3px 5px #000;
       }
       &:focus {
-        @extend .white-color;
+        @extend %white-color;
       }
     }
     &-list {
@@ -39,7 +39,10 @@
 }
 .navigation__btnUp {
   z-index: 10;
-  @extend .fixed;
+  @extend %fixed;
   bottom: 20px;
   right: 50px;
+  &:focus, &:active, &:hover {
+    color: darken($white, 20%);
+  }
 }

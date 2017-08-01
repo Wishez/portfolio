@@ -7,10 +7,10 @@
 .banner {
   background-color: $ghostblack;
   border-radius: 0;
-  @extend .zero-margin;
+  @extend %zero-margin;
   border: 0;
   .container {
-    @extend .center-margin;
+    @extend %center-margin;
     width: 95%;
     justify-content: space-between;
     align-items: center;

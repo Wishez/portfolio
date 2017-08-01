@@ -10,9 +10,9 @@
 }
 
 .success__redirect {
-  font-size: (18em / 16);
+  @extend %font-size-18;
   transition: color 0.5s;
   &:hover {
-    color: darken(#fff, 15%)
+    color: darken($white, 15%)
   }
 }

@@ -1,6 +1,4 @@
 .hat.navbar-header {
-  // @extend .center-margin-xs;
-  // @extend .full-width-xs;
   @include breakpoint($xs) {
     margin: 0 auto;
     width: span(12);
@@ -11,24 +9,24 @@
   }
 /* Flag */
   .hat__resume {
-    @extend .font-size-18;
-    @extend .white-color;
+    @extend %font-size-18;
+    @extend %white-color;
     background: linear-gradient(to left, #dd2325 80%, transparent 80%);
     margin: 31px 0;
     transform: rotate(-90deg);
     @extend .text-right;
-    @extend .relative;
+    @extend %relative;
     width: 110px;
     @extend .text-uppercase;
     box-shadow: 5px 0 10px rgba(0, 0, 0, .9);
     &:hover {
-      @extend .white-color;
+      @extend %white-color;
       background-color: transparent;
     }
     &::after, &::before {
       
       content: "";
-      @extend .absolute;
+      @extend %absolute;
     }
     &::after {
       z-index: 3;
@@ -49,7 +47,7 @@
       border-bottom: 1px dashed $black;
       height: 40px;
       @extend .text-left;
-      @extend .full-width;
+      @extend %full-width;
       padding-left: (110px / 100 * 80 / 5.5);
       color: hsl(0, 0, 18);
       left: (110px / 100 * 7);

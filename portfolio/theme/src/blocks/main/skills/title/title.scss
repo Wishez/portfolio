@@ -1,4 +1,4 @@
 .skills__title {
-  width: 100%;
+  @extend %full-width;
 }
 // The title's name and descriptions is inherited from the section's portfolio title. 

@@ -7,11 +7,11 @@
   }
 }
 .connect__connectForm {
-  width: 100%;
+  @extend %full-width;
 }
 .elemForm {
   & label {
-    opacity: 0;
+    @extend %zero-opacity;
     font-size: (20em / 16);
     position: relative;
     top: 2em;
@@ -29,40 +29,41 @@
   &-filled label {
     color: #aaa;
     top: 0;
-    opacity: 1;
+    @extend %visible-opacity;
   }
   &-focused label {
-    color: #fff;
+    @extend %white-color;
   }
 }
 .elemForm__item {
   background-color: transparent;
   height: 40px;
-  width: 100%;
+  @extend %full-width;
   z-index: 1;
-  font-size: (22em / 16);
+  @extend %font-size-22;
   border: 0;
   border-bottom: 1px solid #fff;
   color: #aaa;
   &:focus {
     outline: 0;
-    color: #fff;
+    @extend %white-color;
   }
 }
 ::-webkit-input-placeholder {
-  color: #fff;
-  font-size: (22em / 16);
+  @extend %white-color;
+  @extend %font-size-22;
 }
 .elemForm__item[name="message"] {
   min-height: 110px;
 }
 .sendBtn__btn {
-  display: block;
+  @extend %block;
+  @extend %font-size-22;
+  @extend %center-margin;
+  @extend %relative;
   padding: 1% 2%;
-  margin: 15px auto 0;
-  font-size: (24em / 16);
+  margin-top: 15px;
   background-color: darken($transviolet, 10%);
-  position: relative;
   transition: top 0.5s;
   &:hover {
     color: currentColor;
