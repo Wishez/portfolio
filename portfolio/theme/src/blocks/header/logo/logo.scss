@@ -1,9 +1,9 @@
 .hat.navbar-header {
-  @media (max-width: 767px) {
+  // @extend .center-margin-xs;
+  // @extend .full-width-xs;
+  @include breakpoint($xs) {
     margin: 0 auto;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
+    width: span(12);
     &::before,
     &::after {
       display: none;
@@ -11,27 +11,30 @@
   }
 /* Flag */
   .hat__resume {
-    font-size: (18em / 16);
-    color: #fff;
+    @extend .font-size-18;
+    @extend .white-color;
     background: linear-gradient(to left, #dd2325 80%, transparent 80%);
     margin: 31px 0;
     transform: rotate(-90deg);
-    text-align: right;
-    position: relative;
+    @extend .text-right;
+    @extend .relative;
     width: 110px;
-    text-transform: uppercase;
+    @extend .text-uppercase;
     box-shadow: 5px 0 10px rgba(0, 0, 0, .9);
     &:hover {
-      color: #fff;
+      @extend .white-color;
       background-color: transparent;
     }
-    
+    &::after, &::before {
+      
+      content: "";
+      @extend .absolute;
+    }
     &::after {
       z-index: 3;
-      content: "";
       background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAAyCAMAAACeXICkAAAA4VBMVEUAAADbIiQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADMICLJHyGrGxwOAgIAAAAAAAAAAAAAAADXIiTTISPRISPBHyC5HR+zHB6iGhuXGBmMFheBFBZ2ExRrERJ3ExReDxC1HR5SDQ5GCww8CQoxCAgXBAQnBgceBQUXBARACgsWAwMAAAAAAAAAAADdIyVLNpz/AAAASnRSTlMA/qQDq6iakogVCpYpDQZcoY94bkdCOjQfGoSunn1zZU8wJBGBYffy6bKya1NM/Pv58u/s5ODc2NXQz8zLx8PAvLu5t7WvimhXVodih/8AAAEoSURBVDjLhZTnboNQDIXNSEhKgKQZkDaF7NWme++93v+BakQTCd97BL+QPnGOsX1M97/5x1i/0OdMoA1xPgz9R+Sat3o9cur2XIto7JrvU61Ps1IuPeqsKIgbPftKo0etyZ5j7p5p1MLV145rvh2rZNg5SK0eFD2q1trBdqNuX0pEXneQWZ1KNX8Uhf19tno9EsTaqg47PzFb3QnCaG11IQj5qVXCVosTQax/q3Lp+TBPMqvvuNKzbwQhy+vW2pPU6lwS34sGq4QHspjlCeuNoqxLT0aObErnVlwLkpYe9ptcxHIuSPpRK+HKly9TTKAarABXjf9U7U6gdkftKJ4Cnpw67aINKd4qvIl4e/HGc0rGakpwsnAaYYJh6vGlgNcFXqTCK4Yv3x+gBftJmTkfEAAAAABJRU5ErkJggg==) no-repeat;
       background-size: cover;
-      position: absolute;
+      
       bottom: 0;
       left: 0;
       height: 50px;
@@ -39,15 +42,14 @@
     }
     &::before {
       z-index: 4;
-      content: "";
       background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAMAAAC6V+0/AAAAY1BMVEUAAAAzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzOO/joSAAAAIHRSTlMA4cizXauOc0grCQXq1c+KVE1AOPLs3L+lopmWg2szKJr7KHQAAACBSURBVBjTbdBJDsMgEETRxmCMjefMc93/lAkhLSDtvwG9BUJFWa160n+dwiqwAgzfzS6eGkDDOKDXd0c3fJoYF6TOxOmEVfoJUuPCapGlHj6qQtHli8cS62BTLoemC/bKaJgpVm98yZWvxUbsT3b214CW0axeDCKmEyM7ErX9b9o3ovUUPPTMyWsAAAAASUVORK5CYII=) no-repeat 15% 50%;
       background-size: 12px;
-      position: absolute;
       width: 100%;
       border-top: 1px dashed $black;
       border-bottom: 1px dashed $black;
       height: 40px;
-      text-align: left;
+      @extend .text-left;
+      @extend .full-width;
       padding-left: (110px / 100 * 80 / 5.5);
       color: hsl(0, 0, 18);
       left: (110px / 100 * 7);

@@ -3,32 +3,35 @@
   z-index: 1;
   top: 28px;
   right: 18%;
-  @media (max-width: 768px) {
+  // @extend .full-width-xs;
+  // @extend .text-center-xs;
+  @include breakpoint($xs) {
     position: static;
-    width: 100%;
     text-align: center;
+    width: span(12);
   }
   .navList__item {
-    font-size: (22em / 16);
-    @media (max-width: 768px) {
+    @extend .font-size-22;
+    @include breakpoint($xs){
       display: inline-flex;
     }
-    @media (max-width: 449px) {
+   @include breakpoint($xxs) {
       display: block;
     }
     .item__text {
-      color: #fff;
+      @extend .white-color;
       transition: box-shadow .5s, color .5s;
       &:hover {
         color: #f0f;
         box-shadow: 2px 3px 5px #000;
       }
       &:focus {
-        color: #fff;
+        @extend .white-color;
       }
     }
     &-list {
-      @media (min-width: 769px) {
+      // @extend .block-xs;
+      @include breakpoint($xs) {
         display: block;
       }
     }
@@ -36,7 +39,7 @@
 }
 .navigation__btnUp {
   z-index: 10;
-  position: fixed;
+  @extend .fixed;
   bottom: 20px;
   right: 50px;
 }

@@ -1,12 +1,12 @@
 .portfolio__title {
-  margin: 0 auto;
-  width: 100%;
+  @extend .center-margin;
+  @extend .full-width;
 }
 .title__name {
-  margin: 60px auto 0;
-  // font-size: (3em / 16);
+  @extend .center-margin;
+  margin-top: 60px;
 }
 .title__description {
-  font-size: (22em / 16);
+  @extend .font-size-22;
   margin-top: 10px; 
 }

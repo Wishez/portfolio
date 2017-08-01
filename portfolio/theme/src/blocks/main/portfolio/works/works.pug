@@ -51,18 +51,18 @@ section.popupContainer(id="work_{{work.id}}")
     aside.popupTech
       h3.popupTech__title Применённые технологии
       | {% if work.technologies %}
-      | {% for tecnology in work.technologies.all %}
-      span.label.label-default.popupTech__label {{technology.name}}
+      | {% for technology in work.technologies.all %}
+      span.label.label-default.popupTech__label {{technology}}
       | {% endfor %}
       | {% endif %}
       | {% if work.tools %}
-      | {% for tecnology in work.tools.all %}
-      span.label.label-default.popupTech__label {{technology.name}}
+      | {% for technology in work.tools.all %}
+      span.label.label-default.popupTech__label {{technology}}
       | {% endfor %}
       | {% endif %}
       | {% if work.additionalTolls %}
-      | {% for tecnology in work.additionalTolls.all %}
-      span.label.label-default.popupTech__label {{technology.name}}
+      | {% for technology in work.additionalTolls.all %}
+      span.label.label-default.popupTech__label {{technology}}
       | {% endfor %}
       | {% endif %}
     article.popupDescription
