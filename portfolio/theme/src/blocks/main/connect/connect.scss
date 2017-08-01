@@ -5,7 +5,7 @@
 *******/
 #connect {
   background-color: $transviolet;
-  width: 100%;
+  @extend %full-width;
 }
 @import "title/title.scss";
 @import "connectForm/connectForm.scss";

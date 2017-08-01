@@ -1,12 +1,9 @@
 /* Socials profiles */
 .connect__socials {
   width: 40%;
-  padding: 0;
+  @extend %zero-padding;
   @include breakpoint($xs) {
-    // flex-direction: column;
     width: 100%;
-
-
   }
   
 }
@@ -15,32 +12,22 @@
   margin-top: 50px;
   list-style: none;
 }
-.socials__contact:first-child .cover__icon {
-
-}
-.cover__icon {
-
-}
 .fa-free-code-camp  {
 
   & + .cover__text {
     @extend .fa-free-code-camp;
-    @include breakpoint($xs) {
-      
-    }
   }
-  @include breakpoint($xs) {}
 }
 
 .contact__cover {
   transition: color 0.5s;
   &:hover {
-    color: darken(#fff, 20%);  
+    color: darken($white, 20%);  
   }
   &:focus {
-    color: #fff;
+    @extend %white-color;
   }
   &:active {
-    color: #fff;  
+    @extend %white-color;
   }
 }

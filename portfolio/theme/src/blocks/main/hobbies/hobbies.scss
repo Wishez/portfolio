@@ -4,31 +4,28 @@
 
 *******/
 #hobbies {
+  @extend %full-width;
+  @extend %relative;
   background: $palegreen;
-  width: 100%;
   padding-top: 19px;
   color: $darkgreen;
-  position: relative;
   &::after {
    @include flagTo($palegreen);  
   }
 }
 .hobbies {
   justify-content: space-between;
-  @media (max-width: 768px) {
-     @extand .portfolio__works;
-  }
   & .hobbies__hobby {
     width: span(5);
     margin-top: 60px;
     &:last-child {
       width: span(8);
-      margin: 0 auto;
-      @include breakpoint(max-width 768px) {
+      @extend %center-margin;
+      @include breakpoint($xs) {
         width: span(12);
       }
     }
-    @media (max-width: 768px) {
+    @include breakpoint($xs) {
       width: span(12);
     }
   }

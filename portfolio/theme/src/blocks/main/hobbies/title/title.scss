@@ -1,4 +1,4 @@
 .hobbies__title {
-  width: 100%;
-  margin: 0 auto;
+   @extend %full-width;
+   @extend %center-margin;
 }
