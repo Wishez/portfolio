@@ -1,4 +1,4 @@
-/*******
+/******
 
  HEADER
 
@@ -7,10 +7,10 @@
 .banner {
   background-color: $ghostblack;
   border-radius: 0;
-  margin: 0;
+  @extend .zero-margin;
   border: 0;
   .container {
-    margin: 0 auto;
+    @extend .center-margin;
     width: 95%;
     justify-content: space-between;
     align-items: center;
@@ -19,8 +19,9 @@
       display: none;
     }
     .navigation {
-      @media (max-width: 768px) {
-        margin: 15px auto 0; 
+      // @extend .center-margin-xs;
+      @include breakpoint($xs) {
+        margin: 15px auto 0;
       }
     }
   }
@@ -31,4 +32,4 @@
 
  END HEADER
 
-**********/
+*********/

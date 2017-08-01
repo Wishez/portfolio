@@ -3,7 +3,7 @@ $('#works').slick({
 	centerPadding: '60px',
 	slideToShow: 3,
   autoplay: true,
-  autoplaySpeed: 2000,
+  autoplaySpeed: 5000,
   arrows: true,
 	responsive: [
     {
@@ -11,7 +11,7 @@ $('#works').slick({
       settings: {
         arrows: true,
         autoplay: true,
-        autoplaySpeed: 2000,
+        autoplaySpeed: 5000,
         centerPadding: '40px'
       }
     },
@@ -42,11 +42,6 @@ $('.elemWork__img').on('click', function(e) {
   $slider.css({
     opacity: 1
   });
-//     .animate({
-//     }, 300, function () {
-
-      
-//     });
 });
 
 $('.popupSlider').slick({
@@ -58,7 +53,7 @@ $('.popupSlider').slick({
       {
         breakpoint: 778,
         settings: {
-          arrows: true
+          arrows: false
         }
       }
     ]

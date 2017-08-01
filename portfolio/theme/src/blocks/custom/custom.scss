@@ -12,6 +12,7 @@ $susy: (
 
 @include border-box-sizing;
 
+$imp: !important;
 // Breakpoints
 $lg: 1200px;
 $md: 992px 1199px;
@@ -19,7 +20,6 @@ $sm: 769px 991px;
 $xs: max-width 768px;
 $xxs: max-width 459px;
 $xxs-iphone: max-width 320px;
-
 $stackEuro: 'Eurofurence', monospace;
 $stackFoo: 'KG Second Chances', cursive;
 $stackRussoOne: 'RussoOne', cursive;
@@ -33,7 +33,98 @@ $palegreen: hsla(89, 27%, 79%, .9);
 $darkgreen: hsl(89, 34%, 30%);
 $transviolet: hsla(325, 65%, 30%, 0.9);
 $darkGray: #3a3a3a;
-// Mixins
+// Default classes;
+.zero-opacity {
+  opacity: 0;
+}
+.visible-opacity {
+  opacity: 1;
+}
+.white-color {
+  color: $white;
+}
+.dark-gray-color {
+  color: $darkGray;
+}
+.zero-margin {
+  margin: 0;
+}
+.relative {
+  position: relative;
+}
+.inline-block {
+  display: inline-block;
+}
+.block {
+  display: block;
+}
+.block-xs {
+  @include breakpoint($xs) {
+    display: block;
+  }
+}
+.absolute {
+  position: absolute;
+}
+.fixed {
+  position: fixed;
+}
+.default-position {
+  top: 0;
+  left: 0;
+}
+.full-height {
+  height: 100%;
+}
+.full-height-xs {
+  @include breakpoint($xs) {
+    height: 100%;
+  }
+}
+.full-width {
+  width: span(12);
+}
+.full-width-xs {
+  @include breakpoint($xs) {
+    width: span(12); 
+  }
+}
+.center-margin {
+  margin: 0 auto;
+}
+.center-margin-xs {
+  @include breakpoint($xs) {
+    margin: 0 auto;
+  }
+}
+.font-size-18 {
+  font-size: (18em / 16);
+}
+.font-size-22 {
+  font-size: (22em / 16);
+}
+.text-center-xs {
+  @include breakpoint($xs) {
+    text-align: center;
+  }
+}
+.text-left-xs {
+  @include breakpoint($xs) {
+    text-align: left;
+  }
+}
+.break-words {
+  word-break: break-all;
+}
+.pull-left-xs {
+  @include breakpoint($xs) {
+    float: left;
+  }
+}
+.responsive-background {
+  background: no-repeat center;
+  background-size: cover;
+}
 .flag {
     z-index: 1;
     content: '';
@@ -42,6 +133,7 @@ $darkGray: #3a3a3a;
     top: 100%;
     border: 25px solid transparent;
 }
+// Mixins
 @mixin flagTo($border-color: false, $border-width: false) {
   @extend .flag;
   @if ($border-width) {
@@ -53,7 +145,7 @@ $darkGray: #3a3a3a;
 }
 /* Commonly custom */
 body {
-  color: $white;
+  @extend .white-color;
   background-image: linear-gradient(#000 2px, transparent 2px), linear-gradient(90deg, #000 2px, transparent 2px), linear-gradient(rgba(0, 0, 0, .3) 1px, transparent 1px), linear-gradient(90deg, rgba(0, 0, 0, .3) 1px, transparent 1px);
   background-size: 100px 100px, 100px 100px, 20px 20px, 20px 20px;
   background-position: -2px -2px, -2px -2px, -1px -1px, -1px -1px;
@@ -83,7 +175,7 @@ h3 {
   font-size: (24em / 16);
 }
 a {
-  color: $white;
+  @extend .white-color;
   &:hover {
     text-decoration: none;
   }
@@ -98,7 +190,6 @@ a {
 .banner .container,
 .main,
 .portfolio,
-// .portfolio__works,
 .skills, .hobbies, .connect, .connect__socials {
   display: flex;
   flex-flow: row wrap;
@@ -129,12 +220,9 @@ a {
 }
 
 .anchor {
-  z-index: 9999;
+  z-index: 20;
 }
-.tooltip {
-  top: 9px;
-  width: 100%;
-}
+
 /*******
 
  END Custom
