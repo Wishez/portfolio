@@ -1,19 +1,55 @@
 .popupContainer {
-	position: fixed;
-	top: 0;
-	left: 0;
-	width: span(12);
-	height: 100%;
+	@extend .fixed;
+	@extend .default-position;
+	@extend .full-width;
+	@extend .full-height;
+	@extend .white-color;
 	background-color: hsla(0, 0, 18, .6);
 	z-index: -5;
 	& * {
 		z-index: 10;
 	}
-	color: $white;
+	 & .slick-next, & .slick-prev  {
+	    top: 50% $imp;
+	    background-color: transparent;
+	    width: 50%;
+	    @extend .full-height;
+	    z-index: 16;
+	    border-radius: 2px;
+	    @extend .zero-opacity;
+	    transition: opacity 0.8s;
+	    &:hover {
+			@extend .visible-opacity;
+	    }
+	    &::before {
+	      content: none $imp;
+	    }
+	    &::after {
+	      position: absolute;
+	      top: 50%;
+	      @extend .center-margin;
+	      @extend .dark-gray-color;
+	      font-size: 60px;
+	    }
+  }
+  & .slick-prev {
+    &::after {
+      content: "\0003C";
+      left: 10%;
+    }
+    left: 0 $imp;
+  }
+  & .slick-next {
+    &::after {
+      content: "\0003E";
+      right: 10%;
+    }
+    right: 0 $imp;
+  }
 }
 
 .pupup {
-	position: absolute;
+	@extend .absolute;
 	left: 100%;
 	max-width: 800px;
  	height: 80vh;
@@ -25,21 +61,21 @@
 	top: 10vh;
 
 	@include breakpoint($xs) {
+		// @extend .full-width-xs;
 		margin-left: 0;
 		left: 0;
-		width: span(12);
 		height: 90vh;
-		top: 5vh;
+		top: 0;
 	}
 	@include breakpoint($xxs-iphone) {
 		min-height: 568px;
 		top: 0;
-		height: 100%;
+		height: 100%
 	}
 
 }
 .popupSlider, .popupContainer {
-	opacity: 0;
+	@extend .zero-opacity;
 	transition: opacity 0.4s;  
 }
 .popupSlider {
@@ -63,27 +99,44 @@
 	padding: 3% 2%;
 
 }
-.popupDescription__text {
-	margin: 0;
-}
 .popupTech {
 	@include span(4);
 }
+.popupTech, .popupDescription, .pupup{
+	@include breakpoint($xs) {
+		width: span(12);
+	}
+}
 .pupup__close {
-	position: absolute;
+	@extend .absolute;
 	right: 20px;
 	top: 10px;
 	z-index: 15;
-	color: $darkGray;
+	cursor: pointer;
+	@extend .dark-gray-color;
 	@include breakpoint($xs) {
 		top: 0;
 	}
 }
-.popupTech__title {
-	font-size: (18em / 16);
-	margin: 0;
+.popupTech__title, .popupDescription__text {
+	@extend .zero-margin;
 }
 .popupTech__title, .popupDescription__link {
 	color: #b3b3b3;
 	
+}
+
+.popupDescription__link{
+	transition: color 1s;
+	&:hover {
+		@extend .white-color;
+	}
+}
+.popupTech__title, .popupTech__label {
+	@extend .font-size-18;
+}
+.popupTech__label {
+	margin: 5px 10px 0 0;
+	@extend .inline-block;
+	@extend .white-color;
 }

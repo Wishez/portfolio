@@ -6,9 +6,9 @@
 /* container */
 .main__intro {
   background-color: $ghostblack;
-  width: 100%;
-  margin: 0 auto;
-  position: relative;
+  @extend .full-width;
+  @extend .center-margin;
+  @extend .relative;
   padding-top: 125px;
   &::after {
     @include flagTo($ghostblack);
@@ -19,16 +19,12 @@
 }
 .intro__heading, .intro__introduce  {
   @include span(5);
- 
-  @include breakpoint($sm) {
- 
-  }
 }
 
 
 .introduce__typed {
-  color: $white;
-  word-break: break-all;
+  @extend .white-color;
+  @extend .break-words;
 }
 .heading__greet, .intro__introduce, .intro__and {
 
@@ -46,7 +42,7 @@
   }
 }
 .heading__name {
-  margin: 0;
+  @extend .zero-margin;
 }
 .intro__and {
   color: hsl(0, 0, 61);
@@ -56,12 +52,14 @@
 
   @include breakpoint($xs) {
     margin-top: 35px;
+    // @extend .text-left-xs;
     text-align: left;
   }
 }
 .intro__heading, .intro__introduce, .intro__and {
   @include breakpoint($xs) {
-    
+    // @extend .full-width-xs;
+    // @extend .pull-left-xs;
     @include span(12);
 
   }
@@ -72,14 +70,15 @@
   }
 }
 .intro__myFace {
-  margin: 80px auto 0;
+  @extend .center-margin;
+  margin-top: 80px;
   max-width: 300px;
 }
 
 .myFace__face {
   padding-top: 100%;
-  background: url("../img/my_face.png") no-repeat center;
-  background-size: cover; 
+  @extend .responsive-background;
+  background-image: url("../img/my_face.png");
   box-shadow: 0 0 5px rgba(0,0,0,.9);
 }
 
@@ -89,12 +88,8 @@
 }
 
 /* Typed.js styles */
-.activity {
-
-  
-}
 .typed-cursor {
-    opacity: 1;
+    @extend .visible-opacity;
     -webkit-animation: blink 0.7s infinite;
     -moz-animation: blink 0.7s infinite;
     animation: blink 0.7s infinite;
