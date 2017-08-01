@@ -5,8 +5,8 @@
 *******/
 #skills {
   background-color: $sweetred;
-  width: 100%;
-  position: relative;
+  @extend %full-width;
+  @extend  %relative;
   &::after {
     @include flagTo($sweetred);
   }
@@ -14,7 +14,7 @@
 
 .skills {
   justify-content: space-between;
-  @media (max-width: 449px) {
+  @include breakpoint($xxs) {
     flex-direction: column;
   }
 }

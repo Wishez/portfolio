@@ -5,8 +5,8 @@
 *******/
 #portfolio {
   background-color: $ghostcyen;
-  position: relative;
-  width: 100%;
+  @extend %relative;
+  @extend %full-width;
   padding-bottom: 75px;
   @include breakpoint($xs) {
     padding-bottom: 40px;
@@ -19,10 +19,8 @@
 
 .portfolio {
   justify-content: flex-start;
-
-  margin: 0 auto;
-  color: $darkGray;
-  $imp: !important;
+  @extend %center-margin;
+  @extend %dark-gray-color;
   & .slick-next, & .slick-prev  {
     top: -35px $imp;
     background-color: $darkGray;
@@ -33,10 +31,10 @@
       content: none $imp;
     }
     &::after {
-      position: relative;
+      @extend %relative;
+      @extend %center-margin;
+      @extend %white-color;
       top: 5px;
-      margin: 0 auto;
-      color: #f4f4f4;
       font-size: 40px;
     }
   }

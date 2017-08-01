@@ -12,7 +12,8 @@ $('#works').slick({
         arrows: true,
         autoplay: true,
         autoplaySpeed: 5000,
-        centerPadding: '40px'
+        centerPadding: '40px',
+        centerMode: false
       }
     },
     {
@@ -22,7 +23,8 @@ $('#works').slick({
         autoplay: true,
         autoplaySpeed: 5000,
         centerPadding: '40px',
-        slidesToShow: 1
+        slidesToShow: 1,
+        centerMode: false
       }
     }
   ]

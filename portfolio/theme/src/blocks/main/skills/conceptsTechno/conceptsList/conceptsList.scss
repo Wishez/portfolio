@@ -1,5 +1,5 @@
 .concepts__conceptsList {
-  padding: 0;
+  @extend %zero-padding;
 }
 .conceptsList__item {
   height: 25px;
@@ -7,16 +7,13 @@
   padding-left: 0;
 }
 .item__refer {
-  font: {
-    size: (18em / 16);
-    weight: 600;
-    family: $stackEuro;
-  }
+  @extend %font-size-18;
+  font-weight: 600;
   color: $sweetbrown;
   transition: color 1s;
   &:hover {
     @extend .item__refer;
-    color: #fff;
+    @extend %white-color;
   }
   &:active {
     @extend .item__refer;
