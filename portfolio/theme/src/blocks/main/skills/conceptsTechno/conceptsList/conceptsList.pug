@@ -1,5 +1,7 @@
 ul.concepts__conceptsList.conceptsList
   | {% for concept in concepts %}
+  | {% if concept.is_showed %}
   li.conceptsList__item.item.showTip(data-supertip="{{concept.tooltip}}")
     a.item__refer.anchor(href="{{concept.link}}") {{concept.name}}
+  | {% endif %}
   | {% endfor %}

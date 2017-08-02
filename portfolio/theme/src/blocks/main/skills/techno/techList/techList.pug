@@ -1,5 +1,6 @@
 ul.techno__techList.techList
   | {% for technology in technologies %}
+  | {% if technology.is_showed %}
   li.techList__itemTechList.itemTechList.showTip(
     data-supertip="{{technology.tooltip}}"
   )
@@ -15,4 +16,5 @@ ul.techno__techList.techList
           aria-valuemax="100",
           style="width:{{technology.progress}}%"
         ) {{technology.name}}
+  | {% endif %}
   | {% endfor %}
