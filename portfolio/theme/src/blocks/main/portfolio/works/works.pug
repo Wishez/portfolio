@@ -13,43 +13,55 @@ section.popupContainer(id="work_{{work.id}}")
     i.fa.fa-close.fa-2x.pupup__close(data-id='#work_{{work.id}}')
     .popupSlider
       | {% if work.slide_1 %}
-      img.img-responsive.img-thambnail.popupSlider__img(
-        src="/media/{{work.slide_1}}",
-        alt='Slide of a work.'
-      )
+      .sliderContainer
+        a.sliderContainer__link(href="/media/{{work.slide_1}}")
+          img.img-responsive.img-thambnail.sliderContainer__img(
+            src="/media/{{work.slide_1}}",
+            alt='Slide of a work.'
+          )
       | {% endif %}
       | {% if work.slide_2 %}
-      img.img-responsive.img-thambnail.popupSlider__img(
-        src="/media/{{work.slide_2}}",
-        alt='Slide of a work.'
-      )
+      .sliderContainer
+        a.sliderContainer__link(href="/media/{{work.slide_2}}")
+          img.img-responsive.img-thambnail.sliderContainer__img(
+            src="/media/{{work.slide_2}}",
+            alt='Slide of a work.'
+          )
       | {% endif %}
       | {% if work.slide_3 %}
-      img.img-responsive.img-thambnail.popupSlider__img(
-        src="/media/{{work.slide_3}}",
-        alt='Slide of a work.'
-      )
+      .sliderContainer
+        a.sliderContainer__link(href="/media/{{work.slide_3}}")
+          img.img-responsive.img-thambnail.sliderContainer__img(
+            src="/media/{{work.slide_3}}",
+            alt='Slide of a work.'
+          )
       | {% endif %}
       | {% if work.slide_4 %}
-      img.img-responsive.img-thambnail.popupSlider__img(
-        src="/media/{{work.slide_4}}",
-        alt='Slide of a work.'
-      )
+      .sliderContainer
+        a.sliderContainer__link(href="/media/{{work.slide_4}}")
+          img.img-responsive.img-thambnail.sliderContainer__img(
+            src="/media/{{work.slide_4}}",
+            alt='Slide of a work.'
+          )
       | {% endif %}
       | {% if work.slide_5 %}
-      img.img-responsive.img-thambnail.popupSlider__img(
-        src="/media/{{work.slide_5}}",
-        alt='Slide of a work.'
-      )
+      .sliderContainer
+        a.sliderContainer__link(href="/media/{{work.slide_5}}")
+          img.img-responsive.img-thambnail.sliderContainer__img(
+            src="/media/{{work.slide_5}}",
+            alt='Slide of a work.'
+          )
       | {% endif %}
       | {% if work.slide_6 %}
-      img.img-responsive.img-thambnail.popupSlider__img(
-        src="/media/{{work.slide_6}}",
-        alt='Slide of a work.'
-      )
+      .sliderContainer
+        a.sliderContainer__link(href="/media/{{work.slide_6}}")
+          img.img-responsive.img-thambnail.sliderContainer__img(
+            src="/media/{{work.slide_6}}",
+            alt='Slide of a work.'
+          )
       | {% endif %}
     aside.popupTech
-      h3.popupTech__title Применённые технологии
+      h3.popupTech__title Используемые технологии
       | {% if work.technologies %}
       | {% for technology in work.technologies.all %}
       span.label.label-default.popupTech__label {{technology}}
@@ -60,12 +72,14 @@ section.popupContainer(id="work_{{work.id}}")
       span.label.label-default.popupTech__label {{technology}}
       | {% endfor %}
       | {% endif %}
-      | {% if work.additionalTolls %}
-      | {% for technology in work.additionalTolls.all %}
+      | {% if work.additionalTools %}
+      | {% for technology in work.additionalTools.all %}
       span.label.label-default.popupTech__label {{technology}}
       | {% endfor %}
       | {% endif %}
     article.popupDescription
-      a.anchor.popupDescription__link(href="{{ work.url }}") Перейти на сайт
+      h3.popupDescription__title.pull-left {{work.name}}
+      a.pull-right.anchor.popupDescription__link(href="{{ work.url }}") Перейти на сайт
+      .clearfix
       p.popupDescription__text {{ work.full_desc }}
 | {% endfor %}

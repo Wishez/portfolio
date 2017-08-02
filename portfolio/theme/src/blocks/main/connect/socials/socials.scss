@@ -21,6 +21,7 @@
 
 .contact__cover {
   transition: color 0.5s;
+  color: $white;
   &:hover {
     color: darken($white, 20%);  
   }

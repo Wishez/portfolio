@@ -33,7 +33,7 @@
     &::after {
       @extend %relative;
       @extend %center-margin;
-      @extend %white-color;
+      color: $white;
       top: 5px;
       font-size: 40px;
     }
