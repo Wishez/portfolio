@@ -1,6 +1,7 @@
 <!-- The Tools List -->
 ul.tools__toolsList.toolsList
   | {% for tool in tools %}
+  | {% if tool.is_showed %}
   li.toolsList__itemToolsList.itemToolsList.showTip(
     data-supertip="{{tool.tooltip}}"
   )
@@ -16,4 +17,5 @@ ul.tools__toolsList.toolsList
           aria-valuemax="100",
           style="width:{{tool.progress}}%"
         ) {{tool.name}}
+  | {% endif %}
   | {% endfor %}

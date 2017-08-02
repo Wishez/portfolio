@@ -1,13 +1,16 @@
 .portfolio__works.works#works
   | {% for work in works %}
+  | {% if work.is_showed %}
   .elemWork
     img.img-responsive.img-thambnail.elemWork__img(
       src="/media/{{ work.img }}",
       alt="{{ work.desc }}"
       data-id="#work_{{work.id}}"
     )
+  | {% endif %}
   | {% endfor %}
 | {% for work in works %}
+| {% if work.is_showed %}
 section.popupContainer(id="work_{{work.id}}")
   .pupup
     i.fa.fa-close.fa-2x.pupup__close(data-id='#work_{{work.id}}')
@@ -81,5 +84,6 @@ section.popupContainer(id="work_{{work.id}}")
       h3.popupDescription__title.pull-left {{work.name}}
       a.pull-right.anchor.popupDescription__link(href="{{ work.url }}") Перейти на сайт
       .clearfix
-      p.popupDescription__text {{ work.full_desc }}
+      .popupDescription__text {{ work.full_desc|safe }}
+| {% endif %}
 | {% endfor %}
