@@ -32,7 +32,7 @@
     @extend %visible-opacity;
   }
   &-focused label {
-    @extend %white-color;
+    color: $white;
   }
 }
 .elemForm__item {
@@ -42,11 +42,11 @@
   z-index: 1;
   @extend %font-size-22;
   border: 0;
-  border-bottom: 1px solid #fff;
+  border-bottom: 1px solid darken($white, 20%);
   color: #aaa;
   &:focus {
     outline: 0;
-    @extend %white-color;
+    color: $white;
   }
 }
 ::-webkit-input-placeholder {

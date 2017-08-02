@@ -10,6 +10,7 @@
 //= ../../bower_components/jquery-mask-plugin/dist/jquery.mask.min.js
 //= ../../bower_components/js-cookie/src/js.cookie.js
 //= ../../bower_components/slick-carousel/slick/slick.min.js
+//= ../../bower_components/magnific-popup/dist/jquery.magnific-popup.min.js
 //= ../libs/notLikeOtherTipsters.js
 
 /**********

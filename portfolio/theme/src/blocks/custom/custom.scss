@@ -123,7 +123,7 @@ $darkGray: #3a3a3a;
 }
 /* Commonly custom */
 body {
-  @extend %white-color;
+  color: $white;
   background-image: linear-gradient(#000 2px, transparent 2px), linear-gradient(90deg, #000 2px, transparent 2px), linear-gradient(rgba(0, 0, 0, .3) 1px, transparent 1px), linear-gradient(90deg, rgba(0, 0, 0, .3) 1px, transparent 1px);
   background-size: 100px 100px, 100px 100px, 20px 20px, 20px 20px;
   background-position: -2px -2px, -2px -2px, -1px -1px, -1px -1px;
@@ -139,7 +139,9 @@ body {
   -webkit-hyphens-after: 3;
   hyphens-lines: 3;
 }
-
+br {
+  font-family: monospace;
+}
 h1, h2, h3{
   font-family: $stackRussoOne;  
 }
@@ -200,6 +202,7 @@ a {
 .anchor {
   z-index: 20;
 }
+
 
 /*******
 
