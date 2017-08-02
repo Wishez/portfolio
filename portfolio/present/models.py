@@ -81,7 +81,7 @@ class MoreTool(models.Model):
         verbose_name_plural = 'Дополнительный инструменты'
 
 def work_direcroty(instance, filename):
-    return 'works/work_{0}/{1}'.format(instance.id, filename)
+    return 'work_{0}/{1}'.format(instance.id, filename)
 class Work(models.Model):
     name = models.CharField(_("Имя работы"), max_length=350, blank=True)
     url = models.URLField(_("Ссылка на работу"), max_length=250)
