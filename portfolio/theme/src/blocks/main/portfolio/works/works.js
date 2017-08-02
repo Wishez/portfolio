@@ -71,4 +71,13 @@ $(document).on('click', '.pupup__close', function() {
       zIndex: -10 
   });
 });
-  // .not('.popupSlider, .pupup, .popupSlider__img, .popupTech, .popupTech__label, .popupDescription, .popupDescription__link, .popupDescription__text')
+var $popupLinks = $('.sliderContainer__link');
+$popupLinks.magnificPopup({
+  delegate: 'a',
+  type: 'image'
+  // other options
+});
+
+$popupLinks.on('click', function(e) {
+   e.preventDefault();
+ })

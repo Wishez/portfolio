@@ -11,14 +11,7 @@
   font-weight: 600;
   color: $sweetbrown;
   transition: color 1s;
-  &:hover {
-    @extend .item__refer;
-    @extend %white-color;
-  }
-  &:active {
-    @extend .item__refer;
-  }
-  &:focus {
-    @extend .item__refer;
+  &:hover,  &:active, &:focus  {
+    color: $white;
   }
 }

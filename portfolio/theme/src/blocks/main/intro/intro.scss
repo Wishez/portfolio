@@ -23,7 +23,7 @@
 
 
 .introduce__typed {
-  @extend %white-color;
+  color: $white;
   @extend %break-words;
 }
 .heading__greet, .intro__introduce, .intro__and {

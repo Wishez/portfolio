@@ -3,8 +3,6 @@
   z-index: 1;
   top: 28px;
   right: 18%;
-  // @extend .full-width-xs;
-  // @extend .text-center-xs;
   @include breakpoint($xs) {
     position: static;
     text-align: center;
@@ -19,7 +17,7 @@
       display: block;
     }
     .item__text {
-      @extend %white-color;
+      color: $white;
       transition: box-shadow .5s, color .5s;
       &:hover {
         color: #f0f;
@@ -30,7 +28,6 @@
       }
     }
     &-list {
-      // @extend .block-xs;
       @include breakpoint($xs) {
         display: block;
       }
