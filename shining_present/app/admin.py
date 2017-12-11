@@ -8,15 +8,14 @@ class SettingsAdmin(SingleModelAdmin):
     fieldsets = (
         ('Настройка информации сайта', {
             'fields': (
-                ('widgets',),
-                ('meta',)
+                ('meta',),
+                ('title',),
             ),
         },),
         ('Настройка контактной информации', {
             'fields': (
-                ('email', 'footer_phone',),
-                ('city', 'address',),
-                ('addressHref',),
+                ('email',),
+                ('skype', 'phone',),
             ),
         },),
         ('Ссылки', {
@@ -39,10 +38,42 @@ class SettingsAdmin(SingleModelAdmin):
                 ('default_color',),
             ),
         },),
-        ('Нижняя часть страницы', {
-            'fields': (
-                ('footer_photo',),
-                ('footer_copyright',)
-            ),
-        },),
+    )
+
+@admin.register(Tag)
+class TagAdmin(admin.ModelAdmin):
+    list_per_page = 10
+
+@admin.register(Work)
+class WorkAdmin(admin.ModelAdmin):
+    list_display = ('name', 'url', 'is_shown', 'created', 'album',)
+    prepopulated_fields = {'slug': ('name',)}
+    ordering = ('created',)
+    list_per_page = 10
+    fieldsets = (
+        ('Описание', {
+            "fields": (
+                ('name', 'url',),
+                ('task',),
+                ('task_en',),
+            )
+        }),
+        ('Изображения', {
+            "fields": (
+                ('album',),
+                ('thumb')
+            )
+        }),
+        ('Инструментарий', {
+            "fields": (
+                ('technologies',),
+                ('tools',),
+                ('additionalTools',),
+            )
+        }),
+        ('Отображение', {
+            "fields": (
+                ('is_showed','added_date'),
+            )
+        }),
     )
