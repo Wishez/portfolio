@@ -1,0 +1,24 @@
+header.header
+	.container
+		nav.navigaton.navbar.navbar-default(role="navigation")
+			.container
+				.navbar-header.navHeader
+					button.navigaton__openMenuButton.navbar-toggle( 
+						type="button",  
+						data-toggle="collapse",
+						data-target="#navbar_collapse"
+					)
+						span.sr-only Toggle navigation
+						span.icon-bar
+						span.icon-bar
+						span.icon-bar
+					a.brand.navbar-brand(href="#") 
+						figure.brand__name.pull-left
+				.navbarCollaps.collapse.navbar-collapse#navbar_collapse
+					ul.nav.navbar-nav.navList
+						li.navItem 
+							a.navItem__refer(href="#") О компании
+						li.navItem
+							a.navItem__refer(href="#") Библиотека
+						li.navItem
+							a.navItem__refer(href="#") Курсы
