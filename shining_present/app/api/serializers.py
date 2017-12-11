@@ -1,36 +1,65 @@
 from rest_framework import serializers
 
-from ..models import User
+from ..models import *
+from album.models import *
 
-class PluginUserSerializer(serializers.ModelSerializer):
-    words = serializers.SlugRelatedField(
-        many=True,
+class WorkPreviewSerializer(serializers.ModelSerializer):
+    album = serializers.SlugRelatedField(
+        many=False,
         read_only=True,
-        slug_field='name'
+        slug_field='thumb'
     )
 
     class Meta:
-        model = User
+        model = Work
+        # lookup_field = 'uuid'
         fields = (
             'uuid',
-            'words',
-            'current_site',
-            'quantity_words',
-            'username',
-            'is_parsed_data',
-            'was_gotten_new_domain',
+            'slug',
+            'name',
+            'is_shown',
+            'album',
         )
 
-class DocumentUserDataSerializer(serializers.ModelSerializer):
-    words = serializers.SlugRelatedField(
+
+class AlbumImageSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = AlbumImage
+
+        fields = (
+            'image',
+            'alt',
+            'description',
+        )
+
+
+class AlbumSerializer(serializers.ModelSerializer):
+    album_images = AlbumImageSerializer(many=True, read_only=True)
+    class Meta:
+        model = AlbumImage
+
+        fields = (
+            'album_images',
+            'slug',
+        )
+
+class WorkSerializer(serializers.ModelSerializer):
+    tags = serializers.SlugRelatedField(
         many=True,
         read_only=True,
         slug_field='name'
     )
+    album = AlbumSerializer(many=False, read_only=True)
 
     class Meta:
-        model = User
+        model = Work
+
         fields = (
             'uuid',
-            'words',
+            'name',
+            'tags',
+            'album',
+            'task',
+            'task_en',
+            'url',
         )
