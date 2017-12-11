@@ -5,6 +5,7 @@ from django.utils.translation import ugettext_lazy as _
 from colorfield.fields import ColorField
 from imagekit.models import ProcessedImageField
 from imagekit.processors import ResizeToFit
+import uuid as uuid_lib
 
 if not settings.DEBUG:
     encoding = 'utf-8'
@@ -25,7 +26,7 @@ class Settings(TimeStampedModel):
     name = models.CharField(
         _('Имя настройки'),
         max_length=100,
-        default='Глобальная настройка'
+        default=_('Глобальная настройка')
     )
     widgets = models.TextField(
         _('Метрики, виджеты и прочее'),
@@ -45,48 +46,13 @@ class Settings(TimeStampedModel):
         blank=True,
         null=True
     )
-    footer_phone = models.CharField(
+
+    phone = models.CharField(
         _('Телефон в нижней части страници'),
         max_length=90,
         blank=True,
         null=True,
-        default='+7 (343) 111-11-11'
-    )
-    city = models.CharField(
-        _('Город'),
-        max_length=100,
-        blank=True,
-        null=True,
-        default='г. Екатеринбург'
-    )
-    address = models.CharField(
-        _('Адрес'),
-        max_length=200,
-        blank=True,
-        null=True,
-        default='ул. Первомайская, 77'
-    )
-    addressHref = models.CharField(
-        _('Ссылка перенаправляющая на карты(Google/Yandex)'),
-        max_length=500,
-        blank=True,
-        null=True,
-        default='https://www.google.ru/maps/place/%D1%83%D0%BB.+%D0%9F%D0%B5%D1%80%D0%B2%D0%BE%D0%BC%D0%B0%D0%B9%D1%81%D0%BA%D0%B0%D1%8F,+77,+%D0%95%D0%BA%D0%B0%D1%82%D0%B5%D1%80%D0%B8%D0%BD%D0%B1%D1%83%D1%80%D0%B3,+%D0%A1%D0%B2%D0%B5%D1%80%D0%B4%D0%BB%D0%BE%D0%B2%D1%81%D0%BA%D0%B0%D1%8F+%D0%BE%D0%B1%D0%BB.,+620062/@56.8459859,60.639357,17z/data=!3m1!4b1!4m5!3m4!1s0x43c16c2be5298e21:0x77522d799d8f3f75!8m2!3d56.8459859!4d60.6415457'
-    )
-    footer_photo = models.ForeignKey(
-        "album.album",
-        verbose_name=_('Альбом'),
-        related_name='footer_album',
-        blank=True,
-        null=True
-    )
-
-    footer_copyright = models.CharField(
-        _('Текст копирайта в нижней части страницы'),
-        max_length=20,
-        blank=True,
-        null=True,
-        default='Copyright by Ideal\''
+        default='+7 (985) 905-12-51'
     )
 
     default_link_color = ColorField(_('Стандартный цвет ссылок'), blank=True,
@@ -98,15 +64,11 @@ class Settings(TimeStampedModel):
                                null=True)
     default_bg = ColorField(_('Цвет фона сайта'), blank=True,
                             null=True)
-    default_image_bg = ProcessedImageField(
-        verbose_name=_('Фоновое изображение сайта'),
-        upload_to='background',
-        processors=[ResizeToFit(1280)],
-        format='JPEG',
-        options={'quality': 90},
-        blank=True,
-        null=True
 
+    thumb_photo = models.ForeignKey(
+        "album.albumimage",
+        verbose_name=_('Твоё лицо'),
+        related_name='thumb_photo'
     )
 
     preloader_color = ColorField(_('Цвет прелоадера'), blank=True,
@@ -121,3 +83,40 @@ class Settings(TimeStampedModel):
         db_table='site_settings'
         verbose_name = _('Настройка')
         verbose_name_plural = _('Настройки')
+
+class Tag(models.Model):
+    name = models.CharField(_('Тэг'), max_length=25)
+
+    def __str__(self):
+        return self.name
+    class Meta:
+        verbose_name = _('Тэг')
+        verbose_name_plural = _('Тэги')
+
+class Work(TimeStampedModel):
+    name = models.CharField(_("Имя работы"), max_length=350)
+    task = models.TextField(_("Цель проекта"), max_length=350)
+    task_en = models.TextField(_("Цель проекта(en)"), max_length=350, blank=True)
+    url = models.URLField(_("Ссылка на работу"), max_length=250)
+    uuid = models.UUIDField(
+        db_index=True,
+        default=uuid_lib.uuid4,
+        editable=True
+    )
+    album = models.ForeignKey(
+        "album.album",
+        models.CASCADE,
+        verbose_name=_("Альбом"),
+        related_name=_('work_album')
+    )
+    slug = models.SlugField(max_length=50, unique=True)
+
+    is_shown = models.BooleanField(_('Отобразить?'), default=True)
+
+    def __str__(self):
+        return self.name
+
+    class Meta:
+        db_table = 'my_works'
+        verbose_name = 'Работа'
+        verbose_name_plural = 'Работы'
