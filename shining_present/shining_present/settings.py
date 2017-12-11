@@ -42,11 +42,11 @@ INSTALLED_APPS = [
     'django.contrib.sites',
     'rest_framework',
     'app.apps.AppConfig',
-    'api.apps.ApiConfig',
     'singlemodeladmin',
     'colorfield',
     'album',
     'imagekit',
+    'pages',
 ]
 
 SITE_ID = 1
@@ -66,7 +66,7 @@ ROOT_URLCONF = 'shining_present.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR, 'app', 'templates')],
+        'DIRS': [os.path.join(BASE_DIR, 'pages', 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
