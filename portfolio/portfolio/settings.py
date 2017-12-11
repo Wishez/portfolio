@@ -84,6 +84,17 @@ DATABASES = {
     }
 }
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql',
+#         'USER': 'shining_present_u',
+#         'NAME': 'shining_present_db',
+#         'PASSWORD': 'nhFhYdSaH7JVupLRULDDxzfYk',
+#         'HOST': '',
+#         'PORT': 5432
+#     }
+# }
+
 # Custom MAIL
 # DEFAULT_FROM_EMAIL = 'comandos.testing@list.ru'
 # SERVER_EMAIL = 'comandos.testing@list.ru'

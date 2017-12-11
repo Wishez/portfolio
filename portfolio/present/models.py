@@ -1,12 +1,14 @@
 # -*- encoding: utf-8 -*-
-#import sys
-#encoding = 'utf-8'
-#reload(sys)
-#sys.setdefaultencoding(encoding)
+from django.conf import settings
+if not settings.DEBUG:
+    import sys
+    reload(sys)
+    sys.setdefaultencoding('utf-8')
+    
 from django.db import models
 from django.utils import timezone
 from django.utils.translation import ugettext_lazy as _
-from django.core.mail import send_mail
+from django.core.mail import EmailMessage
 # Create your models here.
 
 class Order(models.Model):
@@ -18,7 +20,16 @@ class Order(models.Model):
     ordered_date = models.DateTimeField(default=timezone.now)
 
     def sendMail(self, orderMsg):
-        send_mail('Хочешь поработать?.', orderMsg, 'comandos.testing@list.ru', ['shiningfinger@list.ru'])
+        #email = EmailMessage( 'Хочешь поработать?.', 'It\'s body of the message', settings.DEFAULT_FROM_EMAIL,  to=['shiningfinger@list.ru'])
+        # from django.core.mail import send_mail
+        # send_mail('Хочешь поработать?.', 'It\'s body of the message', settings.DEFAULT_FROM_EMAIL,  ['shiningfinger@list.ru'])
+        email = EmailMessage(
+            'Хочешь поработать?.',
+            orderMsg,
+            settings.DEFAULT_FROM_EMAIL,
+            to=['shiningfinger@list.ru']
+        )
+        email.send()
 
     def __str__(self):
         return self.name

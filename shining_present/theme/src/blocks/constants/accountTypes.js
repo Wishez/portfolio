@@ -1,0 +1,9 @@
+export const REQUEST_LOGIN_IN = 'REQUEST_LOGIN_IN';
+export const RECOVER_PASSWORD = 'RECOVER_PASSWORD';
+export const CHANGE_EMAIL = 'CHANGE_EMAIL';
+export const CHANGE_PASSWORD = 'CHANGE_PASSWORD';
+export const REPLANISH_BALANCE = 'REPLANISH_BALANCE';
+export const SUBSCRIBE = 'SUBSCRIBE';
+export const LOGIN = 'LOGIN';
+export const LOGOUT = 'LOGOUT';
+export const CHANGE_USER_AVATAR = 'CHANGE_USER_AVATAR';
