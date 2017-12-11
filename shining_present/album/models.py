@@ -6,14 +6,20 @@ from imagekit.processors import ResizeToFit
 from django.utils.translation import ugettext_lazy as _
 from app.models import TimeStampedModel
 
+def album_directory(instance, filename):
+    return 'albums/{0}/{1}'.format(instance.id, filename)
+
 class Album(TimeStampedModel):
     title = models.CharField(_('Заголовок'), max_length=70)
-    description = models.TextField(_('Описание'), max_length=1024)
-    #thumb = ProcessedImageField(verbose_name=_('Изображение предпоказа'), upload_to='albums', processors=[ResizeToFit(300)], format='JPEG', options={'quality': 90}, default='')
+    thumb = ProcessedImageField(verbose_name=_('Превью'), upload_to='albums', processors=[ResizeToFit(300)], format='JPEG', options={'quality': 90}, default='')
     #tags = models.CharField(max_length=250)
     is_visible = models.BooleanField(_('Отображать альбом?'), default=True)
     slug = models.SlugField(max_length=50, unique=True)
-
+    album_images = models.ManyToManyField(
+        "albumimage",
+        verbose_name=_('Изображения альбома'),
+        related_name='album_images'
+    )
     #def get_absolute_url(self):
     #    return reverse('album', kwargs={'slug':self.slug})
     def __str__(self):
@@ -25,14 +31,8 @@ class Album(TimeStampedModel):
         verbose_name_plural = _('Альбомы')
 
 class AlbumImage(TimeStampedModel):
-    image = ProcessedImageField(verbose_name=_('Изображение'), upload_to='albums', processors=[ResizeToFit(1280)], format='JPEG', options={'quality': 70})
-    #thumb = ProcessedImageField(upload_to='albums', processors=[ResizeToFit(300)], format='JPEG', options={'quality': 80})
-    album = models.ForeignKey(
-        'album',
-        models.SET_NULL,
-        verbose_name=_('Альбом'),
-        null=True
-    )
+    image = ProcessedImageField(verbose_name=_('Изображение'), upload_to='albums', processors=[ResizeToFit(300)], format='JPEG', options={'quality': 70})
+    description = models.TextField(_('Описание'), max_length=1024, blank=True, null=True )
     alt = models.CharField(_('Альтернативный текст изображения'), max_length=255, default=uuid.uuid4)
     width = models.IntegerField(_('Ширина'), default=0, help_text=_('По умолчанию - адаптивно'))
     height = models.IntegerField(_('Высонта'), default=0, help_text=_('По умолчанию - адаптивно'))
@@ -44,4 +44,4 @@ class AlbumImage(TimeStampedModel):
         verbose_name = _('Изображение')
         verbose_name_plural = _('Изображения')
 
-#
+        #
