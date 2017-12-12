@@ -1,0 +1,29 @@
+//BEGIN header
+header.header(itemscope, itemtype='http://schema.org/Person')
+	//BEGIN brand
+	.head
+		a(href='./').brand
+			.brandImage
+				figure.brandImage__image(style="background-image: url('./img/my_face.jpg');")
+			h1.brand__title(itemprop='name') Филипп Журавлёв
+		//BEGIN contacts
+		.contacts
+			p
+				a.contacts__contact(itemprop='email', href='mailto:shiningfinger@list.ru ') shiningfinger@list.ru 
+				| Skype:&nbsp; 
+				a.contacts__contact(itemprop='telephone', href='skype:fanyxxx1234?add') fanyxxx1234
+	//END contacts
+	nav.navigation
+		ul.navList
+			li.navListItem.navListItem_round-topLeft.text-right(data-position='bottomRight')
+				a(href='').navListItem__refer Портфолио
+			li.navListItem.navListItem_round-topRight(data-position='bottomLeft')
+				a(href='').navListItem__refer Обо мне
+			li.navListItem.navListItem_round-bottomLeft.text-right(data-position='topRight')
+				a(href='').navListItem__refer Технологии
+			li.navListItem.navListItem_round-bottomRight(data-position='topLeft')
+				a(href='').navListItem__refer Статьи
+			li.navListItem.navListItem_name-main#centeredMenuButton(data-position='centered')
+				a.navListItem__refer(href='')
+
+//END header
