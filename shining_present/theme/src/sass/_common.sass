@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway:300,300i,400,400i,700,700i')
+@import 'susy'
+@import 'breakpoint'
+@import 'bootstrap'
+@import 'bootstrap-sprockets'
+
+$i: !important
+$blue: #3e3f89
+$ochre: #917215
+$brown: #5f360d
+$heatGreen: #989b40
+$paleOragne: #d9b673
+$white: #f7f7f7
+$darkGray: #212121
+$lightGray: #ececec
+$darkenGray: #5d5c5c
+$shadow: rgba(0, 0, 0, .6)
+
+$lg: 1200px
+$md-up: 992px
+$md: 992px 1199px
+$md-less: max-width 1199px
+$sm-up: 800px
+$sm: 801px 991px
+$sm-less: max-width 991px
+$xs-up: 801px
+$xs-only: 480px 800px
+$xs: max-width 800px
+$xxs: max-width 445px
+$xxs-iphone: max-width 320px
+
+$susy: (columns: 12, gutters: 0, gutter-position: split, global-box-sizing: border-box)
+body
+	& *
+		box-sizing: border-box
+	& *:after, & *:before
+		box-sizing: border-box
+	background: $white
+	// +css-lock(16, 100, 100, 100, $unit: %)
+	text-rendering: optimizeLegibility
+	font-kerning: normal
+	font-variant-ligatures: common-ligatures contextual
+	font-feauture-settings: "kern", "ling", "clig", "calt"
+	font-size-adjust: 100%
+	word-break: break-word
+	hyphens: auto
+	-webkit-hyphenate-before: 2
+	-webkit-hyphenate-after: 3
+	hyphenate-lines: 3
+	font-family: 'Raleway', sans-serif;
+	line-height: 1.4
+	font-style: 
+	font-size: calc(1em + 1vw)
+
