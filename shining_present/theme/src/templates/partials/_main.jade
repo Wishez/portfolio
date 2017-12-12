@@ -1,0 +1,20 @@
+-
+	var images = ['1.png','2.png','3.png', '4.png']
+	var names = ['Fashinable Cards', 'Golden Theme', 'Slider', 'Gaming Fun']
+	var tags = [['React', 'Django', 'Css'], ['JavaSctipt', 'Html', 'Css', 'jQuery'], ['GreenSock', 'JavaScript', 'Css'], ['React', 'Django', 'Css']]
+
+//BEGIN main
+main#main.main
+	.container
+		ul.works.list-unstyled
+			each img, i in images
+				//BEGIN work
+				li.work
+					img.img-responsive.work__image(src='./img/' + img)
+					h2.work__title= names[i]
+					//BEIGN tags 
+					ul.tags
+						each tag in tags[i]
+							li.label.label-default= tag
+					//END tags 
+				//END work
