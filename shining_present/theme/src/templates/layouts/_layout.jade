@@ -9,9 +9,15 @@ html
     .out(class=outClass)
       block header
         include ../partials/_header
-      block main
-        include ../partials/_main
-      block content
+      //BEGIN main
+      main#main.main
+        .container
+          block work
+            include ../partials/_work
+          block portfolio
+            include ../partials/_portfolio
+      block footer
+        include ../partials/_footer
     //END out
 
     //LOAD SCRIPTS
