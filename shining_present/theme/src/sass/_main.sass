@@ -1,16 +1,49 @@
+.previous, .next, .navListItem__refer
+	text-decoration: none
+.work__refer, .navListItem__refer, .previous, .next
+	&:hover
+		text-decoration: none
+.work, .previous, .next
+	transition: 0.2s ease-in-out
+	&:hover
+		box-shadow: 0 10px 20px $shadow
+		transform: scale(1.01, 1.01)
 .header
 	padding-bottom: 6em
-	border-bottom: 1px solid $lightGray
-.head, .brand, .contacts, .navList, .navListItem, .works
+.header, .presentWorkItem, .presentWork
+	border-style: solid
+	border-color: $lightGray
+.header, .presentWorkItem
+	border-bottom-width: 1px
+.head, 
+.brand, 
+.contacts, 
+.navList, 
+.navListItem, 
+.works, 
+.worksPagination, 
+.main > .container, 
+.presentWorkItem, 
+.presentWork
 	display: flex
-	flex-flow: row wrap
 	align-items: center
-
+.head, .brand, .contacts, .navList, .navListItem, .works, .worksPagination
+	flex-flow: row wrap
 .brand
 
-.works, .head 
+.works, .head, .worksPagination
 	justify-content: space-between
 
+.previous
+
+	// padding-right: 0.5em
+.previous, .next
+	padding: 0.2em 0.5em
+	color: $blue
+
+.currentWork
+	&__refer
+		font-size: (9em / 16)
 .head 
 	background-color: $lightGray
 	padding: 0.2em 3.8em
@@ -20,19 +53,24 @@
 .brand, .contacts, .navListItem
 	width: span(6)
 
-.brandImage, .work
+.brandImage, 
+.work, 
+.previous,
+.next,
+.currentWork
 	width: span(4)
 
-
+.work__refer
+	color: $darkGray
+	padding: 0.5em
 .work
 	margin-top: 1em	
-	cursor: pointer
 	padding: 1em
-	padding: 1em
-	transition: 0.2s ease-in-out
-	&:hover
-		box-shadow: 0 10px 20px $shadow
-		transform: scale(1.01, 1.01)
+	
+	@include breakpoint($sm)
+		width: 50%
+	@include breakpoint($xs)
+		width: 100%
 
 .brandImage
 	max-width: 69px
@@ -108,9 +146,6 @@
 		box-shadow: 0 0 10px $shadow
 		
 	& .navListItem__refer
-		text-decoration: none
-		&:hover
-			text-decoration: none
 		color: $white $i
 		width: 100%
 		display: block
@@ -146,16 +181,21 @@
 	&bottomRight
 		border-bottom-right-radius: 100%
 
+.contacts, .footerContacts
+	color: $darkenGray
+	font-size: (12em / 16)
 .contacts
 	padding-top: 0.7em
-	color: $darkenGray
 	justify-content: flex-end
-	font-size: (12em / 16)
 	&__contact:first-of-type
 		margin-right: 2em
 	&__contact:last-of-type
 		margin-right: 1.3em
 
+.footer, .presentWorkItem
+	padding-bottom: 2em
+.footerContacts, .task, .presentWork
+	margin-top: 2em
 
 .shadow_position-
 	&topRight
@@ -169,5 +209,37 @@
 	&centered
 		box-shadow: 0 0 10px $shadow
 
+.label
+	display: inline-block
+	margin-right: 0.5em
 .main
 	padding-top: 1.5em
+		
+.presentWorkItem, .main > .container, .presentWork
+	flex-direction: column
+	// align-items: center
+	justify-content: center
+.main p 
+	max-width: 75rem
+	margin-top: 0.5em
+.presentWorkItem__image,
+.presentWorkItem
+	margin-top: 1em
+.worksPagination, .presentWorkItem
+	width: 100%
+.task
+	background-color: rgba($blue, .3)
+	// color: $white
+	padding: 0 1em 0.9em
+	border-radius: 4px
+.task__title	
+	border-style: solid
+	border-bottom-width: 1px
+	border-image: linear-gradient(to right, $blue 0%, $blue 50%, transparent 50%) 1;
+	padding-bottom: 0.2em
+.task__paragraph
+	font-size: (14em / 16)
+
+.presentWorkItem
+.presentWork
+ 	border-top-width: 1px
