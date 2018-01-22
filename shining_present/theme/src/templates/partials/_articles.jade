@@ -1,0 +1,12 @@
+
+-	var refers = ['article.html', 'article.html', 'article.html']
+-	var titles = ['Моя замечательная статья', 'Плейсхолдер для заголовка', 'Как создать собственное портфолио']
+-
+	var paragraphs = ['Если вы веб разработчик, советую вам создать портфолио собственными руками. А дальше плейсхолдер&helliph;', 'Если вы веб разработчик, советую вам создать портфолио собственными руками. А дальше плейсхолдер&helliph;', 'Если вы веб разработчик, советую вам создать портфолио собственными руками. А дальше плейсхолдер&helliph;']
+
+ul.articles.list-unstyled
+	each title, i in titles
+		li.article
+			h1.articlePreview__title
+				a.articlePreview(href= refers[i])= title
+			p.articlePreview__paragraph= paragraphs[i]
