@@ -13,7 +13,7 @@ class BaseView(TemplateView):
         self.page_model = None
         self.page = None
         self.settings = get_single_model(Settings)
-        self.meta = self.settings.meta
+        self.meta = ''
     # Дополняет контекст свойствами нужной страницы, если нужно
     def set_additional_context(self, context):
 
@@ -38,39 +38,46 @@ class BaseView(TemplateView):
 
         return self.set_additional_context(context)
 
-class HomeView(BaseView):
-    template_name = 'index.html'
+class PortfolioView(BaseView):
+    template_name = 'portfolio.html'
 
     def __init__(self):
-        super(HomeView, self).__init__()
-        self.page_model = HomePage
+        super(PortfolioView, self).__init__()
+        self.page_model = PortfolioPage
 
 
-class ServicesView(BaseView):
-    template_name = 'services.html'
+# class ServicesView(BaseView):
+#     template_name = 'services.html'
+#
+#     def __init__(self):
+#         super(ServicesView, self).__init__()
+#         self.page_model = ServicesPage
+# class PricesView(BaseView):
+#     template_name = 'prices.html'
+#
+#     def __init__(self):
+#         super(PricesView, self).__init__()
+#         self.page_model = PricesPage
 
-    def __init__(self):
-        super(ServicesView, self).__init__()
-        self.page_model = ServicesPage
-class PricesView(BaseView):
-    template_name = 'prices.html'
+# class ConnectView(BaseView):
+#     template_name = 'connect.html'
+#
+#     def __init__(self):
+#         super(ContactsView, self).__init__()
+#         self.page_model = ContactsPage
 
-    def __init__(self):
-        super(PricesView, self).__init__()
-        self.page_model = PricesPage
+# class WorkView(BaseView):
+#     template_name = 'work.html'
+#
+#     def get(self, request, slug):
+#         self.page = get_object_or_404(Work, slug=slug)
+#
+#         return super(SaunaView, self).get(request)
 
-class ContactsView(BaseView):
-    template_name = 'contacts.html'
-
-    def __init__(self):
-        super(ContactsView, self).__init__()
-        self.page_model = ContactsPage
-
-class SaunaView(BaseView):
-    template_name = 'sauna.html'
-
-    def get(self, request, slug):
-        self.page = get_object_or_404(SaunaPage, slug=slug)
-
-        return super(SaunaView, self).get(request)
-
+# class ArticleView(BaseView):
+#     template_name = 'article.html'
+#
+#     def get(self, request, slug):
+#         self.page = get_object_or_404(Article, slug=slug)
+#
+#         return super(SaunaView, self).get(request)
