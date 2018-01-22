@@ -6,8 +6,9 @@ from colorfield.fields import ColorField
 from imagekit.models import ProcessedImageField
 from imagekit.processors import ResizeToFit
 import uuid as uuid_lib
+from django.core.mail import EmailMessage
 
-if not settings.DEBUG:
+if settings.IS_PRODUCTION:
     encoding = 'utf-8'
     import sys
     reload(sys)
@@ -34,12 +35,7 @@ class Settings(TimeStampedModel):
         blank=True,
         null=True
     )
-    meta = models.TextField(
-        _('Глобальное META-описание сайта'),
-        max_length=300,
-        blank=True,
-        null=True
-    )
+
     email = models.CharField(
         _('Email'),
         max_length=200,
@@ -54,16 +50,13 @@ class Settings(TimeStampedModel):
         null=True,
         default='+7 (985) 905-12-51'
     )
-
-    default_link_color = ColorField(_('Стандартный цвет ссылок'), blank=True,
-                                    null=True)
-    default_link_hover_color = ColorField(_('Стандартный цвет ссылок при наведении'), blank=True,
-                                          null=True)
-
-    default_color = ColorField(_('Цвет шрифта по умолчанию'), blank=True,
-                               null=True)
-    default_bg = ColorField(_('Цвет фона сайта'), blank=True,
-                            null=True)
+    skype = models.CharField(
+        _('Skype'),
+        max_length=90,
+        blank=True,
+        null=True,
+        default='fanyxxx1234'
+    )
 
     thumb_photo = models.ForeignKey(
         "album.albumimage",
@@ -71,13 +64,8 @@ class Settings(TimeStampedModel):
         related_name='thumb_photo'
     )
 
-    preloader_color = ColorField(_('Цвет прелоадера'), blank=True,
-                                 null=True)
-    curtain_bg = ColorField(_('Цвет фона предварительной загрузки'), blank=True,
-                            null=True)
-
     def __str__(self):
-        return self.name
+        return 'Глобальная настройка'
 
     class Meta:
         db_table='site_settings'
@@ -110,8 +98,12 @@ class Work(TimeStampedModel):
         related_name=_('work_album')
     )
     slug = models.SlugField(max_length=50, unique=True)
-
-    is_shown = models.BooleanField(_('Отобразить?'), default=True)
+    tags = models.ManyToManyField(
+        Tag,
+        verbose_name=_('Теги'),
+        related_name='work_tags',
+        blank=True
+    )
 
     def __str__(self):
         return self.name
@@ -120,3 +112,26 @@ class Work(TimeStampedModel):
         db_table = 'my_works'
         verbose_name = 'Работа'
         verbose_name_plural = 'Работы'
+
+class Order(TimeStampedModel):
+
+    name = models.CharField(_('Имя'), max_length=36)
+    email = models.EmailField(_('E-mail'), max_length=100)
+    phone = models.CharField(_('Номер телефона'), max_length=24, null=True, blank=True)
+    message = models.TextField(_('Сообщение'))
+
+    def sendMail(self, orderMsg):
+        email = EmailMessage(
+            'Новый заказ, приятель;3',
+            orderMsg,
+            settings.DEFAULT_FROM_EMAIL,
+            to=['shiningfinger@list.ru']
+        )
+        email.send()
+
+    def __str__(self):
+        return self.name
+
+    class Meta:
+        verbose_name = _('Заказ')
+        verbose_name_plural = _('Заказы')
