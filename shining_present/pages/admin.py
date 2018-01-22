@@ -30,32 +30,26 @@ base_settings_page = ('Базовая настройка страницы', {
             },)
 
 
-@admin.register(HomePage)
-class HomePageAdmin(SingleModelAdmin):
+@admin.register(PortfolioPage)
+class PortfolioPageAdmin(SingleModelAdmin):
     # filter_horizontal = ('sauna',)
     fieldsets = (
         base_settings_page,
         ('Контент страницы', {
             'fields': (
-                ('main_title',),
-                ('jumbotron_video', 'is_video',),
-                ('jumbotron_image', 'is_image',),
-                ('sauna',),
+                ('works',),
                 ('content',),
             ),
         },),
     )
 
-@admin.register(ContactsPage)
-class ContactsPageAdmin(SingleModelAdmin):
-    fieldsets = (
-        base_settings_page,
-        ('Контент страницы', {
-            'fields': (
-                ('main_title',),
-                ('phone_1','phone_2',),
-                ('map',),
-                ('content',),
-            ),
-        },),
-    )
+# @admin.register(ContactsPage)
+# class ContactsPageAdmin(SingleModelAdmin):
+#     fieldsets = (
+#         base_settings_page,
+#         ('Контент страницы', {
+#             'fields': (
+#                 ('content',),
+#             ),
+#         },),
+#     )
