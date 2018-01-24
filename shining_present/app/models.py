@@ -3,24 +3,16 @@ from django.db import models
 from django.conf import settings
 from django.utils.translation import ugettext_lazy as _
 from colorfield.fields import ColorField
-from imagekit.models import ProcessedImageField
-from imagekit.processors import ResizeToFit
+from pages.models import BasePage
 import uuid as uuid_lib
 from django.core.mail import EmailMessage
+from model_utils.models import TimeStampedModel
 
 if settings.IS_PRODUCTION:
     encoding = 'utf-8'
     import sys
     reload(sys)
     sys.setdefaultencoding(encoding)
-
-
-
-class TimeStampedModel(models.Model):
-    created = models.DateTimeField(auto_now_add=True)
-    modified = models.DateTimeField(auto_now=True)
-    class Meta:
-        abstract = True
 
 
 class Settings(TimeStampedModel):
@@ -81,7 +73,7 @@ class Tag(models.Model):
         verbose_name = _('Тэг')
         verbose_name_plural = _('Тэги')
 
-class Work(TimeStampedModel):
+class Work(BasePage):
     name = models.CharField(_("Имя работы"), max_length=350)
     task = models.TextField(_("Цель проекта"), max_length=350)
     task_en = models.TextField(_("Цель проекта(en)"), max_length=350, blank=True)
