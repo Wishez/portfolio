@@ -1,7 +1,8 @@
 # -*- encoding: utf-8 -*-
 from django.shortcuts import render, get_object_or_404
 from django.views.generic import TemplateView
-from app.models import Settings
+
+from app.models import Settings, Work
 from .models import *
 # Create your views here.
 
@@ -46,38 +47,45 @@ class PortfolioView(BaseView):
         self.page_model = PortfolioPage
 
 
-# class ServicesView(BaseView):
-#     template_name = 'services.html'
-#
-#     def __init__(self):
-#         super(ServicesView, self).__init__()
-#         self.page_model = ServicesPage
-# class PricesView(BaseView):
-#     template_name = 'prices.html'
-#
-#     def __init__(self):
-#         super(PricesView, self).__init__()
-#         self.page_model = PricesPage
+class TechnologiesView(BaseView):
+    template_name = 'technologies.html'
 
-# class ConnectView(BaseView):
-#     template_name = 'connect.html'
-#
-#     def __init__(self):
-#         super(ContactsView, self).__init__()
-#         self.page_model = ContactsPage
+    def __init__(self):
+        super(TechnologiesView, self).__init__()
+        self.page_model = TechnologiesPage
+class AboutPageView(BaseView):
+    template_name = 'about.html'
 
-# class WorkView(BaseView):
-#     template_name = 'work.html'
-#
-#     def get(self, request, slug):
-#         self.page = get_object_or_404(Work, slug=slug)
-#
-#         return super(SaunaView, self).get(request)
+    def __init__(self):
+        super(AboutPageView, self).__init__()
+        self.page_model = AboutPage
+class ArticlesPageView(BaseView):
+    template_name = 'articles.html'
 
-# class ArticleView(BaseView):
-#     template_name = 'article.html'
-#
-#     def get(self, request, slug):
-#         self.page = get_object_or_404(Article, slug=slug)
-#
-#         return super(SaunaView, self).get(request)
+    def __init__(self):
+        super(ArticlesPageView, self).__init__()
+        self.page_model = ArticlesPage
+
+
+class WorkView(BaseView):
+    template_name = 'work.html'
+
+    def get(self, request, slug):
+        self.page = get_object_or_404(Work, slug=slug)
+
+        return super(Work, self).get(request)
+
+class ArticlePageView(BaseView):
+    template_name = 'article.html'
+    page_model = ArticlesPage
+    def __init__(self):
+        super(ArticlePageView, self).__init__()
+        self.page_model = ArticlePage
+    def set_additional_context(self, context):
+        context['article_id'] = self.article_id
+
+        return context
+    def get(self, request, id):
+        self.article_id = id
+
+        return super(ArticlePageView, self).get(request)
