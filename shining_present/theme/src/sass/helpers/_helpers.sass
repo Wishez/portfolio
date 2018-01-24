@@ -1,6 +1,8 @@
 @function em($size, $context: 16)
   @return ($size/$context) * 1em
 
+@function pb($height, $width)
+  @return ($height/$width*100) * 1%
 @function img-url($image)
   @return url('../img/#{$image}')
 

@@ -2,15 +2,15 @@
 header.header(itemscope, itemtype='http://schema.org/Person')
 	//BEGIN brand
 	.head
-		a(href='./').brand
+		a(href="{% url 'portfolio' %}").brand
 			.brandImage
-				figure.brandImage__image(style="background-image: url('./img/my_face.jpg');")
+				figure.brandImage__image(style="background-image: url('/media/{{ settings.thumb_photo.image }}');")
 			h1.brand__title(itemprop='name') Филипп Журавлёв
 		//BEGIN contacts
 		.contacts
-			a.contacts__contact(itemprop='email', href='mailto:shiningfinger@list.ru ') shiningfinger@list.ru 
+			a.contacts__contact(itemprop='email', href='mailto:{{ settings.email }}') {{ settings.email }} 
 			| Skype:&nbsp; 
-			a.contacts__contact(itemprop='telephone', href='skype:fanyxxx1234?add') fanyxxx1234
+			a.contacts__contact(itemprop='telephone', href='skype:{{ settings.skype }}?add') {{ settings.skype }}
 	//END contacts
 	nav.navigation
 		ul.navList
@@ -19,7 +19,7 @@ header.header(itemscope, itemtype='http://schema.org/Person')
 			li.navListItem.navListItem_round-topRight(data-position='bottomLeft')
 				a(href="{% url 'about' %}").navListItem__refer Обо мне
 			li.navListItem.navListItem_round-bottomLeft.text-right(data-position='topRight')
-				a(href="{% url 'connect' %}").navListItem__refer Связь
+				a(href="{% url 'connect' %}").navListItem__refer Технологии
 			li.navListItem.navListItem_round-bottomRight(data-position='topLeft')
 				a(href="{% url 'articles' %}").navListItem__refer Статьи
 			li.navListItem.navListItem_name-main#centeredMenuButton(data-position='centered')

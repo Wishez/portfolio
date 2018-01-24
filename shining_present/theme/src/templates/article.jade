@@ -1,6 +1,21 @@
----
-title: Статья | Филипп Журавлёв
----
-extends layouts/_layout
-block content
-	include partials/_article
+| {% extends 'base.html' %}
+| {% block content %}
+article.article
+	h1.article__title.text-center Название статьи
+	section.articleSection
+		h2.articleSection__title Подсекция второго уровня
+		p.articleSection__paragraph Lorem ipsum dolor amet dreamcatcher keytar pabst cray tumblr hella cornhole sustainable gluten-free. Before they sold out seitan adaptogen, pitchfork shabby chic snackwave gluten-free selfies disrupt paleo art party. Mumblecore pork belly art party, ramps gluten-free keffiyeh roof party asymmetrical cliche hella PBR&B. Man bun thundercats photo booth food truck mlkshk, cliche plaid woke shabby chic yuccie affogato gastropub disrupt tumeric artisan. Chartreuse tumblr godard, vaporware retro tilde cliche tacos bitters pour-over shoreditch +1 ennui. +1 try-hard adaptogen, shabby chic chia cronut squid bespoke palo santo single-origin coffee prism drinking vinegar portland. Swag next level activated charcoal, cornhole brunch migas williamsburg meh echo park four loko food truck tousled hexagon stumptown.
+	section.articleSection
+		h2.articleSection__title Подсекция второго уровня
+		p.articleSection__paragraph Blue bottle YOLO messenger bag celiac wolf. Organic hoodie VHS chillwave activated charcoal aesthetic fashion axe chambray kombucha occupy taxidermy fixie mlkshk. Tbh photo booth taxidermy ethical, pug XOXO la croix fingerstache kinfolk vice. Pinterest roof party synth semiotics locavore helvetica mustache heirloom sartorial artisan. Shaman tofu iPhone farm-to-table DIY twee tumblr fashion axe affogato truffaut kitsch. Banh mi affogato aesthetic sartorial organic, tote bag chicharrones salvia lumbersexual copper mug chillwave chia fixie.
+	section.articleSection
+		h2.articleSection__title Подсекция второго уровня
+		p.articleSection__paragraph Kombucha woke subway tile fashion axe keytar, butcher helvetica PBR&B literally 3 wolf moon. Put a bird on it vegan kickstarter small batch street art fam 3 wolf moon church-key mixtape truffaut. Pug adaptogen coloring book, wolf ennui before they sold out brunch man braid 3 wolf moon kombucha. Fingerstache schlitz succulents, fashion axe man braid retro poke craft beer. Man bun fanny pack vexillologist distillery pork belly portland. Small batch bushwick lo-fi schlitz authentic activated charcoal chia hoodie selfies cold-pressed single-origin coffee migas.
+	section.articleSection
+		h2.articleSection__title Подсекция второго уровня
+		p.articleSection__paragraph Flexitarian green juice schlitz roof party organic, quinoa messenger bag fingerstache humblebrag 8-bit scenester glossier stumptown chillwave. Direct trade letterpress cliche pabst portland meditation chia street art pug tumeric kinfolk forage. +1 unicorn tbh williamsburg, seitan franzen shabby chic scenester migas adaptogen direct trade. Yuccie whatever shoreditch, bicycle rights hell of vinyl williamsburg freegan cronut hexagon hashtag mumblecore. Yuccie thundercats normcore single-origin coffee keytar, waistcoat truffaut poutine pug sustainable plaid asymmetrical YOLO VHS. Kickstarter hammock activated charcoal, tote bag pug gastropub celiac offal four dollar toast you probably haven't heard of them photo booth yuccie. Messenger bag skateboard hot chicken food truck bitters prism hell of YOLO church-key mixtape marfa mustache hella tousled shoreditch.
+
+	section.articleSection
+		h2.articleSection__title Подсекция второго уровня
+		p.articleSection__paragraph Pickled hexagon before they sold out organic portland aesthetic shabby chic live-edge quinoa leggings cray umami kogi raclette slow-carb. 8-bit hoodie lo-fi, shoreditch kinfolk la croix yuccie godard viral chia roof party marfa. Tumeric hexagon crucifix affogato knausgaard edison bulb. Tofu cardigan vinyl iPhone, +1 vexillologist semiotics.
+| {% endblock %}

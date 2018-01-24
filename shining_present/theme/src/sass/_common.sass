@@ -5,16 +5,22 @@
 @import 'bootstrap-sprockets'
 
 $i: !important
-$blue: #3e3f89
-$ochre: #917215
+$blue: #4E9191// #3e3f89
+$purple: #8C4B65
+$yellow: #E3CA40 
+$ochre: $yellow//#917215
 $brown: #5f360d
-$heatGreen: #989b40
-$paleOragne: #d9b673
+$heatGreen: $purple//#989b40
+$paleOrange: #d9b673
 $white: #f7f7f7
 $darkGray: #212121
 $lightGray: #ececec
 $darkenGray: #5d5c5c
 $shadow: rgba(0, 0, 0, .6)
+$pink: #cf6b9e;
+$red: #eb4a4b;
+$yellow: #f0dc4e;
+$blue: #3f7dae;
 
 $lg: 1200px
 $md-up: 992px
@@ -51,4 +57,36 @@ body
 	line-height: 1.4
 	font-style: 
 	font-size: calc(1em + 1vw)
+
+a
+  transition: .2s ease
+  &, &:hover, &:focus 
+    text-decoration: none
+    background-image: linear-gradient(to right, $blue  0%, $blue 100%)
+    background-repeat: repeat-x
+    background-position: bottom
+    background-size: 0.05em 0.05em
+  color: $blue;
+
+  &:hover, &:focus 
+    // text-decoration: none;  
+    $lightenBlue: lighten($blue, 25%);
+    color: $blue;
+    background-image: linear-gradient(to right, $lightenBlue 0%, $lightenBlue 100%)
+    // color: $red;
+    // background-image: linear-gradient(to right, $red 0%, $red 100%);
+  
+  &:active 
+    color: $blue
+  
+  
+    // text-decoration: none;  
+  
+.visible-hidden
+	white-space: nowrap
+	overflow: hidden
+	clip: rect(1px, 1px, 1px, 1px)
+	width: 1px
+	height: 1px
+	position: absolute
 

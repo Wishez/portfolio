@@ -3,4 +3,4 @@ footer.footer(itemscale, itemtype='http://scheme.com/Person')
 	.container
 		ul.footerContacts
 			li.contacts__item Электронная почта: 
-				span(itemprop='email')  shiningfinger@list.ru
+				a(href="mailto: {{ settings.email }}", itemprop='email')  {{ settings.email }}

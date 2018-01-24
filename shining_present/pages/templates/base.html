@@ -1,127 +1,115 @@
-{% load static pages_tags %}<!DOCTYPE html><html lang="ru" manifest="{% static '/sauna/app.manifest' %}"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="description" content="{{ meta }}"><meta http-equive="X-UA-Compatible" content="IE=edge"><link rel="shortcut icon" type="image/x-icon" href="{% static '/sauna/img/favicon.ico' %}"><title>{{ page.title }}</title><style>.curtain {
-  margin: 0;
-  padding: 0;
-  {% if settings.curtain_bg %}
-  background-color: {{ settings.curtain_bg }} ;
-  {% else %}
-  background-color: #67a7a7;
-  {% endif %}
-  height: 100%;
-  width: 100%;
-  z-index: 11;
-  position: fixed;
-  top: 0;
-  left: 0;
-  transition: width 1.5s, opacity 1s;
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru" class="no-js">
 
-}
-.sk-cube-grid {
-  transition: width 1.5s, opacity 1s;
-  width: 80px;
-  opacity: 1;
-  position: absolute;
-  top: 45%;
-  top: calc(40% - 40px);
-  left: 45%;
-  left: calc(50% - 40px);
-  height: 80px;
-  margin: 80px auto;
-  z-index: 12;
-}
-.sk-cube-grid .sk-cube {
-  width: 33.33%;
-  height: 33.33%;
-  {% if settings.preloader_color %}
-  background-color: {{ settings.preloader_color }};
-  {% else %}
-  background-color: #f4f4f4;
-  {% endif %}
-  float: left;
-  -webkit-animation: sk-cubeGridScaleDelay 1.3s infinite ease-in-out;
-          animation: sk-cubeGridScaleDelay 1.3s infinite ease-in-out;
-}
-.sk-cube-grid .sk-cube1 {
-  -webkit-animation-delay: 0.2s;
-          animation-delay: 0.2s; }
-.sk-cube-grid .sk-cube2 {
-  -webkit-animation-delay: 0.3s;
-          animation-delay: 0.3s; }
-.sk-cube-grid .sk-cube3 {
-  -webkit-animation-delay: 0.4s;
-          animation-delay: 0.4s; }
-.sk-cube-grid .sk-cube4 {
-  -webkit-animation-delay: 0.1s;
-          animation-delay: 0.1s; }
-.sk-cube-grid .sk-cube5 {
-  -webkit-animation-delay: 0.2s;
-          animation-delay: 0.2s; }
-.sk-cube-grid .sk-cube6 {
-  -webkit-animation-delay: 0.3s;
-          animation-delay: 0.3s; }
-.sk-cube-grid .sk-cube7 {
-  -webkit-animation-delay: 0.0s;
-          animation-delay: 0.0s; }
-.sk-cube-grid .sk-cube8 {
-  -webkit-animation-delay: 0.1s;
-          animation-delay: 0.1s; }
-.sk-cube-grid .sk-cube9 {
-  -webkit-animation-delay: 0.2s;
-          animation-delay: 0.2s; }
-@-webkit-keyframes sk-cubeGridScaleDelay {
-  0%, 70%, 100% {
-    -webkit-transform: scale3D(1, 1, 1);
-            transform: scale3D(1, 1, 1); }
-  35% {
-    -webkit-transform: scale3D(0, 0, 1);
-            transform: scale3D(0, 0, 1); } }
-@keyframes sk-cubeGridScaleDelay {
-  0%, 70%, 100% {
-    -webkit-transform: scale3D(1, 1, 1);
-            transform: scale3D(1, 1, 1); }
-  35% {
-    -webkit-transform: scale3D(0, 0, 1);
-            transform: scale3D(0, 0, 1); } }
-body {
-  {% if settings.default_color %}
-  color: {{ settings.default_color }} !important;
-  {% endif %}
-  {% if settings.default_bg %}
-  background-color: {{ settings.default_bg }};
-  {% endif %}
-  {% if settings.default_image_bg %}
-  background-image: url("/media/{{ settings.default_image_bg }}") !important;
-  {% else %}
-  background-image: url("{% static '/sauna/img/background.png' %}") !important;
-  {% endif %}
-}
-{% if settings.default_link_color %}
-a {
-    color: {{ settings.default_link_color }} !important;
-}
-{% endif %}
-{% if settings.default_link_hover_color %}
-a:hover {
-  color: {{ settings.default_link_hover_color }} !important;
-}
-{% endif %}</style></head><body><div class="curtain"><div class="sk-cube-grid"><div class="sk-cube sk-cube1"></div><div class="sk-cube sk-cube2"></div><div class="sk-cube sk-cube3"></div><div class="sk-cube sk-cube4"></div><div class="sk-cube sk-cube5"></div><div class="sk-cube sk-cube6"></div><div class="sk-cube sk-cube7"></div><div class="sk-cube sk-cube8"></div><div class="sk-cube sk-cube9"></div></div></div><figure class="figure figure_name-leaf"></figure><figure class="figure figure_name-strip"></figure><header class="header"><div class="container"><nav class="navigation navbar navbar-default" role="navigation"><figure class="figure figure_name-branch"></figure><div class="container"><div class="navbar-header navHeader col-lg-5 col-md-4 col-sm-12 col-xs-12"><button class="navigation__openMenuButton navbar-toggle" id="openMenuButton" type="button" data-toggle="collapse" data-target="#navbar_collapse"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><a class="brand navbar-brand text-center" href="{% url 'home' %}"><h1 class="brandName"> <span class="brandName_beneath text-uppercase">Сауна </span><br><span class="brandName_beneath brandName_big">Острова</span></h1></a></div><div class="navbarCollaps collapse navbar-collapse" id="navbar_collapse"><ul class="nav navbar-nav navList col-lg-7 col-md-8 col-sm-12 col-xs-12 text-center"><li class="navItem navItem_name-home"> <a class="navItem__refer" href="{% url 'home' %}">Главная</a></li><li class="navItem navItem_name-services"><a class="navItem__refer" href="{% url 'services' %}">Услуги</a></li><li class="navItem navItem_name-prices"><a class="navItem__refer" href="{% url 'prices' %}">Цены</a></li><li class="navItem navItem_name-contacts"><a class="navItem__refer" href="{% url 'contacts' %}">Контакты</a></li></ul></div></div></nav></div></header><main class="main"><div class="container">{% if page.main_title %}<h2 class="jumbotronTitle mainTitle text-center">{{ page.main_title|safe }} </h2>{% endif %}
-{% block content %}
-{% endblock %}</div></main><footer class="footer" itemscope itemtype="http://schema.org/Person"><span class="sr-only" itemprop="name">vip-sauna6.ru</span><div class="container"><figure class="figure figure_name-pretty_woman"></figure><figure class="figure figure_name-floor"></figure>{% if settings.footer_photo %}<!-- begin presentation --><ul class="presentation" id="presentation">{% for photo in settings.footer_photo.id|get_photo %}<li class="footerNavItem col-lg-3 col-md-4 col-sm-4 col-xs-6"><a href="/media/{{ photo.image }}" data-lightbox="roadtrip"><img class="img-responsive fadeOut" data-src="/media/{{ photo.image }}"></a></li>{% endfor %}</ul><!-- end presentation -->{% endif %}</div><!-- begin footerInfo --><div class="footerInfo"><div class="container"> <!-- begin footerContacts --><address class="footerContacts col-lg-4 col-md-6 col-sm-12 col-xs-10"><h2 class="title title_color-black footerContacts__title">Мы ждём вас:</h2><figure class="figure figure_name-phone figure_relative"></figure><ul class="footerContactsList list-unstyled"><li class="footerContactsItem" itemscope itemtype="http://schema.org/PostalAddress"><strong class="footerContactsItem__label">По адресу:</strong><br><a class="footerContactsItem__refer not-follow" href="{{ settings.addressHref }}"><span itemprop="addressLocality"> </span><span itemprop="streetAddress">{{ settings.address }}</span></a></li><li class="footerContactsItem"><strong class="footerContactsItem__label">Телефон для записи:</strong><br>{% if settings.footer_phone %}<a class="not-follow footerContactsItem__refer" href="tel:{{ settings.footer_phone }}"><span itemprop="telephone">{{ settings.footer_phone }}</span></a>{% endif %}</li></ul></address><!-- end footerContacts -->
-<!-- begin aboutUs --><div class="aboutUs col-lg-8 col-md-12 col-sm-12 col-xs-10 pull-right"><figure class="figure figure_name-star"></figure><h2 class="title title_color-brown">О нас</h2><figure class="figure figure_relative figure_name-basket col-lg-3 col-md-3 col-sm-4 col-xs-12"></figure><p class="aboutUs__paragraph col-lg-9 col-md-9 col-sm-8 col-xs-12 pull-right">Сауны Екатеринбурга гостеприимно распахивают перед Вами свои двери. Говорят, что убить двух зайцев одним выстрелом &mdash; это большая удача. Проведя время в сауне, вы убьете одним выстрелом гораздо больше зайцев. Во-первых, вы приятно и весело проведете время. </p><p class="aboutUs__paragraph aboutUs__paragraph col-lg-9 col-md-9 col-sm-8 col-xs-12 pull-right">Парные с профессиональными банщиками, комнаты отдыха с баром и бильярдом, массаж, стрип-шоу &mdash; это все для вас. Во-вторых, сауны и бани &mdash; это замечательный способ поправить свое здоровье или поддерживать его в великолепной форме. В-третьих, в сауне можно легко и приятно расслабиться, отдохнуть от повседневных забот.</p></div><!-- end aboutUs -->
-<!-- begin сopyright --><div class="col-lg-4 col-md-6 col-sm-12 col-xs-12 copyright"><figure class="figure figure_name-bucket"></figure><h3 class="copyright__title title text-right">{{ settings.footer_copyright }}</h3></div><!-- end сopyright --></div></div><!-- end footerInfo --></footer><script async src="{% static '/sauna/js/main.js' %}"></script><script>if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.register("{% static '/sauna/js/sw.js' %}")
-    .then(function(reg){
-      
-    }).catch(function(err) {
-      console.log("No it didn't. This happened: ", err)
-    });
-}
-    </script><link rel="stylesheet" href="{% static '/sauna/css/main.css' %}" media="none" onload="if (media == &quot;none&quot;) this.media = &quot;all&quot;" lazyload="1"><noscript><link rel="stylesheet" href="{% static '/sauna/css/main.css' %}" lazyload="1"></noscript><link rel="stylesheet" href="{% static '/sauna/css/ie-10-up.css' %}" media="none" onload="if (media == &quot;none&quot;) this.media = &quot;all&quot;" lazyload="1"><noscript><link rel="stylesheet" href="{% static '/sauna/css/ie-10-up.css' %}" lazyload="1"></noscript>{% if settings.widgets %}
-{{ settings.widgets|safe }}
-{% endif %}
-{% if page.scripts %}
-{{ page.scripts|safe }}
-{% endif %}<!--[if lt IE 9]>
-<script async src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js">
-<script async src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#fff">
+    <meta name="format-detection" content="telephone=no">{% if page.page_title %}
+    <title>{{ page.page_title }}</title>{% else %}
+    <title>Page</title>{% endif %} {% if page.meta %}
+    <meta name="description" content="{{ page.meta }}">{% else %}
+    <meta name="description" content="No meta">{% endif %}
+    <link rel="stylesheet" href="{% static 'portfolio/css/main.css' %}" media="none" onload="if (media !== 'all') media='all';">
+    <style>
+      .curtains,
+      .preloader {
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        z-index: 10000;
+      }
+
+      .curtains {
+        top: 0;
+        left: 0;
+        background-color: #ccc;
+      }
+
+      .preloader {
+        background: url("{% static 'portfolio/img/ajax-loader.gif' %}") no-repeat center;
+        background-size: 100px;
+      }
+
+    </style>
+  </head>
+
+  <body>
+    <!--.curtains//figure.preloader-->
+    <!--BEGIN out-->
+    <div class="out">
+      <!--BEGIN header-->
+      <header itemscope itemtype="http://schema.org/Person" class="header">
+        <!--BEGIN brand-->
+        <div class="head">
+          <a href="{% url 'portfolio' %}" class="brand">
+            <div class="brandImage">
+              <figure style="background-image: url('/media/{{ settings.thumb_photo.image }}');" class="brandImage__image"></figure>
+            </div>
+            <h1 itemprop="name" class="brand__title">Филипп Журавлёв</h1>
+          </a>
+          <!--BEGIN contacts-->
+          <div class="contacts"><a itemprop="email" href="mailto:{{ settings.email }}" class="contacts__contact">{{ settings.email }} </a>Skype:&nbsp; <a itemprop="telephone" href="skype:{{ settings.skype }}?add" class="contacts__contact">{{ settings.skype }}</a></div>
+        </div>
+        <!--END contacts-->
+        <nav class="navigation">
+          <ul class="navList">
+            <li data-position="bottomRight" class="navListItem navListItem_round-topLeft text-right"><a href="{% url 'portfolio' %}" class="navListItem__refer">Портфолио</a></li>
+            <li data-position="bottomLeft" class="navListItem navListItem_round-topRight"><a href="{% url 'about' %}" class="navListItem__refer">Обо мне</a></li>
+            <li data-position="topRight" class="navListItem navListItem_round-bottomLeft text-right"><a href="{% url 'connect' %}" class="navListItem__refer">Технологии</a></li>
+            <li data-position="topLeft" class="navListItem navListItem_round-bottomRight"><a href="{% url 'articles' %}" class="navListItem__refer">Статьи</a></li>
+            <li id="centeredMenuButton" data-position="centered" class="navListItem navListItem_name-main"><a href="{% url 'portfolio' %}" class="navListItem__refer"></a></li>
+          </ul>
+        </nav>
+      </header>
+      <!--END header-->
+      <!--BEGIN main-->
+      <main id="main" class="main">
+        <div class="container">{% block content %} {% endblock %}</div>
+      </main>
+      <!--BEGIN footer-->
+      <footer itemscale itemtype="http://scheme.com/Person" class="footer">
+        <div class="container">
+          <ul class="footerContacts">
+            <li class="contacts__item">Электронная почта: <a href="mailto: {{ settings.email }}" itemprop="email"> {{ settings.email }}</a></li>
+          </ul>
+        </div>
+      </footer>
+    </div>
+    <!--END out-->{% block settings.widgets %} {% endblock %}
+    <script src="{% static 'portfolio/js/app.js' %}" async></script>
+    <script>
+      (function(i, s, o, g, r, a, m)
+      {
+        i['GoogleAnalyticsObject'] = r;
+        i[r] = i[r] || function()
+        {
+          (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date();
+        a = s.createElement(o),
+          m = s.getElementsByTagName(o)[0];
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m)
+      })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+      ga('create', 'UA-103835197-1', 'auto');
+      ga('send', 'pageview');
+
+    </script>
+  </body>
+  <link href="{% static 'portfolio/css/screen.css' %}" media="none" rel="stylesheet" onload="if(media != 'screen') media='screen';">
+  <link href="{% static 'portfolio/css/app.css' %}" media="none" rel="stylesheet" onload="if(media != 'all') media='all';">
+  <link href="{% static 'portfolio/css/print.css' %}" media="none" rel="stylesheet" type="text/css" onload="if(media != 'print') media='print';">
+  <link rel="icon" href="{% static 'portfolio/img/favicon.ico' %}">
+  <link rel="stylesheet" href="{% static 'portfolio/css/ie.css' %}" media="none" onload="if(media != 'all') media='all';">
+  <!--[if IE]>
+<link href="{% static 'portfolio/css/ie9.css' %}" media="all" rel="stylesheet" type="text/css" />
 <![endif]-->
-<!--[if IE]><link type="text/css" rel="stylesheet" href="{% static '/sauna/css/ie9.css' %}" lazyload="1" /><![endif]--></body></html>
+  <!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js>
+<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js">
+<![endif]-->
+
+</html>
