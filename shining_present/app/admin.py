@@ -2,6 +2,7 @@
 from django.contrib import admin
 from singlemodeladmin import SingleModelAdmin
 from .models import *
+from pages.admin import base_settings_page
 
 @admin.register(Settings)
 class SettingsAdmin(SingleModelAdmin):
@@ -43,4 +44,11 @@ class WorkAdmin(admin.ModelAdmin):
                 ('tags',),
             )
         }),
+        base_settings_page,
+        ('Контент страницы', {
+            'fields': (
+                ('content',),
+                ('scripts',),
+            ),
+        },),
     )
