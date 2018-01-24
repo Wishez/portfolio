@@ -1,6 +1,24 @@
----
-title: Работа | Филипп Журавлёв
----
-extends layouts/_layout
-block content
-	include partials/_work
+| {% extends 'base.html' %}
+-
+	var images = ['p1.png', 'p2.png', 'p3.png', 'p4.png', 'p5.png']
+	var descriptions = ['Это небольшое приложение, разделённое на 2 модуля - карточки стилей с информацией о них и форма заказа. Их можно прикуручивать к сайту по отдельности. ', 'Это небольшое приложение, разделённое на 3 модуля - карточки стилей с информацией о них и форма заказа. Их можно прикуручивать к сайту по отдельности.', '', 'Это небольшое приложение, разделённое на 2 модуля - карточки стилей с информацией о них и форма заказа. Их можно прикуручивать к сайту по отдельности. ', '']
+| {% block content %}
+nav.worksPagination
+	a.previous(href='') Предыдущая 
+		h4.workName DestPest
+	h2.currentWork.text-center Fashinable Cards
+		br
+		a.currentWork__refer.not-follow(href='https://shining-present.ru/fashinableCards/') https://shining-present.ru/fashinableCards/
+	a.next.text-right(href='') Следующая
+		h4.workName Gaming Fun
+.task
+	h3.task__title Задача
+	p.task__paragraph Нужно было построить приложение и я его построил. Сейчас оно функционирует, так как было запланированно в изначальной задумке. Поддерживается оно одним безымянным разработчиком, а этот текст не несёт никакой информативности.
+
+ul.presentWork
+	each image, i in images
+		li.presentWorkItem
+			if descriptions[i]
+				p.presentWorkItem__description= descriptions[i]
+			img.fade.lozad.presentWorkItem__image.img-responsive(data-src='./img/' + image)
+| {% endblock %}
