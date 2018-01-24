@@ -47,6 +47,7 @@ INSTALLED_APPS = [
     'album',
     'imagekit',
     'pages',
+    # 'model_utils'
 ]
 
 SITE_ID = 1
@@ -88,7 +89,7 @@ WSGI_APPLICATION = 'shining_present.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'NAME': os.path.join(BASE_DIR, 'db.test'),
     }
 }
 
@@ -173,7 +174,7 @@ LOCALE_PATHS = (
 # Jet config
 JET_MODULE_GOOGLE_ANALYTICS_CLIENT_SECRETS_FILE = os.path.join(BASE_DIR, 'client_secrets.json')
 JET_DEFAULT_THEME = 'default'
-# JET_SIDE_MENU_COMPACT = True
+JET_SIDE_MENU_COMPACT = True
 JET_THEMES = [
     {
         'theme': 'default', # theme folder name
@@ -212,3 +213,4 @@ REST_FRAMEWORK = {
         'rest_framework.permissions.IsAdminUser',
     ),
 }
+IS_PRODUCTION = False

@@ -1,15 +1,15 @@
 # -*- coding: utf-8 -*-
 from django.db import models
 from django.utils.translation import ugettext_lazy as _
-from app.models import TimeStampedModel
 from .validators import validate_slug_field
+from model_utils.models import TimeStampedModel
 
 class PageManager(models.Manager):
     user_for_related_fields = True
 
 class BasePage(TimeStampedModel):
 
-    title = models.CharField(
+    page_title = models.CharField(
         _('Заголовок'),
         help_text=_('Название страницы во вкладке'),
         max_length=100
@@ -38,7 +38,7 @@ class BasePage(TimeStampedModel):
 
     objects = PageManager()
     def __str__(self):
-        return self.title
+        return self.page_title
     class Meta:
         abstract=True
 
@@ -49,13 +49,29 @@ class PortfolioPage(BasePage):
     )
 
     class Meta:
-        db_table='data_portfolio_page'
+        db_table='portfolio_page'
         verbose_name=_('Страница "Портфолио"')
         verbose_name_plural = _('Страница "Портфолио"')
 
-# class ContactsPage(BasePage):
-#
-#     class Meta:
-#         db_table = 'data_contacts_page'
-#         verbose_name = _('Страница "Контакты"')
-#         verbose_name_plural = _('Страница "Контакты"')
+class AboutPage(BasePage):
+
+    class Meta:
+        db_table = 'about_page'
+        verbose_name = _('Страница "Обо мне"')
+        verbose_name_plural = _('Страница "Обо мне"')
+
+class TechnologiesPage(BasePage):
+    class Meta:
+        db_table = 'technologies_page'
+        verbose_name = _('Страница "Технологии"')
+        verbose_name_plural = _('Страница "Технологии"')
+class ArticlesPage(BasePage):
+    class Meta:
+        db_table = 'articles_page'
+        verbose_name = _('Страница "Статьи"')
+        verbose_name_plural = _('Страница "Статьи"')
+class ArticlePage(BasePage):
+    class Meta:
+        db_table = 'single_article_page'
+        verbose_name = _('Статья')
+        verbose_name_plural = _('Статьи')
