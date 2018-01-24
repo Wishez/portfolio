@@ -1,7 +1,38 @@
 meta(charset="utf-8")
-title= title || 'Template'
 meta(http-equiv="X-UA-Compatible" content="IE=Edge")
 meta(name="viewport" content="width=device-width, initial-scale=1")
 meta(name="theme-color" content="#fff")
 meta(name="format-detection" content="telephone=no")
-link(rel="stylesheet" media="all" href="css/app.css")
+| {% if page.page_title %}
+title {{ page.page_title }}
+| {% else %}
+title Page
+| {% endif %}
+| {% if page.meta %}
+meta(name='description', content="{{ page.meta }}") 
+| {% else %}
+meta(name='description', content="No meta")
+| {% endif %}
+link(
+  rel="stylesheet",
+  href="{% static 'portfolio/css/main.css' %}",
+  media="none",
+  onload="if (media !== 'all') media='all';"
+)
+style.
+  .curtains, .preloader {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: 10000;
+  }
+  .curtains {
+    top: 0;
+    left: 0;
+    background-color: #ccc;
+  }
+  
+  .preloader {
+    background: url("{% static 'portfolio/img/ajax-loader.gif' %}") no-repeat center;
+    background-size: 100px;
+  }

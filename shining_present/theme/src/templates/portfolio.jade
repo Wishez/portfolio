@@ -1,6 +1,22 @@
----
-title: Портфолио | Филипп Журавлёв
----
-extends layouts/_layout
-block content
-	include partials/_portfolio
+| {% extends 'base.html' %}
+-
+	var images = ['1.png','2.png','3.png', '4.png']
+	var names = ['Fashinable Cards', 'Golden Theme', 'Slider', 'Gaming Fun']
+	var tags = [['React', 'Django', 'Css'], ['JavaSctipt', 'Html', 'Css', 'jQuery'], ['GreenSock', 'JavaScript', 'Css'], ['React', 'Django', 'Css']]
+	var urls = ['work.html', 'work.html', 'work.html', 'work.html']
+
+| {% block content %}
+ul.works.list-unstyled
+	each img, i in images
+		//BEGIN work
+		li.work
+			a.work__refer(href= urls[i])
+				img.img-responsive.work__image.lozad(data-src='./img/' + img)
+				h2.work__title= names[i]
+				//BEIGN tags 
+				ul.tags
+					each tag in tags[i]
+						li.label.label-default= tag
+				//END tags 
+		//END work
+| {% endblock %}

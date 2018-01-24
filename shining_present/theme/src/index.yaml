@@ -1,5 +1,15 @@
 ProjectTitle: shining-app
 
 PageList:
-- file: page.html
+- file: portfolio.html
+  ready: 80
+- file: work.html
+  ready: 80
+- file: articles.html
+  ready: 1
+- file: article.html
+  ready: 80
+- file: about.html
   ready: 50
+- file: technologies.html
+  ready: 1
