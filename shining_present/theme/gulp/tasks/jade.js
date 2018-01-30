@@ -18,6 +18,7 @@ function renderHtml(onlyChanged) {
             indent_size: 2,
             wrap_attributes: 'auto', // 'force'
             preserve_newlines: true,
+            pretty: true,
             // unformatted: [],
             end_with_newline: true
         }))
