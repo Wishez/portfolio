@@ -75,9 +75,9 @@ class Tag(models.Model):
 
 class Work(BasePage):
     name = models.CharField(_("Имя работы"), max_length=350)
-    task = models.TextField(_("Цель проекта"), max_length=350)
-    task_en = models.TextField(_("Цель проекта(en)"), max_length=350, blank=True)
-    url = models.URLField(_("Ссылка на работу"), max_length=250)
+    task = models.TextField(_("Цель проекта"), max_length=650, blank=True, null=True)
+    task_en = models.TextField(_("Цель проекта(en)"), max_length=650, blank=True, null=True)
+    url = models.URLField(_("Ссылка на работу"), max_length=250, blank=True, null=True)
     uuid = models.UUIDField(
         db_index=True,
         default=uuid_lib.uuid4,
@@ -89,7 +89,7 @@ class Work(BasePage):
         verbose_name=_("Альбом"),
         related_name=_('work_album')
     )
-    slug = models.SlugField(max_length=50, unique=True)
+    slug = models.SlugField(_('Ссылка на сайте'),max_length=50, unique=True)
     tags = models.ManyToManyField(
         Tag,
         verbose_name=_('Теги'),
@@ -107,10 +107,10 @@ class Work(BasePage):
 
 class Order(TimeStampedModel):
 
-    name = models.CharField(_('Имя'), max_length=36)
-    email = models.EmailField(_('E-mail'), max_length=100)
-    phone = models.CharField(_('Номер телефона'), max_length=24, null=True, blank=True)
-    message = models.TextField(_('Сообщение'))
+    full_name = models.CharField(_('ФИО'), max_length=200, default="")
+    email = models.EmailField(_('E-mail'), max_length=150)
+    phone = models.CharField(_('Skype/Номер телефона'), max_length=50, null=True, blank=True)
+    message = models.TextField(_('Сообщение'),  max_length=700)
 
     def sendMail(self, orderMsg):
         email = EmailMessage(
@@ -119,10 +119,11 @@ class Order(TimeStampedModel):
             settings.DEFAULT_FROM_EMAIL,
             to=['shiningfinger@list.ru']
         )
+
         email.send()
 
     def __str__(self):
-        return self.name
+        return self.full_name
 
     class Meta:
         verbose_name = _('Заказ')
