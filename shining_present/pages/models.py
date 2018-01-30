@@ -44,7 +44,8 @@ class BasePage(TimeStampedModel):
 
 class PortfolioPage(BasePage):
     works = models.ManyToManyField(
-        'app.work', verbose_name='Работы',
+        'app.work',
+        verbose_name='Работы',
         blank=True
     )
 
