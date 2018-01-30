@@ -1,5 +1,6 @@
 from django.conf.urls import url
-from .api.views import *
+from .api.views.work import *
+from .views import *
 urlpatterns = [
     url(
         r'^api/v1/works_list/$',
@@ -11,4 +12,5 @@ urlpatterns = [
         WorkView.as_view(),
         name='document_data_user'
     ),
+    url(r'^connectMe/', success, name='connectMe'),
 ]

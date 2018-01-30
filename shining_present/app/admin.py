@@ -32,6 +32,7 @@ class WorkAdmin(admin.ModelAdmin):
                 ('name', 'url',),
                 ('task',),
                 ('task_en',),
+                ('slug',)
             )
         }),
         ('Изображения', {
@@ -42,13 +43,9 @@ class WorkAdmin(admin.ModelAdmin):
         ('Дополнения', {
             "fields": (
                 ('tags',),
+                ('content',),
+                ('scripts',),
             )
         }),
         base_settings_page,
-        ('Контент страницы', {
-            'fields': (
-                ('content',),
-                ('scripts',),
-            ),
-        },),
     )
