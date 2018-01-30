@@ -33,19 +33,16 @@ class AlbumModelAdmin(admin.ModelAdmin):
                     contentfile = ContentFile(data)
 
                     img = AlbumImage()
-                    # img.album = album
+                    img.album = album
                     img.alt = filename
                     filename = '{0}{1}.jpg'.format(album.slug, str(uuid.uuid4())[-13:])
                     img.image.save(filename, contentfile)
-
                     filepath = '{0}/albums/{1}'.format(shining_present.settings.MEDIA_ROOT, filename)
                     with Image.open(filepath) as i:
                         img.width, img.height = i.size
                     img.save()
 
-                    album.album_images.add(img)
                     #img.thumb.save('thumb-{0}'.format(filename), contentfile)
-                album.save()
                 zip.close()
             super(AlbumModelAdmin, self).save_model(request, obj, form, change)
 

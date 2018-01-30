@@ -15,11 +15,6 @@ class Album(TimeStampedModel):
     #tags = models.CharField(max_length=250)
     is_visible = models.BooleanField(_('Отображать альбом?'), default=True)
     slug = models.SlugField(max_length=50, unique=True)
-    album_images = models.ManyToManyField(
-        "albumimage",
-        verbose_name=_('Изображения альбома'),
-        related_name='album_images'
-    )
     #def get_absolute_url(self):
     #    return reverse('album', kwargs={'slug':self.slug})
     def __str__(self):
@@ -33,6 +28,7 @@ class Album(TimeStampedModel):
 class AlbumImage(TimeStampedModel):
     image = ProcessedImageField(verbose_name=_('Изображение'), upload_to='albums', processors=[ResizeToFit(300)], format='JPEG', options={'quality': 70})
     description = models.TextField(_('Описание'), max_length=1024, blank=True, null=True )
+    album = models.ForeignKey(Album, verbose_name=_('Альбом'), default=None, blank=True, null=True)
     alt = models.CharField(_('Альтернативный текст изображения'), max_length=255, default=uuid.uuid4)
     width = models.IntegerField(_('Ширина'), default=0, help_text=_('По умолчанию - адаптивно'))
     height = models.IntegerField(_('Высонта'), default=0, help_text=_('По умолчанию - адаптивно'))
