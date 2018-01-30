@@ -20,19 +20,40 @@ link(
   onload="if (media !== 'all') media='all';"
 )
 style.
-  .curtains, .preloader {
-    width: 100%;
-    height: 100%;
-    position: fixed;
-    z-index: 10000;
+  .skip {
+    position:fixed;
+    padding: 1em .5em;
+    text-aligin: center;
+    border-radius: 3px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    background-color: #8c4b65;
+    -webkit-transform: translateX(-110%);
+    transform: translateX(-110%);
+    will-change: transform;
+    z-index: 10;
+    color: #f7f7f7;
   }
-  .curtains {
+  .skip:focus {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    color: #f7f7f7;
+  }
+  .curtain, .preloader {
+    position: fixed;
+    will-change: opacity;
+    z-index: 10;
+  }
+  .curtain {
     top: 0;
     left: 0;
-    background-color: #ccc;
+    width: 100%;
+    height: 100%;
+    background-color: #8c4b65;
   }
   
   .preloader {
-    background: url("{% static 'portfolio/img/ajax-loader.gif' %}") no-repeat center;
-    background-size: 100px;
+      top: 40%;
+      left: 47.5%;
+      width: 10%;
   }

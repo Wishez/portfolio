@@ -1,24 +1,37 @@
 | {% extends 'base.html' %}
--
-	var images = ['p1.png', 'p2.png', 'p3.png', 'p4.png', 'p5.png']
-	var descriptions = ['Это небольшое приложение, разделённое на 2 модуля - карточки стилей с информацией о них и форма заказа. Их можно прикуручивать к сайту по отдельности. ', 'Это небольшое приложение, разделённое на 3 модуля - карточки стилей с информацией о них и форма заказа. Их можно прикуручивать к сайту по отдельности.', '', 'Это небольшое приложение, разделённое на 2 модуля - карточки стилей с информацией о них и форма заказа. Их можно прикуручивать к сайту по отдельности. ', '']
+| {% load extract_tags %}
+
 | {% block content %}
+
 nav.worksPagination
-	a.previous(href='') Предыдущая 
-		h4.workName DestPest
-	h2.currentWork.text-center Fashinable Cards
+	| {% if last %}
+	a.previous(href="{% url 'work' slug=last.slug %}") Предыдущая 
+		h4.workName {{ last.name }}
+	| {% endif %}
+	h2.currentWork.text-center(style="{% if not next %}margin-left: 0;{% endif %}") {{ page.name }}
 		br
-		a.currentWork__refer.not-follow(href='https://shining-present.ru/fashinableCards/') https://shining-present.ru/fashinableCards/
-	a.next.text-right(href='') Следующая
-		h4.workName Gaming Fun
-.task
+		a.currentWork__refer.not-follow(href="{{ page.url }}") https://shining-present.ru/fashinableCards/
+	| {% if next %}
+	a.next.text-right(href="{% url 'work' slug=next.slug %}") Следующая
+		h4.workName {{ next.name }}
+	| {% endif %}
+	| {% endif %}
+
+
+.task(class="{% if not page.task %}visible-hidden{% endif %}")
 	h3.task__title Задача
-	p.task__paragraph Нужно было построить приложение и я его построил. Сейчас оно функционирует, так как было запланированно в изначальной задумке. Поддерживается оно одним безымянным разработчиком, а этот текст не несёт никакой информативности.
+	p.task__paragraph {{ page.task }}
+
 
 ul.presentWork
-	each image, i in images
-		li.presentWorkItem
-			if descriptions[i]
-				p.presentWorkItem__description= descriptions[i]
-			img.fade.lozad.presentWorkItem__image.img-responsive(data-src='./img/' + image)
+	| {% for image in page.album|extract_images %}
+	li.presentWorkItem
+		| {% if image.description %}
+		p.presentWorkItem__description {{ image.description }}
+		| {% endif %}
+		picture.parent.centered
+			source(srcset="/media/{{ image.image }}", media="screen")
+			img.zooming.fade.lozad.presentWorkItem__image.img-responsive(data-src="/media/{{ image.image }}" data-action="zoom")
+
+	| {% endfor %}
 | {% endblock %}
