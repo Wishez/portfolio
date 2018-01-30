@@ -1,15 +1,17 @@
-{% extends 'base.html' %}{% block content %}
-<ul class="works list-unstyled">
-  <!--BEGIN work-->
-  <li class="work"><a href="work.html" class="work__refer"><img data-src="./img/1.png" class="img-responsive work__image lozad"/><h2 class="work__title">Fashinable Cards</h2><!--BEIGN tags --><ul class="tags"><li class="label label-default">React</li><li class="label label-default">Django</li><li class="label label-default">Css</li></ul><!--END tags --></a></li>
-  <!--END work-->
-  <!--BEGIN work-->
-  <li class="work"><a href="work.html" class="work__refer"><img data-src="./img/2.png" class="img-responsive work__image lozad"/><h2 class="work__title">Golden Theme</h2><!--BEIGN tags --><ul class="tags"><li class="label label-default">JavaSctipt</li><li class="label label-default">Html</li><li class="label label-default">Css</li><li class="label label-default">jQuery</li></ul><!--END tags --></a></li>
-  <!--END work-->
-  <!--BEGIN work-->
-  <li class="work"><a href="work.html" class="work__refer"><img data-src="./img/3.png" class="img-responsive work__image lozad"/><h2 class="work__title">Slider</h2><!--BEIGN tags --><ul class="tags"><li class="label label-default">GreenSock</li><li class="label label-default">JavaScript</li><li class="label label-default">Css</li></ul><!--END tags --></a></li>
-  <!--END work-->
-  <!--BEGIN work-->
-  <li class="work"><a href="work.html" class="work__refer"><img data-src="./img/4.png" class="img-responsive work__image lozad"/><h2 class="work__title">Gaming Fun</h2><!--BEIGN tags --><ul class="tags"><li class="label label-default">React</li><li class="label label-default">Django</li><li class="label label-default">Css</li></ul><!--END tags --></a></li>
-  <!--END work-->
-</ul>{% endblock %}
+{% extends 'base.html' %} {% load extract_tags %}{% block content %}
+<h2>Папка с работами</h2>
+<ul class="works list-unstyled">{% for work in works %}
+  <li class="work">
+    <a class="work__refer" href="{% url 'work' slug=work.slug %}">
+		<img class="img-responsive work__image lozad " data-src='/media/{{ work.album.thumb }}' />
+		<h2 class="work__title">{{ work.name }}</h2>
+		{% if work.tags|length  %}
+		<ul class="tags">
+			{% for tag in work.tags|extract_m2m %}
+			<li class="label label-default">{{ tag }}</label>
+			{% endfor %}
+		</ul>
+		{% endif %}
+	</a>
+  </li>
+  {% endfor %}</ul>{% endblock %}

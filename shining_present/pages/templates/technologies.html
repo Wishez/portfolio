@@ -45,4 +45,12 @@
       <figure title="Postgresql" class="imageContainer__image technology__image imageContainer__image_postgres"></figure>
     </li>
   </ul>
+  <div id="formWrapper" class="formWrapper">
+    <h2>Обратная связь</h2>
+    <form id="connectForm" method="post" class="connectForm">{% csrf_token %}
+      <!-- Fields-->{% for field in form %}
+      <div class="controller"><label title="{% if field.field.required == true %}Обязательное для заполнения поле{% else %}Заполните поле по желанию{% endif %}" class="controller__label">{{ field.label }}{% if field.field.required %}<span class="controller_required">*</span>{% endif %}</label>{{ field }}
+        {{ field.errors }}
+      </div>{% endfor %}<button id="connect" title="Кнопка, отправляющая данные владельцу сайта" type="submit" class="button center-block button_purple connectForm__button">Связаться</button></form>
+  </div>
 </section>{% endblock %}
