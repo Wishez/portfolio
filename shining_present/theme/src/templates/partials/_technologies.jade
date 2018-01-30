@@ -61,4 +61,19 @@ article.technologies
 		each technology in technologies
 			li.imageContainer.technology.child(class="imageContainer_" + technology.name)
 				figure.imageContainer__image.technology__image(title= technology.title,  class="imageContainer__image_" + technology.name)
+
+#formWrapper
+  form#connectMe.connect__connectForm.connectForm(
+    method='post'
+  )
+    | {% csrf_token %}
+    // Fields
+    | {% for field in form %}
+    .controller
+		label.controller__label(class="{% if field.field.required == true %}controller__label_required{% endif %}", title="{% if field.field.required == true %}Обязательное для заполнения поле{% else %}Заполните поле по желанию{% endif %}") {{ field.label }}
+      | {{ field }}
+      | {{ field.errors }}
+    | {% endfor %}
+    .connectForm__sendBtn.sendBtn
+      button#send.sendBtn__btn.btn(type="submit") Отправить
 	

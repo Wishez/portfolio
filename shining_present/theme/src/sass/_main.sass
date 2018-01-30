@@ -19,6 +19,8 @@
 		text-decoration: none
 .work, .previous, .next
 	transition: 0.2s ease-in-out
+	will-change: transform, box-shadow
+	transform-style: preverse-3d
 	&:hover
 		box-shadow: 0 10px 20px $shadow
 		transform: scale(1.01, 1.01)
@@ -59,13 +61,14 @@
 	@include breakpoint($xs)
 		width: span(12)
 		justify-content: center
-		margin-top: 1em;
+		margin-top: 1em
 .child
 	flex: 1 0 20%
 
 .works, .head, .worksPagination
 	justify-content: space-between
-
+.works
+	width: span(12)
 .previous
 
 	// padding-right: 0.5em
@@ -96,7 +99,9 @@
 .currentWork
 	width: span(4)
 .previous,
-.next
+.next	 
+	background-image: none
+
 	@include breakpoint($md)
 		width: span(3)
 	@include breakpoint($sm-less)
@@ -111,6 +116,8 @@
 	@include breakpoint($sm-less)
 		text-align: left
 .currentWork
+	margin-left: auto
+	margin-right: auto
 	@include breakpoint($md)
 		width: span(6)
 	@include breakpoint($sm-less)
@@ -127,11 +134,15 @@
 .work
 	margin-top: 1em	
 	padding: 1em
-	
+	will-change: transform, box-shadow
+	transform-style: preserve-3d
 	@include breakpoint($sm)
-		width: 50%
+		width: span(6)
 	@include breakpoint($xs)
-		width: 100%
+		width: span(12)
+	&__image 
+		min-width: span(12)
+
 
 .brandImage
 	max-width: 69px
@@ -175,8 +186,12 @@
 		z-index: 2
 		left: calc(50% - 22.5px)
 		background-color: $blue
-	&:after
-	&:after
+	& .navListItem__refer
+		display: block
+		width: span(12)
+		height: span(12)
+		z-index: 10
+
 .navList
 	height: 100%
 	justify-content: center
@@ -187,9 +202,11 @@
 		font-size: (18em / 16)
 	@include breakpoint($sm-less)
 		font-size: (21em / 16)
-	
-.navList:hover .navListItem_name-main, .navListItem:not(.navListItem_name-main):hover
-	transform: scale(1.03, 1.03)
+.navList .navListItem_name-main, .navListItem:not(.navListItem_name-main)
+	will-change: transform, box-shadow
+	transform-style: preverse-3d
+	&:hover 
+		transform: scale(1.03, 1.03)
 .navList, .navListItem
 	border-style: solid
 	border-color: $brown
@@ -198,7 +215,7 @@
 	transition: 0.2s ease-in-out 
 .navListItem__refer, .brand
 	&, &:hover  
-		background-image: none;
+		background-image: none
 	
 
 .navListItem:not(.navListItem_name-main)
@@ -208,7 +225,8 @@
 	max-height: 175px
 	min-height: 150px
 	justify-content: center
-	
+	will-change: transform, box-shadow
+	transform-style: preverse-3d
 	&:hover
 		box-shadow: 0 0 10px $shadow
 		
@@ -310,17 +328,20 @@
 .task__title	
 	border-style: solid
 	border-bottom-width: 1px
-	border-image: linear-gradient(to right, $blue 0%, $blue 50%, transparent 50%) 1;
+	border-image: linear-gradient(to right, $blue 0%, $blue 50%, transparent 50%) 1
 	padding-bottom: 0.2em
 .task__paragraph
 	font-size: (14em / 16)
 
-.presentWorkItem
+
 .presentWork
  	border-top-width: 1px
 
+.presentWorkItem,
+.presentWork
+	width: span(12)
 
-
+.presentWorkItem__image 
 // Start about
 
 .about, .article
@@ -393,4 +414,108 @@ $figures: ('gear', 2000, 1969, em(65, 36)), ('bootstrap', 41, 208, em(200)), ('h
 
 
 .technologiesTitle
-	// display: flex
+	@include breakpoint($sm-less)
+		flex-direction: column
+	@include breakpoint($xxs)
+		font-size: 7vw
+.imageContainer_gear 
+	@include breakpoint($sm-less)
+		width: span(12)
+		margin: .5em 0
+.controller 
+	flex-basis: span(12)
+	&:not(:first-child) 
+		margin-top: 1em
+	
+
+	&_required 
+		color: $purple
+	
+	&__icon 
+		margin-bottom: .15em
+	
+	&__input
+		min-width: span(12)
+		max-width: span(12)
+		font-size: em(18, 21)
+		padding: em(16) em(12.5)
+		border-radius: 3px
+		background-color: #d8d8d8
+		border-width: 2px 
+		border-style: solid
+		// &_purple 
+			// border-color: $purple
+		&, &_textinput
+			border-color: #a7a7a7;
+			&:focus 
+				&:invalid 
+					border-color: $purple				
+				&:valid 
+					border-color: #437A67	
+		&_textinput
+			max-height: 8.5em;
+		&_select 
+			padding: .5em
+			margin-top: .5em
+		
+
+	
+
+	
+	&__label 
+		align-self: flex-end
+	
+	&__checkbox 
+		-webkit-appearance: none
+		align-self: center
+		cursor: pointer
+		// padding: em(9)
+		height: em(26)
+		width: em(26)
+		border: 2px solid $purple
+		background-color: $gray
+		max-width: span(1)
+		margin-right: span(1) / 2
+		display: inline-block
+		position: relative
+		// @include round(em(2))
+		&:checked:active 
+
+		
+		&:checked:after 
+			content: '\2714'
+			// font-size: em(15)
+			position: absolute
+			top: em(1)
+			left: em(3)
+			color: $darkGray
+		
+	
+	&__checkboxLabel 
+		color: $white
+		padding: .5em 0 .8em 1em 
+		max-width: span(10)
+		background-color: $red
+	
+#formWrapper 
+	max-width: em(350)
+	margin: 2em auto
+
+.formLoader 
+	max-width: em(50)
+	margin: 3em auto
+	display: block
+.button 
+	border: 0
+	width: 100%
+	max-width: em(125)
+	color: $white
+	border-radius: 3px
+	padding: .5em 0
+	margin-top: .5em
+
+	&_purple
+		background-color: $purple
+	
+	&_yellow 
+		background-color: $yellow
