@@ -7,12 +7,23 @@
     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#fff">
-    <meta name="format-detection" content="telephone=no">{% if page.page_title %}
+    <meta name="format-detection" content="telephone=no">
+    <link rel="dns-prefetch" href="http://localhost:8000">
+    <link rel="subresource" href="/static/portfolio/css/app.css">
+    <link rel="subresource" href="/static/portfolio/js/app.js">
+    <link rel="prefetch" href="/static/portfolio/css/app.css">
+    <link rel="prefetch" href="/static/portfolio/js/app.js">
+    <link rel="prerender" href="/protfolio">
+    <link rel="prerender" href="/about">
+    <link rel="prerender" href="/technologies">
+    <link rel="prerender" href="/articles">
+    <link rel="preload" href="/static/portfolio/css/app.css" as="style">
+    <link rel="preload" href="/static/portfolio/js/app.js" as="script">{% if page.page_title %}
     <title>{{ page.page_title }}</title>{% else %}
     <title>Page</title>{% endif %} {% if page.meta %}
     <meta name="description" content="{{ page.meta }}">{% else %}
     <meta name="description" content="No meta">{% endif %}
-    <link rel="stylesheet" href="{% static 'portfolio/css/main.css' %}" media="none" onload="if (media !== 'all') media='all';">
+    <link rel="stylesheet" href="{% static 'portfolio/css/app.css' %}" media="none" onload="if (media !== 'all') media='all';">
     <style>
       .skip {
         position: fixed;
@@ -122,14 +133,21 @@
 
     </script>
   </body>
-  <link href="{% static 'portfolio/css/screen.css' %}" media="none" rel="stylesheet" onload="if(media != 'screen') media='screen';">
-  <link href="{% static 'portfolio/css/app.css' %}" media="none" rel="stylesheet" onload="if(media != 'all') media='all';">
-  <link href="{% static 'portfolio/css/print.css' %}" media="none" rel="stylesheet" type="text/css" onload="if(media != 'print') media='print';">
   <link rel="icon" href="{% static 'portfolio/img/favicon.ico' %}">
-  <link rel="stylesheet" href="{% static 'portfolio/css/ie.css' %}" media="none" onload="if(media != 'all') media='all';">
-  <!--[if IE]>
-<link href="{% static 'portfolio/css/ie9.css' %}" media="all" rel="stylesheet" type="text/css" />
-<![endif]-->
+  <script>
+    if ('serviceWorker' in navigator)
+    {
+      navigator.serviceWorker.register("{% static '/portfolio/js/sw.js' %}")
+        .then(function(reg)
+        {
+          console.log(true);
+        }).catch(function(err)
+        {
+          console.log("No it didn't. This happened: ", err)
+        });
+    }
+
+  </script>
   <!--[if lt IE 9]>
 <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js>
 <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js">
