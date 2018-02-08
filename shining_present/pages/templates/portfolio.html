@@ -1,11 +1,11 @@
-{% extends 'base.html' %} {% load extract_tags %}{% block content %}
+{% extends 'base.html' %} {% load extract_tags %} {% block content %}
 <h2>Папка с работами</h2>
 <ul class="works list-unstyled">{% for work in works %}
   <li class="work">
     <a class="work__refer" href="{% url 'work' slug=work.slug %}">
 		<img class="img-responsive work__image lozad " data-src='/media/{{ work.album.thumb }}' />
 		<h2 class="work__title">{{ work.name }}</h2>
-		{% if work.tags|length  %}
+		{% if work.tags|extract_m2m|length  %}
 		<ul class="tags">
 			{% for tag in work.tags|extract_m2m %}
 			<li class="label label-default">{{ tag }}</label>

@@ -1,7 +1,7 @@
 {% extends 'base.html' %} {% load extract_tags %} {% block content %}
 <nav class="worksPagination">{% if last %}<a href="{% url 'work' slug=last.slug %}" class="previous">Предыдущая <h4 class="workName">{{ last.name }}</h4></a>{% endif %}
-  <h2 style="{% if not next %}margin-left: 0;{% endif %}" class="currentWork text-center">{{ page.name }}<br/><a href="{{ page.url }}" class="currentWork__refer not-follow">https://shining-present.ru/fashinableCards/</a></h2>{% if next %}<a href="{% url 'work' slug=next.slug %}" class="next text-right">Следующая<h4 class="workName">{{ next.name }}</h4></a>{%
-  endif %} {% endif %}</nav>
+  <h2 style="{% if not next %}margin-left: 0;{% endif %}" class="currentWork text-center">{{ page.name }}<br/><a href="{{ page.url }}" class="currentWork__refer not-follow"> {{ page.url }}</a></h2>{% if next %}<a href="{% url 'work' slug=next.slug %}" class="next text-right">Следующая<h4 class="workName">{{ next.name }}</h4></a>{% endif
+  %} {% endif %}</nav>
 <div class="task {% if not page.task %}visible-hidden{% endif %}">
   <h3 class="task__title">Задача</h3>
   <p class="task__paragraph">{{ page.task }}</p>

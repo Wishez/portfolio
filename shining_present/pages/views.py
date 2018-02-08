@@ -120,7 +120,7 @@ class ArticlePageView(BaseView):
 
     def __init__(self):
         super(ArticlePageView, self).__init__()
-        self.page_model = ArticlePage
+        self.page_model = ArticlesPage
     def set_additional_context(self, context):
         context['article_id'] = self.article_id
 
