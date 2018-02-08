@@ -7,5 +7,5 @@ urlpatterns = [
     url('^connect/$', TechnologiesView.as_view(), name='connect'),
     url('^articles/$', ArticlesPageView.as_view(), name='articles'),
     url('^work/(?P<slug>[a-z_\-0-9]+)/$', WorkView.as_view(), name='work'),
-    url('^article/(?P<slug>[a-z_\-0-9]+)/$', ArticlePageView.as_view(), name='article'),
+    url('^article/(?P<id>[0-9]+)/$', ArticlePageView.as_view(), name='article'),
 ]
