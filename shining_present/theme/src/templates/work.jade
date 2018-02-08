@@ -10,7 +10,8 @@ nav.worksPagination
 	| {% endif %}
 	h2.currentWork.text-center(style="{% if not next %}margin-left: 0;{% endif %}") {{ page.name }}
 		br
-		a.currentWork__refer.not-follow(href="{{ page.url }}") https://shining-present.ru/fashinableCards/
+		a.currentWork__refer.not-follow(href="{{ page.url }}").
+			 {{ page.url }}
 	| {% if next %}
 	a.next.text-right(href="{% url 'work' slug=next.slug %}") Следующая
 		h4.workName {{ next.name }}

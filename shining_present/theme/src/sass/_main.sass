@@ -2,16 +2,18 @@
 	+after
 	z-index: 0
 	@extend %relative
+	padding-right: .7em
 	&:after
 		background-image: url('./../img/icons/external_link.png')
 		background-size: .5em
 		background-repeat: no-repeat
-		background-position: right top
 		top: 0
-		width: span(12)
-		height: span(12)
-		left: .7em
-
+		height: .5em
+		right: 0
+		width: .5em
+		left: auto
+.articleMeta
+	margin-top: 0
 .previous, .next, .navListItem__refer
 	text-decoration: none
 .work__refer, .navListItem__refer, .previous, .next
@@ -65,9 +67,11 @@
 .child
 	flex: 1 0 20%
 
-.works, .head, .worksPagination
+.head, .worksPagination
 	justify-content: space-between
+
 .works
+	justify-content: space-around
 	width: span(12)
 .previous
 
@@ -79,9 +83,14 @@
 .currentWork
 	&__refer
 		font-size: (9em / 16)
+		white-space: nowrap
+		overflow: hidden
+		display: block
+		margin-top: .5em
+		text-overflow: ellipsis
 .head 
 	background-color: $lightGray
-	padding: 0.2em 3.8em
+	padding: 0.5em 3.8em
 	@include breakpoint($xs)
 		padding: 0 2em 2em
 
@@ -272,7 +281,6 @@
 	color: $darkenGray
 	font-size: (12em / 16)
 .contacts
-	padding-top: 0.7em
 	justify-content: flex-end
 	&__contact:first-of-type
 		margin-right: 2em
@@ -280,8 +288,8 @@
 		margin-right: 1.3em
 .footer
     border-top-width: 1px
-    margin-top: 1em
-.footer, .presentWorkItem
+    margin: 1em 0 1.5em
+.presentWorkItem
 	padding-bottom: 2em
 .footerContacts, .task, .presentWork
 	margin-top: 2em
@@ -312,9 +320,8 @@
 	justify-content: center
 .main p 
 	max-width: 75rem
-	margin: 1em 0 0
-	&:first-child
-		margin-top: 1.5em
+	// margin: 1em 0 0
+
 .presentWorkItem__image,
 .presentWorkItem
 	margin-top: 1em
@@ -512,10 +519,21 @@ $figures: ('gear', 2000, 1969, em(65, 36)), ('bootstrap', 41, 208, em(200)), ('h
 	color: $white
 	border-radius: 3px
 	padding: .5em 0
-	margin-top: .5em
+	will-change: transform
+	transition: transform .3s ease-in
+	&:hover, &:focus
+		transform: scale(1.04)
+	&:active
+		transform: translateY(4px)
 
 	&_purple
 		background-color: $purple
 	
 	&_yellow 
 		background-color: $yellow
+.articlesLoader
+	max-width: em(45)
+	margin: 1em auto
+	width: span(12)
+	display: block
+	align-self: center
