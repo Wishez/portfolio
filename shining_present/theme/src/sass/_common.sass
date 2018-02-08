@@ -90,6 +90,27 @@ a
 	height: 1px
 	position: absolute
 
+
+main * + *
+	margin-top: 1.5rem
+main :empty:not(img):not( picture):not(input):not(textarea):not(figure):not(video):not(audio)
+	display: none
+
+li, dt, dd, br, th, td
+	margin-top: 0
+.article * + *:not(p)
+	margin-top: 3rem
+	margin-bottom: 3rem
+
+.container
+	padding-bottom: 1.5rem
+	& p 
+		margin-top: 1.5rem
+
+* + h2, * + h3
+	margin-top: 1.5em
+
+
 picture
 	width: 100%
 
