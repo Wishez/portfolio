@@ -1,16 +1,77 @@
 import {TweenMax} from 'gsap';
 import $ from 'jquery';
 import lozad from 'lozad';
-import * as Cookies from './lib/js-cookies.js';
+import * as Cookies from './lib/js-cookies';
 import Zooming from 'zooming';
+import customAjaxRequest from './lib/ajax';
+import moment from 'moment';
 
 
-(function() {
-  const $preloader = $('.curtain, .preloader');
-  const _screwed = (selector, callback, event='click') => {
+
+const CORKCREW  = (function() {
+  const that = {};
+
+  that.showLoading = function(
+    $node, 
+    classLoader, 
+    color, 
+    maxWidth=false
+  ) {
+    const $loader =  $(`<svg version="1.1" id="L7" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" class=${classLoader} 
+          viewBox="0 0 100 100" enable-background="new 0 0 100 100" xml:space="preserve">
+         <path fill="${color}" d="M31.6,3.5C5.9,13.6-6.6,42.7,3.5,68.4c10.1,25.7,39.2,38.3,64.9,28.1l-3.1-7.9c-21.3,8.4-45.4-2-53.8-23.3
+          c-8.4-21.3,2-45.4,23.3-53.8L31.6,3.5z">
+              <animateTransform 
+                 attributeName="transform" 
+                 attributeType="XML" 
+                 type="rotate"
+                 dur="2s" 
+                 from="0 50 50"
+                 to="360 50 50" 
+                 repeatCount="indefinite" />
+          </path>
+         <path fill="${color}" d="M42.3,39.6c5.7-4.3,13.9-3.1,18.1,2.7c4.3,5.7,3.1,13.9-2.7,18.1l4.1,5.5c8.8-6.5,10.6-19,4.1-27.7
+          c-6.5-8.8-19-10.6-27.7-4.1L42.3,39.6z">
+              <animateTransform 
+                 attributeName="transform" 
+                 attributeType="XML" 
+                 type="rotate"
+                 dur="1s" 
+                 from="0 50 50"
+                 to="-360 50 50" 
+                 repeatCount="indefinite" />
+          </path>
+         <path fill="${color}" d="M82,35.7C74.1,18,53.4,10.1,35.7,18S10.1,46.6,18,64.3l7.6-3.4c-6-13.5,0-29.3,13.5-35.3s29.3,0,35.3,13.5
+          L82,35.7z">
+              <animateTransform 
+                 attributeName="transform" 
+                 attributeType="XML" 
+                 type="rotate"
+                 dur="2s" 
+                 from="0 50 50"
+                 to="360 50 50" 
+                 repeatCount="indefinite" />
+          </path>
+        </svg>`).appendTo($node);
+
+    if (maxWidth) {
+      $loader.css('maxWidth', maxWidth);
+    }
+
+    return () => {
+      $loader.remove();
+    };
+  }; // end showLoading
+
+  that.screwed = (selector, callback, event='click') => {
     $(document).on(event, selector, callback);
   };
-  // lozad('' ,function() {});
+
+  return that;
+}());
+
+(function(_) {
+  
   // $(document).on('click', '.slideTo', function() {
   //    $('html, body').animate({
   //      scrollTop: $($(this).attr('href')).offset().top
@@ -19,7 +80,7 @@ import Zooming from 'zooming';
   //  
 
   $(function() {
-
+    $('.skip').focus();
     lozad('.lozad', {
       load: function(el) {
         el.src = el.dataset.src;
@@ -28,13 +89,12 @@ import Zooming from 'zooming';
         };
       }
     }).observe();
+
     const zoom = new Zooming({
       bgColor: '#212121'
     });
 
-
-
-    _screwed('.not-follow', function(e) {
+    _.screwed('.not-follow', function(e) {
       const url = $(this).attr('href');
       
       window.open(url);
@@ -46,7 +106,7 @@ import Zooming from 'zooming';
     const $centeredMenuButton = $('#centeredMenuButton');
     let lastShadow  = '';
 
-    _screwed('.navListItem', function() {
+    _.screwed('.navListItem', function() {
       const $this = $(this);
       const shadowPosition = `shadow_position-${$this.data('position')}`;
 
@@ -55,96 +115,99 @@ import Zooming from 'zooming';
       lastShadow = shadowPosition;
     }, 'mouseover');
 
-    _screwed('.navListItem', function() {
+    _.screwed('.navListItem', function() {
       $centeredMenuButton.removeClass(lastShadow);
     }, 'mouseout');
 
   }());	
 
-}());
+}(CORKCREW));
 
+const ARTICLES = (function(_) {
+  const _apiUrl  = 'https://filipp-zhuravlev.ru/api/v0';
 
-const CONNECT_FORM = (function() {
-  // $(document)
-  //   .on('input propertychange', '.controller' , function(e) {
-  //     $(this).toggleClass('elemForm-filled',!! $(e.target).val());
-  //   })
-  //   .on('focus', '.elemForm', function() {
-  //     $(this).addClass('elemForm-focused');
-  //   })
-  //   .on('blur', '.elemForm', function() {
-  //     $(this).removeClass('elemForm-focused');
-  // });
+  const _getArticles = ($articles) => {
+    // _.showLoading($articles, 'articlesLoader', '#8c4b65', `${100 / 16}em`);
 
-    
+    const url  = _apiUrl + '/articles/';
 
-  // $(document).on('input propertychange', '#connectMe', function() {
-  //   var $name = $('#id_name');
-      
-  //   var str = $name
-  //     .val()
-  //     .toLowerCase()
-  //     .split(' ')
-  //     .map(fixWord)
-  //     .join(' ');
+    return fetch(url)
+      .then(data => data.json())
+      .then(articles => {
+        const finalHtml = articles
+          .map(article => (
+            `<li class="article">
+                <h1 class='articlePreview__title'>
+                   <a class='articlePreview' href='/article/${article.id}/'>${article.title}</a>
+                </h1>
+                <div class='articleMeta'>
+                    <time datetime="${moment(article.created_at).format('YYYY-MM-DD')}">${moment(article.created_at).format('YYYY/MM/DD')}</time>
+                    <p class='articlePreview__paragraph'> ${article.announce_text}</p>
+                </div>
+            </li>`
+          ))
+          .join('');
 
-  //   function fixWord( word ) {
-  //      return word.replace(word.charAt(0), word.charAt(0).toUpperCase()); 
-  //   }
-      
-  //   $name.val(str);
-  // });
+        $articles.html(finalHtml);
+      })
+      .catch(err => {
+        $articles.html(err);
+
+      });
+
+  };
+
+  const _getArticle = ($article, id) => {
+    // const removeLoader = _.showLoading($article, '#8c4b65', 'articlesLoader', `${100 / 16}em`);
+    const url  = `${_apiUrl}/articles/${id}/`;
+    return fetch(url)
+      .then(data => data.json())
+      .then(article => {
+        const finalHtml = 
+            `<h1 class='articlePreview__title'>
+                ${article.title}
+             </h1>
+            <div class='articleMeta'>
+                    <time datetime="${moment(article.created_at).format('YYYY-MM-DD')}}">${moment(article.created_at).format('YYYY/MM/DD')}</time>
+            </div>
+            <div class='articleText'> ${article.text.replace(new RegExp('<h5', 'g'), '<h2').replace(new RegExp('</h5>', 'g'), '</h2>')}</div>`;
+
+        $article.html(finalHtml);
+      })
+      .catch(err => {
+        $article.html(err);
+
+      });
+  }; 
   $(function() {
-    $(document).on('submit', '#connectForm', function(e) {
+    const $articles = $('#articles');
+    const articleID = $('#articleID').text();
+    if ($articles.length) {
+      _getArticles($articles);
+    }
+
+    if (articleID) {
+      _getArticle($('#article'), articleID);
+    }
+    
+  });
+}(CORKCREW));
+
+const CONNECT_FORM = (function(_) {
+  $(function() {
+    _.screwed('#connectForm', function(e) {
 
       e.preventDefault();
           
-      _showLoading($('#formWrapper'), 'formLoader', '#8C4B65');
+      const removeLoader = _.showLoading($('#formWrapper'), 'formLoader', '#8C4B65');
 
       $(this).hide('fast');
           
-      _sendEmail();
-    });// end submit
+      _sendEmail(removeLoader);
+    }, 'submit'); // end submit
   });
-  function _showLoading($node, classLoader, color) {
-    $node.append(`<svg version="1.1" id="L7" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" class=${classLoader} 
-        viewBox="0 0 100 100" enable-background="new 0 0 100 100" xml:space="preserve">
-       <path fill="${color}" d="M31.6,3.5C5.9,13.6-6.6,42.7,3.5,68.4c10.1,25.7,39.2,38.3,64.9,28.1l-3.1-7.9c-21.3,8.4-45.4-2-53.8-23.3
-        c-8.4-21.3,2-45.4,23.3-53.8L31.6,3.5z">
-            <animateTransform 
-               attributeName="transform" 
-               attributeType="XML" 
-               type="rotate"
-               dur="2s" 
-               from="0 50 50"
-               to="360 50 50" 
-               repeatCount="indefinite" />
-        </path>
-       <path fill="${color}" d="M42.3,39.6c5.7-4.3,13.9-3.1,18.1,2.7c4.3,5.7,3.1,13.9-2.7,18.1l4.1,5.5c8.8-6.5,10.6-19,4.1-27.7
-        c-6.5-8.8-19-10.6-27.7-4.1L42.3,39.6z">
-            <animateTransform 
-               attributeName="transform" 
-               attributeType="XML" 
-               type="rotate"
-               dur="1s" 
-               from="0 50 50"
-               to="-360 50 50" 
-               repeatCount="indefinite" />
-        </path>
-       <path fill="${color}" d="M82,35.7C74.1,18,53.4,10.1,35.7,18S10.1,46.6,18,64.3l7.6-3.4c-6-13.5,0-29.3,13.5-35.3s29.3,0,35.3,13.5
-        L82,35.7z">
-            <animateTransform 
-               attributeName="transform" 
-               attributeType="XML" 
-               type="rotate"
-               dur="2s" 
-               from="0 50 50"
-               to="360 50 50" 
-               repeatCount="indefinite" />
-        </path>
-      </svg>`);
-  } // end showLoading
-  function _sendEmail() {
+  
+  function _sendEmail(removeLoader) {
     var full_name = $('#id_full_name').val(),
       email = $('#id_email').val(),
       phone = $('#id_phone').val(),
@@ -161,7 +224,7 @@ const CONNECT_FORM = (function() {
     function csrfSafeMethod(method) {
       return (/^(GET|HEAD|OPTIONS|TRACE)$/.test(method));
     }
-    console.log(sendData);
+    
     $.ajaxSetup({
       url: '/data/connectMe/',
       type: 'POST',
@@ -179,9 +242,10 @@ const CONNECT_FORM = (function() {
       },
       error : function(xhr,errmsg,err) {
         $('#connectForm').show('fast');
-        $formWrapper.find('.formLoader').hide('fast');//.remove();
+        $formWrapper.find('.formLoader').hide('fast');
+        removeLoader();
       }
     });
   }
 
-}());
+}(CORKCREW));
