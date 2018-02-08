@@ -1,13 +1,7 @@
 | {% extends 'base.html' %}
 | {% load extract_tags %}
--
-	var images = ['1.png','2.png','3.png', '4.png']
-	var names = ['Fashinable Cards', 'Golden Theme', 'Slider', 'Gaming Fun']
-	var tags = [['React', 'Django', 'Css'], ['JavaSctipt', 'Html', 'Css', 'jQuery'], ['GreenSock', 'JavaScript', 'Css'], ['React', 'Django', 'Css']]
-	var urls = ['work.html', 'work.html', 'work.html', 'work.html']
 
 | {% block content %}
-//- {% if works|length != 0 %}
 h2 Папка с работами
 ul.works.list-unstyled.
 	{% for work in works %}
@@ -15,7 +9,7 @@ ul.works.list-unstyled.
 		<a class="work__refer" href="{% url 'work' slug=work.slug %}">
 			<img class="img-responsive work__image lozad " data-src='/media/{{ work.album.thumb }}' />
 			<h2 class="work__title">{{ work.name }}</h2>
-			{% if work.tags|length  %}
+			{% if work.tags|extract_m2m|length  %}
 			<ul class="tags">
 				{% for tag in work.tags|extract_m2m %}
 				<li class="label label-default">{{ tag }}</label>
