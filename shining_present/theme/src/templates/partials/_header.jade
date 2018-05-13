@@ -1,7 +1,7 @@
 //BEGIN header
 header.header(itemscope, itemtype='http://schema.org/Person')
 	//BEGIN brand
-	.head
+	.head.parent.row
 		a(href="{% url 'portfolio' %}").brand
 			.brandImage
 				figure.brandImage__image(style="background-image: url('/media/{{ settings.thumb_photo.image }}');")

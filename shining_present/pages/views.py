@@ -103,7 +103,7 @@ class WorkView(BaseView):
             next = works[currentIndex + 1]
         else:
             last = works[currentIndex - 1]
-            next = works[currentIndex + 1]
+            next = works[0]
 
         context['last'] = last
         context['next'] = next

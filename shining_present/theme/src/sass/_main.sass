@@ -1,8 +1,10 @@
 .not-follow
 	+after
+
 	z-index: 0
 	@extend %relative
 	padding-right: .7em
+
 	&:after
 		background-image: url('./../img/icons/external_link.png')
 		background-size: .5em
@@ -12,20 +14,25 @@
 		right: 0
 		width: .5em
 		left: auto
+
 .articleMeta
 	margin-top: 0
+
 .previous, .next, .navListItem__refer
 	text-decoration: none
+
 .work__refer, .navListItem__refer, .previous, .next
 	&:hover
 		text-decoration: none
+
 .work, .previous, .next
 	transition: 0.2s ease-in-out
 	will-change: transform, box-shadow
-	transform-style: preverse-3d
+	
 	&:hover
 		box-shadow: 0 10px 20px $shadow
 		transform: scale(1.01, 1.01)
+
 .header
 	padding-bottom: 6em
 	@include breakpoint($xxs) 
@@ -33,8 +40,10 @@
 .header, .presentWorkItem, .presentWork, .footer
 	border-style: solid
 	border-color: lighten($gray, 50%)
+
 .header, .presentWorkItem:not(:last-child)
 	border-bottom-width: 1px
+
 .head, 
 .brand, 
 .contacts, 
@@ -46,6 +55,8 @@
 .presentWorkItem, 
 .presentWork, .technologiesTitle
 	align-items: center
+
+
 .parent, .head, 
 .brand, 
 .contacts, 
@@ -57,13 +68,23 @@
 .presentWorkItem, 
 .presentWork, .technologiesTitle
 	display: flex
+
+.column
+	flex-direction: column
+
+.row
+	flex-direction: row
+
 .head, .brand, .contacts, .navList, .navListItem, .works, .worksPagination, .technologiesTitle, .parent
 	flex-flow: row wrap
+
 .brand, .contacts
+
 	@include breakpoint($xs)
 		width: span(12)
 		justify-content: center
 		margin-top: 1em
+
 .child
 	flex: 1 0 20%
 
@@ -73,14 +94,20 @@
 .works
 	justify-content: space-around
 	width: span(12)
-.previous
 
-	// padding-right: 0.5em
+	@supports (display: grid)
+		display: grid
+		grid-template-columns: repeat(auto-fit, minmax(315px, 1fr))
+		grid-gap: 1rem
+
+
 .previous, .next
 	padding: 0.2em 0.5em
 	color: $blue
 
 .currentWork
+	flex-wrap: nowrap $i
+	flex-direction: column $i
 	&__refer
 		font-size: (9em / 16)
 		white-space: nowrap
@@ -88,9 +115,11 @@
 		display: block
 		margin-top: .5em
 		text-overflow: ellipsis
+
 .head 
 	background-color: $lightGray
 	padding: 0.5em 3.8em
+
 	@include breakpoint($xs)
 		padding: 0 2em 2em
 
@@ -102,11 +131,11 @@
 	width: span(6)
 
 .brandImage, 
-.work, 
 .previous,
 .next,
 .currentWork
 	width: span(4)
+	
 .previous,
 .next	 
 	background-image: none
@@ -124,13 +153,17 @@
 .next
 	@include breakpoint($sm-less)
 		text-align: left
+
 .currentWork
 	margin-left: auto
 	margin-right: auto
+
 	@include breakpoint($md)
 		width: span(6)
+
 	@include breakpoint($sm-less)
 		width: span(12)
+		
 	&__refer
 		@include breakpoint($xs)
 			font-size: (6em / 16)
@@ -203,6 +236,7 @@
 
 .navList
 	height: 100%
+	font-size: 24px
 	justify-content: center
 	+round
 	border-width: 3px
@@ -279,7 +313,7 @@
 
 .contacts, .footerContacts
 	color: $darkenGray
-	font-size: (12em / 16)
+	// font-size: (12em / 16)
 .contacts
 	justify-content: flex-end
 	&__contact:first-of-type

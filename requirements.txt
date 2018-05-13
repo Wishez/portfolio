@@ -1,8 +1,10 @@
 Django==1.11
 django-appconf==1.0.2
 django-colorfield==0.1.14
+django-grappelli==2.10.1
 django-imagekit==4.0.2
 django-jet==1.0.6
+django-model-utils==3.1.1
 djangorestframework==3.7.3
 google-api-python-client==1.4.1
 httplib2==0.10.3
