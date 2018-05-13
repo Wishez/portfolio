@@ -28,8 +28,7 @@ meta(name='description', content="No meta")
 link(
   rel="stylesheet",
   href="{% static 'portfolio/css/app.css' %}",
-  media="none",
-  onload="if (media !== 'all') media='all';"
+  media="all"
 )
 style.
   .skip {
@@ -45,6 +44,7 @@ style.
     will-change: transform;
     z-index: 10;
     color: #f7f7f7;
+    top: 100px;
   }
   .skip:focus {
     -webkit-transform: translateX(0);
