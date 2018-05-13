@@ -72,15 +72,25 @@ const CORKCREW  = (function() {
 
 (function(_) {
   
-  // $(document).on('click', '.slideTo', function() {
-  //    $('html, body').animate({
-  //      scrollTop: $($(this).attr('href')).offset().top
-  //    }, 600, Linear.ease);
-  //  });
-  //  
+  $(document).on('click', '.slideTo', function() {
+    $('html, body').animate({
+      scrollTop: $($(this).attr('href')).offset().top
+    }, 600, Linear.ease);
+  });
+   
 
   $(function() {
     $('.skip').focus();
+
+    $(window).on('scroll', function() {
+      const fromTop  =$('html, body').scrollTop();
+      console.log(fromTop);
+      
+      if (fromTop > 596) {
+        $('.skip').blur();
+      }
+    });
+
     lozad('.lozad', {
       load: function(el) {
         el.src = el.dataset.src;

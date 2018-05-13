@@ -6,9 +6,8 @@ html.no-js(lang="ru")
     include layouts/_head
     
   body(class=bodyClass)
-    a.skip(href="#main") К основному содержимому
-    //.curtains
-      //figure.preloader
+    a.skip.slideTo(href="#main") К основному содержимому
+    
     //BEGIN out
     .out(class=outClass)
       include partials/_header
@@ -34,13 +33,6 @@ html.no-js(lang="ru")
       ga('create', 'UA-103835197-1', 'auto');
       ga('send', 'pageview');
 
-  //- link( 
-  //-   href="{% static 'portfolio/css/print.css' %}",
-  //-   media="none",
-  //-   rel="stylesheet",
-  //-   type="text/css",
-  //-   onload="if(media != 'print') media='print';"
-  //- )
   link(
     rel="icon",
     href="{% static 'portfolio/img/favicon.ico' %}"
