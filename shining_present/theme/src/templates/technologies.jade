@@ -47,7 +47,7 @@
 		{
 			"name": "django",
 			"title": "Django"
-		}, 
+		},
 		{
 			"name": "postgres",
 			"title": "Postgresql"
@@ -63,7 +63,7 @@ section.technologies
 		each technology in technologies
 			li.imageContainer.technology.child(class="imageContainer_" + technology.name)
 				figure.imageContainer__image.technology__image(title= technology.title,  class="imageContainer__image_" + technology.name)
-	
+
 	#formWrapper.formWrapper
 		h2 Обратная связь
 		form#connectForm.connectForm(
@@ -78,7 +78,6 @@ section.technologies
 				| {{ field }}
 				| {{ field.errors }}
 			| {% endfor %}
-			
-			button#connect.button.center-block.button_purple.connectForm__button(title="Кнопка, отправляющая данные владельцу сайта", type="submit", aria-pressed=false) Связаться
-| {% endblock  %}
 
+			button#connect.button.center-block.button_purple.materialShadow.connectForm__button(title="Кнопка, отправляющая данные владельцу сайта", type="submit", aria-pressed=false) Связаться
+| {% endblock  %}

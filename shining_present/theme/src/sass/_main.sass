@@ -1,19 +1,64 @@
+.row.row
+	margin-right: 0
+	margin-left: 0
+
+::selection
+	background: $yellow
+
+.skip
+	padding: 1em .5em
+	text-align: center
+	border-radius: 3px
+	border-top-left-radius: 0
+	border-bottom-left-radius: 0
+	background-color: $heatGreen
+	transform: translateX(-110%)
+	will-change: transform
+	z-index: 10
+	color: $white
+	top: 100px
+	position: fixed
+
+	&:focus
+		transform: translateX(0)
+		color: $white
+
+.curtain, .preloader
+	position: fixed
+	will-change: opacity
+	z-index: 10
+
+.curtain
+	background-color: $purple
+	top: 0
+	left: 0
+	width: 100%
+	height: 100%
+
+.preloader
+	top: 40%
+	left: 47.5%
+	width: 10%
+
 .not-follow
 	+after
 
 	z-index: 0
 	@extend %relative
-	padding-right: .7em
+	padding-right: 1em
 
 	&:after
 		background-image: url('./../img/icons/external_link.png')
-		background-size: .5em
+		background-size: 1em
 		background-repeat: no-repeat
 		top: 0
-		height: .5em
+		height: 1em
 		right: 0
-		width: .5em
+		width: 1em
 		left: auto
+
+
+
 
 .articleMeta
 	margin-top: 0
@@ -28,14 +73,14 @@
 .work, .previous, .next
 	transition: 0.2s ease-in-out
 	will-change: transform, box-shadow
-	
+
 	&:hover
 		box-shadow: 0 10px 20px $shadow
 		transform: scale(1.01, 1.01)
 
 .header
 	padding-bottom: 6em
-	@include breakpoint($xxs) 
+	@include breakpoint($xxs)
 		padding-bottom: 4em
 .header, .presentWorkItem, .presentWork, .footer
 	border-style: solid
@@ -44,28 +89,28 @@
 .header, .presentWorkItem:not(:last-child)
 	border-bottom-width: 1px
 
-.head, 
-.brand, 
-.contacts, 
-.navList, 
-.navListItem, 
-.works, 
-.worksPagination, 
-.main > .container, 
-.presentWorkItem, 
+.head,
+.brand,
+.contacts,
+.navList,
+.navListItem,
+.works,
+.worksPagination,
+.main > .container,
+.presentWorkItem,
 .presentWork, .technologiesTitle
 	align-items: center
 
 
-.parent, .head, 
-.brand, 
-.contacts, 
-.navList, 
-.navListItem, 
-.works, 
-.worksPagination, 
-.main > .container, 
-.presentWorkItem, 
+.parent, .head,
+.brand,
+.contacts,
+.navList,
+.navListItem,
+.works,
+.worksPagination,
+.main > .container,
+.presentWorkItem,
 .presentWork, .technologiesTitle
 	display: flex
 
@@ -116,7 +161,7 @@
 		margin-top: .5em
 		text-overflow: ellipsis
 
-.head 
+.head
 	background-color: $lightGray
 	padding: 0.5em 3.8em
 
@@ -130,14 +175,14 @@
 .brand, .contacts, .navListItem
 	width: span(6)
 
-.brandImage, 
+.brandImage,
 .previous,
 .next,
 .currentWork
 	width: span(4)
-	
+
 .previous,
-.next	 
+.next
 	background-image: none
 
 	@include breakpoint($md)
@@ -163,7 +208,7 @@
 
 	@include breakpoint($sm-less)
 		width: span(12)
-		
+
 	&__refer
 		@include breakpoint($xs)
 			font-size: (6em / 16)
@@ -174,7 +219,7 @@
 	color: $darkGray
 	padding: 0.5em
 .work
-	margin-top: 1em	
+	margin-top: 1em
 	padding: 1em
 	will-change: transform, box-shadow
 	transform-style: preserve-3d
@@ -182,21 +227,24 @@
 		width: span(6)
 	@include breakpoint($xs)
 		width: span(12)
-	&__image 
+	&__image
 		min-width: span(12)
 
 
 .brandImage
 	max-width: 69px
 	width: span(3)
+
 	&__image
 		+round
 		padding-bottom: (2491% / 2304 * 100)
 		+cover
+		width: 74px
+
 .brandImage
 	margin-right: 1em
 
-.brand__title 
+.brand__title
 	color: $darkGray
 	font-size: (17em / 16)
 	position: relative
@@ -208,22 +256,24 @@
 	max-height: 370px
 	margin: 0 auto
 	padding-top: 3em
-	@include breakpoint($xxs) 
+	@include breakpoint($xxs)
 		padding: 3em 1em 0
 
 .navListItem_name-main
 	@extend %relative
 	+after
-	width: 70px 
+	width: 70px
 	height: 70px
 	left: calc(50% - 35px)
-	background-color: darken($yellow, 20%)
+	background-color: $blue //darken($yellow, 20%)
+
 	&, &:after
 		@extend %absolute
 		+round
+
 	&:after
 		content: ""
-		width: 45px 
+		width: 45px
 		height: 45px
 		z-index: 2
 		left: calc(50% - 22.5px)
@@ -248,18 +298,18 @@
 .navList .navListItem_name-main, .navListItem:not(.navListItem_name-main)
 	will-change: transform, box-shadow
 	transform-style: preverse-3d
-	&:hover 
+	&:hover
 		transform: scale(1.03, 1.03)
 .navList, .navListItem
 	border-style: solid
 	border-color: $brown
 .navListItem
 	cursor: pointer
-	transition: 0.2s ease-in-out 
+	transition: 0.2s ease-in-out
 .navListItem__refer, .brand
-	&, &:hover  
+	&, &:hover
 		background-image: none
-	
+
 
 .navListItem:not(.navListItem_name-main)
 	border-width: 3px
@@ -272,12 +322,12 @@
 	transform-style: preverse-3d
 	&:hover
 		box-shadow: 0 0 10px $shadow
-		
+
 	& .navListItem__refer
 		color: $white $i
 		width: 100%
 		display: block
-	
+
 	&:first-of-type, &:nth-child(2)
 		align-items: flex-start
 		& .navListItem__refer
@@ -300,7 +350,7 @@
 	&:nth-child(2), &:nth-child(3)
 		background-color: $heatGreen
 
-	
+
 .navListItem_round-
 	&topRight
 		border-top-right-radius: 100%
@@ -324,13 +374,13 @@
     border-top-width: 1px
     margin: 1em 0 1.5em
 .presentWorkItem
-	padding-bottom: 2em
+	padding-bottom: 2.75em
 .footerContacts, .task, .presentWork
 	margin-top: 2em
 
 .shadow_position-
 	&topRight
-		box-shadow: 5px -5px 10px $shadow 
+		box-shadow: 5px -5px 10px $shadow
 	&topLeft
 		box-shadow: -5px -5px 10px $shadow
 	&bottomRight
@@ -348,11 +398,11 @@
 .main, .head
 	@include breakpoint($xs)
 		font-size: +em(18)
-		
+
 .presentWorkItem, .main > .container, .presentWork
 	flex-direction: column
 	justify-content: center
-.main p 
+.main p
 	max-width: 75rem
 	// margin: 1em 0 0
 
@@ -361,12 +411,17 @@
 	margin-top: 1em
 .worksPagination, .presentWorkItem
 	width: 100%
+.materialShadow
+	box-shadow: 0 2px 6px 0 rgba(0,0,0,.5)
+
 .task
 	background-color: rgba($blue, .3)
-	// color: $white
+	box-shadow: 0 2px 6px 0 rgba(0,0,0,.5)
 	padding: 0 1em 1.3em
 	border-radius: 4px
-.task__title	
+	max-width: 60ch
+
+.task__title
 	border-style: solid
 	border-bottom-width: 1px
 	border-image: linear-gradient(to right, $blue 0%, $blue 50%, transparent 50%) 1
@@ -376,13 +431,21 @@
 
 
 .presentWork
- 	border-top-width: 1px
+	border-top-width: 1px
+
+	img
+		box-shadow: 0 2px 6px rgba(0,0,0,.5)
+.tabLink
+	background-color: $white
+
+	&:hover, &:focus
+		z-index: 2
 
 .presentWorkItem,
 .presentWork
 	width: span(12)
 
-.presentWorkItem__image 
+.presentWorkItem__image
 // Start about
 
 .about, .article
@@ -408,8 +471,8 @@
 		border-bottom: 1px solid lighten($gray, 50%)
 
 // End article
- 
-.article, 
+
+.article,
 .articlePreview
 	// color: $darkGray
 .text-uppercase
@@ -419,15 +482,15 @@
 		// justify-content: center
 
 		border: 2px solid $darkGray
-		padding: .5em 0 
+		padding: .5em 0
 	&List
 		margin-top: 1em
 
 
 .technologies, .technologiesImageContainer
 	width: 100%
-	
-$figures: ('gear', 2000, 1969, em(65, 36)), ('bootstrap', 41, 208, em(200)), ('html', 188, 200, em(65)), ('sass', 77, 102, em(80)), ('git', 55, 133, em(100)), ('gulp', 510, 228, em(40)), ('js', 61, 62, em(65)), ('jquery', 100, 100, em(65)), ('react', 100, 100, em(70)), ('redux', 3109, 3440, em(65)), ('figma', 100, 100, em(70)), ('python', 100, 100, em(65)), ('django', 282, 650, em(120)), ('postrgres', 1032, 1000, em(65)) 
+
+$figures: ('gear', 2000, 1969, em(65, 36)), ('bootstrap', 41, 208, em(200)), ('html', 188, 200, em(65)), ('sass', 77, 102, em(80)), ('git', 55, 133, em(100)), ('gulp', 510, 228, em(40)), ('js', 61, 62, em(65)), ('jquery', 100, 100, em(65)), ('react', 100, 100, em(70)), ('redux', 3109, 3440, em(65)), ('figma', 100, 100, em(70)), ('python', 100, 100, em(65)), ('django', 282, 650, em(120)), ('postrgres', 1032, 1000, em(65))
 
 
 .imageContainer
@@ -437,14 +500,20 @@ $figures: ('gear', 2000, 1969, em(65, 36)), ('bootstrap', 41, 208, em(200)), ('h
 .centered
 	justify-content: center
 	align-items: center
-.technologiesList 
-	justify-content: space-between
-.technology, .imageContainer_gear 
+
+.technologiesList
+	justify-content: center
+	margin-top: 3em
+	display: grid
+	grid-template-rows: 1fr
+	grid-template-columns: repeat(auto-fit, 90px)
+	grid-gap: 25px 50px
+
+.technology, .imageContainer_gear
 	margin: auto .5em
 	flex-basis: 33%
 
-.technology
-	// margin-bottom: .75em
+
 @each $name, $height, $width, $max-width in $figures
 	.imageContainer
 		&_#{$name}
@@ -459,58 +528,58 @@ $figures: ('gear', 2000, 1969, em(65, 36)), ('bootstrap', 41, 208, em(200)), ('h
 		flex-direction: column
 	@include breakpoint($xxs)
 		font-size: 7vw
-.imageContainer_gear 
+.imageContainer_gear
 	@include breakpoint($sm-less)
 		width: span(12)
 		margin: .5em 0
-.controller 
+.controller
 	flex-basis: span(12)
-	&:not(:first-child) 
+	&:not(:first-child)
 		margin-top: 1em
-	
 
-	&_required 
+
+	&_required
 		color: $purple
-	
-	&__icon 
+
+	&__icon
 		margin-bottom: .15em
-	
+
 	&__input
 		min-width: span(12)
 		max-width: span(12)
 		font-size: em(18, 21)
-		padding: em(16) em(12.5)
+		padding: em(8) em(12.5) em(12.5)
 		border-radius: 3px
-		background-color: #d8d8d8
-		border-width: 2px 
-		border-style: solid
-		// &_purple 
-			// border-color: $purple
+		transition-duration: 250ms
+
+		border: 0
+		border-bottom: 2px solid $purple
+		box-shadow: 0 2px 6px rgba(0,0,0, .15)
+		margin-top: 0
+
 		&, &_textinput
-			border-color: #a7a7a7;
-			&:focus 
-				&:invalid 
-					border-color: $purple				
-				&:valid 
-					border-color: #437A67	
+			border-color: #ccc
+
+			&:focus
+				&:invalid
+					border-color: $purple
+				&:valid
+					border-color: $blue
 		&_textinput
 			max-height: 8.5em;
-		&_select 
+
+		&_select
 			padding: .5em
 			margin-top: .5em
-		
 
-	
-
-	
-	&__label 
+	&__label
 		align-self: flex-end
-	
-	&__checkbox 
+		margin-left: -3px
+
+	&__checkbox
 		-webkit-appearance: none
 		align-self: center
 		cursor: pointer
-		// padding: em(9)
 		height: em(26)
 		width: em(26)
 		border: 2px solid $purple
@@ -520,33 +589,33 @@ $figures: ('gear', 2000, 1969, em(65, 36)), ('bootstrap', 41, 208, em(200)), ('h
 		display: inline-block
 		position: relative
 		// @include round(em(2))
-		&:checked:active 
+		&:checked:active
 
-		
-		&:checked:after 
+
+		&:checked:after
 			content: '\2714'
 			// font-size: em(15)
 			position: absolute
 			top: em(1)
 			left: em(3)
 			color: $darkGray
-		
-	
-	&__checkboxLabel 
+
+
+	&__checkboxLabel
 		color: $white
-		padding: .5em 0 .8em 1em 
+		padding: .5em 0 .8em 1em
 		max-width: span(10)
 		background-color: $red
-	
-#formWrapper 
+
+#formWrapper
 	max-width: em(350)
 	margin: 2em auto
 
-.formLoader 
+.formLoader
 	max-width: em(50)
 	margin: 3em auto
 	display: block
-.button 
+.button
 	border: 0
 	width: 100%
 	max-width: em(125)
@@ -562,8 +631,8 @@ $figures: ('gear', 2000, 1969, em(65, 36)), ('bootstrap', 41, 208, em(200)), ('h
 
 	&_purple
 		background-color: $purple
-	
-	&_yellow 
+
+	&_yellow
 		background-color: $yellow
 .articlesLoader
 	max-width: em(45)
@@ -571,3 +640,8 @@ $figures: ('gear', 2000, 1969, em(65, 36)), ('bootstrap', 41, 208, em(200)), ('h
 	width: span(12)
 	display: block
 	align-self: center
+
+.connectForm
+
+	&__button
+		margin-top: 1.5em

@@ -21,7 +21,7 @@ title {{ page.page_title }}
 title Page
 | {% endif %}
 | {% if page.meta %}
-meta(name='description', content="{{ page.meta }}") 
+meta(name='description', content="{{ page.meta }}")
 | {% else %}
 meta(name='description', content="No meta")
 | {% endif %}
@@ -30,42 +30,3 @@ link(
   href="{% static 'portfolio/css/app.css' %}",
   media="all"
 )
-style.
-  .skip {
-    position:fixed;
-    padding: 1em .5em;
-    text-aligin: center;
-    border-radius: 3px;
-    border-top-left-radius: 0;
-    border-bottom-left-radius: 0;
-    background-color: #8c4b65;
-    -webkit-transform: translateX(-110%);
-    transform: translateX(-110%);
-    will-change: transform;
-    z-index: 10;
-    color: #f7f7f7;
-    top: 100px;
-  }
-  .skip:focus {
-    -webkit-transform: translateX(0);
-    transform: translateX(0);
-    color: #f7f7f7;
-  }
-  .curtain, .preloader {
-    position: fixed;
-    will-change: opacity;
-    z-index: 10;
-  }
-  .curtain {
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: #8c4b65;
-  }
-  
-  .preloader {
-      top: 40%;
-      left: 47.5%;
-      width: 10%;
-  }

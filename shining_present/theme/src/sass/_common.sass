@@ -5,9 +5,9 @@
 @import 'bootstrap-sprockets'
 
 $i: !important
-$blue: #4E9191// #3e3f89
-$purple: #8C4B65
-$yellow: #E3CA40 
+$blue: #4e7db8//#4E9191// #3e3f89
+$purple: #9d5b4b//#8C4B65
+$yellow: #d0be5a// #E3CA40
 $ochre: $yellow//#917215
 $brown: #5f360d
 $heatGreen: $purple//#989b40
@@ -36,6 +36,14 @@ $xxs: max-width 445px
 $xxs-iphone: max-width 320px
 
 $susy: (columns: 12, gutters: 0, gutter-position: split, global-box-sizing: border-box)
+
+*
+
+	&:focus-visible
+		border: 4px dotted lighten($blue, 15%)
+
+h1,h2,h3,h4,h5,h6
+	line-height: 1.5
 body
 	& *
 		box-sizing: border-box
@@ -55,33 +63,31 @@ body
 	hyphenate-lines: 3
 	font-family: 'Raleway', sans-serif;
 	line-height: 1.4
-	font-style: 
+	font-style:
 	font-size: calc(1em + 1vw)
+
 
 a
   transition: .2s ease
-  &, &:hover, &:focus 
+
+  &, &:hover, &:focus
     text-decoration: none
-    background-image: linear-gradient(to right, $blue  0%, $blue 100%)
+    background-image: linear-gradient(to right, $heatGreen  0%, $heatGreen 100%)
     background-repeat: repeat-x
-    background-position: bottom
-    background-size: 0.05em 0.05em
+    background-position: center bottom
+    background-size: 0.05em 0.15em
+		padding-bottom: .15em
+
   color: $blue;
 
-  &:hover, &:focus 
-    // text-decoration: none;  
-    $lightenBlue: lighten($blue, 25%);
-    color: $blue;
-    background-image: linear-gradient(to right, $lightenBlue 0%, $lightenBlue 100%)
-    // color: $red;
-    // background-image: linear-gradient(to right, $red 0%, $red 100%);
-  
-  &:active 
+  &:hover, &:focus
+    $lightenBlue: lighten($blue, 25%)
     color: $blue
-  
-  
-    // text-decoration: none;  
-  
+    background-image: linear-gradient(to right, $blue 0%, $blue 100%)
+
+  &:active
+    color: $blue
+
 .visible-hidden
 	white-space: nowrap
 	overflow: hidden
@@ -104,7 +110,7 @@ li, dt, dd, br, th, td
 
 .container
 	padding-bottom: 1.5rem
-	& p 
+	& p
 		margin-top: 1.5rem
 
 * + h2, * + h3
@@ -112,6 +118,9 @@ li, dt, dd, br, th, td
 
 h2
 	font-size: 1.38685714285714285714em
+
+h3
+	font-size: 1.2em
 picture
 	width: 100%
 
