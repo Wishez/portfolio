@@ -1,6 +1,6 @@
 {% extends 'base.html' %} {% load extract_tags %} {% block content %}
 <nav class="worksPagination">{% if last %}
-  <a class="previous" href="{% url 'work' slug=last.slug %}"> 		Предыдущая 
+  <a class="previous tabLink" href="{% url 'work' slug=last.slug %}"> 		Предыдущая
 	<h4 class="workName">{{ last.name }}</h4>
 </a> {% endif %}
   <h2 class="currentWork text-center parent column centered" style="{% if not next %}margin-left: 0;{% endif %}"> {{ page.name }}
@@ -9,7 +9,7 @@
 	</a>
   </h2>
   {% if next %}
-  <a class="next text-right" href="{% url 'work' slug=next.slug %}">	  Следующая
+  <a class="next text-right tabLink" href="{% url 'work' slug=next.slug %}">	  Следующая
 	<h4 class="workName">{{ next.name }}</h4>
 </a> {% endif %}
 

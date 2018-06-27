@@ -12,44 +12,44 @@ const CORKCREW  = (function() {
   const that = {};
 
   that.showLoading = function(
-    $node, 
-    classLoader, 
-    color, 
+    $node,
+    classLoader,
+    color,
     maxWidth=false
   ) {
-    const $loader =  $(`<svg version="1.1" id="L7" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" class=${classLoader} 
+    const $loader =  $(`<svg version="1.1" id="L7" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" class=${classLoader}
           viewBox="0 0 100 100" enable-background="new 0 0 100 100" xml:space="preserve">
          <path fill="${color}" d="M31.6,3.5C5.9,13.6-6.6,42.7,3.5,68.4c10.1,25.7,39.2,38.3,64.9,28.1l-3.1-7.9c-21.3,8.4-45.4-2-53.8-23.3
           c-8.4-21.3,2-45.4,23.3-53.8L31.6,3.5z">
-              <animateTransform 
-                 attributeName="transform" 
-                 attributeType="XML" 
+              <animateTransform
+                 attributeName="transform"
+                 attributeType="XML"
                  type="rotate"
-                 dur="2s" 
+                 dur="2s"
                  from="0 50 50"
-                 to="360 50 50" 
+                 to="360 50 50"
                  repeatCount="indefinite" />
           </path>
          <path fill="${color}" d="M42.3,39.6c5.7-4.3,13.9-3.1,18.1,2.7c4.3,5.7,3.1,13.9-2.7,18.1l4.1,5.5c8.8-6.5,10.6-19,4.1-27.7
           c-6.5-8.8-19-10.6-27.7-4.1L42.3,39.6z">
-              <animateTransform 
-                 attributeName="transform" 
-                 attributeType="XML" 
+              <animateTransform
+                 attributeName="transform"
+                 attributeType="XML"
                  type="rotate"
-                 dur="1s" 
+                 dur="1s"
                  from="0 50 50"
-                 to="-360 50 50" 
+                 to="-360 50 50"
                  repeatCount="indefinite" />
           </path>
          <path fill="${color}" d="M82,35.7C74.1,18,53.4,10.1,35.7,18S10.1,46.6,18,64.3l7.6-3.4c-6-13.5,0-29.3,13.5-35.3s29.3,0,35.3,13.5
           L82,35.7z">
-              <animateTransform 
-                 attributeName="transform" 
-                 attributeType="XML" 
+              <animateTransform
+                 attributeName="transform"
+                 attributeType="XML"
                  type="rotate"
-                 dur="2s" 
+                 dur="2s"
                  from="0 50 50"
-                 to="360 50 50" 
+                 to="360 50 50"
                  repeatCount="indefinite" />
           </path>
         </svg>`).appendTo($node);
@@ -71,23 +71,29 @@ const CORKCREW  = (function() {
 }());
 
 (function(_) {
-  
+
   $(document).on('click', '.slideTo', function() {
     $('html, body').animate({
       scrollTop: $($(this).attr('href')).offset().top
-    }, 600, Linear.ease);
+    }, 250, Linear.ease);
   });
-   
+
 
   $(function() {
     $('.skip').focus();
+    var isSkipButtonFocused = true;
 
     $(window).on('scroll', function() {
       const fromTop  =$('html, body').scrollTop();
-      console.log(fromTop);
-      
-      if (fromTop > 596) {
+      const isUserInMainContent = fromTop > 596;
+      const isHideSkipButton = isUserInMainContent && isSkipButtonFocused;
+
+      if (isHideSkipButton) {
         $('.skip').blur();
+        isSkipButtonFocused = false;
+      } else if (!isUserInMainContent && !isSkipButtonFocused) {
+        $('.skip').focus();
+        isSkipButtonFocused = true;
       }
     });
 
@@ -106,9 +112,9 @@ const CORKCREW  = (function() {
 
     _.screwed('.not-follow', function(e) {
       const url = $(this).attr('href');
-      
+
       window.open(url);
-      
+
       e.preventDefault();
 
     }); // end click
@@ -129,7 +135,7 @@ const CORKCREW  = (function() {
       $centeredMenuButton.removeClass(lastShadow);
     }, 'mouseout');
 
-  }());	
+  }());
 
 }(CORKCREW));
 
@@ -173,7 +179,7 @@ const ARTICLES = (function(_) {
     return fetch(url)
       .then(data => data.json())
       .then(article => {
-        const finalHtml = 
+        const finalHtml =
             `<h1 class='articlePreview__title'>
                 ${article.title}
              </h1>
@@ -188,7 +194,7 @@ const ARTICLES = (function(_) {
         $article.html(err);
 
       });
-  }; 
+  };
   $(function() {
     const $articles = $('#articles');
     const articleID = $('#articleID').text();
@@ -199,7 +205,7 @@ const ARTICLES = (function(_) {
     if (articleID) {
       _getArticle($('#article'), articleID);
     }
-    
+
   });
 }(CORKCREW));
 
@@ -208,15 +214,15 @@ const CONNECT_FORM = (function(_) {
     _.screwed('#connectForm', function(e) {
 
       e.preventDefault();
-          
+
       const removeLoader = _.showLoading($('#formWrapper'), 'formLoader', '#8C4B65');
 
       $(this).hide('fast');
-          
+
       _sendEmail(removeLoader);
     }, 'submit'); // end submit
   });
-  
+
   function _sendEmail(removeLoader) {
     var full_name = $('#id_full_name').val(),
       email = $('#id_email').val(),
@@ -234,7 +240,7 @@ const CONNECT_FORM = (function(_) {
     function csrfSafeMethod(method) {
       return (/^(GET|HEAD|OPTIONS|TRACE)$/.test(method));
     }
-    
+
     $.ajaxSetup({
       url: '/data/connectMe/',
       type: 'POST',
@@ -244,7 +250,7 @@ const CONNECT_FORM = (function(_) {
         }
       }
     });
-      
+
     $.ajax({
       data: sendData,
       success: function(respond) {

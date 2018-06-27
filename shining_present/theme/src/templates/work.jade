@@ -5,7 +5,7 @@
 
 nav.worksPagination.
 	{% if last %}
-	<a class="previous" href="{% url 'work' slug=last.slug %}"> 		Предыдущая 
+	<a class="previous tabLink" href="{% url 'work' slug=last.slug %}"> 		Предыдущая
 		<h4 class="workName">{{ last.name }}</h4>
 	</a>
 	{% endif %}
@@ -15,9 +15,9 @@ nav.worksPagination.
 		</a>
 	</h2>
 	{% if next %}
-	<a class="next text-right" href="{% url 'work' slug=next.slug %}">	  Следующая
+	<a class="next text-right tabLink" href="{% url 'work' slug=next.slug %}">	  Следующая
 		<h4 class="workName">{{ next.name }}</h4>
-	</a>		 
+	</a>
 	{% endif %}
 
 

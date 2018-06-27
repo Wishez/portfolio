@@ -46,6 +46,7 @@
     "gulp-postcss": "^6.2.0",
     "gulp-prettify": "^0.4.0",
     "gulp-rename": "^1.2.2",
+    "gulp-sass": "^4.0.1",
     "gulp-sourcemaps": "^1.6.0",
     "gulp-svgmin": "^1.2.0",
     "gulp-svgstore": "^5.0.5",
@@ -57,6 +58,7 @@
     "lint-staged": "^4.0.2",
     "lodash": "^4.3.0",
     "lost": "^7.1.0",
+    "node-sass": "^4.9.0",
     "postcss-csso": "^2.0.0",
     "require-dir": "^0.3.2",
     "require-yaml": "^0.0.1",
@@ -71,12 +73,10 @@
     "bootstrap-sass": "^3.3.7",
     "breakpoint-sass": "^2.7.1",
     "gsap": "^1.20.3",
-    "gulp-sass": "^3.1.0",
     "handlebars": "^4.0.11",
     "js-cookie": "^2.2.0",
     "lozad": "^1.0.9",
     "moment": "^2.20.1",
-    "sass": "^1.0.0-beta.5.2",
     "susy": "^2.2.12",
     "zooming": "^1.2.7"
   }
