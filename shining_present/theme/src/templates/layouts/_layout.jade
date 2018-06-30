@@ -6,14 +6,14 @@ html
 
   body(class=bodyClass)
     //BEGIN out
-    .out(class=outClass)
+    .out.parallaxContainer(class=outClass)
       block header
         include ../partials/_header
       //BEGIN main
       main#main.main
         .container
           block content
-          
+
       block footer
         include ../partials/_footer
     //END out

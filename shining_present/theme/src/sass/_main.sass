@@ -1,3 +1,23 @@
+.parallax
+	&Container
+		overflow-x: hidden
+		overflow-y: auto
+		height: 500px
+		height: 100vh
+		perspective: 300px
+		perspective-origin: 0 0
+		transform-style: preserve-3d
+
+	&Child
+		transform-origin: 0 0
+		@include breakpoint($xs-up)
+			transform: translateZ(90px) scale(.7) translateY(40px)
+
+		@include breakpoint($xs)
+			transform: translateZ(60px) scale(.8)
+		//  translateX(-225px)
+		transform-style: preserve-3d
+
 .row.row
 	margin-right: 0
 	margin-left: 0
@@ -79,7 +99,12 @@
 		transform: scale(1.01, 1.01)
 
 .header
-	padding-bottom: 6em
+	padding-bottom: 5em
+	background-image: url('./../img/space-three.jpg')
+	background-repeat: no-repeat
+	background-size: cover
+	background-position: center center
+
 	@include breakpoint($xxs)
 		padding-bottom: 4em
 .header, .presentWorkItem, .presentWork, .footer
@@ -246,16 +271,16 @@
 
 .brand__title
 	color: $darkGray
-	font-size: (17em / 16)
 	position: relative
 	top: -0.2em
+	
 .navigation
 	max-width: 370px
 	min-width: 300px
 	min-height: 300px
 	max-height: 370px
 	margin: 0 auto
-	padding-top: 3em
+	// padding-top: 3em
 	@include breakpoint($xxs)
 		padding: 3em 1em 0
 
@@ -361,7 +386,7 @@
 	&bottomRight
 		border-bottom-right-radius: 100%
 
-.contacts, .footerContacts
+.contacts
 	color: $darkenGray
 	// font-size: (12em / 16)
 .contacts
@@ -371,12 +396,36 @@
 	&__contact:last-of-type
 		margin-right: 1.3em
 .footer
-    border-top-width: 1px
-    margin: 1em 0 1.5em
+		color: $white
+		background-color: $darkGray
+		margin: 1em 0 0
+
+.contacts__item_git
+	margin-left: auto
+	min-width: 45px
+
+	a
+		&, &:hover
+			background-image: none
+
+	svg
+		max-width: 45px
+		transition-duration: 250ms
+
+		&:hover
+			color: $blue
+
 .presentWorkItem
 	padding-bottom: 2.75em
-.footerContacts, .task, .presentWork
+.task, .presentWork
 	margin-top: 2em
+
+.footerContacts
+	padding: 1em 0 0
+
+	a
+		color: $yellow
+
 
 .shadow_position-
 	&topRight
