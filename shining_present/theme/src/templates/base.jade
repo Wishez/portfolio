@@ -4,24 +4,24 @@ doctype
 html.no-js(lang="ru")
   head
     include layouts/_head
-    
+
   body(class=bodyClass)
     a.skip.slideTo(href="#main") К основному содержимому
-    
+
     //BEGIN out
-    .out(class=outClass)
+    .out.parallaxContainer(class=outClass)
       include partials/_header
       //BEGIN main
       main#main.main
         .container
           | {% block content %}
           | {% endblock %}
-      
+
       include partials/_footer
     //END out
     | {% block settings.widgets %}
     | {% endblock %}
-    
+
     script(src="{% static 'portfolio/js/app.js' %}", async)
 
     script.
