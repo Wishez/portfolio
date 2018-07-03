@@ -1,5 +1,5 @@
 {% extends 'base.html' %}{% block content %}
-<section class="technologies">
+<section class="technologies parent">
   <h1 class="technologiesTitle text-uppercase centered parent">инструментарий
     <div class="imageContainer imageContainer_gear child">
       <figure class="imageContainer__image imageContainer__image_gear"></figure>
@@ -46,7 +46,7 @@
     </li>
   </ul>
   <div id="formWrapper" class="formWrapper">
-    <h2>Обратная связь</h2>
+    <h2 class="font-weight_semi">Обратная связь</h2>
     <form id="connectForm" method="post" class="connectForm">{% csrf_token %}
       <!-- Fields-->{% for field in form %}
       <div class="controller"><label title="{% if field.field.required == true %}Обязательное для заполнения поле{% else %}Заполните поле по желанию{% endif %}" class="controller__label">{{ field.label }}{% if field.field.required %}<span class="controller_required">*</span>{% endif %}</label>{{ field }}

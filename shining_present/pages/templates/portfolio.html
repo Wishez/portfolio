@@ -1,6 +1,6 @@
 {% extends 'base.html' %} {% load extract_tags %} {% block content %}
-<h2>Папка с работами</h2>
-<ul class="works list-unstyled">{% for work in works %}
+<h2 class="font-weight_semi">Папка с работами</h2>
+<ul class="works list-unstyled parent">{% for work in works %}
   <li class="work">
     <a class="work__refer" href="{% url 'work' slug=work.slug %}">
 		<img class="img-responsive fade work__image lozad" data-src='/media/{{ work.album.thumb }}' />

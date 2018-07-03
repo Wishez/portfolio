@@ -7,7 +7,6 @@ import customAjaxRequest from './lib/ajax';
 import moment from 'moment';
 
 
-
 const CORKCREW  = (function() {
   const that = {};
 
@@ -72,27 +71,29 @@ const CORKCREW  = (function() {
 
 (function(_) {
 
-  $(document).on('click', '.slideTo', function() {
-    $('html, body').animate({
-      scrollTop: $($(this).attr('href')).offset().top
-    }, 250, Linear.ease);
-  });
-
 
   $(function() {
-    $('.skip').focus();
+    const $out = $('.out');
+    const $skip = $('.skip');
+
+    $(document).on('click', '.slideTo', function() {
+      $out.animate({
+        scrollTop: $($(this).attr('href')).offset().top + 42
+      }, 250, Linear.ease);
+    });
+    $skip.focus();
     var isSkipButtonFocused = true;
 
-    $(window).on('scroll', function() {
-      const fromTop  =$('html, body').scrollTop();
-      const isUserInMainContent = fromTop > 596;
+    $out.on('scroll', function() {
+      const fromTop = $out.scrollTop();
+      const isUserInMainContent = fromTop > 550;
       const isHideSkipButton = isUserInMainContent && isSkipButtonFocused;
 
       if (isHideSkipButton) {
-        $('.skip').blur();
+        $skip.blur();
         isSkipButtonFocused = false;
       } else if (!isUserInMainContent && !isSkipButtonFocused) {
-        $('.skip').focus();
+        $skip.focus();
         isSkipButtonFocused = true;
       }
     });
@@ -140,12 +141,12 @@ const CORKCREW  = (function() {
 }(CORKCREW));
 
 const ARTICLES = (function(_) {
-  const _apiUrl  = 'https://filipp-zhuravlev.ru/api/v0';
+  const _apiUrl  = 'https://filipp-zhuravlev.ru/api/v1';
 
   const _getArticles = ($articles) => {
     // _.showLoading($articles, 'articlesLoader', '#8c4b65', `${100 / 16}em`);
 
-    const url  = _apiUrl + '/articles/';
+    const url  = _apiUrl + '/article/';
 
     return fetch(url)
       .then(data => data.json())
