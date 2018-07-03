@@ -2,8 +2,9 @@
 | {% load extract_tags %}
 
 | {% block content %}
-h2 Папка с работами
-ul.works.list-unstyled.
+h2.font-weight_semi Папка с работами
+
+ul.works.list-unstyled.parent.
 	{% for work in works %}
 	<li class="work">
 		<a class="work__refer" href="{% url 'work' slug=work.slug %}">

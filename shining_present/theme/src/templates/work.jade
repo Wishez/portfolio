@@ -3,17 +3,20 @@
 
 | {% block content %}
 
-nav.worksPagination.
+nav.worksPagination.parent.
 	{% if last %}
 	<a class="previous tabLink" href="{% url 'work' slug=last.slug %}"> 		Предыдущая
 		<h4 class="workName">{{ last.name }}</h4>
 	</a>
 	{% endif %}
-	<h2 class="currentWork text-center parent column centered" style="{% if not next %}margin-left: 0;{% endif %}"> {{ page.name }}
+
+	<h2 class="currentWork text-center parent column centered" style="{% if not next %}margin-left: 0;{% endif %}">
+		<span class="font-weight_semi">{{ page.name }}</span>
 		<a class="currentWork__refer not-follow" href="{{ page.url }}">
 			 {{ page.url }}
 		</a>
 	</h2>
+
 	{% if next %}
 	<a class="next text-right tabLink" href="{% url 'work' slug=next.slug %}">	  Следующая
 		<h4 class="workName">{{ next.name }}</h4>
@@ -22,11 +25,11 @@ nav.worksPagination.
 
 
 .task(class="{% if not page.task %}visible-hidden{% endif %}")
-	h3.task__title Задача
+	h3.task__title.font-weight_semi Задача
 	.task__paragraph {{ page.task|safe }}
 
 
-ul.presentWork
+ul.presentWork.parent
 	| {% for image in page.album|extract_images %}
 	li.presentWorkItem
 		| {% if image.description %}
