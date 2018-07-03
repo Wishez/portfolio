@@ -1,13 +1,15 @@
 {% extends 'base.html' %} {% load extract_tags %} {% block content %}
-<nav class="worksPagination">{% if last %}
+<nav class="worksPagination parent">{% if last %}
   <a class="previous tabLink" href="{% url 'work' slug=last.slug %}"> 		Предыдущая
 	<h4 class="workName">{{ last.name }}</h4>
 </a> {% endif %}
+
   <h2 class="currentWork text-center parent column centered" style="{% if not next %}margin-left: 0;{% endif %}"> {{ page.name }}
     <a class="currentWork__refer not-follow" href="{{ page.url }}">
 		 {{ page.url }}
 	</a>
   </h2>
+
   {% if next %}
   <a class="next text-right tabLink" href="{% url 'work' slug=next.slug %}">	  Следующая
 	<h4 class="workName">{{ next.name }}</h4>
@@ -15,10 +17,10 @@
 
 </nav>
 <div class="task {% if not page.task %}visible-hidden{% endif %}">
-  <h3 class="task__title">Задача</h3>
+  <h3 class="task__title font-weight_semi">Задача</h3>
   <div class="task__paragraph">{{ page.task|safe }}</div>
 </div>
-<ul class="presentWork">{% for image in page.album|extract_images %}
+<ul class="presentWork parent">{% for image in page.album|extract_images %}
   <li class="presentWorkItem">{% if image.description %}
     <p class="presentWorkItem__description">{{ image.description }}</p>{% endif %}
     <picture class="parent centered">

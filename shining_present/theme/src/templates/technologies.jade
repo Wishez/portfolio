@@ -54,18 +54,21 @@
 		}
 	];
 | {% block content %}
-section.technologies
+section.technologies.parent
+
 	h1.technologiesTitle.text-uppercase.centered.parent инструментарий
 		.imageContainer.imageContainer_gear.child
 			figure.imageContainer__image.imageContainer__image_gear
 		| для разработки
+
 	ul.technologiesList.parent.centered
 		each technology in technologies
 			li.imageContainer.technology.child(class="imageContainer_" + technology.name)
 				figure.imageContainer__image.technology__image(title= technology.title,  class="imageContainer__image_" + technology.name)
 
 	#formWrapper.formWrapper
-		h2 Обратная связь
+		h2.font-weight_semi Обратная связь
+		
 		form#connectForm.connectForm(
 			method='post'
 	  	)
