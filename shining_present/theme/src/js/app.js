@@ -108,7 +108,7 @@ const CORKCREW  = (function() {
     }).observe();
 
     const zoom = new Zooming({
-      bgColor: '#212121'
+      bgColor: 'transparent'
     });
 
     _.screwed('.not-follow', function(e) {
