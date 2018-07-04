@@ -4,7 +4,8 @@
 	<h4 class="workName">{{ last.name }}</h4>
 </a> {% endif %}
 
-  <h2 class="currentWork text-center parent column centered" style="{% if not next %}margin-left: 0;{% endif %}"> {{ page.name }}
+  <h2 class="currentWork text-center parent column centered" style="{% if not next %}margin-left: 0;{% endif %}">
+    <span class="font-weight_semi">{{ page.name }}</span>
     <a class="currentWork__refer not-follow" href="{{ page.url }}">
 		 {{ page.url }}
 	</a>
