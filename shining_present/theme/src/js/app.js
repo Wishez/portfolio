@@ -243,7 +243,7 @@ const CONNECT_FORM = (function(_) {
     }
 
     $.ajaxSetup({
-      url: '/data/connectMe/',
+      url: '/connectMe/',
       type: 'POST',
       beforeSend: function(xhr, settings) {
         if (!csrfSafeMethod(settings.type) && !this.crossDomain) {
