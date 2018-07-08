@@ -134,11 +134,11 @@
   <component name="NodeModulesDirectoryManager">
     <handled-path value="$PROJECT_DIR$/portfolio/theme/node_modules" />
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="505" />
-    <option name="y" value="82" />
-    <option name="width" value="1173" />
-    <option name="height" value="783" />
+    <option name="y" value="80" />
+    <option name="width" value="1175" />
+    <option name="height" value="785" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">

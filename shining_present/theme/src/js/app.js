@@ -144,8 +144,6 @@ const ARTICLES = (function(_) {
   const _apiUrl  = 'https://filipp-zhuravlev.ru/api/v1';
 
   const _getArticles = ($articles) => {
-    // _.showLoading($articles, 'articlesLoader', '#8c4b65', `${100 / 16}em`);
-
     const url  = _apiUrl + '/article/';
 
     return fetch(url)
@@ -155,7 +153,7 @@ const ARTICLES = (function(_) {
           .map(article => (
             `<li class="article">
                 <h1 class='articlePreview__title'>
-                   <a class='articlePreview' href='/article/${article.id}/'>${article.title}</a>
+                   <a class='articlePreview' href='/article/${article.slug}/'>${article.title}</a>
                 </h1>
                 <div class='articleMeta'>
                     <time datetime="${moment(article.created_at).format('YYYY-MM-DD')}">${moment(article.created_at).format('YYYY/MM/DD')}</time>
