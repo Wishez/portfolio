@@ -172,9 +172,8 @@ const ARTICLES = (function(_) {
 
   };
 
-  const _getArticle = ($article, id) => {
-    // const removeLoader = _.showLoading($article, '#8c4b65', 'articlesLoader', `${100 / 16}em`);
-    const url  = `${_apiUrl}/articles/${id}/`;
+  const _getArticle = ($article, slug) => {
+    const url  = `${_apiUrl}/article/${slug}/`;
     return fetch(url)
       .then(data => data.json())
       .then(article => {
