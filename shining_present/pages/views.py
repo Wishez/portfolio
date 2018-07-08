@@ -50,7 +50,7 @@ class PortfolioView(BaseView):
     def set_additional_context(self, context):
         works = self.page.works.order_by('-created')
         context['works'] = [work for work in works if work in works]
-        
+
         return context
 
 class TechnologiesView(BaseView):
@@ -79,8 +79,10 @@ class ArticlesPageView(BaseView):
 
 class WorkView(BaseView):
     template_name = 'work.html'
+
     def __init__(self):
         super(WorkView, self).__init__()
+
     def set_additional_context(self, context):
         works = Work.objects.all()
         currentIndex = None
@@ -94,18 +96,23 @@ class WorkView(BaseView):
 
         if quantityWorks == 1:
             pass
+
         elif quantityWorks == 2:
             lastIndex = 0
             if currentIndex == 0:
                 lastIndex += 1
 
             last = works[lastIndex]
+
         elif currentIndex == 0 and quantityWorks >= 3:
             last = works[quantityWorks - 1]
             next = works[currentIndex + 1]
+
         else:
             last = works[currentIndex - 1]
-            next = works[0]
+            length = len(works) - 1
+            if length >= currentIndex + 1:
+                next = works[currentIndex + 1]
 
         context['last'] = last
         context['next'] = next
@@ -123,10 +130,12 @@ class ArticlePageView(BaseView):
     def __init__(self):
         super(ArticlePageView, self).__init__()
         self.page_model = ArticlesPage
+
     def set_additional_context(self, context):
         context['article_id'] = self.article_id
 
         return context
+
     def get(self, request, slug):
         self.article_id = slug
 
