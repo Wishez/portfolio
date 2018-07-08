@@ -62,6 +62,7 @@ class TechnologiesView(BaseView):
         context['form'] = ConnectForm()
 
         return context
+
 class AboutPageView(BaseView):
     template_name = 'about.html'
     def __init__(self):
@@ -125,7 +126,7 @@ class ArticlePageView(BaseView):
         context['article_id'] = self.article_id
 
         return context
-    def get(self, request, id):
-        self.article_id = id
+    def get(self, request, slug):
+        self.article_id = slug
 
         return super(ArticlePageView, self).get(request)
