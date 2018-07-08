@@ -48,8 +48,9 @@ class PortfolioView(BaseView):
         self.page_model = PortfolioPage
 
     def set_additional_context(self, context):
-        works = self.page.works.all()
+        works = self.page.works.order_by('-created')
         context['works'] = [work for work in works if work in works]
+        
         return context
 
 class TechnologiesView(BaseView):
