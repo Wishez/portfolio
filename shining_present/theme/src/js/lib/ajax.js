@@ -1,5 +1,7 @@
 import * as Cookies from 'js-cookie';
 
+const csrfSafeMethod = (method) => (/^(GET|HEAD|OPTIONS|TRACE)$/.test(method));
+
 const crossDomainRequest = (xhr, settings, that) => {		
   /* Заметка:
 	 * csrftoken не всегда устанавливается сервером.
@@ -8,13 +10,12 @@ const crossDomainRequest = (xhr, settings, that) => {
 	 * используя декоратор @csrf_exempt для функции регистрации.
 	 */
   const csrftoken = Cookies.get('csrftoken');
-  const csrfSafeMethod = (method) => (/^(GET|HEAD|OPTIONS|TRACE)$/.test(method));
   if (!csrfSafeMethod(settings.type) && !that.crossDomain) {
  		xhr.setRequestHeader('X-CSRFToken', csrftoken);
   }
 };
 
-const customAjaxRequest = ({
+const request = ({
   url,
   data,
   type,
@@ -22,19 +23,14 @@ const customAjaxRequest = ({
   failure
 }) => {
   $.ajaxSetup({
-    url: url,
-    type: type,
-    data: data,
+    url,
+    type,
+    data,
     cache: true,
-    beforeSend(xhr, settings) {
-      crossDomainRequest(xhr, settings, this);
-    }
+    beforeSend: (xhr, settings) => crossDomainRequest(xhr, settings, this),
   });
 
   return $.ajax(success, failure);
-
 };
 
-
-
-export default customAjaxRequest;
+export default request;

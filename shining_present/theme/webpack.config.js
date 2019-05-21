@@ -1,6 +1,5 @@
 const webpack = require('webpack');
 const path = require('path');
-const util = require('gulp-util');
 const config = require('./gulp/config');
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 
@@ -17,7 +16,6 @@ function createConfig(env) {
   webpackConfig = {
     context: path.join(__dirname, config.src.js),
     entry: {
-      // vendor: ['jquery'],
       app: './app.js',
       sw: './sw.js'
     },
@@ -31,9 +29,9 @@ function createConfig(env) {
       '#cheap-module-eval-source-map',
     plugins: [
       // new webpack.optimize.CommonsChunkPlugin({
-      //     name: 'vendor',
-      //     filename: '[name].js',
-      //     minChunks: Infinity
+    //     name: 'app',
+    //     filename: '[name].js',
+    //     minChunks: Infinity
       // }),
       new webpack.LoaderOptionsPlugin({
         options: {
@@ -57,15 +55,7 @@ function createConfig(env) {
     ],
     resolve: {
       extensions: ['.js'],
-      alias: {
-        TweenLite: path.resolve('node_modules', 'gsap/src/uncompressed/TweenLite.js'),
-        TweenMax: path.resolve('node_modules', 'gsap/src/uncompressed/TweenMax.js'),
-        TimelineLite: path.resolve('node_modules', 'gsap/src/uncompressed/TimelineLite.js'),
-        TimelineMax: path.resolve('node_modules', 'gsap/src/uncompressed/TimelineMax.js'),
-        ScrollMagic: path.resolve('node_modules', 'scrollmagic/scrollmagic/uncompressed/ScrollMagic.js'),
-        'animation.gsap': path.resolve('node_modules', 'scrollmagic/scrollmagic/uncompressed/plugins/animation.gsap.js'),
-        'debug.addIndicators': path.resolve('node_modules', 'scrollmagic/scrollmagic/uncompressed/plugins/debug.addIndicators.js'),
-      },
+      alias: {},
     },
     module: {
       rules: [

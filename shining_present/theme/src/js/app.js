@@ -1,11 +1,8 @@
-import {TweenMax} from 'gsap';
 import $ from 'jquery';
 import lozad from 'lozad';
-import * as Cookies from './lib/js-cookies';
-import Zooming from 'zooming';
-import customAjaxRequest from './lib/ajax';
+import Siema from 'siema';
 import moment from 'moment';
-
+import request from './lib/ajax';
 
 const CORKCREW  = (function() {
   const that = {};
@@ -14,10 +11,9 @@ const CORKCREW  = (function() {
     $node,
     classLoader,
     color,
-    maxWidth=false
+    maxWidth
   ) {
-    const $loader =  $(`<svg version="1.1" id="L7" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" class=${classLoader}
-          viewBox="0 0 100 100" enable-background="new 0 0 100 100" xml:space="preserve">
+    const $loader =  $(`<svg class=${classLoader} viewBox="0 0 100 100">
          <path fill="${color}" d="M31.6,3.5C5.9,13.6-6.6,42.7,3.5,68.4c10.1,25.7,39.2,38.3,64.9,28.1l-3.1-7.9c-21.3,8.4-45.4-2-53.8-23.3
           c-8.4-21.3,2-45.4,23.3-53.8L31.6,3.5z">
               <animateTransform
@@ -53,37 +49,31 @@ const CORKCREW  = (function() {
           </path>
         </svg>`).appendTo($node);
 
-    if (maxWidth) {
-      $loader.css('maxWidth', maxWidth);
-    }
+    if (maxWidth) $loader.css('maxWidth', maxWidth);
 
-    return () => {
-      $loader.remove();
-    };
+    return () => $loader.remove();
   }; // end showLoading
 
-  that.screwed = (selector, callback, event='click') => {
-    $(document).on(event, selector, callback);
-  };
+  that.screwed = (selector, callback, event='click') => $(document).on(event, selector, callback);
 
   return that;
 }());
 
 (function(_) {
-
-
   $(function() {
-    const $out = $('.out');
     const $skip = $('.skip');
-
-    $(document).on('click', '.slideTo', function() {
-      $out.animate({
-        scrollTop: $($(this).attr('href')).offset().top + 42
-      }, 250, Linear.ease);
-    });
     $skip.focus();
-    var isSkipButtonFocused = true;
 
+    const $out = $('.out');
+    $(document).on('click', '.slideTo', function() {
+      const anchor =  $(this).attr('href');
+      $out.animate({
+        scrollTop: $(anchor).offset().top + 42
+      }, 250);
+    });
+    
+
+    let isSkipButtonFocused = true;
     $out.on('scroll', function() {
       const fromTop = $out.scrollTop();
       const isUserInMainContent = fromTop > 550;
@@ -103,21 +93,18 @@ const CORKCREW  = (function() {
         el.src = el.dataset.src;
         el.onload = function() {
           el.classList.add('in');
+          el.style.minHeight = '375px';
         };
       }
     }).observe();
 
-    const zoom = new Zooming({
-      bgColor: 'transparent'
-    });
-
+    new Siema();
+  
     _.screwed('.not-follow', function(e) {
       const url = $(this).attr('href');
 
       window.open(url);
-
       e.preventDefault();
-
     }); // end click
 
     const $centeredMenuButton = $('#centeredMenuButton');
@@ -132,15 +119,16 @@ const CORKCREW  = (function() {
       lastShadow = shadowPosition;
     }, 'mouseover');
 
-    _.screwed('.navListItem', function() {
-      $centeredMenuButton.removeClass(lastShadow);
-    }, 'mouseout');
-
+    _.screwed(
+      '.navListItem',
+      () => $centeredMenuButton.removeClass(lastShadow),
+      'mouseout'
+    );
   }());
 
 }(CORKCREW));
 
-const ARTICLES = (function(_) {
+(function(_) {
   const _apiUrl  = 'https://filipp-zhuravlev.ru/api/v1';
 
   const _getArticles = ($articles) => {
@@ -165,11 +153,7 @@ const ARTICLES = (function(_) {
 
         $articles.html(finalHtml);
       })
-      .catch(err => {
-        $articles.html(err);
-
-      });
-
+      .catch(err => $articles.html(err));
   };
 
   const _getArticle = ($article, slug) => {
@@ -188,78 +172,48 @@ const ARTICLES = (function(_) {
 
         $article.html(finalHtml);
       })
-      .catch(err => {
-        $article.html(err);
-
-      });
+      .catch(err => $article.html(err));
   };
+
   $(function() {
     const $articles = $('#articles');
+    if ($articles.length) _getArticles($articles);
+
     const articleID = $('#articleID').text();
-    if ($articles.length) {
-      _getArticles($articles);
-    }
-
-    if (articleID) {
-      _getArticle($('#article'), articleID);
-    }
-
+    if (articleID) _getArticle($('#article'), articleID);
   });
 }(CORKCREW));
 
-const CONNECT_FORM = (function(_) {
+(function(_) {
   $(function() {
     _.screwed('#connectForm', function(e) {
-
       e.preventDefault();
 
-      const removeLoader = _.showLoading($('#formWrapper'), 'formLoader', '#8C4B65');
-
+      const removeLoader = _.showLoading($('#formWrapper'), 'formLoader', '#8C4B65');      
       $(this).hide('fast');
-
       _sendEmail(removeLoader);
     }, 'submit'); // end submit
   });
 
   function _sendEmail(removeLoader) {
-    var full_name = $('#id_full_name').val(),
-      email = $('#id_email').val(),
-      phone = $('#id_phone').val(),
-      message = $('#id_message').val(),
-      sendData = {
-        'full_name': full_name,
-        'email': email,
-        'phone': phone,
-        'message': message
-      },
-      csrftoken = Cookies.get('csrftoken'),
-      $formWrapper = $('#formWrapper');
+    const data = {
+      'full_name': $('#id_full_name').val(),
+      'email': $('#id_email').val(),
+      'phone': $('#id_phone').val(),
+      'message': $('#id_message').val()
+    };
 
-    function csrfSafeMethod(method) {
-      return (/^(GET|HEAD|OPTIONS|TRACE)$/.test(method));
-    }
-
-    $.ajaxSetup({
+    const $formWrapper = $('#formWrapper');
+    request({
       url: '/connectMe/',
       type: 'POST',
-      beforeSend: function(xhr, settings) {
-        if (!csrfSafeMethod(settings.type) && !this.crossDomain) {
-          xhr.setRequestHeader('X-CSRFToken', csrftoken);
-        }
-      }
-    });
-
-    $.ajax({
-      data: sendData,
-      success: function(respond) {
-        $formWrapper.html(respond);
-      },
-      error : function(xhr,errmsg,err) {
+      success: (response) => $formWrapper.html(response),
+      failure: () => {
         $('#connectForm').show('fast');
         $formWrapper.find('.formLoader').hide('fast');
         removeLoader();
-      }
+      },
+      data,
     });
   }
-
 }(CORKCREW));

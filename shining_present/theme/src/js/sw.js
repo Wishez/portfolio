@@ -5,7 +5,6 @@
 var CACHE_NAME = 'shining-present-cache-v1';
 var staticCssPath = '/static/portfolio/css/';
 var staticJsPath = '/static/portfolio/js/';
-var staticFontPath = '/static/portfolio/fonts/'; 
 
 var urlsToCache = [
   staticCssPath + 'app.css',

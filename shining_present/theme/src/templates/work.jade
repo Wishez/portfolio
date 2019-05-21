@@ -29,11 +29,11 @@ nav.worksPagination.parent.
 	.task__paragraph {{ page.task|safe }}
 
 
-ul.presentWork.parent
+ul.presentWork.siema
 	| {% for image in page.album|extract_images %}
 	li.presentWorkItem
 		| {% if image.description %}
-		p.presentWorkItem__description {{ image.description }}
+		h2.text-center.presentWorkItem__description {{ image.description }}
 		| {% endif %}
 		picture.parent.centered
 			source(srcset="/media/{{ image.image }}", media="screen")
