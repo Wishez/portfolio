@@ -8,10 +8,10 @@ var config       = require('../config');
 var csso = require('postcss-csso');
 
 var processors = [
-    autoprefixer({
-        browsers: ['last 4 versions'],
-        cascade: false
-    }),
+    // autoprefixer({
+    //     browsers: ['last 2 versions'],
+    //     cascade: false
+    // }),
     require('lost'),
     mqpacker({
         sort: sortMediaQueries

@@ -15,8 +15,6 @@
 
 		@include breakpoint($xs)
 			transform: translateZ(60px) scale(.8)
-		//  translateX(-225px)
-		transform-style: preserve-3d
 
 .row.row
 	margin-right: 0
@@ -62,26 +60,23 @@
 
 .not-follow
 	+after
-
 	z-index: 0
 	@extend %relative
-	padding-right: 1.25em
+	// padding-right: 1.25em
 
 	&:after
-		// background-image: url('./../img/icons/external_link.png')
 		background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path fill="rgb(157, 91, 75)" d="M576 24v127.984c0 21.461-25.96 31.98-40.971 16.971l-35.707-35.709-243.523 243.523c-9.373 9.373-24.568 9.373-33.941 0l-22.627-22.627c-9.373-9.373-9.373-24.569 0-33.941L442.756 76.676l-35.703-35.705C391.982 25.9 402.656 0 424.024 0H552c13.255 0 24 10.745 24 24zM407.029 270.794l-16 16A23.999 23.999 0 0 0 384 303.765V448H64V128h264a24.003 24.003 0 0 0 16.97-7.029l16-16C376.089 89.851 365.381 64 344 64H48C21.49 64 0 85.49 0 112v352c0 26.51 21.49 48 48 48h352c26.51 0 48-21.49 48-48V287.764c0-21.382-25.852-32.09-40.971-16.97z" /></svg>')
 		background-size: 1em
 		background-repeat: no-repeat
-		top: .1em
+		position: static
+		display: inline-block
+		margin-left: .25em
+		transform: translateY(.2em)
 		height: 1em
 		right: 0
 		width: 1em
-		left: auto
 		
-
-
-
-
+		
 .articleMeta
 	margin-top: 0
 
@@ -133,8 +128,7 @@
 
 
 .parent,
-.navListItem,
-.presentWorkItem
+.navListItem
 	display: flex
 
 .column
@@ -151,7 +145,6 @@
 	@include breakpoint($xs)
 		width: span(12)
 		justify-content: center
-		margin-top: 1em
 
 .child
 	flex: 1 0 20%
@@ -189,7 +182,8 @@
 	padding: 0.5em 3.8em
 
 	@include breakpoint($xs)
-		padding: 0 2em 2em
+		padding: 1em 2em 2em
+		
 
 =b($media)
 	@include breakpoint($media)
@@ -241,15 +235,18 @@
 .work__refer
 	color: $darkGray
 	padding: 0.5em
+
 .work
 	margin-top: 1em
 	padding: 1em
 	will-change: transform, box-shadow
-	transform-style: preserve-3d
+
 	@include breakpoint($sm)
 		width: span(6)
+
 	@include breakpoint($xs)
 		width: span(12)
+
 	&__image
 		min-width: span(12)
 
@@ -276,8 +273,16 @@
 
 .brand__title
 	color: $darkGray
-	position: relative
-	top: -0.2em
+
+	@include breakpoint($xs-up)
+		position: relative
+		top: -0.2em
+
+	@include breakpoint($xs)
+		margin-top: .2em
+    margin-bottom: 0
+
+	text-align: center
 
 
 .navigation
@@ -286,9 +291,6 @@
 	min-height: 300px
 	max-height: 370px
 	margin: 0 auto
-
-	@include breakpoint($xxs)
-		padding: 3em 1em 0
 
 .navListItem_name-main
 	@extend %relative
@@ -328,9 +330,10 @@
 		font-size: (21em / 16)
 .navList .navListItem_name-main, .navListItem:not(.navListItem_name-main)
 	will-change: transform, box-shadow
-	transform-style: preverse-3d
+
 	&:hover
 		transform: scale(1.03, 1.03)
+
 .navList, .navListItem
 	border-style: solid
 	border-color: $brown
@@ -350,7 +353,7 @@
 	min-height: 150px
 	justify-content: center
 	will-change: transform, box-shadow
-	transform-style: preverse-3d
+
 	&:hover
 		box-shadow: 0 0 10px $shadow
 
@@ -371,9 +374,10 @@
 	&:nth-child(4)
 		padding-left: 2em
 	&:nth-child(4), &:nth-child(3)
-		align-items: flex-end
+
 		& .navListItem__refer
-			transform: translate(0, 0)
+			transform: translate(0,-32.5px)
+
 	&:first-of-type, &:nth-child(4)
 		background-color: $ochre
 		& .navListItem__refer
@@ -394,13 +398,22 @@
 
 .contacts
 	color: $darkenGray
-	// font-size: (12em / 16)
-.contacts
 	justify-content: flex-end
+
+	@include breakpoint($xs)
+		font-size: 18px;
+
 	&__contact:first-of-type
-		margin-right: 2em
+		@include breakpoint($xs-up)
+			margin-right: 2em
+
 	&__contact:last-of-type
-		margin-right: 1.3em
+		@include breakpoint($xs-up)
+			margin-right: 1.3em
+
+		@include breakpoint($xs)
+			margin-top: 1em
+		
 .footer
 		color: $white
 		background-color: $darkGray
@@ -414,7 +427,7 @@
 	min-width: 45px
 
 	svg
-		width: 45px
+		width: 18px
 		transition-duration: 250ms
 
 		&:hover
@@ -435,6 +448,9 @@
 
 .presentWorkItem
 	padding-bottom: 2.75em
+
+	&__description
+
 .task, .presentWork
 	margin-top: 2em
 
@@ -469,15 +485,17 @@
 .presentWorkItem, .main > .container, .presentWork
 	flex-direction: column
 	justify-content: center
+
 .main p
 	max-width: 75rem
-	// margin: 1em 0 0
 
 .presentWorkItem__image,
 .presentWorkItem
 	margin-top: 1em
+
 .worksPagination, .presentWorkItem
 	width: 100%
+
 .materialShadow
 	box-shadow: 0 2px 6px 0 rgba(0,0,0,.5)
 
@@ -557,13 +575,10 @@
 .technologies, .technologiesImageContainer
 	width: 100%
 
-$figures: ('gear', 2000, 1969, em(65, 36)), ('bootstrap', 41, 208, em(200)), ('html', 188, 200, em(65)), ('sass', 77, 102, em(80)), ('git', 55, 133, em(100)), ('gulp', 510, 228, em(40)), ('js', 61, 62, em(65)), ('jquery', 100, 100, em(65)), ('react', 100, 100, em(70)), ('redux', 3109, 3440, em(65)), ('figma', 100, 100, em(70)), ('python', 100, 100, em(65)), ('django', 282, 650, em(120)), ('postrgres', 1032, 1000, em(65))
-
-
-.imageContainer
-	&__image
+.imageContainer__image
 		background: no-repeat center
 		background-size: cover
+	
 .centered
 	justify-content: center
 	align-items: center
@@ -580,11 +595,28 @@ $figures: ('gear', 2000, 1969, em(65, 36)), ('bootstrap', 41, 208, em(200)), ('h
 	margin: auto .5em
 	flex-basis: 33%
 
+.technology
+	min-width: 100%
+	height: 100%
+	display: flex
+	justify-content: center
+	align-items: center
+	background-color: #fff
+	margin: 0
+	padding: 0 .5em
+	border: 3px solid #333
+	box-shadow: 3px 5px 0 rgba(0,0,0,.4)
 
+	&__image
+		width: 100%
+
+$figures: ('gear', 2000, 1969, em(65, 36)), ('bootstrap', 41, 208, em(200)), ('html', 188, 200, em(65)), ('sass', 77, 102, em(80)), ('git', 55, 133, em(100)), ('gulp', 510, 228, em(40)), ('js', 61, 62, em(65)), ('jquery', 100, 100, em(65)), ('react', 100, 100, em(70)), ('redux', 3109, 3440, em(65)), ('figma', 100, 100, em(70)), ('python', 100, 100, em(65)), ('django', 282, 650, em(120)), ('postrgres', 1032, 1000, em(65))
 @each $name, $height, $width, $max-width in $figures
 	.imageContainer
+
 		&_#{$name}
 			max-width: #{$max-width}
+
 		&__image_#{$name}
 			padding-bottom: pb($height, $width)
 			+image('./../img/icons/#{$name}.png')
@@ -599,11 +631,12 @@ $figures: ('gear', 2000, 1969, em(65, 36)), ('bootstrap', 41, 208, em(200)), ('h
 	@include breakpoint($sm-less)
 		width: span(12)
 		margin: .5em 0
+
 .controller
 	flex-basis: span(12)
+
 	&:not(:first-child)
 		margin-top: 1em
-
 
 	&_required
 		color: $purple
@@ -618,11 +651,11 @@ $figures: ('gear', 2000, 1969, em(65, 36)), ('bootstrap', 41, 208, em(200)), ('h
 		padding: em(8) em(12.5) em(12.5)
 		border-radius: 3px
 		transition-duration: 250ms
-
-		border: 0
-		border-bottom: 2px solid $purple
-		box-shadow: 0 2px 6px rgba(0,0,0, .15)
+		box-shadow: 3px 3px 0px rgba(0,0,0,.5)
+		border: 3px solid #333
+		border-bottom-color: $purple
 		margin-top: 0
+		will-change: border
 
 		&, &_textinput
 			border-color: #ccc
@@ -632,6 +665,7 @@ $figures: ('gear', 2000, 1969, em(65, 36)), ('bootstrap', 41, 208, em(200)), ('h
 					border-color: $purple
 				&:valid
 					border-color: $blue
+
 		&_textinput
 			max-height: 8.5em;
 
@@ -655,13 +689,9 @@ $figures: ('gear', 2000, 1969, em(65, 36)), ('bootstrap', 41, 208, em(200)), ('h
 		margin-right: span(1) / 2
 		display: inline-block
 		position: relative
-		// @include round(em(2))
-		&:checked:active
-
 
 		&:checked:after
 			content: '\2714'
-			// font-size: em(15)
 			position: absolute
 			top: em(1)
 			left: em(3)
