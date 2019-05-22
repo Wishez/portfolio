@@ -91,10 +91,7 @@ const CORKCREW  = (function() {
     lozad('.lozad', {
       load: function(el) {
         el.src = el.dataset.src;
-        el.onload = function() {
-          el.classList.add('in');
-          el.style.minHeight = '375px';
-        };
+        el.onload = () => el.classList.add('in');
       }
     }).observe();
 
