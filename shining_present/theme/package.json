@@ -77,9 +77,9 @@
     "handlebars": "^4.0.11",
     "js-cookie": "^2.2.0",
     "lozad": "^1.9.0",
+    "magnific-popup": "^1.1.0",
     "moment": "^2.20.1",
     "siema": "^1.5.1",
-    "susy": "^2.2.12",
-    "zooming": "^1.5.0"
+    "susy": "^2.2.12"
   }
 }

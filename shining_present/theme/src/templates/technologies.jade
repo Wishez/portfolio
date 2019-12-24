@@ -1,28 +1,45 @@
 | {% extends 'base.html' %}
 -
-	var technologies = [{
+	var technologies = [
+		{
+			"name": "html",
+			"title": "HTML"
+		},
+		{
+			"name": "css",
+			"title": "CSS"
+		},
+		{
+			"name": "js",
+			"title": "JavaScript"
+		},
+		{
 			"name": "bootstrap",
 			"title": "Bootstrap"
 		},
 		{
-			"name": "html",
-			"title": "HTML5"
+			"name": "semantic-ui",
+			"title": "Semantic UI"
 		},
 		{
-			"name": "sass",
-			"title": "Sass"
+			"name": "bulma",
+			"title": "Bulma"
 		},
 		{
 			"name": "git",
 			"title": "GitHub"
 		},
 		{
-			"name": "gulp",
-			"title": "Gulp"
+			"name": "sass",
+			"title": "Sass"
 		},
 		{
-			"name": "js",
-			"title": "JavaScript"
+			"name": "npm",
+			"title": "npm"
+		},
+		{
+			"name": "node",
+			"title": "Node JS"
 		},
 		{
 			"name": "jquery",
@@ -33,12 +50,36 @@
 			"title": "React"
 		},
 		{
+			"name": "vue",
+			"title": "Vue"
+		},
+		{
+			"name": "vuex",
+			"title": "Vuex"
+		},
+		{
 			"name": "redux",
 			"title": "Redux"
 		},
 		{
+			"name": "rxjs",
+			"title": "Rxjs"
+		},
+		{
+			"name": "redux-observable",
+			"title": "redux-observable"
+		},
+		{
+			"name": "storybook",
+			"title": "Storybook"
+		},
+		{
 			"name": "figma",
 			"title": "Figma"
+		},
+		{
+			"name": "photoshop",
+			"title": "Photoshop"
 		},
 		{
 			"name": "python",
@@ -49,9 +90,37 @@
 			"title": "Django"
 		},
 		{
+			"name": "django-rest-framework",
+			"title": "Django Rest Framework"
+		},
+		{
 			"name": "postgres",
 			"title": "Postgresql"
-		}
+		},
+		{
+			"name": "gulp",
+			"title": "Gulp"
+		},
+		{
+			"name": "webpack",
+			"title": "Webpack"
+		},
+		{
+			"name": "docker",
+			"title": "Docker"
+		},
+		{
+			"name": "graphql",
+			"title": "Graphql"
+		},
+		{
+			"name": "linux",
+			"title": "Linux"
+		},
+		{
+			"name": "postman",
+			"title": "Postman"
+		},
 	];
 | {% block content %}
 section.technologies.parent.column
@@ -63,11 +132,11 @@ section.technologies.parent.column
 
 	ul.technologiesList.parent.centered
 		each technology in technologies
-			li.imageContainer.technology.child(class="imageContainer_" + technology.name)
-				figure.imageContainer__image.technology__image(title= technology.title,  class="imageContainer__image_" + technology.name)
+			li.technology.child
+				img.fade.lozad.technology__image(title= technology.title, data-src="/static/portfolio/img/icons/" + technology.name + ".png")
 
 	#formWrapper.formWrapper
-		h2.font-weight_semi Обратная связь
+		h1.font-weight_semi Обратная связь
 
 		form#connectForm.connectForm(
 			method='post'
@@ -82,5 +151,5 @@ section.technologies.parent.column
 				| {{ field.errors }}
 			| {% endfor %}
 
-			button#connect.button.center-block.button_purple.materialShadow.connectForm__button(title="Кнопка, отправляющая данные владельцу сайта", type="submit", aria-pressed=false) Связаться
+			button#connect.button.button_yellow.connectForm__button(title="Кнопка, отправляющая данные владельцу сайта", type="submit", aria-pressed=false) Связаться
 | {% endblock  %}

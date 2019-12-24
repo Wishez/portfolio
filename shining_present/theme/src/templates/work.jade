@@ -29,15 +29,12 @@ nav.worksPagination.parent.
 	.task__paragraph {{ page.task|safe }}
 
 
-ul.presentWork.siema
+ul.presentWork
 	| {% for image in page.album|extract_images %}
 	li.presentWorkItem
-		| {% if image.description %}
-		h2.text-center.presentWorkItem__description {{ image.description }}
-		| {% endif %}
-		picture.parent.centered
-			source(srcset="/media/{{ image.image }}", media="screen")
-			img.zooming.fade.lozad.presentWorkItem__image.img-responsive(data-src="/media/{{ image.image }}" data-action="zoom")
-
+		a.poppy-image(href="/media/{{ image.image }}", rel="gallery" title="{{ image.description }}")
+			picture.parent.centered
+				source(srcset="/media/{{ image.image }}", media="screen")
+				img.fade.lozad.presentWorkItem__image.img-responsive
 	| {% endfor %}
 | {% endblock %}

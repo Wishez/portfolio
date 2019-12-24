@@ -1,5 +1,5 @@
-.parallax
-	&Container
+.parallaxContainer
+	@include breakpoint($xs-up)
 		overflow-x: hidden
 		overflow-y: auto
 		height: 500px
@@ -8,17 +8,10 @@
 		perspective-origin: 0 0
 		transform-style: preserve-3d
 
-	&Child
+.parallaxChild
+	@include breakpoint($xs-up)
 		transform-origin: 0 0
-		@include breakpoint($xs-up)
-			transform: translateZ(90px) scale(.7) translateY(40px)
-
-		@include breakpoint($xs)
-			transform: translateZ(60px) scale(.8)
-
-.row.row
-	margin-right: 0
-	margin-left: 0
+		transform: translateZ(90px) scale(.7) translateY(40px)
 
 ::selection
 	background: $yellow
@@ -62,7 +55,6 @@
 	+after
 	z-index: 0
 	@extend %relative
-	// padding-right: 1.25em
 
 	&:after
 		background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path fill="rgb(157, 91, 75)" d="M576 24v127.984c0 21.461-25.96 31.98-40.971 16.971l-35.707-35.709-243.523 243.523c-9.373 9.373-24.568 9.373-33.941 0l-22.627-22.627c-9.373-9.373-9.373-24.569 0-33.941L442.756 76.676l-35.703-35.705C391.982 25.9 402.656 0 424.024 0H552c13.255 0 24 10.745 24 24zM407.029 270.794l-16 16A23.999 23.999 0 0 0 384 303.765V448H64V128h264a24.003 24.003 0 0 0 16.97-7.029l16-16C376.089 89.851 365.381 64 344 64H48C21.49 64 0 85.49 0 112v352c0 26.51 21.49 48 48 48h352c26.51 0 48-21.49 48-48V287.764c0-21.382-25.852-32.09-40.971-16.97z" /></svg>')
@@ -104,6 +96,7 @@
 
 	@include breakpoint($xxs)
 		padding-bottom: 4em
+
 .header, .presentWorkItem, .presentWork, .footer
 	border-style: solid
 	border-color: lighten($gray, 50%)
@@ -111,7 +104,6 @@
 .header, .presentWorkItem:not(:last-child)
 	border-bottom-width: 1px
 
-.head,
 .v-centered,
 .brand,
 .contacts,
@@ -121,11 +113,8 @@
 .worksPagination,
 .main > .container,
 .presentWorkItem,
-.presentWork, .technologiesTitle
+.technologiesTitle
 	align-items: center
-
-
-
 
 .parent,
 .navListItem
@@ -133,9 +122,6 @@
 
 .column
 	flex-direction: column
-
-.row
-	flex-direction: row
 
 .head, .brand, .contacts, .navList, .navListItem, .works, .worksPagination, .technologiesTitle
 	flex-flow: row wrap
@@ -161,21 +147,36 @@
 		grid-template-columns: repeat(auto-fit, minmax(315px, 1fr))
 		grid-gap: 1rem
 
+		@include breakpoint($xxs-iphone)
+			grid-template-columns: repeat(auto-fit, minmax(245px, 1fr))
 
-.previous, .next
-	padding: 0.2em 0.5em
-	color: $blue
+
 
 .currentWork
 	flex-wrap: nowrap $i
 	flex-direction: column $i
+	margin: 0 auto
+
+	@include breakpoint($md)
+		width: span(6)
+
+	@include breakpoint($sm-less)
+		width: span(12)
+
 	&__refer
-		font-size: (9em / 16)
 		white-space: nowrap
 		overflow: hidden
 		display: block
-		margin-top: .5em
 		text-overflow: ellipsis
+
+		@include breakpoint($xs-up)
+			font-size: (9em / 16)
+			max-width: 345px;
+
+		@include breakpoint($xs)
+			font-size: .5em
+			max-width: calc(100vw - 2em);
+			
 
 .head
 	background-color: $lightGray
@@ -189,7 +190,7 @@
 	@include breakpoint($media)
 		@content
 
-.brand, .contacts, .navListItem
+.navListItem
 	width: span(6)
 
 .brandImage,
@@ -200,13 +201,22 @@
 
 .previous,
 .next
+	padding: 0.2em 0.5em
+	color: $blue
 	background-image: none
 
 	@include breakpoint($md)
 		width: span(3)
+
 	@include breakpoint($sm-less)
 		width: span(6)
 		padding-top: 0.5em
+
+	@include breakpoint($xxs)
+		width: span(12)
+		display: flex
+		align-items: center
+		flex-direction: column
 
 .previous
 	@include breakpoint($sm-less)
@@ -216,42 +226,40 @@
 	@include breakpoint($sm-less)
 		text-align: left
 
-.currentWork
-	margin-left: auto
-	margin-right: auto
-
-	@include breakpoint($md)
-		width: span(6)
-
-	@include breakpoint($sm-less)
-		width: span(12)
-
-	&__refer
-		@include breakpoint($xs)
-			font-size: (6em / 16)
-
-	@include breakpoint($md)
-
 .work__refer
 	color: $darkGray
-	padding: 0.5em
+	display: block
+	background-image: none
+	padding: 0
+
+	&:hover, &:focus
+		background-image: none
 
 .work
 	margin-top: 1em
-	padding: 1em
+	padding: 0 1em 18px
 	will-change: transform, box-shadow
 	border: 3px solid #333
 	align-self: flex-end
 
 	@include breakpoint($sm)
-		width: span(6)
-
-	@include breakpoint($xs)
 		width: span(12)
 
 	&__image
-		min-width: span(12)
+		min-width: calc(100% + 2em)
+		margin-left: -1em
+		margin-right: -1em
+	
+	&__title
+		margin-top: 9px
+		margin-bottom: 18px
 
+.tags
+	margin-top: 0
+
+	.label
+		margin-bottom: 9px
+		margin-top: 0
 
 .brandImage
 	max-width: 69px
@@ -294,6 +302,12 @@
 	max-height: 370px
 	margin: 0 auto
 
+	@include breakpoint($xs)
+		margin-bottom: -42px
+		transform: scale(.8)
+
+
+
 .navListItem_name-main
 	@extend %relative
 	+after
@@ -313,6 +327,7 @@
 		z-index: 2
 		left: calc(50% - 22.5px)
 		background-color: $blue
+
 	& .navListItem__refer
 		display: block
 		width: span(12)
@@ -339,9 +354,11 @@
 .navList, .navListItem
 	border-style: solid
 	border-color: $brown
+
 .navListItem
 	cursor: pointer
 	transition: 0.2s ease-in-out
+
 .navListItem__refer, .brand
 	&, &:hover
 		background-image: none
@@ -349,12 +366,21 @@
 
 .navListItem:not(.navListItem_name-main)
 	border-width: 3px
-	font-size: (14em / 16)
 	padding: 4em 0
 	max-height: 175px
 	min-height: 150px
 	justify-content: center
 	will-change: transform, box-shadow
+
+	@include breakpoint($xs-up)
+		font-size: (14em / 16)
+
+	@include breakpoint($xs)
+		font-size: 1em
+		padding: 4em 0 2em
+
+	@include breakpoint($xxs)
+		font-size: (18em / 16)
 
 	&:hover
 		box-shadow: 0 0 10px $shadow
@@ -366,15 +392,19 @@
 
 	&:first-of-type, &:nth-child(2)
 		align-items: flex-start
+
 		& .navListItem__refer
 			transform: translate(0, 0.2em)
+
 	&:first-of-type, &:nth-child(3)
 		padding-right: 1em
 
 	&:nth-child(2)
 		padding-left: 1.5em
+
 	&:nth-child(4)
 		padding-left: 2em
+
 	&:nth-child(4), &:nth-child(3)
 
 		& .navListItem__refer
@@ -382,8 +412,10 @@
 
 	&:first-of-type, &:nth-child(4)
 		background-color: $ochre
+
 		& .navListItem__refer
 			color: $darkGray $i
+
 	&:nth-child(2), &:nth-child(3)
 		background-color: $heatGreen
 
@@ -404,17 +436,6 @@
 
 	@include breakpoint($xs)
 		font-size: 18px;
-
-	&__contact:first-of-type
-		@include breakpoint($xs-up)
-			margin-right: 2em
-
-	&__contact:last-of-type
-		@include breakpoint($xs-up)
-			margin-right: 1.3em
-
-		@include breakpoint($xs)
-			margin-top: 1em
 		
 .footer
 		color: $white
@@ -426,10 +447,10 @@
 		background-image: none
 
 .contactIcon
-	min-width: 45px
+	min-width: 36px
 
 	svg
-		width: 18px
+		width: 36px
 		transition-duration: 250ms
 
 		&:hover
@@ -446,18 +467,21 @@
 		&_auto
 			margin-left: auto
 
-.contacts__item_git
-
 .presentWorkItem
-	padding-bottom: 2.75em
+	display: flex;
+	align-items: center;
 
-	&__description
+	@include breakpoint($xs-up)
+		padding-bottom: 2.75em
+		min-width: span(4)
 
-.task, .presentWork
-	margin-top: 2em
+	@include breakpoint($xs)
+		margin-top: 9px
+		padding-bottom: 27px
+		min-width: 100%
 
 .footerContacts
-	padding: 1em 0
+	padding: 1.25em 0 1em
 
 	a
 		color: $yellow
@@ -478,24 +502,32 @@
 .label
 	display: inline-block
 	margin-right: 0.5em
+
 .main
 	padding-top: 1.5em
 .main, .head
 	@include breakpoint($xs)
 		font-size: +em(18)
 
-.presentWorkItem, .main > .container, .presentWork
+.presentWork
+	border-top-width: 1px
+	width: 100%
+	flex-flow: row wrap
+	display: flex
+	margin-top: 0
+	border-top-color: transparent
+
+	img
+		box-shadow: 0 2px 6px rgba(0,0,0,.5)
+
+.presentWorkItem, .main > .container
 	flex-direction: column
 	justify-content: center
 
 .main p
 	max-width: 75rem
 
-.presentWorkItem__image,
-.presentWorkItem
-	margin-top: 1em
-
-.worksPagination, .presentWorkItem
+.worksPagination
 	width: 100%
 
 .materialShadow
@@ -507,42 +539,32 @@
 	padding: 0 1em 1.3em
 	border-radius: 4px
 	max-width: 60ch
+	margin-top: 18px
+	margin-bottom: 27px
 
 .task__title
 	border-style: solid
 	border-bottom-width: 1px
 	border-image: linear-gradient(to right, $blue 0%, $blue 50%, transparent 50%) 1
 	padding-bottom: 0.2em
+
 .task__paragraph
 	font-size: (14em / 16)
 
-
-.presentWork
-	border-top-width: 1px
-
-	img
-		box-shadow: 0 2px 6px rgba(0,0,0,.5)
 .tabLink
 	background-color: $white
 
 	&:hover, &:focus
 		z-index: 2
 
-.presentWorkItem,
-.presentWork
-	width: span(12)
-
-.presentWorkItem__image
-// Start about
 
 .about, .article
-	// flex: 1 0 50%
-	// min-width: 60%
 	max-width: 75rem
 	width: 100%
+
 	&:last-child
 		margin-bottom: 1em
-	// align-self: flex-start
+
 .about, .article
 	&:not(:first-child)
 		margin-top: 1.5em
@@ -559,20 +581,12 @@
 
 // End article
 
-.article,
-.articlePreview
-	// color: $darkGray
 .text-uppercase
 	letter-spacing: .12em
-.technologies
-	&Title
-		// justify-content: center
 
+.technologiesTitle
 		border: 2px solid $darkGray
 		padding: .5em 0
-	&List
-		margin-top: 1em
-
 
 .technologies, .technologiesImageContainer
 	width: 100%
@@ -587,11 +601,12 @@
 
 .technologiesList
 	justify-content: center
-	margin-top: 3em
+	margin-top: 1em
+	margin-bottom: 1em
 	display: grid
 	grid-template-rows: 1fr
 	grid-template-columns: repeat(auto-fit, 90px)
-	grid-gap: 25px 50px
+	grid-gap: 27px 18px
 
 .technology, .imageContainer_gear
 	margin: auto .5em
@@ -605,23 +620,16 @@
 	align-items: center
 	background-color: #fff
 	margin: 0
-	padding: 0 .5em
+	padding: .25em .5em .5em
 	border: 3px solid #333
 	box-shadow: 3px 5px 0 rgba(0,0,0,.4)
 
 	&__image
 		width: 100%
 
-$figures: ('gear', 2000, 1969, em(65, 36)), ('bootstrap', 41, 208, em(200)), ('html', 188, 200, em(65)), ('sass', 77, 102, em(80)), ('git', 55, 133, em(100)), ('gulp', 510, 228, em(40)), ('js', 61, 62, em(65)), ('jquery', 100, 100, em(65)), ('react', 100, 100, em(70)), ('redux', 3109, 3440, em(65)), ('figma', 100, 100, em(70)), ('python', 100, 100, em(65)), ('django', 282, 650, em(120)), ('postrgres', 1032, 1000, em(65))
-@each $name, $height, $width, $max-width in $figures
-	.imageContainer
+		&[src*="gulp"]
+			max-width: 35px
 
-		&_#{$name}
-			max-width: #{$max-width}
-
-		&__image_#{$name}
-			padding-bottom: pb($height, $width)
-			+image('./../img/icons/#{$name}.png')
 
 
 .technologiesTitle
@@ -629,10 +637,17 @@ $figures: ('gear', 2000, 1969, em(65, 36)), ('bootstrap', 41, 208, em(200)), ('h
 		flex-direction: column
 	@include breakpoint($xxs)
 		font-size: 7vw
+
 .imageContainer_gear
+	max-width: em(65, 36)
+
 	@include breakpoint($sm-less)
 		width: span(12)
 		margin: .5em 0
+
+.imageContainer__image_gear
+	padding-bottom: pb(2000, 1969)
+	+image('/icons/gear.png')
 
 .controller
 	flex-basis: span(12)
@@ -650,8 +665,7 @@ $figures: ('gear', 2000, 1969, em(65, 36)), ('bootstrap', 41, 208, em(200)), ('h
 		min-width: span(12)
 		max-width: span(12)
 		font-size: em(18, 21)
-		padding: em(8) em(12.5) em(12.5)
-		border-radius: 3px
+		padding: 18px
 		transition-duration: 250ms
 		box-shadow: 3px 3px 0px rgba(0,0,0,.5)
 		border: 3px solid #333
@@ -706,25 +720,28 @@ $figures: ('gear', 2000, 1969, em(65, 36)), ('bootstrap', 41, 208, em(200)), ('h
 		max-width: span(10)
 		background-color: $red
 
-#formWrapper
+.formWrapper
 	max-width: em(350)
-	margin: 2em auto
+	margin: 0 auto 1em
 
 .formLoader
 	max-width: em(50)
 	margin: 3em auto
 	display: block
+
 .button
-	border: 0
+	border: 3px solid $darkGray
 	width: 100%
 	max-width: em(125)
 	color: $white
-	border-radius: 3px
-	padding: .5em 0
+	padding: 18px 9px
 	will-change: transform
 	transition: transform .3s ease-in
+	box-shadow: 3px 3px 0 rgba(0,0,0,.5)
+
 	&:hover, &:focus
 		transform: scale(1.04)
+
 	&:active
 		transform: translateY(4px)
 
@@ -733,6 +750,7 @@ $figures: ('gear', 2000, 1969, em(65, 36)), ('bootstrap', 41, 208, em(200)), ('h
 
 	&_yellow
 		background-color: $yellow
+		color: $darkGray
 
 .articlesLoader
 	max-width: em(45)
