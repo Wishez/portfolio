@@ -1,8 +1,8 @@
 import $ from 'jquery';
 import lozad from 'lozad';
-import Siema from 'siema';
 import moment from 'moment';
 import request from './lib/ajax';
+import 'magnific-popup';
 
 const CORKCREW  = (function() {
   const that = {};
@@ -61,6 +61,7 @@ const CORKCREW  = (function() {
 
 (function(_) {
   $(function() {
+    $('.poppy-image').magnificPopup({type:'image'});
     const $skip = $('.skip');
     $skip.focus();
 
@@ -94,8 +95,6 @@ const CORKCREW  = (function() {
         el.onload = () => el.classList.add('in');
       }
     }).observe();
-
-    new Siema();
   
     _.screwed('.not-follow', function(e) {
       const url = $(this).attr('href');
@@ -106,7 +105,6 @@ const CORKCREW  = (function() {
 
     const $centeredMenuButton = $('#centeredMenuButton');
     let lastShadow  = '';
-
     _.screwed('.navListItem', function() {
       const $this = $(this);
       const shadowPosition = `shadow_position-${$this.data('position')}`;
@@ -127,7 +125,6 @@ const CORKCREW  = (function() {
 
 (function(_) {
   const _apiUrl  = 'https://filipp-zhuravlev.ru/api/v1';
-
   const _getArticles = ($articles) => {
     const url  = _apiUrl + '/article/';
 
