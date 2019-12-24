@@ -5,11 +5,11 @@
 @import 'bootstrap-sprockets'
 
 $i: !important
-$blue: #4e7db8//#4E9191// #3e3f89
-$purple: #9d5b4b//#8C4B65
-$yellow: #d0be5a// #E3CA40
+$blue: #b0d2e8//#4E9191// #3e3f89
+$purple: #b1c071//#8C4B65
+$yellow: #ebd142//#d0be5a// #E3CA40
 $ochre: $yellow//#917215
-$brown: #5f360d
+$brown: #213441
 $heatGreen: $purple//#989b40
 $paleOrange: #d9b673
 $white: #f7f7f7
@@ -68,22 +68,22 @@ body
 
 
 a
-  transition: .2s ease
+	color: $blue
+	transition: .2s ease-in-out
+	background-image: linear-gradient(to right, $blue  0%, $blue 100%)
 
+a
   &, &:hover, &:focus
     text-decoration: none
-    background-image: linear-gradient(to right, $heatGreen  0%, $heatGreen 100%)
     background-repeat: repeat-x
     background-position: center bottom
     background-size: 0.05em 0.15em
 		padding-bottom: .15em
 
-  color: $blue;
-
   &:hover, &:focus
     $lightenBlue: lighten($blue, 25%)
     color: $blue
-    background-image: linear-gradient(to right, $blue 0%, $blue 100%)
+    background-image: linear-gradient(to right, $brown 0%, $brown 100%)
 
   &:active
     color: $blue
