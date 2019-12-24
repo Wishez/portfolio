@@ -1,9 +1,8 @@
 var gulp   = require('gulp');
 var config = require('../config');
 
-gulp.task('watch', 
-    ['copy:watch',
-    
+gulp.task('watch', [
+    'copy:watch',
     'jade:watch',
     'sprite:svg:watch',
     'sprite:png:watch',
