@@ -21,9 +21,10 @@
   <h3 class="task__title font-weight_semi">Задача</h3>
   <div class="task__paragraph">{{ page.task|safe }}</div>
 </div>
-<ul class="presentWork siema">{% for image in page.album|extract_images %}
-  <li class="presentWorkItem">{% if image.description %}
-    <h2 class="text-center presentWorkItem__description">{{ image.description }}</h2>{% endif %}
-    <picture class="parent centered">
-      <source srcset="/media/{{ image.image }}" media="screen" /><img data-src="/media/{{ image.image }}" data-action="zoom" class="zooming fade lozad presentWorkItem__image img-responsive" /></picture>
+<ul class="presentWork">{% for image in page.album|extract_images %}
+  <li class="presentWorkItem">
+    <a href="/media/{{ image.image }}" rel="gallery" title="{{ image.description }}" class="poppy-image">
+      <picture class="parent centered">
+        <source srcset="/media/{{ image.image }}" media="screen" /><img class="fade lozad presentWorkItem__image img-responsive" /></picture>
+    </a>
   </li>{% endfor %}</ul>{% endblock %}
