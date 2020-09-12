@@ -1,3 +1,4 @@
+# -*- encoding: utf-8 -*-
 """
 Django settings for portfolio project.
 
@@ -24,6 +25,8 @@ SECRET_KEY = 'vj#v!e5dc6+b2t0(o#%uq9d=*e*&efbnz52lw5&9bxhp+7v@#8'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
+
+IS_PRODUTION = False
 
 ALLOWED_HOSTS = ['localhost']
 

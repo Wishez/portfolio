@@ -1,3 +1,4 @@
+# -*- encoding: utf-8 -*-
 """
 Django settings for shining_present project.
 
@@ -216,4 +217,4 @@ REST_FRAMEWORK = {
         'rest_framework.permissions.IsAdminUser',
     ),
 }
-IS_PRODUCTION = False
+IS_PRODUCTION = True
