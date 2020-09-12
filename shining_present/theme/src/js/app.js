@@ -123,7 +123,7 @@ const CORKCREW  = (function() {
 
 }(CORKCREW));
 
-(function(_) {
+(function() {
   const _apiUrl  = 'https://filipp-zhuravlev.ru/api/v1';
   const _getArticles = ($articles) => {
     const url  = _apiUrl + '/article/';
