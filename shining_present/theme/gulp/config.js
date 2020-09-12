@@ -25,7 +25,7 @@ var config = {
         iconsSvg     : 'src/icons',
         // path to svg sources for iconfont task
         iconsFont    : 'src/icons',
-        fonts        : 'src/fonts',
+        fonts        : 'src/assets/fonts',
         lib          : 'src/lib'
     },
     dest: {
