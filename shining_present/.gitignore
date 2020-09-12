@@ -9,3 +9,4 @@ range_filter
 jet
 jet.dashboard
 db.sqlite3
+*.pyc
