@@ -1,1 +1,0 @@
-$.notLikeOtherTipsters('.showTip');
