@@ -1,7 +1,7 @@
 import $ from 'jquery';
 import lozad from 'lozad';
 import moment from 'moment';
-import request from './lib/ajax';
+import * as Cookies from 'js-cookie';
 import 'magnific-popup';
 
 const CORKCREW  = (function() {
@@ -66,14 +66,6 @@ const CORKCREW  = (function() {
     $skip.focus();
 
     const $out = $('.out');
-    $(document).on('click', '.slideTo', function() {
-      const anchor =  $(this).attr('href');
-      $out.animate({
-        scrollTop: $(anchor).offset().top + 42
-      }, 250);
-    });
-    
-
     let isSkipButtonFocused = true;
     $out.on('scroll', function() {
       const fromTop = $out.scrollTop();
@@ -198,16 +190,26 @@ const CORKCREW  = (function() {
     };
 
     const $formWrapper = $('#formWrapper');
-    request({
-      url: '/connectMe/',
-      type: 'POST',
-      success: (response) => $formWrapper.html(response),
-      failure: () => {
+    fetch('/data/connectMe/', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'X-CSRFToken': Cookies.get('csrftoken'),
+      },
+      body: JSON.stringify(data),
+    })
+      .then(response => {
+        if (response.status !== 200) throw Error();
+
+        return response.text();
+      })
+      .then((text) => {
+        $formWrapper.html(text);
+      })
+      .catch((error) => {
         $('#connectForm').show('fast');
         $formWrapper.find('.formLoader').hide('fast');
         removeLoader();
-      },
-      data,
-    });
+      });
   }
 }(CORKCREW));
