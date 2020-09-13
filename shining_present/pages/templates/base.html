@@ -28,27 +28,30 @@
 
   <body><a href="#main" class="skip slideTo">К основному содержимому</a>
     <!--BEGIN out-->
-    <div class="out parallaxContainer">
-      <header itemscope itemtype="http://schema.org/Person" class="header">
+    <div class="out">
+      <header itemscope itemtype="http://schema.org/Person" class="header {% if about_content %}header_with-about-section{% endif %}">
         <div class="head parent">
           <a href="{% url 'portfolio' %}" class="brand parent">
             <div class="brandImage">
               <figure style="background-image: url('/media/{{ settings.thumb_photo.image }}');" class="brandImage__image"></figure>
             </div>
-            <h1 itemprop="name" class="brand__title font-weight_semi">Филипп Журавлёв</h1>
+            <h1 itemprop="name" class="brand__title font-weight_semi">Филипп Журавлёв
+              <p class="brand__text">Разработчик интерфейсов</p>
+            </h1>
           </a>
           <div class="contacts contactIcon parent"><a itemprop="email" href="mailto:{{ settings.email }}" class="contacts__contact">💌&nbsp;{{ settings.email }}</a></div>
         </div>
-        <nav class="navigation parallaxChild">
-          <ul class="navList parent">
-            <li data-position="bottomRight" class="navListItem navListItem_round-topLeft text-right"><a href="{% url 'portfolio' %}" class="navListItem__refer">Портфолио</a></li>
-            <li data-position="bottomLeft" class="navListItem navListItem_round-topRight"><a href="{% url 'about' %}" class="navListItem__refer">Обо мне</a></li>
-            <li data-position="topRight" class="navListItem navListItem_round-bottomLeft text-right"><a href="{% url 'connect' %}" class="navListItem__refer">Технологии</a></li>
-            <li data-position="topLeft" class="navListItem navListItem_round-bottomRight"><a href="{% url 'articles' %}" class="navListItem__refer">Статьи</a></li>
-            <li id="centeredMenuButton" data-position="centered" class="navListItem navListItem_name-main"><a href="{% url 'portfolio' %}" class="navListItem__refer"></a></li>
-          </ul>
-        </nav>
-      </header>
+        {% if about_content %}
+        <div class="aboutMeInHeader container">{{ about_content|safe }}</div>{% endif %}</header>
+      <nav class="navigation">
+        <ul class="navList parent">
+          <li class="navListItem"><a href="{% url 'portfolio' %}" class="navListItem__refer">Портфолио</a></li>
+          <li class="navListItem"><a href="{% url 'about' %}" class="navListItem__refer">Обо мне</a></li>
+          <li class="navListItem"><a href="{% url 'connect' %}" class="navListItem__refer">Технологии</a></li>
+          <li class="navListItem"><a href="{% url 'articles' %}" class="navListItem__refer">Статьи</a></li>
+          <li class="navListItem"><a href="{% url 'portfolio' %}" class="navListItem__refer"></a></li>
+        </ul>
+      </nav>
       <!--END header-->
       <!--BEGIN main-->
       <main id="main" class="main">

@@ -1,27 +1,34 @@
 //- BEGIN header
-header.header(itemscope, itemtype='http://schema.org/Person')
+header.header(itemscope, itemtype='http://schema.org/Person', class="{% if about_content %}header_with-about-section{% endif %}")
 	//-BEGIN brand
 	.head.parent
 		a(href="{% url 'portfolio' %}").brand.parent
 			.brandImage
 				figure.brandImage__image(style="background-image: url('/media/{{ settings.thumb_photo.image }}');")
 			h1.brand__title.font-weight_semi(itemprop='name') Филипп Журавлёв
+				p.brand__text Разработчик интерфейсов
 		//- BEGIN contacts
 		.contacts.contactIcon.parent
 			a.contacts__contact(itemprop='email', href='mailto:{{ settings.email }}') 💌&nbsp;{{ settings.email }}
 	//- END contacts
 
-	nav.navigation.parallaxChild
-		ul.navList.parent
-			li.navListItem.navListItem_round-topLeft.text-right(data-position='bottomRight')
-				a(href="{% url 'portfolio' %}").navListItem__refer Портфолио
-			li.navListItem.navListItem_round-topRight(data-position='bottomLeft')
-				a(href="{% url 'about' %}").navListItem__refer Обо мне
-			li.navListItem.navListItem_round-bottomLeft.text-right(data-position='topRight')
-				a(href="{% url 'connect' %}").navListItem__refer Технологии
-			li.navListItem.navListItem_round-bottomRight(data-position='topLeft')
-				a(href="{% url 'articles' %}").navListItem__refer Статьи
-			li.navListItem.navListItem_name-main#centeredMenuButton(data-position='centered')
-				a.navListItem__refer(href="{% url 'portfolio' %}")
+	{% if about_content %}
+	.aboutMeInHeader.container
+		{{ about_content|safe }}
+	{% endif %}
+
+
+nav.navigation
+	ul.navList.parent
+		li.navListItem
+			a(href="{% url 'portfolio' %}").navListItem__refer Портфолио
+		li.navListItem
+			a(href="{% url 'about' %}").navListItem__refer Обо мне
+		li.navListItem
+			a(href="{% url 'connect' %}").navListItem__refer Технологии
+		li.navListItem
+			a(href="{% url 'articles' %}").navListItem__refer Статьи
+		li.navListItem
+			a.navListItem__refer(href="{% url 'portfolio' %}")
 
 //END header
