@@ -1,17 +1,10 @@
-.parallaxContainer
-	@include breakpoint($xs-up)
-		overflow-x: hidden
-		overflow-y: auto
-		height: 500px
-		height: 100vh
-		perspective: 300px
-		perspective-origin: 0 0
-		transform-style: preserve-3d
+.out
+	display: flex
+	flex-direction: column
+	min-height: 100vh;
 
-.parallaxChild
-	@include breakpoint($xs-up)
-		transform-origin: 0 0
-		transform: translateZ(90px) scale(.7) translateY(40px)
+main
+	flex-grow: 1
 
 ::selection
 	background: $yellow
@@ -67,15 +60,15 @@
 		height: 1em
 		right: 0
 		width: 1em
-		
-		
+
+
 .articleMeta
 	margin-top: 0 $i
 
-.previous, .next, .navListItem__refer
+.previous, .next
 	text-decoration: none
 
-.work__refer, .navListItem__refer, .previous, .next
+.work__refer, .previous, .next
 	&:hover
 		text-decoration: none
 
@@ -88,27 +81,56 @@
 		transform: scale(1.01, 1.01)
 
 .header
-	padding-bottom: 5em
-	background-image: url('./../img/background.jpg')
-	background-repeat: no-repeat
-	background-size: cover
-	background-position: center center
+	display: flex
+	flex-direction: column
+	position: relative
+
+	&::after
+		content: ''
+		position: absolute
+		width: 100%
+		height: 100%
+		top: 0
+		left: 0
+		transform: scale(-1) rotateX(180deg)
+		z-index: -1
+		background-image: url(/static/portfolio/img/background.jpeg)
+		background-repeat: no-repeat
+		background-size: cover
+
+	&_with-about-section
+		height: calc(100vh - 80px)
 
 	@include breakpoint($xxs)
-		padding-bottom: 4em
 
-.header, .presentWorkItem, .presentWork, .footer
+.aboutMeInHeader
+	padding-top: 36px
+	padding-bottom: 36px
+	flex: 1
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+
+	.about > *
+		margin: 0
+		color: #fff
+
+	.about
+		filter: drop-shadow(0 0 20px rgba(0, 0, 0, 0.1))
+		display: flex
+		flex-direction: column
+		align-items: flex-start
+
+.presentWorkItem, .presentWork, .footer
 	border-style: solid
 	border-color: lighten($gray, 50%)
 
-.header, .presentWorkItem:not(:last-child)
+.presentWorkItem:not(:last-child)
 	border-bottom-width: 1px
 
 .v-centered,
 .brand,
 .contacts,
-.navList,
-.navListItem,
 .works,
 .worksPagination,
 .main > .container,
@@ -117,13 +139,12 @@
 	align-items: center
 
 .parent,
-.navListItem
 	display: flex
 
 .column
 	flex-direction: column
 
-.head, .brand, .contacts, .navList, .navListItem, .works, .worksPagination, .technologiesTitle
+.head, .brand, .contacts, .works, .worksPagination, .technologiesTitle
 	flex-flow: row wrap
 
 .brand, .contacts
@@ -181,6 +202,7 @@
 .head
 	background-color: $lightGray
 	padding: 0.5em 3.8em
+	box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
 
 	@include breakpoint($xs)
 		padding: 1em 2em 2em
@@ -190,8 +212,6 @@
 	@include breakpoint($media)
 		@content
 
-.navListItem
-	width: span(6)
 
 .brandImage,
 .previous,
@@ -274,12 +294,15 @@
 .brandImage
 	margin-right: 1em
 
-.font
-
-	&-weight
+.font-weight
 
 		&_semi
-			font-weight: 600
+			font-weight: bold
+
+.brand__text
+	margin-bottom: 0
+	font-weight: normal
+	font-size: 16px 
 
 .brand__title
 	color: $darkGray
@@ -292,143 +315,48 @@
 		margin-top: .2em
     margin-bottom: 0
 
-	text-align: center
-
 
 .navigation
-	max-width: 370px
-	min-width: 300px
-	min-height: 300px
-	max-height: 370px
-	margin: 0 auto
+	background: #fff
+	height: 80px
+	justify-content: center
+	display: flex
+	position: sticky
+	top: 0
+	left: 0
+	z-index: 1000
+	box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
 
 	@include breakpoint($xs)
-		margin-bottom: -42px
-		transform: scale(.8)
 
 
 
-.navListItem_name-main
-	@extend %relative
-	+after
-	width: 70px
-	height: 70px
-	left: calc(50% - 35px)
-	background-color: $brown
-
-	&, &:after
-		@extend %absolute
-		+round
-
-	&:after
-		content: ""
-		width: 45px
-		height: 45px
-		z-index: 2
-		left: calc(50% - 22.5px)
-		background-color: $blue
-
-	& .navListItem__refer
-		display: block
-		width: span(12)
-		height: span(12)
-		z-index: 10
-
-.navList
-	height: 100%
-	font-size: 24px
-	justify-content: center
-	+round
-	border-width: 3px
-	box-shadow: 0 0 15px $shadow
-	@include breakpoint($md-less)
-		font-size: (18em / 16)
-	@include breakpoint($sm-less)
-		font-size: (21em / 16)
-.navList .navListItem_name-main, .navListItem:not(.navListItem_name-main)
-	will-change: transform, box-shadow
-
-	&:hover
-		transform: scale(1.03, 1.03)
-
-.navList, .navListItem
-	border-style: solid
-	border-color: $brown
 
 .navListItem
-	cursor: pointer
-	transition: 0.2s ease-in-out
+	height: 100%
 
-.navListItem__refer, .brand
-	&, &:hover
+.navList
+	margin: 0
+
+.navListItem__refer
+	height: 100%
+	padding: 0 36px
+	display: flex
+	align-items: center
+	background: none
+	color: $darkGray
+	transition-propery: background-color, color
+	transition-duration: 200ms
+	transition-timing-function: ease-in
+
+	&:hover, &:focus
+		background-color: $blue
+		color: $white
 		background-image: none
 
-
-.navListItem:not(.navListItem_name-main)
-	border-width: 3px
-	padding: 4em 0
-	max-height: 175px
-	min-height: 150px
-	justify-content: center
-	will-change: transform, box-shadow
-
-	@include breakpoint($xs-up)
-		font-size: (14em / 16)
-
-	@include breakpoint($xs)
-		font-size: 1em
-		padding: 4em 0 2em
-
-	@include breakpoint($xxs)
-		font-size: (18em / 16)
-
-	&:hover
-		box-shadow: 0 0 10px $shadow
-
-	& .navListItem__refer
-		color: $white $i
-		width: 100%
-		display: block
-
-	&:first-of-type, &:nth-child(2)
-		align-items: flex-start
-
-		& .navListItem__refer
-			transform: translate(0, 0.2em)
-
-	&:first-of-type, &:nth-child(3)
-		padding-right: 1em
-
-	&:nth-child(2)
-		padding-left: 1.5em
-
-	&:nth-child(4)
-		padding-left: 2em
-
-	&:nth-child(4), &:nth-child(3)
-
-		& .navListItem__refer
-			transform: translate(0,-32.5px)
-
-	&:first-of-type, &:nth-child(4)
-		background-color: $ochre
-
-		& .navListItem__refer
-			color: $darkGray $i
-
-	&:nth-child(2), &:nth-child(3)
-		background-color: $heatGreen
-
-
-.navListItem_round-
-	&topRight
-		border-top-right-radius: 100%
-	&topLeft
-		border-top-left-radius: 100%
-	&bottomLeft
-		border-bottom-left-radius: 100%
-	&bottomRight
-		border-bottom-right-radius: 100%
+.brand
+	&, &:hover
+		background-image: none
 
 .contacts
 	color: $darkenGray
@@ -436,7 +364,7 @@
 
 	@include breakpoint($xs)
 		font-size: 18px;
-		
+
 .footer
 		color: $white
 		background-color: $darkGray

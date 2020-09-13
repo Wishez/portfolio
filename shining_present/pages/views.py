@@ -21,7 +21,7 @@ class BaseView(TemplateView):
         return context
     def get_page(self):
         if self.page_model is not None:
-            self.page = self.page_model.objects.get()
+            self.page = get_single_model(self.page_model)
 
     def get_context_data(self, **kwargs):
         context = super(BaseView, self).get_context_data(**kwargs)
@@ -50,6 +50,7 @@ class PortfolioView(BaseView):
     def set_additional_context(self, context):
         works = self.page.works.order_by('-created')
         context['works'] = [work for work in works if work in works]
+        context['about_content'] = get_single_model(AboutPage).content
 
         return context
 
@@ -69,6 +70,7 @@ class AboutPageView(BaseView):
     def __init__(self):
         super(AboutPageView, self).__init__()
         self.page_model = AboutPage
+
 class ArticlesPageView(BaseView):
     template_name = 'articles.html'
 
