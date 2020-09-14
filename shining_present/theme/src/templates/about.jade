@@ -1,0 +1,10 @@
+| {% extends 'base.html' %}
+
+| {% block content %}
+section.about
+	h1.visible-hidden Обо мне
+
+	| {% if page.content %}
+	| {{ page.content|safe }}
+	| {% endif %}
+| {% endblock %}

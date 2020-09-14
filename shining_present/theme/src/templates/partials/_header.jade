@@ -1,0 +1,32 @@
+//- BEGIN header
+header.header(itemscope, itemtype='http://schema.org/Person', class="{% if about_content %}header_with-about-section{% endif %}")
+	//-BEGIN brand
+	.head.parent
+		a(href="{% url 'portfolio' %}").brand.parent
+			.brandImage
+				figure.brandImage__image(style="background-image: url('/media/{{ settings.thumb_photo.image }}');")
+			h1.brand__title.font-weight_semi(itemprop='name') Филипп Журавлёв
+				p.brand__text Разработчик интерфейсов
+		//- BEGIN contacts
+		.contacts.contactIcon.parent
+			a.contacts__contact(itemprop='email', href='mailto:{{ settings.email }}') 💌&nbsp;{{ settings.email }}
+	//- END contacts
+
+	{% if about_content %}
+	.aboutMeInHeader.container
+		{{ about_content|safe }}
+	{% endif %}
+
+
+nav.navigation
+	ul.navList.parent
+		li.navListItem
+			a(href="{% url 'portfolio' %}").navListItem__refer Портфолио
+		li.navListItem
+			a(href="{% url 'about' %}").navListItem__refer Обо мне
+		li.navListItem
+			a(href="{% url 'connect' %}").navListItem__refer Технологии
+		li.navListItem
+			a(href="{% url 'articles' %}").navListItem__refer Статьи
+
+//END header

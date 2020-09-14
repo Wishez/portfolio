@@ -1,0 +1,30 @@
+{% extends 'base.html' %} {% load extract_tags %} {% block content %}
+<nav class="worksPagination parent">{% if last %}
+  <a class="previous tabLink" href="{% url 'work' slug=last.slug %}"> 		Предыдущая
+	<h4 class="workName">{{ last.name }}</h4>
+</a> {% endif %}
+
+  <h2 class="currentWork text-center parent column centered" style="{% if not next %}margin-left: 0;{% endif %}">
+    <span class="font-weight_semi">{{ page.name }}</span>
+    <a class="currentWork__refer not-follow" href="{{ page.url }}">
+		 {{ page.url }}
+	</a>
+  </h2>
+
+  {% if next %}
+  <a class="next text-right tabLink" href="{% url 'work' slug=next.slug %}">	  Следующая
+	<h4 class="workName">{{ next.name }}</h4>
+</a> {% endif %}
+
+</nav>
+<div class="task {% if not page.task %}visible-hidden{% endif %}">
+  <h3 class="task__title font-weight_semi">Задача</h3>
+  <div class="task__paragraph">{{ page.task|safe }}</div>
+</div>
+<ul class="presentWork">{% for image in page.album|extract_images %}
+  <li class="presentWorkItem">
+    <a href="/media/{{ image.image }}" rel="gallery" title="{{ image.description }}" class="poppy-image">
+      <picture class="parent centered">
+        <source srcset="/media/{{ image.image }}" media="screen" /><img class="fade lozad presentWorkItem__image img-responsive" /></picture>
+    </a>
+  </li>{% endfor %}</ul>{% endblock %}
