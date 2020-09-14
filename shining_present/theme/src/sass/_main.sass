@@ -72,13 +72,17 @@ main
 	&:hover
 		text-decoration: none
 
-.work, .previous, .next
+.previous, .next
 	transition: 0.2s ease-in-out
 	will-change: transform, box-shadow
 
 	&:hover
 		box-shadow: 0 10px 20px $shadow
 		transform: scale(1.01, 1.01)
+
+.desktop-works
+	display: flex
+	margin: 0 -9px
 
 .header
 	display: flex
@@ -131,7 +135,6 @@ main
 .v-centered,
 .brand,
 .contacts,
-.works,
 .worksPagination,
 .main > .container,
 .presentWorkItem,
@@ -144,7 +147,7 @@ main
 .column
 	flex-direction: column
 
-.head, .brand, .contacts, .works, .worksPagination, .technologiesTitle
+.head, .brand, .contacts, .worksPagination, .technologiesTitle
 	flex-flow: row wrap
 
 .brand, .contacts
@@ -160,17 +163,10 @@ main
 	justify-content: space-between
 
 .works
-	justify-content: space-around
-	width: span(12)
-
-	@supports (display: grid)
-		display: grid
-		grid-template-columns: repeat(auto-fit, minmax(315px, 1fr))
-		grid-gap: 1rem
-
-		@include breakpoint($xxs-iphone)
-			grid-template-columns: repeat(auto-fit, minmax(245px, 1fr))
-
+	display: flex
+	flex-direction: column
+	padding: 0 9px
+	margin: 0
 
 
 .currentWork
@@ -256,11 +252,11 @@ main
 		background-image: none
 
 .work
-	margin-top: 1em
+	margin: 0 0 18px
 	padding: 0 1em 18px
 	will-change: transform, box-shadow
-	border: 3px solid #333
-	align-self: flex-end
+	width: 100%
+	box-shadow: 0 5px 20px rgba(0,0,0,.3)
 
 	@include breakpoint($sm)
 		width: span(12)
@@ -269,7 +265,7 @@ main
 		min-width: calc(100% + 2em)
 		margin-left: -1em
 		margin-right: -1em
-	
+
 	&__title
 		margin-top: 9px
 		margin-bottom: 18px
@@ -428,6 +424,7 @@ main
 		box-shadow: 0 0 10px $shadow
 
 .label
+	font-size: 1em
 	display: inline-block
 	margin-right: 0.5em
 
