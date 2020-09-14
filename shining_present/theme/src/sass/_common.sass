@@ -1,0 +1,136 @@
+@import 'susy'
+@import 'breakpoint'
+@import 'bootstrap'
+@import 'bootstrap-sprockets'
+
+$i: !important
+$blue: #b0d2e8//#4E9191// #3e3f89
+$purple: #b1c071//#8C4B65
+$yellow: #ebd142//#d0be5a// #E3CA40
+$ochre: $yellow//#917215
+$brown: #213441
+$heatGreen: $purple//#989b40
+$paleOrange: #d9b673
+$white: #f7f7f7
+$darkGray: #212121
+$lightGray: #ececec
+$darkenGray: #5d5c5c
+$shadow: rgba(0, 0, 0, .6)
+$pink: #cf6b9e;
+$red: #eb4a4b;
+$yellow: #f0dc4e;
+$blue: #3f7dae;
+
+$lg: 1200px
+$md-up: 992px
+$md: 992px 1199px
+$md-less: max-width 1199px
+$sm-up: 800px
+$sm: 801px 991px
+$sm-less: max-width 991px
+$xs-up: 801px
+$xs-only: 480px 800px
+$xs: max-width 800px
+$xxs: max-width 445px
+$xxs-up: 445px
+$xxs-iphone: max-width 320px
+
+$susy: (columns: 12, gutters: 0, gutter-position: split, global-box-sizing: border-box)
+
++font("Anonymous Pro", "AnonymousPro-Regular")
++font("Anonymous Pro", "AnonymousPro-Bold", "bold")
+
+*
+
+	&:focus-visible
+		border: 4px dotted lighten($blue, 15%)
+
+h1,h2,h3,h4,h5,h6
+	line-height: 1.5
+	font-weight: bold
+
+html, body
+	scroll-behavior: smooth
+
+body
+	& *
+		box-sizing: border-box
+	& *:after, & *:before
+		box-sizing: border-box
+	background: $white
+	// +css-lock(16, 100, 100, 100, $unit: %)
+	text-rendering: optimizeLegibility
+	font-kerning: normal
+	font-variant-ligatures: common-ligatures contextual
+	font-feauture-settings: "kern", "ling", "clig", "calt"
+	font-size-adjust: 100%
+	word-break: break-word
+	hyphens: auto
+	-webkit-hyphenate-before: 2
+	-webkit-hyphenate-after: 3
+	hyphenate-lines: 3
+	font-family: 'Anonymous Pro', sans-serif;
+	line-height: 1.4
+	font-style:
+	font-size: calc(1em + 1vw)
+
+
+a
+	color: $blue
+	transition: .2s ease-in-out
+	background-image: linear-gradient(to right, $blue  0%, $blue 100%)
+
+a
+  &, &:hover, &:focus
+    text-decoration: none
+    background-repeat: repeat-x
+    background-position: center bottom
+    background-size: 0.05em 0.15em
+		padding-bottom: .15em
+
+  &:hover, &:focus
+    $lightenBlue: lighten($blue, 25%)
+    color: $blue
+    background-image: linear-gradient(to right, $brown 0%, $brown 100%)
+
+  &:active
+    color: $blue
+
+.visible-hidden
+	white-space: nowrap
+	overflow: hidden
+	clip: rect(1px, 1px, 1px, 1px)
+	width: 1px
+	height: 1px
+	position: absolute
+
+
+main * + *
+	margin-top: 1.5rem
+main :empty:not(img):not( picture):not(input):not(textarea):not(figure):not(video):not(audio)
+	display: none
+
+li, dt, dd, br, th, td
+	margin-top: 0
+.article * + *:not(p)
+	margin-top: 3rem
+	margin-bottom: 3rem
+
+.container
+	padding-bottom: 1.5rem
+	& p
+		margin-top: 1.5rem
+
+* + h2, * + h3
+	margin-top: 1.5em
+
+h2
+	font-size: 1.38685714285714285714em
+
+h3
+	font-size: 1.2em
+picture
+	width: 100%
+
+ul
+	list-style: none

@@ -1,0 +1,32 @@
+meta(charset="utf-8")
+meta(http-equiv="X-UA-Compatible" content="IE=Edge")
+meta(name="viewport" content="width=device-width, initial-scale=1")
+meta(name="theme-color" content="#fff")
+meta(name="format-detection" content="telephone=no")
+link(rel='dns-prefetch' href="https://shining-present.ru")
+link(rel='subresource' href="/static/portfolio/css/app.css")
+link(rel='subresource' href="/static/portfolio/js/app.js")
+link(rel='prefetch' href="/static/portfolio/css/app.css")
+link(rel='prefetch' href="/static/portfolio/js/app.js")
+link(rel='prerender' href="/protfolio")
+link(rel='prerender' href="/about")
+link(rel='prerender' href="/technologies")
+link(rel='prerender' href="/articles")
+link(rel='preload' href="/static/portfolio/css/app.css" as="style")
+link(rel='preload' href="/static/portfolio/js/app.js" as="script")
+//-link(rel='dns-prefetch' href="shining-present.ru")
+| {% if page.page_title %}
+title {{ page.page_title }}
+| {% else %}
+title Page
+| {% endif %}
+| {% if page.meta %}
+meta(name='description', content="{{ page.meta }}")
+| {% else %}
+meta(name='description', content="No meta")
+| {% endif %}
+link(
+  rel="stylesheet",
+  href="{% static 'portfolio/css/app.css' %}",
+  media="all"
+)

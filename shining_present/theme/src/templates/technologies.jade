@@ -1,0 +1,155 @@
+| {% extends 'base.html' %}
+-
+	var technologies = [
+		{
+			"name": "html",
+			"title": "HTML"
+		},
+		{
+			"name": "css",
+			"title": "CSS"
+		},
+		{
+			"name": "js",
+			"title": "JavaScript"
+		},
+		{
+			"name": "bootstrap",
+			"title": "Bootstrap"
+		},
+		{
+			"name": "semantic-ui",
+			"title": "Semantic UI"
+		},
+		{
+			"name": "bulma",
+			"title": "Bulma"
+		},
+		{
+			"name": "git",
+			"title": "GitHub"
+		},
+		{
+			"name": "sass",
+			"title": "Sass"
+		},
+		{
+			"name": "npm",
+			"title": "npm"
+		},
+		{
+			"name": "node",
+			"title": "Node JS"
+		},
+		{
+			"name": "jquery",
+			"title": "jQuery"
+		},
+		{
+			"name": "react",
+			"title": "React"
+		},
+		{
+			"name": "vue",
+			"title": "Vue"
+		},
+		{
+			"name": "vuex",
+			"title": "Vuex"
+		},
+		{
+			"name": "redux",
+			"title": "Redux"
+		},
+		{
+			"name": "rxjs",
+			"title": "Rxjs"
+		},
+		{
+			"name": "redux-observable",
+			"title": "redux-observable"
+		},
+		{
+			"name": "storybook",
+			"title": "Storybook"
+		},
+		{
+			"name": "figma",
+			"title": "Figma"
+		},
+		{
+			"name": "photoshop",
+			"title": "Photoshop"
+		},
+		{
+			"name": "python",
+			"title": "Python"
+		},
+		{
+			"name": "django",
+			"title": "Django"
+		},
+		{
+			"name": "django-rest-framework",
+			"title": "Django Rest Framework"
+		},
+		{
+			"name": "postgres",
+			"title": "Postgresql"
+		},
+		{
+			"name": "gulp",
+			"title": "Gulp"
+		},
+		{
+			"name": "webpack",
+			"title": "Webpack"
+		},
+		{
+			"name": "docker",
+			"title": "Docker"
+		},
+		{
+			"name": "graphql",
+			"title": "Graphql"
+		},
+		{
+			"name": "linux",
+			"title": "Linux"
+		},
+		{
+			"name": "postman",
+			"title": "Postman"
+		},
+	];
+| {% block content %}
+section.technologies.parent.column
+
+	h1.technologiesTitle.text-uppercase.centered.parent инструментарий
+		.imageContainer.imageContainer_gear.child
+			figure.imageContainer__image.imageContainer__image_gear
+		| для разработки
+
+	ul.technologiesList.parent.centered
+		each technology in technologies
+			li.technology.child
+				img.fade.lozad.technology__image(title= technology.title, data-src="/static/portfolio/img/icons/" + technology.name + ".png")
+
+	#formWrapper.formWrapper
+		h1.font-weight_semi Обратная связь
+
+		form#connectForm.connectForm(
+			method='post'
+	  	)
+			| {% csrf_token %}
+			// Fields
+			| {% for field in form %}
+			.controller
+				label.controller__label( title="{% if field.field.required == true %}Обязательное для заполнения поле{% else %}Заполните поле по желанию{% endif %}").
+					{{ field.label }}{% if field.field.required %}<span class="controller_required">*</span>{% endif %}
+				| {{ field }}
+				| {{ field.errors }}
+			| {% endfor %}
+
+			button#connect.button.button_yellow.connectForm__button(title="Кнопка, отправляющая данные владельцу сайта", type="submit", aria-pressed=false) Связаться
+| {% endblock  %}

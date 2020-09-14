@@ -1,0 +1,3 @@
+{% extends 'base.html' %} {% block content %}
+<section class="about">
+  <h1 class="visible-hidden">Обо мне</h1>{% if page.content %} {{ page.content|safe }} {% endif %}</section>{% endblock %}
