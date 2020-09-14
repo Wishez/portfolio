@@ -4,7 +4,7 @@ from django.views.generic import TemplateView
 from app.forms import ConnectForm
 from app.models import Settings, Work
 from .models import *
-# Create your views here.
+import math
 
 def get_single_model(Model):
     return Model.objects.get()
@@ -49,7 +49,14 @@ class PortfolioView(BaseView):
 
     def set_additional_context(self, context):
         works = self.page.works.order_by('-created')
-        context['works'] = [work for work in works if work in works]
+        works = [work for work in works if work in works]
+        context['works'] = works
+        desktop_part_quantity = int(math.floor(len(works) / 3))
+        context['works_desktop_parts'] = {
+            "first": works[0:desktop_part_quantity],
+            "second": works[desktop_part_quantity:desktop_part_quantity * 2],
+            "third": works[desktop_part_quantity * 2:desktop_part_quantity * 3]
+        }
         context['about_content'] = get_single_model(AboutPage).content
 
         return context

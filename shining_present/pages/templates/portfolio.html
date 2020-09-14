@@ -1,17 +1,71 @@
 {% extends 'base.html' %} {% load extract_tags %} {% block content %}
-<h1 class="font-weight_semi">Папка с работами</h1>
-<ul class="works list-unstyled parent">{% for work in works %}
+<h1>Проекты</h1>
+<div class="desktop-works hidden-xs">
+  <ul class="works list-unstyled parent">
+    {% for work in works_desktop_parts.first %}
+    <li class="work">
+      <a class="work__refer" href="{% url 'work' slug=work.slug %}">
+<img class="img-responsive fade work__image lozad" data-src='/media/{{ work.album.thumb }}' />
+<h2 class="work__title">{{ work.name }}</h2>
+{% if work.tags|extract_m2m|length  %}
+<ul class="tags">
+{% for tag in work.tags|extract_m2m %}
+<li class="label label-default">{{ tag }}</label>
+{% endfor %}
+</ul>
+{% endif %}
+</a>
+    </li>
+    {% endfor %}
+  </ul>
+  <ul class="works list-unstyled parent">
+    {% for work in works_desktop_parts.second %}
+    <li class="work">
+      <a class="work__refer" href="{% url 'work' slug=work.slug %}">
+<img class="img-responsive fade work__image lozad" data-src='/media/{{ work.album.thumb }}' />
+<h2 class="work__title">{{ work.name }}</h2>
+{% if work.tags|extract_m2m|length  %}
+<ul class="tags">
+{% for tag in work.tags|extract_m2m %}
+<li class="label label-default">{{ tag }}</label>
+{% endfor %}
+</ul>
+{% endif %}
+</a>
+    </li>
+    {% endfor %}
+  </ul>
+  <ul class="works list-unstyled parent">
+    {% for work in works_desktop_parts.third %}
+    <li class="work">
+      <a class="work__refer" href="{% url 'work' slug=work.slug %}">
+<img class="img-responsive fade work__image lozad" data-src='/media/{{ work.album.thumb }}' />
+<h2 class="work__title">{{ work.name }}</h2>
+{% if work.tags|extract_m2m|length  %}
+<ul class="tags">
+{% for tag in work.tags|extract_m2m %}
+<li class="label label-default">{{ tag }}</label>
+{% endfor %}
+</ul>
+{% endif %}
+</a>
+    </li>
+    {% endfor %}
+  </ul>
+</div>
+<div class="tablet-works"></div>
+<ul class="works list-unstyled parent visible-xs">{% for work in works %}
   <li class="work">
     <a class="work__refer" href="{% url 'work' slug=work.slug %}">
-		<img class="img-responsive fade work__image lozad" data-src='/media/{{ work.album.thumb }}' />
-		<h2 class="work__title">{{ work.name }}</h2>
-		{% if work.tags|extract_m2m|length  %}
-		<ul class="tags">
-			{% for tag in work.tags|extract_m2m %}
-			<li class="label label-default">{{ tag }}</label>
-			{% endfor %}
-		</ul>
-		{% endif %}
-	</a>
+<img class="img-responsive fade work__image lozad" data-src='/media/{{ work.album.thumb }}' />
+<h2 class="work__title">{{ work.name }}</h2>
+{% if work.tags|extract_m2m|length  %}
+<ul class="tags">
+{% for tag in work.tags|extract_m2m %}
+<li class="label label-default">{{ tag }}</label>
+{% endfor %}
+</ul>
+{% endif %}
+</a>
   </li>
   {% endfor %}</ul>{% endblock %}
