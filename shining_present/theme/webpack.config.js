@@ -2,6 +2,7 @@ const webpack = require('webpack');
 const path = require('path');
 const config = require('./gulp/config');
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
+const TerserPlugin = require('terser-webpack-plugin');
 
 function createConfig(env) {
   let isProduction,
@@ -14,6 +15,11 @@ function createConfig(env) {
   isProduction = env === 'production';
 
   webpackConfig = {
+    mode: env,
+    optimization: {
+      minimize: isProduction,
+      minimizer: [new TerserPlugin()],
+    },
     context: path.join(__dirname, config.src.js),
     entry: {
       app: './app.js',
@@ -28,11 +34,6 @@ function createConfig(env) {
       '#source-map' :
       '#cheap-module-eval-source-map',
     plugins: [
-      // new webpack.optimize.CommonsChunkPlugin({
-    //     name: 'app',
-    //     filename: '[name].js',
-    //     minChunks: Infinity
-      // }),
       new webpack.LoaderOptionsPlugin({
         options: {
           eslint: {
@@ -65,15 +66,22 @@ function createConfig(env) {
           exclude: [
             path.resolve(__dirname, 'node_modules'),
           ],
-          loader: 'eslint-loader',
-          options: {
-            fix: true,
-            cache: true,
-            ignorePattern: __dirname + '/src/js/lib/'
-          }
+          use: {
+            loader: "eslint-loader",
+            options: {
+              fix: true,
+              cache: true,
+              ignorePattern: __dirname + '/src/js/lib/'
+            }
+          },
         }, {
           test: /\.js$/,
-          loader: 'babel-loader',
+          use: {
+            loader: "babel-loader",
+            options: {
+              presets: ['@babel/preset-env']
+            }
+          },
           exclude: [
             path.resolve(__dirname, 'node_modules'),
           ],
@@ -86,11 +94,6 @@ function createConfig(env) {
       new webpack.LoaderOptionsPlugin({
         minimize: true,
       }),
-      new webpack.optimize.UglifyJsPlugin({
-        compress: {
-          warnings: false,
-        },
-      })
     );
   }
 
