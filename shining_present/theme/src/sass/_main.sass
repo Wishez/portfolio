@@ -111,7 +111,7 @@ main
 			height: calc(100% - 238px)
 
 	&_with-about-section
-		height: calc(100vh - 80px)
+		min-height: calc(100vh - 80px)
 
 		@media (max-height: 750px)
 			height: auto
@@ -186,6 +186,8 @@ main
 	padding: 0 9px
 	margin: 0
 
+	@include breakpoint($xs-up)
+		width: 33%
 
 .currentWork
 	flex-wrap: nowrap $i
