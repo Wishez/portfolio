@@ -1,6 +1,5 @@
 import $ from 'jquery';
 import lozad from 'lozad';
-import moment from 'moment';
 import * as Cookies from 'js-cookie';
 import 'magnific-popup';
 
@@ -13,7 +12,8 @@ const CORKCREW  = (function() {
     color,
     maxWidth
   ) {
-    const $loader =  $(`<svg class=${classLoader} viewBox="0 0 100 100">
+    const $loader =  $(`
+      <svg class=${classLoader} viewBox="0 0 100 100">
          <path fill="${color}" d="M31.6,3.5C5.9,13.6-6.6,42.7,3.5,68.4c10.1,25.7,39.2,38.3,64.9,28.1l-3.1-7.9c-21.3,8.4-45.4-2-53.8-23.3
           c-8.4-21.3,2-45.4,23.3-53.8L31.6,3.5z">
               <animateTransform
@@ -52,7 +52,7 @@ const CORKCREW  = (function() {
     if (maxWidth) $loader.css('maxWidth', maxWidth);
 
     return () => $loader.remove();
-  }; // end showLoading
+  };
 
   that.screwed = (selector, callback, event='click') => $(document).on(event, selector, callback);
 
@@ -115,67 +115,13 @@ const CORKCREW  = (function() {
 
 }(CORKCREW));
 
-(function() {
-  const _apiUrl  = 'https://filipp-zhuravlev.ru/api/v1';
-  const _getArticles = ($articles) => {
-    const url  = _apiUrl + '/article/';
-
-    return fetch(url)
-      .then(data => data.json())
-      .then(articles => {
-        const finalHtml = articles
-          .map(article => (
-            `<li class="article">
-                <h1 class='articlePreview__title'>
-                   <a class='articlePreview' href='/article/${article.slug}/'>${article.title}</a>
-                </h1>
-                <div class='articleMeta'>
-                    <time datetime="${moment(article.created_at).format('YYYY-MM-DD')}">${moment(article.created_at).format('YYYY/MM/DD')}</time>
-                    <p class='articlePreview__paragraph'> ${article.announce_text}</p>
-                </div>
-            </li>`
-          ))
-          .join('');
-
-        $articles.html(finalHtml);
-      })
-      .catch(err => $articles.html(err));
-  };
-
-  const _getArticle = ($article, slug) => {
-    const url  = `${_apiUrl}/article/${slug}/`;
-    return fetch(url)
-      .then(data => data.json())
-      .then(article => {
-        const finalHtml =
-            `<h1 class='articlePreview__title'>
-                ${article.title}
-             </h1>
-            <div class='articleMeta'>
-                    <time datetime="${moment(article.created_at).format('YYYY-MM-DD')}}">${moment(article.created_at).format('YYYY/MM/DD')}</time>
-            </div>
-            <div class='articleText'> ${article.text.replace(new RegExp('<h5', 'g'), '<h2').replace(new RegExp('</h5>', 'g'), '</h2>')}</div>`;
-
-        $article.html(finalHtml);
-      })
-      .catch(err => $article.html(err));
-  };
-
-  $(function() {
-    const $articles = $('#articles');
-    if ($articles.length) _getArticles($articles);
-
-    const articleID = $('#articleID').text();
-    if (articleID) _getArticle($('#article'), articleID);
-  });
-}(CORKCREW));
 
 (function(_) {
   $(function() {
     _.screwed('#connectForm', function(e) {
       e.preventDefault();
 
-      const removeLoader = _.showLoading($('#formWrapper'), 'formLoader', '#8C4B65');      
+      const removeLoader = _.showLoading($('#formWrapper'), 'formLoader', '#8C4B65');
       $(this).hide('fast');
       _sendEmail(removeLoader);
     }, 'submit'); // end submit
