@@ -1,5 +1,6 @@
 var gulp   = require('gulp');
 var config = require('../config.js');
+var imagemin = require('gulp-imagemin')
 
 gulp.task('copy:fonts', function() {
     return gulp
@@ -19,13 +20,18 @@ gulp.task('copy:rootfiles', function() {
         .pipe(gulp.dest(config.dest.root));
 });
 
+const imagePaths = [
+    config.src.img + '/**/*.{jpg,png,jpeg,svg,gif}',
+    '!' + config.src.img + '/svgo/**/*.*',
+]
 gulp.task('copy:img', function() {
-    return gulp
-        .src([
-            config.src.img + '/**/*.{jpg,png,jpeg,svg,gif}',
-            '!' + config.src.img + '/svgo/**/*.*'
-        ])
-        .pipe(gulp.dest(config.dest.img));
+    return config.production ? (
+        gulp.src(imagePaths)
+        .pipe(imagemin())
+        .pipe(gulp.dest(config.dest.img))
+    ) : (
+        gulp.src(imagePaths).pipe(gulp.dest(config.dest.img))
+    )
 });
 
 gulp.task('copy', [

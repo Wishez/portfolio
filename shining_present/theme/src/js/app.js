@@ -206,7 +206,7 @@ const CORKCREW  = (function() {
       .then((text) => {
         $formWrapper.html(text);
       })
-      .catch((error) => {
+      .catch(() => {
         $('#connectForm').show('fast');
         $formWrapper.find('.formLoader').hide('fast');
         removeLoader();
