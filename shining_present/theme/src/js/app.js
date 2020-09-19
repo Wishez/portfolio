@@ -69,10 +69,10 @@ const CORKCREW  = (function() {
     let isSkipButtonFocused = true;
     $out.on('scroll', function() {
       const fromTop = $out.scrollTop();
-      const isUserInMainContent = fromTop > 550;
-      const isHideSkipButton = isUserInMainContent && isSkipButtonFocused;
+      const isUserInMainContent = fromTop > 100;
+      const shouldHideSkipButton = isUserInMainContent && isSkipButtonFocused;
 
-      if (isHideSkipButton) {
+      if (shouldHideSkipButton) {
         $skip.blur();
         isSkipButtonFocused = false;
       } else if (!isUserInMainContent && !isSkipButtonFocused) {
