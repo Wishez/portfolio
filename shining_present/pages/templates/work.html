@@ -18,7 +18,6 @@
 
 </nav>
 <div class="task {% if not page.task %}visible-hidden{% endif %}">
-  <h3 class="task__title font-weight_semi">Задача</h3>
   <div class="task__paragraph">{{ page.task|safe }}</div>
 </div>
 <ul class="presentWork">{% for image in page.album|extract_images %}

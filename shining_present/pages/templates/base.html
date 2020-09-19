@@ -47,8 +47,8 @@
         <ul class="navList parent">
           <li class="navListItem"><a href="{% url 'portfolio' %}" class="navListItem__refer">Портфолио</a></li>
           <li class="navListItem"><a href="{% url 'about' %}" class="navListItem__refer">Обо мне</a></li>
-          <li class="navListItem"><a href="{% url 'connect' %}" class="navListItem__refer">Технологии</a></li>
-          <li class="navListItem"><a href="{% url 'articles' %}" class="navListItem__refer">Статьи</a></li>
+          <li class="navListItem"><a href="{% url 'tools' %}" class="navListItem__refer">Технологии</a></li>
+          <li class="navListItem"><a href="{% url 'connect' %}" class="navListItem__refer">Контакты</a></li>
         </ul>
       </nav>
       <!--END header-->
@@ -100,7 +100,7 @@
 
     </script>
   </body>
-  <link rel="icon" href="{% static 'portfolio/img/favicon.ico' %}">
+  <link rel="icon" href="{% static '/portfolio/img/favicon.ico' %}">
   <script>
     if ('serviceWorker' in navigator)
     {
