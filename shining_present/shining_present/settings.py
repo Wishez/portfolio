@@ -68,7 +68,10 @@ ROOT_URLCONF = 'shining_present.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR, 'pages', 'templates')],
+        'DIRS': [
+            os.path.join(BASE_DIR, 'pages', 'templates'),
+            os.path.join(BASE_DIR, 'theme', 'templates'),
+        ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
