@@ -3,4 +3,15 @@ node_modules
 bower_components
 admin
 grappelli
+__pycache__
+.idea
+debug.log
+admin
+colorfield
+grappelli
+rest_framework
+range_filter
+jet
+jet.dashboard
+db.sqlite3
 *.pyc
