@@ -1,119 +1,14 @@
-{% load static %}
-<!DOCTYPE html>
-<html lang="ru" class="no-js">
+{% load static %}<!DOCTYPE html><html lang="ru" class="no-js"><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=Edge"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#fff"><meta name="format-detection" content="telephone=no"><link rel="dns-prefetch" href="https://shining-present.ru"><link rel="subresource" href="/static/portfolio/css/app.css"><link rel="subresource" href="/static/portfolio/js/app.js"><link rel="prefetch" href="/static/portfolio/css/app.css"><link rel="prefetch" href="/static/portfolio/js/app.js"><link rel="prerender" href="/protfolio"><link rel="prerender" href="/about"><link rel="prerender" href="/technologies"><link rel="prerender" href="/articles"><link rel="preload" href="/static/portfolio/css/app.css" as="style"><link rel="preload" href="/static/portfolio/js/app.js" as="script"><link rel="icon" href="{% static '/portfolio/img/favicon.ico' %}"><link rel="apple-touch-icon" sizes="180x180" href="{% static '/portfolio/img/apple-touch-icon.png' %}"><link rel="icon" type="image/png" sizes="32x32" href="{% static '/portfolio/img/favicon-32x32.png' %}"><link rel="icon" type="image/png" sizes="16x16" href="{% static '/portfolio/img/favicon-16x16.png' %}"><link rel="manifest" href="{% static '/portfolio/img/site.webmanifest' %}"><link rel="mask-icon" href="{% static '/portfolio/img/safari-pinned-tab.svg' %}" color="#515151"><meta name="msapplication-TileColor" content="#da532c"><meta name="theme-color" content="#ffffff">{% if page.page_title %}<title>{{ page.page_title }}</title>{% else %}<title>Page</title>{% endif %} {% if page.meta %}<meta name="description" content="{{ page.meta }}">{% else %}<meta name="description" content="No meta">{% endif %}<link rel="stylesheet" href="{% static 'portfolio/css/app.css' %}" media="all"></head><body><a href="#main" class="skip slideTo">К основному содержимому</a><!--BEGIN out--><div class="out"><header itemscope itemtype="http://schema.org/Person" class="header {% if about_content %}header_with-about-section{% endif %}"><div class="head parent"><a href="{% url 'portfolio' %}" class="brand parent"><div class="brandImage"><figure style="background-image: url('/media/{{ settings.thumb_photo.image }}');" class="brandImage__image"></figure></div><h1 itemprop="name" class="brand__title font-weight_semi">Филипп Журавлёв<p class="brand__text">Разработчик интерфейсов</p></h1></a><div class="contacts contactIcon parent"><a itemprop="email" href="mailto:{{ settings.email }}" class="contacts__contact">💌&nbsp;{{ settings.email }}</a></div></div>{% if about_content %}<div class="aboutMeInHeader container">{{ about_content|safe }}</div>{% endif %}</header><nav class="navigation"><ul class="navList parent"><li class="navListItem"><a href="{% url 'portfolio' %}" class="navListItem__refer">Портфолио</a></li><li class="navListItem"><a href="{% url 'about' %}" class="navListItem__refer">Обо мне</a></li><li class="navListItem"><a href="{% url 'tools' %}" class="navListItem__refer">Технологии</a></li><li class="navListItem"><a href="{% url 'connect' %}" class="navListItem__refer">Контакты</a></li></ul></nav><!--END header--><!--BEGIN main--><main id="main" class="main"><div class="container parent">{% block content %} {% endblock %}</div></main><!--BEGIN footer--><footer itemscale itemtype="http://scheme.com/Person" class="footer"><div class="container"><ul class="footerContacts parent v-centered"><li class="contacts__item"><a href="mailto: {{ settings.email }}" itemprop="email">💌 {{ settings.email }}</a></li><li class="contacts__item contactIcon margin-left_auto"><a class="withoutUnderline" target="_blank" aria-label="Github account" href="https://github.com/Wishez"><svg aria-hidden="true" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 512"><path fill="currentColor" d="M186.1 328.7c0 20.9-10.9 55.1-36.7 55.1s-36.7-34.2-36.7-55.1 10.9-55.1 36.7-55.1 36.7 34.2 36.7 55.1zM480 278.2c0 31.9-3.2 65.7-17.5 95-37.9 76.6-142.1 74.8-216.7 74.8-75.8 0-186.2 2.7-225.6-74.8-14.6-29-20.2-63.1-20.2-95 0-41.9 13.9-81.5 41.5-113.6-5.2-15.8-7.7-32.4-7.7-48.8 0-21.5 4.9-32.3 14.6-51.8 45.3 0 74.3 9 108.8 36 29-6.9 58.8-10 88.7-10 27 0 54.2 2.9 80.4 9.2 34-26.7 63-35.2 107.8-35.2 9.8 19.5 14.6 30.3 14.6 51.8 0 16.4-2.6 32.7-7.7 48.2 27.5 32.4 39 72.3 39 114.2zm-64.3 50.5c0-43.9-26.7-82.6-73.5-82.6-18.9 0-37 3.4-56 6-14.9 2.3-29.8 3.2-45.1 3.2-15.2 0-30.1-.9-45.1-3.2-18.7-2.6-37-6-56-6-46.8 0-73.5 38.7-73.5 82.6 0 87.8 80.4 101.3 150.4 101.3h48.2c70.3 0 150.6-13.4 150.6-101.3zm-82.6-55.1c-25.8 0-36.7 34.2-36.7 55.1s10.9 55.1 36.7 55.1 36.7-34.2 36.7-55.1-10.9-55.1-36.7-55.1z"></path></svg></a></li></ul></div></footer></div><!--END out-->{% block settings.widgets %} {% endblock %}<script src="{% static 'portfolio/js/app.js' %}" async></script><script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="theme-color" content="#fff">
-    <meta name="format-detection" content="telephone=no">
-    <link rel="dns-prefetch" href="https://shining-present.ru">
-    <link rel="subresource" href="/static/portfolio/css/app.css">
-    <link rel="subresource" href="/static/portfolio/js/app.js">
-    <link rel="prefetch" href="/static/portfolio/css/app.css">
-    <link rel="prefetch" href="/static/portfolio/js/app.js">
-    <link rel="prerender" href="/protfolio">
-    <link rel="prerender" href="/about">
-    <link rel="prerender" href="/technologies">
-    <link rel="prerender" href="/articles">
-    <link rel="preload" href="/static/portfolio/css/app.css" as="style">
-    <link rel="preload" href="/static/portfolio/js/app.js" as="script">
-    <link rel="icon" href="{% static '/portfolio/img/favicon.ico' %}">
-    <link rel="apple-touch-icon" sizes="180x180" href="{% static '/portfolio/img/apple-touch-icon.png' %}">
-    <link rel="icon" type="image/png" sizes="32x32" href="{% static '/portfolio/img/favicon-32x32.png' %}">
-    <link rel="icon" type="image/png" sizes="16x16" href="{% static '/portfolio/img/favicon-16x16.png' %}">
-    <link rel="manifest" href="{% static '/portfolio/img/site.webmanifest' %}">
-    <link rel="mask-icon" href="{% static '/portfolio/img/safari-pinned-tab.svg' %}" color="#515151">
-    <meta name="msapplication-TileColor" content="#da532c">
-    <meta name="theme-color" content="#ffffff"> {% if page.page_title %}
-    <title>{{ page.page_title }}</title>{% else %}
-    <title>Page</title>{% endif %} {% if page.meta %}
-    <meta name="description" content="{{ page.meta }}">{% else %}
-    <meta name="description" content="No meta">{% endif %}
-    <link rel="stylesheet" href="{% static 'portfolio/css/app.css' %}" media="all">
-  </head>
-
-  <body><a href="#main" class="skip slideTo">К основному содержимому</a>
-    <!--BEGIN out-->
-    <div class="out">
-      <header itemscope itemtype="http://schema.org/Person" class="header {% if about_content %}header_with-about-section{% endif %}">
-        <div class="head parent">
-          <a href="{% url 'portfolio' %}" class="brand parent">
-            <div class="brandImage">
-              <figure style="background-image: url('/media/{{ settings.thumb_photo.image }}');" class="brandImage__image"></figure>
-            </div>
-            <h1 itemprop="name" class="brand__title font-weight_semi">Филипп Журавлёв
-              <p class="brand__text">Разработчик интерфейсов</p>
-            </h1>
-          </a>
-          <div class="contacts contactIcon parent"><a itemprop="email" href="mailto:{{ settings.email }}" class="contacts__contact">💌&nbsp;{{ settings.email }}</a></div>
-        </div>
-        {% if about_content %}
-        <div class="aboutMeInHeader container">{{ about_content|safe }}</div>{% endif %}</header>
-      <nav class="navigation">
-        <ul class="navList parent">
-          <li class="navListItem"><a href="{% url 'portfolio' %}" class="navListItem__refer">Портфолио</a></li>
-          <li class="navListItem"><a href="{% url 'about' %}" class="navListItem__refer">Обо мне</a></li>
-          <li class="navListItem"><a href="{% url 'tools' %}" class="navListItem__refer">Технологии</a></li>
-          <li class="navListItem"><a href="{% url 'connect' %}" class="navListItem__refer">Контакты</a></li>
-        </ul>
-      </nav>
-      <!--END header-->
-      <!--BEGIN main-->
-      <main id="main" class="main">
-        <div class="container parent">{% block content %} {% endblock %}</div>
-      </main>
-      <!--BEGIN footer-->
-      <footer itemscale itemtype="http://scheme.com/Person" class="footer">
-        <div class="container">
-          <ul class="footerContacts parent v-centered">
-            <li class="contacts__item"><a href="mailto: {{ settings.email }}" itemprop="email">💌 {{ settings.email }}</a></li>
-            <li class="contacts__item contactIcon margin-left_auto"><a class="withoutUnderline" target="_blank" aria-label="Github account" href="https://github.com/Wishez">
-	<svg aria-hidden="true" role="img"
-		xmlns="http://www.w3.org/2000/svg"
-		viewBox="0 0 480 512">
-			<path fill="currentColor" d="M186.1 328.7c0 20.9-10.9 55.1-36.7 55.1s-36.7-34.2-36.7-55.1 10.9-55.1 36.7-55.1 36.7 34.2 36.7 55.1zM480 278.2c0 31.9-3.2 65.7-17.5 95-37.9 76.6-142.1 74.8-216.7 74.8-75.8 0-186.2 2.7-225.6-74.8-14.6-29-20.2-63.1-20.2-95 0-41.9 13.9-81.5 41.5-113.6-5.2-15.8-7.7-32.4-7.7-48.8 0-21.5 4.9-32.3 14.6-51.8 45.3 0 74.3 9 108.8 36 29-6.9 58.8-10 88.7-10 27 0 54.2 2.9 80.4 9.2 34-26.7 63-35.2 107.8-35.2 9.8 19.5 14.6 30.3 14.6 51.8 0 16.4-2.6 32.7-7.7 48.2 27.5 32.4 39 72.3 39 114.2zm-64.3 50.5c0-43.9-26.7-82.6-73.5-82.6-18.9 0-37 3.4-56 6-14.9 2.3-29.8 3.2-45.1 3.2-15.2 0-30.1-.9-45.1-3.2-18.7-2.6-37-6-56-6-46.8 0-73.5 38.7-73.5 82.6 0 87.8 80.4 101.3 150.4 101.3h48.2c70.3 0 150.6-13.4 150.6-101.3zm-82.6-55.1c-25.8 0-36.7 34.2-36.7 55.1s10.9 55.1 36.7 55.1 36.7-34.2 36.7-55.1-10.9-55.1-36.7-55.1z"></path>
-	</svg>
-</a></li>
-          </ul>
-        </div>
-      </footer>
-    </div>
-    <!--END out-->{% block settings.widgets %} {% endblock %}
-    <script src="{% static 'portfolio/js/app.js' %}" async></script>
-    <script>
-      (function(i, s, o, g, r, a, m)
-      {
-        i['GoogleAnalyticsObject'] = r;
-        i[r] = i[r] || function()
-        {
-          (i[r].q = i[r].q || []).push(arguments)
-        }, i[r].l = 1 * new Date();
-        a = s.createElement(o),
-          m = s.getElementsByTagName(o)[0];
-        a.async = 1;
-        a.src = g;
-        m.parentNode.insertBefore(a, m)
-      })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
-      ga('create', 'UA-103835197-1', 'auto');
-      ga('send', 'pageview');
-
-    </script>
-    <script>
-      if ('serviceWorker' in navigator)
-      {
-        navigator.serviceWorker.register("{% static '/portfolio/js/sw.js' %}")
-          .then(function(reg)
-          {
-            console.log(true);
-          }).catch(function(err)
-          {
-            console.log("No it didn't. This happened: ", err)
-          });
-      }
-
-    </script>
-  </body>
-
-</html>
+ga('create', 'UA-103835197-1', 'auto');
+ga('send', 'pageview');</script><script>if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register("{% static '/portfolio/js/sw.js' %}")
+    .then(function(reg){
+        console.log(true);
+    }).catch(function(err) {
+      console.log("No it didn't. This happened: ", err)
+    });
+}</script></body></html>
