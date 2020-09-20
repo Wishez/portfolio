@@ -33,20 +33,12 @@ html.no-js(lang="ru")
       ga('create', 'UA-103835197-1', 'auto');
       ga('send', 'pageview');
 
-  link(
-    rel="icon",
-    href="{% static 'portfolio/img/favicon.ico' %}"
-  )
-  script.
-    if ('serviceWorker' in navigator) {
-      navigator.serviceWorker.register("{% static '/portfolio/js/sw.js' %}")
-        .then(function(reg){
-            console.log(true);
-        }).catch(function(err) {
-          console.log("No it didn't. This happened: ", err)
-        });
-    }
-  <!--[if lt IE 9]>
-  <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js>
-  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js">
-  <![endif]-->
+    script.
+      if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register("{% static '/portfolio/js/sw.js' %}")
+          .then(function(reg){
+              console.log(true);
+          }).catch(function(err) {
+            console.log("No it didn't. This happened: ", err)
+          });
+      }

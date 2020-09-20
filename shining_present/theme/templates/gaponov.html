@@ -1,0 +1,1358 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8">
+    <title>Главная</title>
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width; initial-scale=0">
+    <meta property="og:image:type" content="image/png">
+
+    <link rel="stylesheet" href="/static/gaponov/css/main.css">
+</head>
+
+<body>
+    <div class="mnu__list-toggle">
+        <ul class="mnu__list header__mnu">
+            <li class="mnu__item active">
+                <a href="#tariffs" class="mnu__link">Тарифы</a>
+            </li>
+            <li class="mnu__item">
+                <a href="#" class="mnu__link">Разработки</a>
+            </li>
+            <li class="mnu__item">
+                <a href="#" class="mnu__link">Документация</a>
+            </li>
+            <li class="mnu__item">
+                <a href="#" class="mnu__link">Контакты</a>
+            </li>
+        </ul>
+    </div>
+    <header class="header bluredWithOpenedPopup">
+
+        <div class="container">
+            <div class="row justify-content-between align-items-center">
+
+                <div class="col-auto">
+                    <a href="#" class="header__logo logo">
+                        <img src="/static/gaponov/images/logo.svg" alt="Igaponov">
+                    </a>
+                </div>
+
+                <div class="col-auto">
+                    <div class="mnu">
+                        <button class="mnu__btn hamburger hamburger--collapse">
+                            <span class="hamburger-box">
+                                <span class="hamburger-inner"></span>
+                            </span>
+                        </button>
+
+                        <div class="mnu__list-wrapper">
+                            <ul class="mnu__list header__mnu">
+                                <li class="mnu__item active">
+                                    <a href="#tariffs" class="mnu__link">Тарифы</a>
+                                </li>
+                                <li class="mnu__item">
+                                    <a href="#" class="mnu__link">Разработки</a>
+                                </li>
+                                <li class="mnu__item">
+                                    <a href="#" class="mnu__link">Документация</a>
+                                </li>
+                                <li class="mnu__item">
+                                    <a href="#" class="mnu__link">Контакты</a>
+                                </li>
+                            </ul>
+                        </div>
+
+                    </div>
+                    <!-- /.mnu -->
+                </div>
+
+            </div>
+            <!-- /.row -->
+        </div>
+        <!-- /.container -->
+
+    </header>
+    <main class="wrapper bluredWithOpenedPopup parallax">
+
+        <section class="banner-top">
+            <div class="banner-top__wrapper box">
+                <div class="container">
+                    <div class="row justify-content-between align-items-center">
+
+                        <div class="col-lg-6">
+                            <div class="intro parallax__layer parallax__layer_base">
+                                <p class="intro__subtitle">наше кредо</p>
+                                <h1 class="intro__title section__title--lg">реализуем задуманное</h1>
+                                <p class="intro__text">Вы озвучиваете задачу — мы предлагаем решение </p>
+                                <a href="#tariffs" class="intro__link">смотреть тарифы</a>
+                            </div>
+                            <a href="#form-callback-pup" class="button button-accent button-accent--form d-lg-none d-block popup-with-form">Отправить запрос
+                            </a>
+                        </div>
+
+                        <div class="col-lg-5">
+                            <form class="form form-callback d-lg-block d-none" id="form-callback" name="form-callback" action="#" method="post">
+                                <div class="form__header">
+                                    <h2 class="form__title">Запрос на обработку</h2>
+                                    <p class="form__text">Можете заполнить форму и мы свяжемся с вами</p>
+                                    <div class="form__row">
+                                        <span class="form__success success_send_text"></span>
+                                    </div>
+                                </div>
+
+                                <div class="form__body">
+                                    <div class="form__load"></div>
+                                    <div class="form__content">
+                                        <div class="form__row">
+                                            <label class="form__label">Ваше имя</label>
+                                            <input type="text" class="form__input" name="form_name" required/>
+                                        </div>
+                                        <div class="form__row">
+                                            <label class="form__label">Сайт</label>
+                                            <input type="text" class="form__input" name="form_site" required/>
+                                        </div>
+                                        <div class="form__row">
+                                            <label class="form__label">Комментарий</label>
+                                            <textarea name="form_comment" class="form__input form__textarea"></textarea>
+                                        </div>
+                                        <div class="form__row">
+                                            <button type="submit" class="clickAudio form__btn button button-accent button-accent--form transfusionButton transfusionButton_orange"
+                                            />
+                                            <span>отправить запрос</span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        <!-- /.col-lg-5 -->
+                    </div>
+                    <!-- /.row -->
+                </div>
+                <!-- /.container -->
+                <div class="clock clock_top leftScaleTranslatePseudoElement leftScaleTranslatePseudoElement_left"></div>
+            </div>
+            <!-- /.banner-top__wrapper -->
+        </section>
+
+        <section class="offer" id="offer">
+            <div class="offer__wrapper">
+
+                <div class="container">
+                    <div class="row justify-content-between align-items-center itemsList">
+
+                        <div class="col-lg-3">
+                            <div class="offer__descr">
+                                <h2 class="offer__title section__title--xs">Мы предлагаем</h2>
+                                <p class="offer__text section__text">возможность получения круглосуточной поддержки и комплексного обслуживания вашего магазина
+                                    от команды экспертов Webasyst</p>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-8">
+                            <div class="offer__list">
+                                <div class="offer__item">
+                                    <div class="offer__img itemsList__item itemsList__item_1">
+                                        <img src="/static/gaponov/images/icons/technical_support.svg" alt="Техническая поддержка">
+                                    </div>
+                                    <p class="offer__item-title">Техническая поддержка</p>
+                                </div>
+
+                                <div class="offer__item">
+                                    <div class="offer__img  itemsList__item itemsList__item_2">
+                                        <img src="/static/gaponov/images/icons/information_support.svg" alt="Информационная поддержка">
+                                    </div>
+                                    <p class="offer__item-title">Информационная поддержка</p>
+                                </div>
+
+                                <div class="offer__item">
+                                    <div class="offer__img  itemsList__item itemsList__item_3">
+                                        <img src="/static/gaponov/images/icons/content_manager.svg" alt="Контентная поддержка">
+                                    </div>
+                                    <p class="offer__item-title">Контентная поддержка</p>
+                                </div>
+
+                                <div class="offer__item">
+                                    <div class="offer__img  itemsList__item itemsList__item_4">
+                                        <img src="/static/gaponov/images/icons/individual_work.svg" alt="Индивидуальные работы">
+                                    </div>
+                                    <p class="offer__item-title">Индивидуальные работы</p>
+                                </div>
+
+                                <div class="offer__item">
+                                    <div class="offer__img itemsList__item itemsList__item_5">
+                                        <img src="/static/gaponov/images/icons/modernization.svg" alt="Модернизация и доработка">
+                                    </div>
+                                    <p class="offer__item-title">Модернизация и доработка</p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <!-- /.row -->
+                </div>
+                <!-- /.container -->
+            </div>
+            <!-- /.offer__wrapper -->
+        </section>
+
+        <section class="analysis" id="analysis">
+
+            <div class="analysis__top box">
+                <div class="container">
+                    <div class="row justify-center align-items-center">
+                        <div class="col-lg-8">
+                            <h2 class="analysis__title section__title">анализ сотрудничества</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="analysis__mobile-title">
+                <div class="container">
+                    <div class="row justify-center align-items-center">
+                        <div class="col-lg-12">
+
+                            <h2 class="section__title">анализ сотрудничества</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="analysis__list-wrapper">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-6">
+
+                            <p class="analysis__subtitle analysis__subtitle--blue">работы с несколькими исполнителями</p>
+
+                            <div class="analysis__list analysis__list--minus">
+                                <div class="analysis__item">
+                                    <div class="analysis__item-ico">
+                                        <svg class="analysis__icon" aria-hidden="true" role="img" viewBox="0 0 280.17 280.17">
+                                            <use xlink:href="#minusIcon"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="analysis__item-info">
+                                        <p class="analysis__item-title">Поиск исполнителей под различные задачи</p>
+                                        <p class="analysis__item-text">Приходится тратить время на обсуждение задач и оъеснения спицифики работы каждому
+                                            исполнителю.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="analysis__item">
+                                    <div class="analysis__item-ico">
+                                        <svg class="analysis__icon" aria-hidden="true" role="img" viewBox="0 0 280.17 280.17">
+                                            <use xlink:href="#minusIcon"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="analysis__item-info">
+                                        <p class="analysis__item-title">Отсутствие истории сайта</p>
+                                        <p class="analysis__item-text">У экпертов нет понимания о всех изменениях вносимых в коде сайта, в результате которых
+                                            может возникнуть дублирование кода пониажющая скорость загрузки страницы сайта
+                                            и понижение в ранжировании. </p>
+                                    </div>
+                                </div>
+                                <div class="analysis__item">
+                                    <div class="analysis__item-ico">
+                                        <svg class="analysis__icon" aria-hidden="true" role="img" viewBox="0 0 280.17 280.17">
+                                            <use xlink:href="#minusIcon"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="analysis__item-info">
+                                        <p class="analysis__item-title">Увеличенные сроков выполнения задач</p>
+                                        <p class="analysis__item-text">Отсутсвие возможности работать над несколькими задачами, а также ожидание очереди
+                                            у одного исполненителя дольше за счет живой очереди.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="analysis__item">
+                                    <div class="analysis__item-ico">
+                                        <svg class="analysis__icon" aria-hidden="true" role="img" viewBox="0 0 280.17 280.17">
+                                            <use xlink:href="#minusIcon"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="analysis__item-info">
+                                        <p class="analysis__item-title">Консультация по конкретной разработке</p>
+                                        работы проекта и его конверсионности. </p>
+                                        <p class="analysis__item-text">Консультация экспертов происходит в рамках своих продуктов, без понимания специфики
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- /.analysis__list -->
+
+                        </div>
+                        <!-- /.col-md-6 -->
+
+                        <div class="col-md-6">
+
+                            <p class="analysis__subtitle analysis__subtitle--orange">работа с нами при комплексной поддержке
+                            </p>
+
+                            <div class="analysis__list analysis__list--plus">
+                                <div class="analysis__item">
+                                    <div class="analysis__item-ico">
+                                        <svg class="analysis__icon" aria-hidden="true" role="img" viewBox="0 0 280.17 280.17">
+                                            <use xlink:href="#plusIcon"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="analysis__item-info">
+                                        <p class="analysis__item-title">Все ваши вопросы озвучиваются менеджеру</p>
+                                        <p class="analysis__item-text">Специфика описавыется один раз в карточке клиента. В дальнейшем Вам достаточно описать
+                                            задачу и мы определим какой специалист должен его реализовать. </p>
+                                    </div>
+                                </div>
+                                <div class="analysis__item">
+                                    <div class="analysis__item-ico">
+                                        <svg class="analysis__icon" aria-hidden="true" role="img" viewBox="0 0 280.17 280.17">
+                                            <use xlink:href="#plusIcon"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="analysis__item-info">
+                                        <p class="analysis__item-title">Ведение "медицинской карты" сайта</p>
+                                        <p class="analysis__item-text">Вся история внесенных изменений харнится в нашей базе. Каждый специалист выстраивает
+                                            свою работу учитывая их. </p>
+                                    </div>
+                                </div>
+                                <div class="analysis__item">
+                                    <div class="analysis__item-ico">
+                                        <svg class="analysis__icon" aria-hidden="true" role="img" viewBox="0 0 280.17 280.17">
+                                            <use xlink:href="#plusIcon"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="analysis__item-info">
+                                        <p class="analysis__item-title">Сжатые сроки за счет команданой работы</p>
+                                        <p class="analysis__item-text">Объеденине специалистов в команду дает возможность работать одновременно над несколькоми
+                                            задачами и оперативно делегировать задачи между специалистами.</p>
+                                    </div>
+                                </div>
+                                <div class="analysis__item">
+                                    <div class="analysis__item-ico">
+                                        <svg class="analysis__icon" aria-hidden="true" role="img" viewBox="0 0 280.17 280.17">
+                                            <use xlink:href="#plusIcon"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="analysis__item-info">
+                                        <p class="analysis__item-title">Увлечение конверсионности сайта</p>
+                                        <p class="analysis__item-text">Консультация происходит в рамках всего проекта и ориентирована на повышение конверсии
+                                            сайта, а не конкретного продукта.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- /.analysis__list -->
+                        </div>
+                        <!-- /.col-md-6 -->
+
+                    </div>
+                    <!-- /.row -->
+                </div>
+                <!-- /.container -->
+
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-md-12 justify-content-center">
+                            <a href="#form-callback-pup" class="popupAudio analysis__btn button button-accent popup-with-form transfusionButton transfusionButton_orange">
+                                <span> мне нужна комплексная поддержка сайта</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- /.analysis__list -->
+
+        </section>
+
+        <section class="staff" id="staff">
+            <div class="staff__wrapper itemsList">
+
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h2 class="staff__title section__title--xs">Комплексная поддержка сайта позволит Вам иметь в штате
+                            </h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="staff__list">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-2 col-sm-4 col-6">
+                                <div class="staff__item">
+                                    <div class="staff__item-ico itemsList__item itemsList__item_1">
+                                        <img src="/static/gaponov/images/icons/project_manager.svg" alt="менеджер проекта">
+                                    </div>
+                                    <p class="staff__item-text">Менеджера проекта</p>
+                                </div>
+                            </div>
+                            <div class="col-lg-2 col-sm-4 col-6">
+                                <div class="staff__item">
+                                    <div class="staff__item-ico itemsList__item itemsList__item_2">
+                                        <img src="/static/gaponov/images/icons/programmer.svg" alt="программист">
+                                    </div>
+                                    <p class="staff__item-text">Программиста</p>
+                                </div>
+                            </div>
+                            <div class="col-lg-2 col-sm-4 col-6">
+                                <div class="staff__item">
+                                    <div class="staff__item-ico  itemsList__item itemsList__item_3">
+                                        <img src="/static/gaponov/images/icons/copywriter.svg" alt="копирайтер">
+                                    </div>
+                                    <p class="staff__item-text">Копирайтера</p>
+                                </div>
+                            </div>
+                            <div class="col-lg-2 col-sm-4 col-6">
+                                <div class="staff__item">
+                                    <div class="staff__item-ico itemsList__item itemsList__item_4">
+                                        <img src="/static/gaponov/images/icons/content_manager.svg" alt="контент-менеджер">
+                                    </div>
+                                    <p class="staff__item-text">Контент-менеджера</p>
+                                </div>
+                            </div>
+                            <div class="col-lg-2 col-sm-4 col-6">
+                                <div class="staff__item">
+                                    <div class="staff__item-ico itemsList__item itemsList__item_5">
+                                        <img src="/static/gaponov/images/icons/frontender.svg" alt="верстальщик">
+                                    </div>
+                                    <p class="staff__item-text">Верстальщика</p>
+                                </div>
+                            </div>
+                            <div class="col-lg-2 col-sm-4 col-6">
+                                <div class="staff__item">
+                                    <div class="staff__item-ico  itemsList__item itemsList__item_6">
+                                        <img src="/static/gaponov/images/icons/designer.svg" alt="дизайнер">
+                                    </div>
+                                    <p class="staff__item-text">Дизайнера</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- /.row -->
+                    </div>
+                    <!-- /.container -->
+                </div>
+                <!-- /.staff__list -->
+            </div>
+            <!-- /.staff__wrapper -->
+        </section>
+
+        <section class="our-tariffs" id="tariffs">
+            <div class="our-tariffs__top">
+
+                <div id="parallaxScreen" class="our-tariffs__img">
+                    <img data-depth="0.5" class="" src="/static/gaponov/images/computer.png" alt="Наши тарифы">
+
+                    <div id="parallaxText" class="our-tariffs__title-wrapper">
+                        <div class="container" data-depth="0.2">
+                            <div class="row justify-center align-items-center">
+                                <div class="col-md-6 col-sm-8">
+
+                                    <div class="our-tariffs__title">
+                                        <h2 class="section__title">Наши тарифы</h2>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+            <!-- /.our-tariffs__top -->
+
+            <div class="our-tariffs__section">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md">
+                            <div class="our-tariffs__table">
+                                <div class="our-tariffs__row">
+
+                                    <div class="our-tariffs__row-left cells_indicator">
+                                        <div class="our-tariffs__line"></div>
+                                        <div class="our-tariffs__possibility">Срок реакции на заявку</div>
+                                    </div>
+
+                                    <div class="our-tariffs__row-right">
+                                        <div class="our-tariffs__type visible">
+                                            <div class="our-tariffs__type-item tariff-type tariff-type--green table__heading" data-cell-index="1">стандарт
+                                            </div>
+                                            <div class="our-tariffs__type-item tariff-type tariff-type--purpure table__heading" data-cell-index="2">эконом
+                                            </div>
+                                            <div class="our-tariffs__type-item tariff-type tariff-type--orange table__heading" data-cell-index="3">старт</div>
+                                            <div class="our-tariffs__type-item tariff-type tariff-type--blue table__heading" data-cell-index="4">премиум</div>
+                                            <div class="our-tariffs__type-item tariff-type tariff-type--crimson table__heading" data-cell-index="5">vip</div>
+                                        </div>
+                                        <div class="our-tariffs__possibility-label">
+                                            <div class="our-tariffs__possibility-item" data-cell-index="1">24 часа</div>
+                                            <div class="our-tariffs__possibility-item" data-cell-index="2">8 часов</div>
+                                            <div class="our-tariffs__possibility-item" data-cell-index="3">4 часа</div>
+                                            <div class="our-tariffs__possibility-item" data-cell-index="4">2 часа</div>
+                                            <div class="our-tariffs__possibility-item" data-cell-index="5">1 час</div>
+
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <!-- /.our-tariffs__row -->
+
+                                <div class="our-tariffs__row">
+
+                                    <div class="our-tariffs__row-left cells_indicator">
+                                        <div class="our-tariffs__possibility">Количество вклөченных часов</div>
+                                    </div>
+
+                                    <div class="our-tariffs__row-right">
+                                        <div class="our-tariffs__type">
+                                            <div class="our-tariffs__type-item tariff-type tariff-type--green" data-cell-index="1">стандарт</div>
+                                            <div class="our-tariffs__type-item tariff-type tariff-type--purpure" data-cell-index="2">эконом</div>
+                                            <div class="our-tariffs__type-item tariff-type tariff-type--orange" data-cell-index="3">старт</div>
+                                            <div class="our-tariffs__type-item tariff-type tariff-type--blue" data-cell-index="4">премиум</div>
+                                            <div class="our-tariffs__type-item tariff-type tariff-type--crimson" data-cell-index="5">vip</div>
+                                        </div>
+                                        <div class="our-tariffs__possibility-label">
+                                            <div class="our-tariffs__possibility-item" data-cell-index="1">-</div>
+                                            <div class="our-tariffs__possibility-item" data-cell-index="2">5 часов</div>
+                                            <div class="our-tariffs__possibility-item" data-cell-index="3">10 часов</div>
+                                            <div class="our-tariffs__possibility-item" data-cell-index="4">25 часов</div>
+                                            <div class="our-tariffs__possibility-item" data-cell-index="5">36 часов</div>
+
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <!-- /.our-tariffs__row -->
+
+                                <div class="our-tariffs__row">
+
+                                    <div class="our-tariffs__row-left cells_indicator">
+                                        <div class="our-tariffs__possibility">Консультация через whatsapp или skype</div>
+                                    </div>
+
+                                    <div class="our-tariffs__row-right">
+                                        <div class="our-tariffs__type">
+                                            <div class="our-tariffs__type-item tariff-type tariff-type--green" data-cell-index="1">стандарт</div>
+                                            <div class="our-tariffs__type-item tariff-type tariff-type--purpure" data-cell-index="2">эконом</div>
+                                            <div class="our-tariffs__type-item tariff-type tariff-type--orange" data-cell-index="3">старт</div>
+                                            <div class="our-tariffs__type-item tariff-type tariff-type--blue" data-cell-index="4">премиум</div>
+                                            <div class="our-tariffs__type-item tariff-type tariff-type--crimson" data-cell-index="5">vip</div>
+                                        </div>
+                                        <div class="our-tariffs__possibility-label">
+                                            <div class="our-tariffs__possibility-item" data-cell-index="1">-</div>
+                                            <div class="our-tariffs__possibility-item" data-cell-index="2">-</div>
+                                            <div class="our-tariffs__possibility-item" data-cell-index="3">+</div>
+                                            <div class="our-tariffs__possibility-item" data-cell-index="4">+</div>
+                                            <div class="our-tariffs__possibility-item" data-cell-index="5">+</div>
+
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <!-- /.our-tariffs__row -->
+
+                                <h2 class="our-tariffs__subtitle">Поддержка плагинов собственной разработки:</h2>
+
+                                <div class="our-tariffs__row">
+
+                                    <div class="our-tariffs__row-left cells_indicator">
+                                        <div class="our-tariffs__possibility">Помощь в стандартной настройке по опубликованным инструкциям
+                                        </div>
+                                    </div>
+
+                                    <div class="our-tariffs__row-right">
+                                        <div class="our-tariffs__type">
+                                            <div class="our-tariffs__type-item tariff-type tariff-type--green" data-cell-index="1">стандарт</div>
+                                            <div class="our-tariffs__type-item tariff-type tariff-type--purpure" data-cell-index="2">эконом</div>
+                                            <div class="our-tariffs__type-item tariff-type tariff-type--orange" data-cell-index="3">старт</div>
+                                            <div class="our-tariffs__type-item tariff-type tariff-type--blue" data-cell-index="4">премиум</div>
+                                            <div class="our-tariffs__type-item tariff-type tariff-type--crimson" data-cell-index="5">vip</div>
+                                        </div>
+                                        <div class="our-tariffs__possibility-label">
+                                            <div class="our-tariffs__possibility-item" data-cell-index="1">+</div>
+                                            <div class="our-tariffs__possibility-item" data-cell-index="2">+</div>
+                                            <div class="our-tariffs__possibility-item" data-cell-index="3">+</div>
+                                            <div class="our-tariffs__possibility-item" data-cell-index="4">+</div>
+                                            <div class="our-tariffs__possibility-item" data-cell-index="5">+</div>
+
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <!-- /.our-tariffs__row -->
+
+                                <div class="our-tariffs__row">
+
+                                    <div class="our-tariffs__row-left cells_indicator">
+                                        <div class="our-tariffs__possibility">Изменение местоположения продукта в теме дизайна (ручной вывод)
+                                        </div>
+                                    </div>
+
+                                    <div class="our-tariffs__row-right">
+                                        <div class="our-tariffs__type">
+                                            <div class="our-tariffs__type-item tariff-type tariff-type--green" data-cell-index="1">стандарт</div>
+                                            <div class="our-tariffs__type-item tariff-type tariff-type--purpure" data-cell-index="2">эконом</div>
+                                            <div class="our-tariffs__type-item tariff-type tariff-type--orange" data-cell-index="3">старт</div>
+                                            <div class="our-tariffs__type-item tariff-type tariff-type--blue" data-cell-index="4">премиум</div>
+                                            <div class="our-tariffs__type-item tariff-type tariff-type--crimson" data-cell-index="5">vip</div>
+                                        </div>
+                                        <div class="our-tariffs__possibility-label">
+                                            <div class="our-tariffs__possibility-item" data-cell-index="1">+</div>
+                                            <div class="our-tariffs__possibility-item" data-cell-index="2">+</div>
+                                            <div class="our-tariffs__possibility-item" data-cell-index="3">+</div>
+                                            <div class="our-tariffs__possibility-item" data-cell-index="4">+</div>
+                                            <div class="our-tariffs__possibility-item" data-cell-index="5">+</div>
+
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <!-- /.our-tariffs__row -->
+
+                                <div class="our-tariffs__row">
+
+                                    <div class="our-tariffs__row-left cells_indicator">
+                                        <div class="our-tariffs__possibility">Изменение внешнего вида в теме дизайна</div>
+                                    </div>
+
+                                    <div class="our-tariffs__row-right">
+                                        <div class="our-tariffs__type">
+                                            <div class="our-tariffs__type-item tariff-type tariff-type--green" data-cell-index="1">стандарт</div>
+                                            <div class="our-tariffs__type-item tariff-type tariff-type--purpure" data-cell-index="2">эконом</div>
+                                            <div class="our-tariffs__type-item tariff-type tariff-type--orange" data-cell-index="3">старт</div>
+                                            <div class="our-tariffs__type-item tariff-type tariff-type--blue" data-cell-index="4">премиум</div>
+                                            <div class="our-tariffs__type-item tariff-type tariff-type--crimson" data-cell-index="5">vip</div>
+                                        </div>
+                                        <div class="our-tariffs__possibility-label">
+                                            <div class="our-tariffs__possibility-item" data-cell-index="1">+</div>
+                                            <div class="our-tariffs__possibility-item" data-cell-index="2">+</div>
+                                            <div class="our-tariffs__possibility-item" data-cell-index="3">+</div>
+                                            <div class="our-tariffs__possibility-item" data-cell-index="4">+</div>
+                                            <div class="our-tariffs__possibility-item" data-cell-index="5">+</div>
+
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <!-- /.our-tariffs__row -->
+
+                                <h2 class="our-tariffs__subtitle">Поддержка сайта:</h2>
+
+                                <div class="our-tariffs__row">
+
+                                    <div class="our-tariffs__row-left cells_indicator">
+                                        <div class="our-tariffs__possibility">Первичный технический аудит сайта</div>
+                                    </div>
+
+                                    <div class="our-tariffs__row-right">
+                                        <div class="our-tariffs__type">
+                                            <div class="our-tariffs__type-item tariff-type tariff-type--green" data-cell-index="1">стандарт</div>
+                                            <div class="our-tariffs__type-item tariff-type tariff-type--purpure" data-cell-index="2">эконом</div>
+                                            <div class="our-tariffs__type-item tariff-type tariff-type--orange" data-cell-index="3">старт</div>
+                                            <div class="our-tariffs__type-item tariff-type tariff-type--blue" data-cell-index="4">премиум</div>
+                                            <div class="our-tariffs__type-item tariff-type tariff-type--crimson" data-cell-index="5">vip</div>
+                                        </div>
+                                        <div class="our-tariffs__possibility-label">
+                                            <div class="our-tariffs__possibility-item" data-cell-index="1">-</div>
+                                            <div class="our-tariffs__possibility-item" data-cell-index="2">-</div>
+                                            <div class="our-tariffs__possibility-item" data-cell-index="3">+</div>
+                                            <div class="our-tariffs__possibility-item" data-cell-index="4">+</div>
+                                            <div class="our-tariffs__possibility-item" data-cell-index="5">+</div>
+
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <!-- /.our-tariffs__row -->
+
+                                <div class="our-tariffs__row">
+
+                                    <div class="our-tariffs__row-left cells_indicator">
+                                        <div class="our-tariffs__possibility">Первичный seo аудит сайта</div>
+                                    </div>
+
+                                    <div class="our-tariffs__row-right">
+                                        <div class="our-tariffs__type">
+                                            <div class="our-tariffs__type-item tariff-type tariff-type--green" data-cell-index="1">стандарт</div>
+                                            <div class="our-tariffs__type-item tariff-type tariff-type--purpure" data-cell-index="2">эконом</div>
+                                            <div class="our-tariffs__type-item tariff-type tariff-type--orange" data-cell-index="3">старт</div>
+                                            <div class="our-tariffs__type-item tariff-type tariff-type--blue" data-cell-index="4">премиум</div>
+                                            <div class="our-tariffs__type-item tariff-type tariff-type--crimson" data-cell-index="5">vip</div>
+                                        </div>
+                                        <div class="our-tariffs__possibility-label">
+                                            <div class="our-tariffs__possibility-item" data-cell-index="1">-</div>
+                                            <div class="our-tariffs__possibility-item" data-cell-index="2">-</div>
+                                            <div class="our-tariffs__possibility-item" data-cell-index="3">+</div>
+                                            <div class="our-tariffs__possibility-item" data-cell-index="4">+</div>
+                                            <div class="our-tariffs__possibility-item" data-cell-index="5">+</div>
+
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <!-- /.our-tariffs__row -->
+
+                                <div class="our-tariffs__row">
+
+                                    <div class="our-tariffs__row-left cells_indicator">
+                                        <div class="our-tariffs__possibility">Настройка почтового сервиса для домена</div>
+                                    </div>
+
+                                    <div class="our-tariffs__row-right">
+                                        <div class="our-tariffs__type">
+                                            <div class="our-tariffs__type-item tariff-type tariff-type--green" data-cell-index="1">стандарт</div>
+                                            <div class="our-tariffs__type-item tariff-type tariff-type--purpure" data-cell-index="2">эконом</div>
+                                            <div class="our-tariffs__type-item tariff-type tariff-type--orange" data-cell-index="3">старт</div>
+                                            <div class="our-tariffs__type-item tariff-type tariff-type--blue" data-cell-index="4">премиум</div>
+                                            <div class="our-tariffs__type-item tariff-type tariff-type--crimson" data-cell-index="5">vip</div>
+                                        </div>
+                                        <div class="our-tariffs__possibility-label">
+                                            <div class="our-tariffs__possibility-item" data-cell-index="1">-</div>
+                                            <div class="our-tariffs__possibility-item" data-cell-index="2">+</div>
+                                            <div class="our-tariffs__possibility-item" data-cell-index="3">+</div>
+                                            <div class="our-tariffs__possibility-item" data-cell-index="4">+</div>
+                                            <div class="our-tariffs__possibility-item" data-cell-index="5">+</div>
+
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <!-- /.our-tariffs__row -->
+
+                                <div class="our-tariffs__row">
+
+                                    <div class="our-tariffs__row-left cells_indicator">
+                                        <div class="our-tariffs__possibility">Установка и настройка счетчиков ЯндексМетрики и Гугл Аналитикс (до 5 целей)
+                                        </div>
+                                    </div>
+
+                                    <div class="our-tariffs__row-right">
+                                        <div class="our-tariffs__type">
+                                            <div class="our-tariffs__type-item tariff-type tariff-type--green" data-cell-index="1">стандарт</div>
+                                            <div class="our-tariffs__type-item tariff-type tariff-type--purpure" data-cell-index="2">эконом</div>
+                                            <div class="our-tariffs__type-item tariff-type tariff-type--orange" data-cell-index="3">старт</div>
+                                            <div class="our-tariffs__type-item tariff-type tariff-type--blue" data-cell-index="4">премиум</div>
+                                            <div class="our-tariffs__type-item tariff-type tariff-type--crimson" data-cell-index="5">vip</div>
+                                        </div>
+                                        <div class="our-tariffs__possibility-label">
+                                            <div class="our-tariffs__possibility-item" data-cell-index="1">-</div>
+                                            <div class="our-tariffs__possibility-item" data-cell-index="2">-</div>
+                                            <div class="our-tariffs__possibility-item" data-cell-index="3">+</div>
+                                            <div class="our-tariffs__possibility-item" data-cell-index="4">+</div>
+                                            <div class="our-tariffs__possibility-item" data-cell-index="5">+</div>
+
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <!-- /.our-tariffs__row -->
+
+                                <div class="our-tariffs__row">
+
+                                    <div class="our-tariffs__row-left cells_indicator">
+                                        <div class="our-tariffs__possibility">Мониторинг наличия и удаление вредоносного кода
+                                        </div>
+                                    </div>
+
+                                    <div class="our-tariffs__row-right">
+                                        <div class="our-tariffs__type">
+                                            <div class="our-tariffs__type-item tariff-type tariff-type--green" data-cell-index="1">стандарт</div>
+                                            <div class="our-tariffs__type-item tariff-type tariff-type--purpure" data-cell-index="2">эконом</div>
+                                            <div class="our-tariffs__type-item tariff-type tariff-type--orange" data-cell-index="3">старт</div>
+                                            <div class="our-tariffs__type-item tariff-type tariff-type--blue" data-cell-index="4">премиум</div>
+                                            <div class="our-tariffs__type-item tariff-type tariff-type--crimson" data-cell-index="5">vip</div>
+                                        </div>
+                                        <div class="our-tariffs__possibility-label">
+                                            <div class="our-tariffs__possibility-item" data-cell-index="1">-</div>
+                                            <div class="our-tariffs__possibility-item" data-cell-index="2">-</div>
+                                            <div class="our-tariffs__possibility-item" data-cell-index="3">+</div>
+                                            <div class="our-tariffs__possibility-item" data-cell-index="4">+</div>
+                                            <div class="our-tariffs__possibility-item" data-cell-index="5">+</div>
+
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <!-- /.our-tariffs__row -->
+
+                                <h2 class="our-tariffs__subtitle">Поддержка плагинов сторонних разработчиков (в рамках включенных часов):</h2>
+
+                                <div class="our-tariffs__row">
+
+                                    <div class="our-tariffs__row-left cells_indicator">
+                                        <div class="our-tariffs__possibility">Помощь в стандартной настройке по опубликованным инструкциям
+                                        </div>
+                                    </div>
+
+                                    <div class="our-tariffs__row-right">
+                                        <div class="our-tariffs__type">
+                                            <div class="our-tariffs__type-item tariff-type tariff-type--green" data-cell-index="1">стандарт</div>
+                                            <div class="our-tariffs__type-item tariff-type tariff-type--purpure" data-cell-index="2">эконом</div>
+                                            <div class="our-tariffs__type-item tariff-type tariff-type--orange" data-cell-index="3">старт</div>
+                                            <div class="our-tariffs__type-item tariff-type tariff-type--blue" data-cell-index="4">премиум</div>
+                                            <div class="our-tariffs__type-item tariff-type tariff-type--crimson" data-cell-index="5">vip</div>
+                                        </div>
+                                        <div class="our-tariffs__possibility-label">
+                                            <div class="our-tariffs__possibility-item" data-cell-index="1">-</div>
+                                            <div class="our-tariffs__possibility-item" data-cell-index="2">+</div>
+                                            <div class="our-tariffs__possibility-item" data-cell-index="3">+</div>
+                                            <div class="our-tariffs__possibility-item" data-cell-index="4">+</div>
+                                            <div class="our-tariffs__possibility-item" data-cell-index="5">+</div>
+
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <!-- /.our-tariffs__row -->
+
+                                <div class="our-tariffs__row">
+
+                                    <div class="our-tariffs__row-left cells_indicator">
+                                        <div class="our-tariffs__possibility">Изменение местоположения продукта в теме дизайна (ручной вывод)
+                                        </div>
+                                    </div>
+
+                                    <div class="our-tariffs__row-right">
+                                        <div class="our-tariffs__type">
+                                            <div class="our-tariffs__type-item tariff-type tariff-type--green" data-cell-index="1">стандарт</div>
+                                            <div class="our-tariffs__type-item tariff-type tariff-type--purpure" data-cell-index="2">эконом</div>
+                                            <div class="our-tariffs__type-item tariff-type tariff-type--orange" data-cell-index="3">старт</div>
+                                            <div class="our-tariffs__type-item tariff-type tariff-type--blue" data-cell-index="4">премиум</div>
+                                            <div class="our-tariffs__type-item tariff-type tariff-type--crimson" data-cell-index="5">vip</div>
+                                        </div>
+                                        <div class="our-tariffs__possibility-label">
+                                            <div class="our-tariffs__possibility-item" data-cell-index="1">-</div>
+                                            <div class="our-tariffs__possibility-item" data-cell-index="2">-</div>
+                                            <div class="our-tariffs__possibility-item" data-cell-index="3">+</div>
+                                            <div class="our-tariffs__possibility-item" data-cell-index="4">+</div>
+                                            <div class="our-tariffs__possibility-item" data-cell-index="5">+</div>
+
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <!-- /.our-tariffs__row -->
+
+                                <div class="our-tariffs__row">
+
+                                    <div class="our-tariffs__row-left cells_indicator">
+                                        <div class="our-tariffs__possibility">Изменение внешнего вида в теме дизайна</div>
+                                    </div>
+
+                                    <div class="our-tariffs__row-right">
+                                        <div class="our-tariffs__type">
+                                            <div class="our-tariffs__type-item tariff-type tariff-type--green" data-cell-index="1">стандарт</div>
+                                            <div class="our-tariffs__type-item tariff-type tariff-type--purpure" data-cell-index="2">эконом</div>
+                                            <div class="our-tariffs__type-item tariff-type tariff-type--orange" data-cell-index="3">старт</div>
+                                            <div class="our-tariffs__type-item tariff-type tariff-type--blue" data-cell-index="4">премиум</div>
+                                            <div class="our-tariffs__type-item tariff-type tariff-type--crimson" data-cell-index="5">vip</div>
+                                        </div>
+                                        <div class="our-tariffs__possibility-label">
+                                            <div class="our-tariffs__possibility-item" data-cell-index="1">-</div>
+                                            <div class="our-tariffs__possibility-item" data-cell-index="2">-</div>
+                                            <div class="our-tariffs__possibility-item" data-cell-index="3">-</div>
+                                            <div class="our-tariffs__possibility-item" data-cell-index="4">+</div>
+                                            <div class="our-tariffs__possibility-item" data-cell-index="5">+</div>
+
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <!-- /.our-tariffs__row -->
+
+                                <h2 class="our-tariffs__subtitle">Информационная поддержка (в рамках включенных часов):</h2>
+
+                                <div class="our-tariffs__row">
+
+                                    <div class="our-tariffs__row-left cells_indicator">
+                                        <div class="our-tariffs__possibility">Изменение опубликованной информации</div>
+                                    </div>
+
+                                    <div class="our-tariffs__row-right">
+                                        <div class="our-tariffs__type">
+                                            <div class="our-tariffs__type-item tariff-type tariff-type--green" data-cell-index="1">стандарт</div>
+                                            <div class="our-tariffs__type-item tariff-type tariff-type--purpure" data-cell-index="2">эконом</div>
+                                            <div class="our-tariffs__type-item tariff-type tariff-type--orange" data-cell-index="3">старт</div>
+                                            <div class="our-tariffs__type-item tariff-type tariff-type--blue" data-cell-index="4">премиум</div>
+                                            <div class="our-tariffs__type-item tariff-type tariff-type--crimson" data-cell-index="5">vip</div>
+                                        </div>
+                                        <div class="our-tariffs__possibility-label">
+                                            <div class="our-tariffs__possibility-item" data-cell-index="1">-</div>
+                                            <div class="our-tariffs__possibility-item" data-cell-index="2">+</div>
+                                            <div class="our-tariffs__possibility-item" data-cell-index="3">+</div>
+                                            <div class="our-tariffs__possibility-item" data-cell-index="4">+</div>
+                                            <div class="our-tariffs__possibility-item" data-cell-index="5">+</div>
+
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <!-- /.our-tariffs__row -->
+
+                                <div class="our-tariffs__row">
+
+                                    <div class="our-tariffs__row-left cells_indicator">
+                                        <div class="our-tariffs__possibility">Публикация информации на сайт</div>
+                                    </div>
+
+                                    <div class="our-tariffs__row-right">
+                                        <div class="our-tariffs__type">
+                                            <div class="our-tariffs__type-item tariff-type tariff-type--green" data-cell-index="1">стандарт</div>
+                                            <div class="our-tariffs__type-item tariff-type tariff-type--purpure" data-cell-index="2">эконом</div>
+                                            <div class="our-tariffs__type-item tariff-type tariff-type--orange" data-cell-index="3">старт</div>
+                                            <div class="our-tariffs__type-item tariff-type tariff-type--blue" data-cell-index="4">премиум</div>
+                                            <div class="our-tariffs__type-item tariff-type tariff-type--crimson" data-cell-index="5">vip</div>
+                                        </div>
+                                        <div class="our-tariffs__possibility-label">
+                                            <div class="our-tariffs__possibility-item" data-cell-index="1">-</div>
+                                            <div class="our-tariffs__possibility-item" data-cell-index="2">-</div>
+                                            <div class="our-tariffs__possibility-item" data-cell-index="3">+</div>
+                                            <div class="our-tariffs__possibility-item" data-cell-index="4">+</div>
+                                            <div class="our-tariffs__possibility-item" data-cell-index="5">+</div>
+
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <!-- /.our-tariffs__row -->
+
+                                <div class="our-tariffs__row">
+
+                                    <div class="our-tariffs__row-left cells_indicator">
+                                        <div class="our-tariffs__possibility">Изменение графических элементов в теме дизайна
+                                        </div>
+                                    </div>
+
+                                    <div class="our-tariffs__row-right">
+                                        <div class="our-tariffs__type">
+                                            <div class="our-tariffs__type-item tariff-type tariff-type--green" data-cell-index="1">стандарт</div>
+                                            <div class="our-tariffs__type-item tariff-type tariff-type--purpure" data-cell-index="2">эконом</div>
+                                            <div class="our-tariffs__type-item tariff-type tariff-type--orange" data-cell-index="3">старт</div>
+                                            <div class="our-tariffs__type-item tariff-type tariff-type--blue" data-cell-index="4">премиум</div>
+                                            <div class="our-tariffs__type-item tariff-type tariff-type--crimson" data-cell-index="5">vip</div>
+                                        </div>
+                                        <div class="our-tariffs__possibility-label">
+                                            <div class="our-tariffs__possibility-item" data-cell-index="1">-</div>
+                                            <div class="our-tariffs__possibility-item" data-cell-index="2">-</div>
+                                            <div class="our-tariffs__possibility-item" data-cell-index="3">-</div>
+                                            <div class="our-tariffs__possibility-item" data-cell-index="4">+</div>
+                                            <div class="our-tariffs__possibility-item" data-cell-index="5">+</div>
+
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <!-- /.our-tariffs__row -->
+
+                                <div class="our-tariffs__row our-tariffs__row--price">
+
+                                    <div class="our-tariffs__row-left cells_indicator">
+                                        <div class="our-tariffs__line our-tariffs__line-bottom"></div>
+                                    </div>
+
+                                    <div class="our-tariffs__row-right">
+                                        <div class="our-tariffs__type">
+                                            <div class="our-tariffs__type-item tariff-type tariff-type--green" data-cell-index="1">стандарт</div>
+                                            <div class="our-tariffs__type-item tariff-type tariff-type--purpure" data-cell-index="2">эконом</div>
+                                            <div class="our-tariffs__type-item tariff-type tariff-type--orange" data-cell-index="3">старт</div>
+                                            <div class="our-tariffs__type-item tariff-type tariff-type--blue" data-cell-index="4">премиум</div>
+                                            <div class="our-tariffs__type-item tariff-type tariff-type--crimson" data-cell-index="5">vip</div>
+                                        </div>
+                                        <div class="our-tariffs__price">
+                                            <div class="our-tariffs__price-item" data-cell-index="1">
+                                                <div class="our-tariffs__price-now">2500 р</div>
+                                                <div class="our-tariffs__price-old">
+                                                    <span class="our-tariffs__price-old-num">3000</span> р
+                                                </div>
+                                            </div>
+                                            <div class="our-tariffs__price-item" data-cell-index="2">
+                                                <div class="our-tariffs__price-now">2500 р</div>
+                                                <div class="our-tariffs__price-old">
+                                                    <span class="our-tariffs__price-old-num">3000</span> р
+                                                </div>
+                                            </div>
+                                            <div class="our-tariffs__price-item" data-cell-index="3">
+                                                <div class="our-tariffs__price-now">2500 р</div>
+                                                <div class="our-tariffs__price-old">
+                                                    <span class="our-tariffs__price-old-num">3000</span> р
+                                                </div>
+                                            </div>
+                                            <div class="our-tariffs__price-item" data-cell-index="4">
+                                                <div class="our-tariffs__price-now">2500 р</div>
+                                                <div class="our-tariffs__price-old">
+                                                    <span class="our-tariffs__price-old-num">3000</span> р
+                                                </div>
+                                            </div>
+                                            <div class="our-tariffs__price-item" data-cell-index="5">
+                                                <div class="our-tariffs__price-now">2500 р</div>
+                                                <div class="our-tariffs__price-old">
+                                                    <span class="our-tariffs__price-old-num">3000</span> р
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <!-- /.our-tariffs__row -->
+
+                                <div class="our-tariffs__row">
+
+                                    <div class="our-tariffs__row-left cells_indicator"></div>
+
+                                    <div class="our-tariffs__row-right">
+                                        <div class="our-tariffs__buttons">
+                                            <a href="#form-tariff-pup" class="transfusionButton transfusionButton_green popupAudio our-tariffs__btn our-tariffs__btn--green popup-with-form">
+                                                <span>выбрать</span>
+                                                <span class="our-tariffs__btn-mobile">стандарт</span>
+                                            </a>
+                                            <a href="#form-tariff-pup" class="transfusionButton transfusionButton_purple popupAudio our-tariffs__btn our-tariffs__btn--purpure popup-with-form">
+                                                <span>выбрать</span>
+                                                <span class="our-tariffs__btn-mobile">эконом</span>
+                                            </a>
+                                            <a href="#form-tariff-pup" class="transfusionButton transfusionButton_lightOrange popupAudio our-tariffs__btn our-tariffs__btn--orange popup-with-form">
+                                                <span>выбрать</span>
+                                                <span class="our-tariffs__btn-mobile">старт</span>
+                                            </a>
+                                            <a href="#form-tariff-pup" class="transfusionButton transfusionButton_blue popupAudio our-tariffs__btn our-tariffs__btn--blue popup-with-form">
+                                                <span>выбрать</span>
+                                                <span class="our-tariffs__btn-mobile">премиум</span>
+                                            </a>
+                                            <a href="#form-tariff-pup" class="transfusionButton transfusionButton_pink popupAudio our-tariffs__btn our-tariffs__btn--crimson popup-with-form">
+                                                <span>выбрать</span>
+                                                <span class="our-tariffs__btn-mobile">vip</span>
+                                            </a>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+                                <!-- /.our-tariffs__row -->
+
+                            </div>
+                            <!-- /.our-tariffs__table -->
+                        </div>
+                        <!-- /.col-md -->
+                    </div>
+                    <!-- /.row -->
+                </div>
+                <!-- /.container -->
+            </div>
+            <!-- /.our-tariffs__section -->
+
+        </section>
+
+        <div class="tariff-choose" id="tariff-choose">
+            <div class="box tariff-choose__wrapper">
+                <div class="tariff-choose__img"></div>
+            </div>
+
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8">
+                        <div class="tariff-choose__info">
+                            <h2 class="tariff-choose__title section__title">
+                                НЕ знаете какой тариф выбрать?
+                            </h2>
+                            <p class="tariff-choose__text section__text">Мы готовы оказать БЕСПЛАТНУЮ консультацию или предложить индивидуальное решение</p>
+                            <a href="#form-callback-pup" class="popupAudio tariff-choose__btn button button-accent popup-with-form transfusionButton transfusionButton_orange">
+                                <span>Получить консультацию</span>
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="steps" id="steps">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md">
+                        <div class="steps__list itemsList">
+                            <div class="steps__list-wrapper">
+
+                                <div class="steps__item">
+                                    <div class="steps__item-ico itemsList__item itemsList__item_1">
+                                        <img src="/static/gaponov/images/icons/statement_problem.svg" alt="Постановка задачи">
+                                    </div>
+                                    <div class="steps__item-info">
+                                        <p class="steps__item-text">Постановка задачи</p>
+                                    </div>
+                                </div>
+
+                                <div class="steps__item">
+                                    <div class="steps__item-ico itemsList__item itemsList__item_2">
+                                        <img src="/static/gaponov/images/icons/real-time_monitoring.svg" alt="Контроль в реальном времени">
+                                    </div>
+                                    <div class="steps__item-info">
+                                        <p class="steps__item-text">Контроль в реальном времени</p>
+                                    </div>
+                                </div>
+
+                                <div class="steps__item">
+                                    <div class="steps__item-ico itemsList__item itemsList__item_3">
+                                        <img src="/static/gaponov/images/icons/acceptance_task.svg" alt="Принятие выполненной задачи">
+                                    </div>
+                                    <div class="steps__item-info">
+                                        <p class="steps__item-text">Принятие выполненной задачи</p>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <!-- /.steps__list-wrapper -->
+                        </div>
+                        <!-- /.steps__list -->
+                    </div>
+                    <!-- /.col-md -->
+                </div>
+                <!-- /.row -->
+            </div>
+            <!-- /.container -->
+        </div>
+
+        <section class="banner-bottom">
+            <div class="banner-bottom__wrapper box">
+                <div class="container">
+                    <div class="row justify-content-between">
+
+                        <div class="col-lg-5 col-lg-offset-1">
+                            <div class="tariff">
+                                <div class="tariff__line tariff__line--green">
+                                    <div class="tariff__name">стандарт</div>
+                                    <div class="tariff__info">
+                                        <div class="tariff__price-old">
+                                            <span class="tariff__price-old-num">3000</span> р
+                                        </div>
+                                        <div class="tariff__price">2500 р</div>
+                                    </div>
+
+                                </div>
+                                <div class="tariff__line tariff__line--purpure">
+                                    <div class="tariff__name tariff__name--purpure">Эконом</div>
+                                    <div class="tariff__info">
+                                        <div class="tariff__price-old">
+                                            <span class="tariff__price-old-num">3000</span> р
+                                        </div>
+                                        <div class="tariff__price">2500 р</div>
+                                    </div>
+                                </div>
+                                <div class="tariff__line tariff__line--orange">
+                                    <div class="tariff__name">старт</div>
+                                    <div class="tariff__info">
+                                        <div class="tariff__price-old">
+                                            <span class="tariff__price-old-num">3000</span> р
+                                        </div>
+                                        <div class="tariff__price">2500 р</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- /.col-lg-5 -->
+
+                        <div class="col-lg-5 form-tariff__wrapper">
+                            <form class="form form-tariff" id="form-tariff" name="form-tariff" action="#" method="post">
+                                <div class="form__header">
+                                    <h2 class="form-tariff__title form__title">Акция</h2>
+                                    <div class="form__taimer taimer">
+                                        <div id="defaultCountdown"></div>
+                                    </div>
+                                </div>
+
+                                <div class="form__body">
+                                    <div class="form__load"></div>
+                                    <div class="form__content">
+                                        <div class="form__row">
+                                            <label class="form__label">Ваше имя</label>
+                                            <input type="text" class="form__input" name="form-tariff_name" required/>
+                                        </div>
+                                        <div class="form__row">
+                                            <label class="form__label">Сайт</label>
+                                            <input type="text" class="form__input" name="form-tariff_site" required/>
+                                        </div>
+                                        <div class="form__row">
+                                            <label class="form__label">Тарифы</label>
+
+                                            <div class="form__select select">
+                                                <div class="select__header">
+                                                    <div class="select__label">
+                                                        Премиум
+                                                    </div>
+                                                    <div class="select__ico"></div>
+                                                </div>
+                                                <div class="select__list">
+                                                    <div class="select__item">Стандарт</div>
+                                                    <div class="select__item">Эконом</div>
+                                                    <div class="select__item">Старт</div>
+                                                    <div class="select__item">Премиум</div>
+                                                    <div class="select__item">Vip</div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                        <div class="form__row">
+                                            <button type="submit" class="clickAudio form__btn button button-accent button-accent--form transfusionButton transfusionButton_orange">
+                                                <span>отправить</span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        <!-- /.col-lg-5 -->
+                    </div>
+                    <!-- /.row -->
+                </div>
+                <!-- /.container -->
+                <div class="clock clock_bottom leftScaleTranslatePseudoElement leftScaleTranslatePseudoElement_left"></div>
+            </div>
+            <!-- /.banner-bottom__wrapper -->
+
+        </section>
+
+    </main>
+    <!-- /.wrapper -->
+
+    <footer class="footer bluredWithOpenedPopup" id="footer">
+        <div class="container">
+            <div class="row justify-content-between align-items-center">
+
+                <div class="col-lg-4 col-md-6">
+                    <p class="footer__copyright">© 2018 IGAPONOV . All rights reserved.</p>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <a href="#" class="footer__link">Политика безопасности</a>
+                </div>
+
+            </div>
+            <!-- /.row -->
+        </div>
+        <!-- /.container -->
+    </footer>
+    <!-- /.footer -->
+
+    <form class="form form-callback white-popup-block mfp-with-anim mfp-hide" id="form-callback-pup" name="form-callback" action="#"
+        method="post">
+        <div class="form__header">
+            <h2 class="form__title">Запрос на обработку</h2>
+            <p class="form__text">Можете заполнить форму и мы свяжемся с вами</p>
+            <div class="form__row">
+                <span class="form__success success_send_text"></span>
+            </div>
+        </div>
+
+        <div class="form__body">
+            <div class="form__load"></div>
+            <div class="form__content">
+                <div class="form__row">
+                    <label class="form__label">Ваше имя</label>
+                    <input type="text" class="form__input" name="form-callback_name" required/>
+                </div>
+                <div class="form__row">
+                    <label class="form__label">Сайт</label>
+                    <input type="text" class="form__input" name="form-callback_site" required/>
+                </div>
+                <div class="form__row">
+                    <label class="form__label">Комментарий</label>
+                    <textarea name="form-callback_comment" class="form__input form__textarea"></textarea>
+                </div>
+                <div class="form__row">
+                    <input type="submit" class="clickAudio form__btn button button-accent button-accent--form" value="отправить запрос">
+                </div>
+            </div>
+        </div>
+    </form>
+
+    <form class="form form-tariff white-popup-block mfp-hide mfp-with-anim" id="form-tariff-pup" name="form-tariff" action="#"
+        method="post">
+        <div class="form__header">
+            <h2 class="form-tariff__title form__title">Акция</h2>
+        </div>
+
+        <div class="form__body">
+            <div class="form__load"></div>
+            <div class="form__content">
+                <div class="form__row">
+                    <label class="form__label">Ваше имя</label>
+                    <input type="text" class="form__input" name="form-tariff_name" required/>
+                </div>
+                <div class="form__row">
+                    <label class="form__label">Сайт</label>
+                    <input type="text" class="form__input" name="form-tariff_site" required/>
+                </div>
+                <div class="form__row">
+                    <label class="form__label">Тарифы</label>
+
+                    <div class="form__select select">
+                        <div class="select__header">
+                            <div class="select__label">
+                                Премиум
+                            </div>
+                            <div class="select__ico"></div>
+                        </div>
+                        <div class="select__list">
+                            <div class="select__item">Стандарт</div>
+                            <div class="select__item">Эконом</div>
+                            <div class="select__item">Старт</div>
+                            <div class="select__item">Премиум</div>
+                            <div class="select__item">Vip</div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="form__row">
+                    <input type="submit" class="form__btn button button-accent button-accent--form" value="отправить">
+                </div>
+            </div>
+        </div>
+    </form>
+
+    <div hidden>
+        <audio preload="none" volume="0.1" id="audioClick">
+            <source src="/static/gaponov/audio/click.mp3">
+            </source>
+        </audio>
+
+        <audio preload="none" volume="0.1" id="audioNotify">
+            <source src="/static/gaponov/audio/notify.wav">
+            </source>
+        </audio>
+
+        <audio preload="none" volume="1" id="audioMinimize">
+            <source src="/static/gaponov/audio/minimize.wav">
+            </source>
+        </audio>
+    </div>
+
+    <svg width="0" height="0" aria-hidden="true" hidden>
+        <filter id="blur3px">
+            <feGaussianBlur in="SourceGraphic" stdDeviation="3"></feGaussianBlur>
+        </filter>
+
+        <g id="plusIcon">
+            <path class="fillSvg_black" d="M280.17 140.09a140.09 140.09 0 0 1-280.17 0 10.94 10.94 0 0 1 21.89 0 118.2 118.2 0 1 0 118.2-118.2 10.94 10.94 0 0 1 0-21.89 140 140 0 0 1 140.08 140.09z"
+            />
+            <path class="fillSvg_orange" d="M87.78 33.82L101.93 28a10.94 10.94 0 0 0-8.37-20.27L79.4 13.6a10.94 10.94 0 0 0 8.38 20.22zM51.09 61.93l10.84-10.84a10.94 10.94 0 0 0-15.48-15.48L35.61 46.45a10.94 10.94 0 0 0 15.48 15.48zm-37.44 45.93A11 11 0 0 0 28 101.93l5.86-14.16A10.94 10.94 0 0 0 13.6 79.4L7.73 93.56a11 11 0 0 0 5.92 14.3zm126.44-22.49a10.94 10.94 0 0 0-10.94 10.94v32.83H96.31a10.94 10.94 0 1 0 0 21.89h32.83v32.83a10.94 10.94 0 1 0 21.89 0V151h32.83a10.94 10.94 0 1 0 0-21.89H151v-32.8a10.94 10.94 0 0 0-10.91-10.94z">
+                <animate dur="1s" repeatCount="indefinite" attributeName="fill" from="#ed6d00" to="#7f3900" />
+            </path>
+        </g>
+
+        <g id="minusIcon">
+            <path class="fillSvg_black" d="M280.17 140.09a140.09 140.09 0 0 1-280.17 0 10.94 10.94 0 0 1 21.89 0 118.2 118.2 0 1 0 118.2-118.2 10.94 10.94 0 0 1 0-21.89 140 140 0 0 1 140.08 140.09z"
+            />
+            <path class="fillSvg_blue" d="M87.78 33.82L101.93 28a10.94 10.94 0 0 0-8.37-20.27L79.4 13.6a10.94 10.94 0 0 0 8.38 20.22zM51.09 61.93l10.84-10.84a10.94 10.94 0 0 0-15.48-15.48L35.61 46.45a10.94 10.94 0 0 0 15.48 15.48zm-37.44 45.93A11 11 0 0 0 28 101.93l5.86-14.16A10.94 10.94 0 0 0 13.6 79.4L7.73 93.56a11 11 0 0 0 5.92 14.3zM183.86 151a10.94 10.94 0 0 0 0-21.89H96.31a10.94 10.94 0 0 0 0 21.89z">
+                <animate dur="1s" repeatCount="indefinite" attributeName="fill" from="#00b0b9" to="#00656a" />
+            </path>
+        </g>
+    </svg>
+
+    <svg aria-hidden="true" hidden xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280.17 280.17">
+
+    </svg>
+
+    <script defer src="/static/gaponov/js/libs.min.js"></script>
+    <script defer src="/static/gaponov/js/common.js"></script>
+</body>
+
+</html>

@@ -67,10 +67,6 @@ class TechnologiesView(BaseView):
     def __init__(self):
         super(TechnologiesView, self).__init__()
         self.page_model = TechnologiesPage
-    def set_additional_context(self, context):
-        context['form'] = ConnectForm()
-
-        return context
 
 class AboutPageView(BaseView):
     template_name = 'about.html'
@@ -84,6 +80,11 @@ class ArticlesPageView(BaseView):
     def __init__(self):
         super(ArticlesPageView, self).__init__()
         self.page_model = ArticlesPage
+
+    def set_additional_context(self, context):
+        context['form'] = ConnectForm()
+
+        return context
 
 
 class WorkView(BaseView):
