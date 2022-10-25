@@ -15,3 +15,6 @@ jet
 jet.dashboard
 db.sqlite3
 *.pyc
+venv
+.DS_Store
+.idea
