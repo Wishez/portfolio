@@ -51,11 +51,20 @@ class PortfolioView(BaseView):
         works = self.page.works.order_by('-created')
         works = [work for work in works if work in works]
         context['works'] = works
+
         desktop_part_quantity = int(math.floor(len(works) / 3))
+        parts = {
+            0: [],
+            1: [],
+            2: [],
+        }
+        for index in range(len(works)):
+            parts[(index + 3) % 3].append(works[index])
+
         context['works_desktop_parts'] = {
-            "first": works[0:desktop_part_quantity],
-            "second": works[desktop_part_quantity:desktop_part_quantity * 2],
-            "third": works[desktop_part_quantity * 2:desktop_part_quantity * 3]
+            "first": parts[0],
+            "second": parts[1],
+            "third": parts[2],
         }
         context['about_content'] = get_single_model(AboutPage).content
 
@@ -67,6 +76,18 @@ class TechnologiesView(BaseView):
     def __init__(self):
         super(TechnologiesView, self).__init__()
         self.page_model = TechnologiesPage
+
+class ConnectMeView(BaseView):
+    template_name = 'connect.html'
+
+    def __init__(self):
+        super(ConnectMeView, self).__init__()
+        self.page_model = ConnectMePage
+
+    def set_additional_context(self, context):
+        context['form'] = ConnectForm()
+
+        return context
 
 class AboutPageView(BaseView):
     template_name = 'about.html'
