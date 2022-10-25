@@ -1,7 +1,7 @@
 .out
 	display: flex
 	flex-direction: column
-	min-height: 100vh;
+	min-height: 100vh
 
 main
 	flex-grow: 1
@@ -18,7 +18,7 @@ main
 	background-color: $heatGreen
 	transform: translateX(-110%)
 	will-change: transform
-	z-index: 10
+	z-index: 10000
 	color: $white
 	top: 100px
 	position: fixed
@@ -50,7 +50,7 @@ main
 	@extend %relative
 
 	&:after
-		background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path fill="rgb(157, 91, 75)" d="M576 24v127.984c0 21.461-25.96 31.98-40.971 16.971l-35.707-35.709-243.523 243.523c-9.373 9.373-24.568 9.373-33.941 0l-22.627-22.627c-9.373-9.373-9.373-24.569 0-33.941L442.756 76.676l-35.703-35.705C391.982 25.9 402.656 0 424.024 0H552c13.255 0 24 10.745 24 24zM407.029 270.794l-16 16A23.999 23.999 0 0 0 384 303.765V448H64V128h264a24.003 24.003 0 0 0 16.97-7.029l16-16C376.089 89.851 365.381 64 344 64H48C21.49 64 0 85.49 0 112v352c0 26.51 21.49 48 48 48h352c26.51 0 48-21.49 48-48V287.764c0-21.382-25.852-32.09-40.971-16.97z" /></svg>')
+		background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path fill="rgb(157, 91, 75)" d="M576 24v127.984c0 21.461-25.96 31.98-40.971 16.971l-35.707-35.709-243.523 243.523c-9.373 9.373-24.568 9.373-33.941 0l-22.627-22.627c-9.373-9.373-9.373-24.569 0-33.941L442.756 76.676l-35.703-35.705C391.982 25.9 402.656 0 424.024 0H552c13.255 0 24 10.745 24 24zM407.029 270.794l-16 16A23.999 23.999 0 0 0 384 303.765V448H64V128h264a24.003 24.003 0 0 0 16.97-7.029l16-16C376.089 89.851 365.381 64 344 64H48C21.49 64 0 85.49 0 112v352c0 26.51 21.49 48 48 48h352c26.51 0 48-21.49 48-48V287.764c0-21.382-25.852-32.09-40.971-16.97z§" /></svg>')
 		background-size: 1em
 		background-repeat: no-repeat
 		position: static
@@ -62,8 +62,52 @@ main
 		width: 1em
 
 
-.articleMeta
-	margin-top: 0 $i
+.article-preview
+	display: grid
+	grid-template-columns: 30% 1fr
+	grid-template-rows: auto 1fr
+	grid-column-gap: 24px
+
+	&__title
+		grid-column-start: 2
+		grid-row-start: 1
+
+	&__image
+		&.article__image
+			margin: 0
+
+		align-self: center
+		grid-row: span 2
+		max-width: 100%
+		order: -1
+		min-height: 200px
+		display: block
+		z-index: 2
+		position: relative
+
+		&::after
+			background-image: linear-gradient(to right, white, #dadada, white);
+			content: ''
+			position: absolute
+			z-index: 1
+			top: 0
+			left: 0
+			animation: background-position-skeleton infinite 1s ease-in-out
+			width: 100%
+			height: 100%
+			display: block
+
+
+@keyframes background-position-skeleton
+	0%
+		background-position: 0
+
+	100%
+		background-position: 342px 0
+
+.article-preview-meta
+	grid-row-start: 2
+	grid-column-start: 2
 
 .previous, .next
 	text-decoration: none
@@ -89,39 +133,35 @@ main
 	flex-direction: column
 	position: relative
 
-	&::after
-		content: ''
-		position: absolute
-		width: 100%
-		bottom: 0
-		left: 0
-		z-index: -1
-		background-image: url(/static/portfolio/img/background.jpeg)
-		background-repeat: no-repeat
-		background-size: cover
-
-		@include breakpoint($xs-up)
-			transform: scale(-1) rotateX(180deg)
-
-		@include breakpoint($xxs-up)
-			height: calc(100% - 132px)
-
-		@include breakpoint($xxs)
-			height: calc(100% - 238px)
-
 	&_with-about-section
 		height: calc(100vh - 80px)
 
 		@media (max-height: 750px)
 			height: auto
 
+		.aboutMeInHeader::before
+			content: ''
+			position: absolute
+			width: 100vw
+			bottom: 0
+			left: 50%
+			background-color: rgba($darkGray, .3)
+			background: linear-gradient(to right, rgba($darkGray, .5), rgba($darkGray, .5) 100%), url(/static/portfolio/img/afinskaya-shkola.jpeg)
+			background-position: left bottom
+			background-repeat: no-repeat
+			background-size: cover
+			background-blend-mode: darken
+			height: 100%
+			transform: translateX(-50%)
+
 .aboutMeInHeader
 	padding-top: 36px
-	padding-bottom: 36px
+	padding-bottom: 52px
 	flex: 1
-	display: flex;
-	flex-direction: column;
-	justify-content: flex-end;
+	position: relative
+	display: flex
+	flex-direction: column
+	justify-content: flex-end
 
 	@include breakpoint($xxs)
 		font-size: 2.2vh
@@ -134,6 +174,7 @@ main
 		@include breakpoint($xs)
 
 	.about
+		position: relative
 		display: flex
 		flex-direction: column
 		align-items: flex-start
@@ -141,20 +182,15 @@ main
 		&:last-child
 			margin-bottom: 0
 
-.presentWorkItem, .presentWork, .footer
+.footer
 	border-style: solid
 	border-color: lighten($gray, 50%)
-
-.presentWorkItem:not(:last-child)
-	border-bottom-width: 1px
 
 .v-centered,
 .brand,
 .contacts,
 .worksPagination,
-.main > .container,
-.presentWorkItem,
-.technologiesTitle
+.main > .container
 	align-items: center
 
 .parent,
@@ -163,7 +199,7 @@ main
 .column
 	flex-direction: column
 
-.head, .brand, .contacts, .worksPagination, .technologiesTitle
+.head, .brand, .contacts, .worksPagination
 	flex-flow: row wrap
 
 .brand, .contacts
@@ -204,21 +240,21 @@ main
 
 		@include breakpoint($xs-up)
 			font-size: (9em / 16)
-			max-width: 345px;
+			max-width: 345px
 
 		@include breakpoint($xs)
 			font-size: .5em
-			max-width: calc(100vw - 2em);
-			
+			max-width: calc(100vw - 2em)
+
 
 .head
 	background-color: $lightGray
 	padding: 0.5em 3.8em
-	box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+	box-shadow: 0 0 20px rgba(0, 0, 0, 0.1)
 
 	@include breakpoint($xs)
 		padding: 1em 2em 2em
-		
+
 
 =b($media)
 	@include breakpoint($media)
@@ -271,11 +307,10 @@ main
 	margin: 0 0 18px
 	padding: 0 1em 18px
 	will-change: transform, box-shadow
-	width: 100%
 	box-shadow: 0 5px 20px rgba(0,0,0,.3)
 
-	@include breakpoint($sm)
-		width: span(12)
+	@include breakpoint($xs)
+		width: 100vw
 
 	&__image
 		min-width: calc(100% + 2em)
@@ -335,34 +370,27 @@ main
 
 
 .navigation
-	background: #fff
+	background: $white
 	min-height: 80px
 	justify-content: center
+	transition: transform 250ms ease-in-out
 	display: flex
-	position: sticky
 	top: 0
 	left: 0
 	z-index: 1000
-	box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+	box-shadow: 0 2px 20px rgba($blue, 0.3)
+	position: sticky
 
-	@include breakpoint($xxs)
-
-
-
+	&_down
+		transform: translateY(-100%)
 
 .navListItem
 	height: 80px
+	white-space: nowrap
 
 .navList
 	margin: 0
-
-	@include breakpoint($xxs)
-		height: 160px
-		flex-wrap: wrap
-		justify-content: center
-		height: auto
-		min-height: 160px
-
+	overflow: auto
 
 .navListItem__refer
 	height: 100%
@@ -371,7 +399,7 @@ main
 	align-items: center
 	background: none
 	color: $darkGray
-	transition-property: background-color, color;
+	transition-property: background-color, color
 	transition-duration: 200ms
 	transition-timing-function: ease-in
 
@@ -389,7 +417,7 @@ main
 	justify-content: flex-end
 
 	@include breakpoint($xs)
-		font-size: 18px;
+		font-size: 18px
 
 .footer
 		color: $white
@@ -421,18 +449,26 @@ main
 		&_auto
 			margin-left: auto
 
-.presentWorkItem
-	display: flex;
-	align-items: center;
 
-	@include breakpoint($xs-up)
-		padding-bottom: 2.75em
-		min-width: span(4)
+.presentWork
+	width: 100%
+	grid-gap: 16px;
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
 
 	@include breakpoint($xs)
-		margin-top: 9px
-		padding-bottom: 27px
+		grid-template-columns: 1fr;
 		min-width: 100%
+
+.presentWorkItem
+	display: flex
+	align-items: center
+
+	*
+		width: 100%
+
+	a
+		background-image: none
 
 .footerContacts
 	padding: 1.25em 0 1em
@@ -440,18 +476,6 @@ main
 	a
 		color: $yellow
 
-
-.shadow_position-
-	&topRight
-		box-shadow: 5px -5px 10px $shadow
-	&topLeft
-		box-shadow: -5px -5px 10px $shadow
-	&bottomRight
-		box-shadow: 5px 5px 10px $shadow
-	&bottomLeft
-		box-shadow: -5px 5px 10px $shadow
-	&centered
-		box-shadow: 0 0 10px $shadow
 
 .label
 	font-size: 1em
@@ -464,18 +488,7 @@ main
 	@include breakpoint($xs)
 		font-size: +em(18)
 
-.presentWork
-	border-top-width: 1px
-	width: 100%
-	flex-flow: row wrap
-	display: flex
-	margin-top: 0
-	border-top-color: transparent
-
-	img
-		box-shadow: 0 2px 6px rgba(0,0,0,.5)
-
-.presentWorkItem, .main > .container
+.main > .container
 	flex-direction: column
 	justify-content: center
 
@@ -489,13 +502,14 @@ main
 	box-shadow: 0 2px 6px 0 rgba(0,0,0,.5)
 
 .task
-	background-color: rgba($blue, .3)
-	box-shadow: 0 2px 6px 0 rgba(0,0,0,.5)
+	background-color: $blue
+	box-shadow: 0 4px 20px rgba($blue, .4)
 	padding: 0 1em 1.3em
 	border-radius: 4px
 	max-width: 60ch
 	margin-top: 18px
 	margin-bottom: 27px
+	color: $white
 
 .task__title
 	border-style: solid
@@ -513,7 +527,7 @@ main
 		z-index: 2
 
 
-.about, .article
+.about
 	max-width: 75rem
 	width: 100%
 
@@ -539,17 +553,13 @@ main
 .text-uppercase
 	letter-spacing: .12em
 
-.technologiesTitle
-		border: 2px solid $darkGray
-		padding: .5em 0
-
 .technologies, .technologiesImageContainer
 	width: 100%
 
 .imageContainer__image
 		background: no-repeat center
 		background-size: cover
-	
+
 .centered
 	justify-content: center
 	align-items: center
@@ -576,8 +586,8 @@ main
 	background-color: #fff
 	margin: 0
 	padding: .25em .5em .5em
-	border: 3px solid #333
-	box-shadow: 3px 5px 0 rgba(0,0,0,.4)
+	border: 3px solid $darkGray
+	box-shadow: 3px 3px 0 rgba($blue,.4)
 
 	&__image
 		width: 100%
@@ -588,6 +598,9 @@ main
 
 
 .technologiesTitle
+	align-items: center
+	display: flex
+
 	@include breakpoint($sm-less)
 		flex-direction: column
 	@include breakpoint($xxs)
@@ -638,7 +651,7 @@ main
 					border-color: $blue
 
 		&_textinput
-			max-height: 8.5em;
+			max-height: 8.5em
 
 		&_select
 			padding: .5em
@@ -706,6 +719,11 @@ main
 	&_yellow
 		background-color: $yellow
 		color: $darkGray
+
+.articles
+	display: grid
+	grid-template-columns: 1fr
+	grid-gap: 16px 24px
 
 .articlesLoader
 	max-width: em(45)

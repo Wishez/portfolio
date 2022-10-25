@@ -33,7 +33,7 @@ ul.presentWork
 	| {% for image in page.album|extract_images %}
 	li.presentWorkItem
 		a.poppy-image(href="/media/{{ image.image }}", rel="gallery" title="{{ image.description }}")
-			picture.parent.centered
+			picture
 				source(srcset="/media/{{ image.image }}", media="screen")
 				img.fade.lozad.presentWorkItem__image.img-responsive
 	| {% endfor %}

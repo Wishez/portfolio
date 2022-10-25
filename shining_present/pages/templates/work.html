@@ -24,7 +24,7 @@
 <ul class="presentWork">{% for image in page.album|extract_images %}
   <li class="presentWorkItem">
     <a href="/media/{{ image.image }}" rel="gallery" title="{{ image.description }}" class="poppy-image">
-      <picture class="parent centered">
+      <picture>
         <source srcset="/media/{{ image.image }}" media="screen" /><img class="fade lozad presentWorkItem__image img-responsive" /></picture>
     </a>
   </li>{% endfor %}</ul>{% endblock %}

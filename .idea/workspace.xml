@@ -1,12 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="6192725a-0ebe-49e1-9688-f7b6827c314b" name="Default" comment="">
+    <list default="true" id="6192725a-0ebe-49e1-9688-f7b6827c314b" name="Default" comment="Подкорректирвал стили фронта">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shining_present/pages/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/shining_present/pages/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shining_present/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/shining_present/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shining_present/db.test" beforeDir="false" afterPath="$PROJECT_DIR$/shining_present/db.test" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shining_present/pages/templates/articles.html" beforeDir="false" afterPath="$PROJECT_DIR$/shining_present/pages/templates/articles.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shining_present/pages/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/shining_present/pages/templates/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shining_present/pages/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/shining_present/pages/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shining_present/pages/templates/technologies.html" beforeDir="false" afterPath="$PROJECT_DIR$/shining_present/pages/templates/technologies.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shining_present/pages/templates/work.html" beforeDir="false" afterPath="$PROJECT_DIR$/shining_present/pages/templates/work.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shining_present/static/portfolio/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/shining_present/static/portfolio/css/app.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shining_present/static/portfolio/css/app.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/shining_present/static/portfolio/css/app.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shining_present/static/portfolio/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/shining_present/static/portfolio/js/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shining_present/static/portfolio/js/report.html" beforeDir="false" afterPath="$PROJECT_DIR$/shining_present/static/portfolio/js/report.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shining_present/static/portfolio/js/sw.js" beforeDir="false" afterPath="$PROJECT_DIR$/shining_present/static/portfolio/js/sw.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shining_present/theme/.eslintrc" beforeDir="false" afterPath="$PROJECT_DIR$/shining_present/theme/.eslintrc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shining_present/theme/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/shining_present/theme/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shining_present/theme/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/shining_present/theme/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shining_present/theme/src/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/shining_present/theme/src/js/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shining_present/theme/src/sass/_common.sass" beforeDir="false" afterPath="$PROJECT_DIR$/shining_present/theme/src/sass/_common.sass" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shining_present/theme/src/sass/_main.sass" beforeDir="false" afterPath="$PROJECT_DIR$/shining_present/theme/src/sass/_main.sass" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shining_present/theme/src/templates/articles.jade" beforeDir="false" afterPath="$PROJECT_DIR$/shining_present/theme/src/templates/articles.jade" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shining_present/theme/src/templates/partials/_footer.jade" beforeDir="false" afterPath="$PROJECT_DIR$/shining_present/theme/src/templates/partials/_footer.jade" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shining_present/theme/src/templates/partials/_header.jade" beforeDir="false" afterPath="$PROJECT_DIR$/shining_present/theme/src/templates/partials/_header.jade" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shining_present/theme/src/templates/technologies.jade" beforeDir="false" afterPath="$PROJECT_DIR$/shining_present/theme/src/templates/technologies.jade" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shining_present/theme/src/templates/work.jade" beforeDir="false" afterPath="$PROJECT_DIR$/shining_present/theme/src/templates/work.jade" afterDir="false" />
     </list>
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
-    <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -15,86 +38,8 @@
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
   </component>
-  <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="settings.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/portfolio/portfolio/settings.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1428">
-              <caret line="84" column="1" selection-start-line="84" selection-start-column="1" selection-end-line="84" selection-end-column="1" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="views.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/shining_present/pages/views.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="54">
-              <caret line="84" column="8" selection-start-line="84" selection-start-column="8" selection-end-line="84" selection-end-column="8" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/AppData/Local/Temp/scp50172/webapps/shining_present/shining_present/pages/views.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="765">
-              <caret line="49" column="8" selection-start-line="49" selection-start-column="8" selection-end-line="49" selection-end-column="52" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="views1.py" pinned="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/AppData/Local/Temp/scp50828/webapps/shining_present/shining_present/pages/views1.py">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file leaf-file-name="urls.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/shining_present/pages/urls.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="9" column="26" selection-start-line="9" selection-start-column="26" selection-end-line="9" selection-end-column="26" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/portfolio/present/models.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="13" column="26" selection-start-line="13" selection-start-column="26" selection-end-line="13" selection-end-column="26" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/portfolio/present/views.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="561">
-              <caret line="38" column="32" selection-start-line="38" selection-start-column="32" selection-end-line="38" selection-end-column="32" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="urls.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/shining_present/app/urls.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="14" column="20" selection-start-line="14" selection-start-column="11" selection-end-line="14" selection-end-column="20" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="admin.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/portfolio/present/admin.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="12" column="14" selection-start-line="12" selection-start-column="14" selection-end-line="12" selection-end-column="14" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+  <component name="EditorConfigPreviewManager">
+    <editorConfig file="$PROJECT_DIR$/shining_present/theme/.editorconfig" previewFile="$PROJECT_DIR$/shining_present/theme/src/sass/_main.sass" />
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
@@ -155,6 +100,9 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
   <component name="NodeModulesDirectoryManager">
     <handled-path value="$PROJECT_DIR$/portfolio/theme/node_modules" />
   </component>
@@ -163,6 +111,7 @@
     <option name="width" value="1950" />
     <option name="height" value="2075" />
   </component>
+  <component name="ProjectId" id="2Gcw1dCf0GTA3wfhTVAFW0xFUmI" />
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
@@ -205,53 +154,25 @@
       <pane id="Scope" />
     </panes>
   </component>
-  <component name="PropertiesComponent">
-    <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  <component name="ProjectViewState">
+    <option name="autoscrollFromSource" value="true" />
+    <option name="autoscrollToSource" value="true" />
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
   </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
-  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "WebServerToolWindowFactoryState": "true",
+    "last_opened_file_path": "/Users/shiningfinger/reps/portfolio",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
   <component name="RunManager">
-    <configuration default="true" type="PythonConfigurationType" factoryName="Python">
-      <module name="portfolio" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-    </configuration>
-    <configuration default="true" type="Tox" factoryName="Tox">
-      <module name="portfolio" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-    </configuration>
     <configuration default="true" type="DjangoTestsConfigurationType" factoryName="Django tests">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -270,22 +191,6 @@
       <option name="CUSTOM_SETTINGS" value="false" />
       <option name="USE_OPTIONS" value="false" />
       <option name="OPTIONS" value="" />
-      <method />
-    </configuration>
-    <configuration default="true" type="JavaScriptTestRunnerJest" factoryName="Jest">
-      <node-interpreter value="project" />
-      <working-dir value="" />
-      <envs />
-      <scope-kind value="ALL" />
-      <method />
-    </configuration>
-    <configuration default="true" type="JavaScriptTestRunnerProtractor" factoryName="Protractor">
-      <config-file value="" />
-      <node-interpreter value="project" />
-      <envs />
-      <method />
-    </configuration>
-    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
       <method />
     </configuration>
     <configuration default="true" type="PyBehaveRunConfigurationType" factoryName="Behave">
@@ -316,15 +221,35 @@
       <option name="ADDITIONAL_ARGS" value="" />
       <method />
     </configuration>
-    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
-      <method />
+    <configuration default="true" type="PythonConfigurationType" factoryName="Python">
+      <module name="portfolio" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
     </configuration>
-    <configuration default="true" type="js.build_tools.npm" factoryName="npm">
-      <command value="run" />
-      <scripts />
-      <node-interpreter value="project" />
-      <envs />
-      <method />
+    <configuration default="true" type="Tox" factoryName="Tox">
+      <module name="portfolio" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
     </configuration>
     <configuration default="true" type="tests" factoryName="Doctests">
       <module name="portfolio" />
@@ -358,7 +283,17 @@
       <option name="_new_target" value="&quot;.&quot;" />
       <option name="_new_targetType" value="&quot;PATH&quot;" />
     </configuration>
+    <configuration default="true" type="js.build_tools.gulp">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <gulpfile />
+      <tasks />
+      <arguments />
+      <envs />
+      <method v="2" />
+    </configuration>
   </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -369,7 +304,44 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1491933268219</updated>
+      <workItem from="1666700967318" duration="4954000" />
     </task>
+    <task id="LOCAL-00001" summary="Починил staticfiles">
+      <created>1666712720866</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1666712720866</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Обновил зависимости django приложения">
+      <created>1666712754157</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1666712754157</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Добавил папочки и файлики в git игнор">
+      <created>1666712784673</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1666712784673</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Поправил отображение работ на главной">
+      <created>1666713223472</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1666713223472</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Добавил модель страницы связи">
+      <created>1666713359129</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1666713359129</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -399,10 +371,27 @@
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="processedProjectFiles" value="true" />
+    <option name="version" value="3" />
   </component>
-  <component name="VcsContentAnnotationSettings">
-    <option name="myLimit" value="2678400000" />
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Починил staticfiles" />
+    <MESSAGE value="Обновил зависимости django приложения" />
+    <MESSAGE value="Добавил папочки и файлики в git игнор" />
+    <MESSAGE value="Поправил отображение работ на главной" />
+    <MESSAGE value="Добавил модель страницы связи" />
+    <MESSAGE value="Подкорректирвал стили фронта" />
+    <option name="LAST_COMMIT_MESSAGE" value="Подкорректирвал стили фронта" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/shining_present/app/urls.py">
