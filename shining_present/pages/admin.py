@@ -55,6 +55,7 @@ class ArticlePageAdmin(SingleModelAdmin):
             ),
         },),
     )
+
 @admin.register(ArticlesPage)
 class ArticlesPageAdmin(SingleModelAdmin):
     fieldsets = (
@@ -78,6 +79,7 @@ class TechnologiesPageAdmin(SingleModelAdmin):
             ),
         },),
     )
+
 @admin.register(AboutPage)
 class AboutPageAdmin(SingleModelAdmin):
     fieldsets = (
@@ -90,4 +92,15 @@ class AboutPageAdmin(SingleModelAdmin):
         },),
     )
 
+@admin.register(ConnectMePage)
+class ConnectMePageAdmin(SingleModelAdmin):
+    fieldsets = (
+        base_settings_page,
+        ('Контент страницы', {
+            'fields': (
+                ('content',),
+                ('scripts',),
+            ),
+        },),
+    )
 
