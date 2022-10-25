@@ -16,7 +16,7 @@
       }
     }],
     "no-multi-str": 2,
-    "camelcase": 1,
+    "camelcase": "off",
     "eol-last": 1,
     "indent": [2, 2, {
       "SwitchCase": 1,

@@ -18,6 +18,47 @@
  */
 
 /*!
+ * URI.js - Mutating URLs
+ *
+ * Version: 1.19.8
+ *
+ * Author: Rodney Rehm
+ * Web: http://medialize.github.io/URI.js/
+ *
+ * Licensed under
+ *   MIT License http://www.opensource.org/licenses/mit-license
+ *
+ */
+
+/*!
+ * URI.js - Mutating URLs
+ * IPv6 Support
+ *
+ * Version: 1.19.8
+ *
+ * Author: Rodney Rehm
+ * Web: http://medialize.github.io/URI.js/
+ *
+ * Licensed under
+ *   MIT License http://www.opensource.org/licenses/mit-license
+ *
+ */
+
+/*!
+ * URI.js - Mutating URLs
+ * Second Level Domain (SLD) Support
+ *
+ * Version: 1.19.8
+ *
+ * Author: Rodney Rehm
+ * Web: http://medialize.github.io/URI.js/
+ *
+ * Licensed under
+ *   MIT License http://www.opensource.org/licenses/mit-license
+ *
+ */
+
+/*!
  * jQuery JavaScript Library v3.4.1
  * https://jquery.com/
  *
@@ -34,6 +75,8 @@
 /*! Magnific Popup - v1.1.0 - 2016-02-20
 * http://dimsemenov.com/plugins/magnific-popup/
 * Copyright (c) 2016 Dmitry Semenov; */
+
+/*! https://mths.be/punycode v1.4.0 by @mathias */
 
 /*! lozad.js - v1.9.0 - 2019-02-09
 * https://github.com/ApoorvSaxena/lozad.js

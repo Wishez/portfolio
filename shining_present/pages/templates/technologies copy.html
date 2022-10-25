@@ -1,0 +1,47 @@
+{% extends 'base.html' %}{% block content %}
+<section class="technologies parent column">
+  <h1 class="technologiesTitle text-uppercase centered parent">инструментарий
+    <div class="imageContainer imageContainer_gear child">
+      <figure class="imageContainer__image imageContainer__image_gear"></figure>
+    </div>для разработки</h1>
+  <ul class="technologiesList parent centered">
+    <li class="technology child"><img title="HTML" data-src="/static/portfolio/img/icons/html.png" class="fade lozad technology__image" /></li>
+    <li class="technology child"><img title="CSS" data-src="/static/portfolio/img/icons/css.png" class="fade lozad technology__image" /></li>
+    <li class="technology child"><img title="JavaScript" data-src="/static/portfolio/img/icons/js.png" class="fade lozad technology__image" /></li>
+    <li class="technology child"><img title="Bootstrap" data-src="/static/portfolio/img/icons/bootstrap.png" class="fade lozad technology__image" /></li>
+    <li class="technology child"><img title="Semantic UI" data-src="/static/portfolio/img/icons/semantic-ui.png" class="fade lozad technology__image" /></li>
+    <li class="technology child"><img title="Bulma" data-src="/static/portfolio/img/icons/bulma.png" class="fade lozad technology__image" /></li>
+    <li class="technology child"><img title="GitHub" data-src="/static/portfolio/img/icons/git.png" class="fade lozad technology__image" /></li>
+    <li class="technology child"><img title="Sass" data-src="/static/portfolio/img/icons/sass.png" class="fade lozad technology__image" /></li>
+    <li class="technology child"><img title="npm" data-src="/static/portfolio/img/icons/npm.png" class="fade lozad technology__image" /></li>
+    <li class="technology child"><img title="Node JS" data-src="/static/portfolio/img/icons/node.png" class="fade lozad technology__image" /></li>
+    <li class="technology child"><img title="jQuery" data-src="/static/portfolio/img/icons/jquery.png" class="fade lozad technology__image" /></li>
+    <li class="technology child"><img title="React" data-src="/static/portfolio/img/icons/react.png" class="fade lozad technology__image" /></li>
+    <li class="technology child"><img title="Vue" data-src="/static/portfolio/img/icons/vue.png" class="fade lozad technology__image" /></li>
+    <li class="technology child"><img title="Vuex" data-src="/static/portfolio/img/icons/vuex.png" class="fade lozad technology__image" /></li>
+    <li class="technology child"><img title="Redux" data-src="/static/portfolio/img/icons/redux.png" class="fade lozad technology__image" /></li>
+    <li class="technology child"><img title="Rxjs" data-src="/static/portfolio/img/icons/rxjs.png" class="fade lozad technology__image" /></li>
+    <li class="technology child"><img title="redux-observable" data-src="/static/portfolio/img/icons/redux-observable.png" class="fade lozad technology__image" /></li>
+    <li class="technology child"><img title="Storybook" data-src="/static/portfolio/img/icons/storybook.png" class="fade lozad technology__image" /></li>
+    <li class="technology child"><img title="Figma" data-src="/static/portfolio/img/icons/figma.png" class="fade lozad technology__image" /></li>
+    <li class="technology child"><img title="Photoshop" data-src="/static/portfolio/img/icons/photoshop.png" class="fade lozad technology__image" /></li>
+    <li class="technology child"><img title="Python" data-src="/static/portfolio/img/icons/python.png" class="fade lozad technology__image" /></li>
+    <li class="technology child"><img title="Django" data-src="/static/portfolio/img/icons/django.png" class="fade lozad technology__image" /></li>
+    <li class="technology child"><img title="Django Rest Framework" data-src="/static/portfolio/img/icons/django-rest-framework.png" class="fade lozad technology__image" /></li>
+    <li class="technology child"><img title="Postgresql" data-src="/static/portfolio/img/icons/postgres.png" class="fade lozad technology__image" /></li>
+    <li class="technology child"><img title="Gulp" data-src="/static/portfolio/img/icons/gulp.png" class="fade lozad technology__image" /></li>
+    <li class="technology child"><img title="Webpack" data-src="/static/portfolio/img/icons/webpack.png" class="fade lozad technology__image" /></li>
+    <li class="technology child"><img title="Docker" data-src="/static/portfolio/img/icons/docker.png" class="fade lozad technology__image" /></li>
+    <li class="technology child"><img title="Graphql" data-src="/static/portfolio/img/icons/graphql.png" class="fade lozad technology__image" /></li>
+    <li class="technology child"><img title="Linux" data-src="/static/portfolio/img/icons/linux.png" class="fade lozad technology__image" /></li>
+    <li class="technology child"><img title="Postman" data-src="/static/portfolio/img/icons/postman.png" class="fade lozad technology__image" /></li>
+  </ul>
+  <div id="formWrapper" class="formWrapper">
+    <h1 class="font-weight_semi">Обратная связь</h1>
+    <form id="connectForm" method="post" class="connectForm">{% csrf_token %}
+      <!-- Fields-->{% for field in form %}
+      <div class="controller"><label title="{% if field.field.required == true %}Обязательное для заполнения поле{% else %}Заполните поле по желанию{% endif %}" class="controller__label">{{ field.label }}{% if field.field.required %}<span class="controller_required">*</span>{% endif %}</label>{{ field }}
+        {{ field.errors }}
+      </div>{% endfor %}<button id="connect" title="Кнопка, отправляющая данные владельцу сайта" type="submit" class="button button_yellow connectForm__button">Связаться</button></form>
+  </div>
+</section>{% endblock %}

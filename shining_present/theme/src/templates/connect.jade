@@ -1,0 +1,21 @@
+| {% extends 'base.html' %}
+
+| {% block content %}
+#formWrapper.formWrapper
+	h1.font-weight_semi Обратная связь
+
+	form#connectForm.connectForm(
+		method='post'
+		)
+		| {% csrf_token %}
+		// Fields
+		| {% for field in form %}
+		.controller
+			label.controller__label( title="{% if field.field.required == true %}Обязательное для заполнения поле{% else %}Заполните поле по желанию{% endif %}").
+				{{ field.label }}{% if field.field.required %}<span class="controller_required">*</span>{% endif %}
+			| {{ field }}
+			| {{ field.errors }}
+		| {% endfor %}
+
+		button#connect.button.button_yellow.connectForm__button(title="Кнопка, отправляющая данные владельцу сайта", type="submit", aria-pressed=false) Связаться
+| {% endblock  %}

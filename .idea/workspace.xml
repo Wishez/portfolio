@@ -5,10 +5,98 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6192725a-0ebe-49e1-9688-f7b6827c314b" name="Default" comment="Подкорректирвал стили фронта и подкрутил поведение">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shining_present/pages/migrations/0004_connectmepage.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shining_present/pages/templates/connect.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shining_present/pages/templates/contact.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shining_present/pages/templates/contacts.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shining_present/pages/templates/technologies copy.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shining_present/pages/templates/tools.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shining_present/static/portfolio/img/afinskaya-shkola.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shining_present/theme/src/img/afinskaya-shkola.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shining_present/theme/src/js/components/Corkcrew.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shining_present/theme/src/js/components/Loader.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shining_present/theme/src/js/components/MovingNav.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shining_present/theme/src/js/components/ScrollDirection.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shining_present/theme/src/js/services/Blog.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shining_present/theme/src/js/views/Article.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shining_present/theme/src/js/views/Articles.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shining_present/theme/src/templates/connect.jade" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shining_present/pages/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/shining_present/pages/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shining_present/pages/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/shining_present/pages/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shining_present/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/shining_present/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shining_present/db.test" beforeDir="false" afterPath="$PROJECT_DIR$/shining_present/db.test" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shining_present/debug.log" beforeDir="false" afterPath="$PROJECT_DIR$/shining_present/debug.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shining_present/pages/templates/about.html" beforeDir="false" afterPath="$PROJECT_DIR$/shining_present/pages/templates/about.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shining_present/pages/templates/article.html" beforeDir="false" afterPath="$PROJECT_DIR$/shining_present/pages/templates/article.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shining_present/pages/templates/articles.html" beforeDir="false" afterPath="$PROJECT_DIR$/shining_present/pages/templates/articles.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shining_present/pages/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/shining_present/pages/templates/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shining_present/pages/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/shining_present/pages/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shining_present/pages/templates/portfolio.html" beforeDir="false" afterPath="$PROJECT_DIR$/shining_present/pages/templates/portfolio.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shining_present/pages/templates/work.html" beforeDir="false" afterPath="$PROJECT_DIR$/shining_present/pages/templates/work.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shining_present/static/portfolio/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/shining_present/static/portfolio/css/app.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shining_present/static/portfolio/css/app.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/shining_present/static/portfolio/css/app.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shining_present/static/portfolio/img/1.png" beforeDir="false" afterPath="$PROJECT_DIR$/shining_present/static/portfolio/img/1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shining_present/static/portfolio/img/2.png" beforeDir="false" afterPath="$PROJECT_DIR$/shining_present/static/portfolio/img/2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shining_present/static/portfolio/img/3.png" beforeDir="false" afterPath="$PROJECT_DIR$/shining_present/static/portfolio/img/3.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shining_present/static/portfolio/img/4.png" beforeDir="false" afterPath="$PROJECT_DIR$/shining_present/static/portfolio/img/4.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shining_present/static/portfolio/img/android-chrome-192x192.png" beforeDir="false" afterPath="$PROJECT_DIR$/shining_present/static/portfolio/img/android-chrome-192x192.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shining_present/static/portfolio/img/android-chrome-512x512.png" beforeDir="false" afterPath="$PROJECT_DIR$/shining_present/static/portfolio/img/android-chrome-512x512.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shining_present/static/portfolio/img/apple-touch-icon.png" beforeDir="false" afterPath="$PROJECT_DIR$/shining_present/static/portfolio/img/apple-touch-icon.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shining_present/static/portfolio/img/favicon-16x16.png" beforeDir="false" afterPath="$PROJECT_DIR$/shining_present/static/portfolio/img/favicon-16x16.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shining_present/static/portfolio/img/favicon-32x32.png" beforeDir="false" afterPath="$PROJECT_DIR$/shining_present/static/portfolio/img/favicon-32x32.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shining_present/static/portfolio/img/github-alt-brands.svg" beforeDir="false" afterPath="$PROJECT_DIR$/shining_present/static/portfolio/img/github-alt-brands.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shining_present/static/portfolio/img/icons/bootstrap.png" beforeDir="false" afterPath="$PROJECT_DIR$/shining_present/static/portfolio/img/icons/bootstrap.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shining_present/static/portfolio/img/icons/bulma.png" beforeDir="false" afterPath="$PROJECT_DIR$/shining_present/static/portfolio/img/icons/bulma.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shining_present/static/portfolio/img/icons/css.png" beforeDir="false" afterPath="$PROJECT_DIR$/shining_present/static/portfolio/img/icons/css.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shining_present/static/portfolio/img/icons/django-rest-framework.png" beforeDir="false" afterPath="$PROJECT_DIR$/shining_present/static/portfolio/img/icons/django-rest-framework.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shining_present/static/portfolio/img/icons/django.png" beforeDir="false" afterPath="$PROJECT_DIR$/shining_present/static/portfolio/img/icons/django.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shining_present/static/portfolio/img/icons/external_link.png" beforeDir="false" afterPath="$PROJECT_DIR$/shining_present/static/portfolio/img/icons/external_link.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shining_present/static/portfolio/img/icons/figma.png" beforeDir="false" afterPath="$PROJECT_DIR$/shining_present/static/portfolio/img/icons/figma.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shining_present/static/portfolio/img/icons/gear.png" beforeDir="false" afterPath="$PROJECT_DIR$/shining_present/static/portfolio/img/icons/gear.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shining_present/static/portfolio/img/icons/git.png" beforeDir="false" afterPath="$PROJECT_DIR$/shining_present/static/portfolio/img/icons/git.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shining_present/static/portfolio/img/icons/graphql.png" beforeDir="false" afterPath="$PROJECT_DIR$/shining_present/static/portfolio/img/icons/graphql.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shining_present/static/portfolio/img/icons/gulp.png" beforeDir="false" afterPath="$PROJECT_DIR$/shining_present/static/portfolio/img/icons/gulp.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shining_present/static/portfolio/img/icons/html.png" beforeDir="false" afterPath="$PROJECT_DIR$/shining_present/static/portfolio/img/icons/html.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shining_present/static/portfolio/img/icons/jquery.png" beforeDir="false" afterPath="$PROJECT_DIR$/shining_present/static/portfolio/img/icons/jquery.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shining_present/static/portfolio/img/icons/js.png" beforeDir="false" afterPath="$PROJECT_DIR$/shining_present/static/portfolio/img/icons/js.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shining_present/static/portfolio/img/icons/linux.png" beforeDir="false" afterPath="$PROJECT_DIR$/shining_present/static/portfolio/img/icons/linux.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shining_present/static/portfolio/img/icons/node.png" beforeDir="false" afterPath="$PROJECT_DIR$/shining_present/static/portfolio/img/icons/node.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shining_present/static/portfolio/img/icons/npm.png" beforeDir="false" afterPath="$PROJECT_DIR$/shining_present/static/portfolio/img/icons/npm.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shining_present/static/portfolio/img/icons/photoshop.png" beforeDir="false" afterPath="$PROJECT_DIR$/shining_present/static/portfolio/img/icons/photoshop.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shining_present/static/portfolio/img/icons/postgres.png" beforeDir="false" afterPath="$PROJECT_DIR$/shining_present/static/portfolio/img/icons/postgres.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shining_present/static/portfolio/img/icons/postman.png" beforeDir="false" afterPath="$PROJECT_DIR$/shining_present/static/portfolio/img/icons/postman.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shining_present/static/portfolio/img/icons/python.png" beforeDir="false" afterPath="$PROJECT_DIR$/shining_present/static/portfolio/img/icons/python.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shining_present/static/portfolio/img/icons/react.png" beforeDir="false" afterPath="$PROJECT_DIR$/shining_present/static/portfolio/img/icons/react.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shining_present/static/portfolio/img/icons/redux-observable.png" beforeDir="false" afterPath="$PROJECT_DIR$/shining_present/static/portfolio/img/icons/redux-observable.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shining_present/static/portfolio/img/icons/redux.png" beforeDir="false" afterPath="$PROJECT_DIR$/shining_present/static/portfolio/img/icons/redux.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shining_present/static/portfolio/img/icons/rxjs.png" beforeDir="false" afterPath="$PROJECT_DIR$/shining_present/static/portfolio/img/icons/rxjs.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shining_present/static/portfolio/img/icons/sass.png" beforeDir="false" afterPath="$PROJECT_DIR$/shining_present/static/portfolio/img/icons/sass.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shining_present/static/portfolio/img/icons/semantic-ui.png" beforeDir="false" afterPath="$PROJECT_DIR$/shining_present/static/portfolio/img/icons/semantic-ui.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shining_present/static/portfolio/img/icons/storybook.png" beforeDir="false" afterPath="$PROJECT_DIR$/shining_present/static/portfolio/img/icons/storybook.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shining_present/static/portfolio/img/icons/vue.png" beforeDir="false" afterPath="$PROJECT_DIR$/shining_present/static/portfolio/img/icons/vue.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shining_present/static/portfolio/img/icons/vuex.png" beforeDir="false" afterPath="$PROJECT_DIR$/shining_present/static/portfolio/img/icons/vuex.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shining_present/static/portfolio/img/icons/webpack.png" beforeDir="false" afterPath="$PROJECT_DIR$/shining_present/static/portfolio/img/icons/webpack.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shining_present/static/portfolio/img/mstile-150x150.png" beforeDir="false" afterPath="$PROJECT_DIR$/shining_present/static/portfolio/img/mstile-150x150.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shining_present/static/portfolio/img/p1.png" beforeDir="false" afterPath="$PROJECT_DIR$/shining_present/static/portfolio/img/p1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shining_present/static/portfolio/img/safari-pinned-tab.svg" beforeDir="false" afterPath="$PROJECT_DIR$/shining_present/static/portfolio/img/safari-pinned-tab.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shining_present/static/portfolio/img/space-one.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/shining_present/static/portfolio/img/space-one.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shining_present/static/portfolio/img/space-three.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/shining_present/static/portfolio/img/space-three.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shining_present/static/portfolio/img/space-two.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/shining_present/static/portfolio/img/space-two.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shining_present/static/portfolio/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/shining_present/static/portfolio/js/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shining_present/static/portfolio/js/app.js.LICENSE.txt" beforeDir="false" afterPath="$PROJECT_DIR$/shining_present/static/portfolio/js/app.js.LICENSE.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shining_present/static/portfolio/js/app.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/shining_present/static/portfolio/js/app.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shining_present/static/portfolio/js/report.html" beforeDir="false" afterPath="$PROJECT_DIR$/shining_present/static/portfolio/js/report.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shining_present/static/portfolio/js/sw.js" beforeDir="false" afterPath="$PROJECT_DIR$/shining_present/static/portfolio/js/sw.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shining_present/static/portfolio/js/sw.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/shining_present/static/portfolio/js/sw.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shining_present/theme/.eslintrc" beforeDir="false" afterPath="$PROJECT_DIR$/shining_present/theme/.eslintrc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shining_present/theme/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/shining_present/theme/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shining_present/theme/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/shining_present/theme/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shining_present/theme/src/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/shining_present/theme/src/js/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shining_present/theme/src/sass/_common.sass" beforeDir="false" afterPath="$PROJECT_DIR$/shining_present/theme/src/sass/_common.sass" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shining_present/theme/src/sass/_main.sass" beforeDir="false" afterPath="$PROJECT_DIR$/shining_present/theme/src/sass/_main.sass" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shining_present/theme/src/templates/articles.jade" beforeDir="false" afterPath="$PROJECT_DIR$/shining_present/theme/src/templates/articles.jade" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shining_present/theme/src/templates/partials/_header.jade" beforeDir="false" afterPath="$PROJECT_DIR$/shining_present/theme/src/templates/partials/_header.jade" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shining_present/theme/src/templates/portfolio.jade" beforeDir="false" afterPath="$PROJECT_DIR$/shining_present/theme/src/templates/portfolio.jade" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shining_present/theme/src/templates/work.jade" beforeDir="false" afterPath="$PROJECT_DIR$/shining_present/theme/src/templates/work.jade" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -130,12 +218,12 @@
       <pane id="Scope" />
     </panes>
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "node.js.selected.package.tslint": "(autodetect)",
-    "settings.editor.selected.configurable": "preferences.pluginManager"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration default="true" type="DjangoTestsConfigurationType" factoryName="Django tests">
       <option name="INTERPRETER_OPTIONS" value="" />
