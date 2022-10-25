@@ -7,13 +7,11 @@ from pages.models import BasePage
 import uuid as uuid_lib
 from django.core.mail import EmailMessage
 from model_utils.models import TimeStampedModel
+import sys
 
-if settings.IS_PRODUCTION:
-    encoding = 'utf-8'
-    import sys
+if settings.IS_PRODUCTION and sys.version[0] == '2':
     reload(sys)
-    sys.setdefaultencoding(encoding)
-
+    sys.setdefaultencoding('utf-8')
 
 class Settings(TimeStampedModel):
     name = models.CharField(

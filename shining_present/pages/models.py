@@ -51,28 +51,36 @@ class PortfolioPage(BasePage):
 
     class Meta:
         db_table='portfolio_page'
-        verbose_name=_('Страница "Портфолио"')
-        verbose_name_plural = _('Страница "Портфолио"')
+        verbose_name=_('Страница «Портфолио»')
+        verbose_name_plural = _('Страница «Портфолио»')
 
 class AboutPage(BasePage):
 
     class Meta:
         db_table = 'about_page'
-        verbose_name = _('Страница "Обо мне"')
-        verbose_name_plural = _('Страница "Обо мне"')
+        verbose_name = _('Страница «Обо мне»')
+        verbose_name_plural = _('Страница «Обо мне»')
 
 class TechnologiesPage(BasePage):
     class Meta:
         db_table = 'technologies_page'
-        verbose_name = _('Страница "Технологии"')
-        verbose_name_plural = _('Страница "Технологии"')
+        verbose_name = _('Страница «Технологии»')
+        verbose_name_plural = _('Страница «Технологии»')
+
 class ArticlesPage(BasePage):
     class Meta:
         db_table = 'articles_page'
-        verbose_name = _('Страница "Статьи"')
-        verbose_name_plural = _('Страница "Статьи"')
+        verbose_name = _('Страница «Статьи»')
+        verbose_name_plural = _('Страница «Статьи»')
+
 class ArticlePage(BasePage):
     class Meta:
         db_table = 'single_article_page'
         verbose_name = _('Статья')
         verbose_name_plural = _('Статьи')
+
+class ConnectMePage(BasePage):
+    class Meta:
+        db_table = 'connect_me_page'
+        verbose_name = _('Страница «Контакт»')
+        verbose_name_plural = _('Страница «Контакты»')
