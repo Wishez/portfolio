@@ -4,3 +4,6 @@ bower_components
 admin
 grappelli
 *.pyc
+venv
+.DS_Store
+.idea
